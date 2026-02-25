@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZAI Institute — Transforming Education for the Age of AI</title>
+
+<!-- Primary SEO -->
+<meta name="description" content="ZAI Institute partners with universities and industry to close the AI readiness gap. Two certificate programs, faculty training, and a national executive network — deployable in 30 days.">
+<meta name="keywords" content="AI education, AI readiness, university AI programs, workforce AI training, AI certificate, How to Be Indispensable, ZAI Institute, higher education AI">
+<meta name="author" content="ZAI Institute">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://zaiinstitute.ai/">
+
+<!-- Open Graph — controls how the link previews on LinkedIn, Facebook, iMessage -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zaiinstitute.ai/">
+<meta property="og:title" content="ZAI Institute — Transforming Education for the Age of AI">
+<meta property="og:description" content="The future of work is already here. ZAI Institute partners with universities and employers to build AI-ready graduates, faculty, and organizations — with urgency and with rigor.">
+<meta property="og:image" content="https://zaiinstitute.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="ZAI Institute">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://zaiinstitute.ai/">
+<meta name="twitter:title" content="ZAI Institute — Transforming Education for the Age of AI">
+<meta name="twitter:description" content="The future of work is already here. ZAI Institute partners with universities and employers to build AI-ready graduates, faculty, and organizations.">
+<meta name="twitter:image" content="https://zaiinstitute.ai/og-image.png">
+
+<!-- Inline SVG favicon — the ZAI mark, no external file needed -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='1' y='1' width='98' height='98' stroke='%23B8962E' stroke-width='1.5' fill='%230A0A0F'/><line x1='20' y1='25' x2='80' y2='25' stroke='%23F5F2ED' stroke-width='6'/><line x1='80' y1='25' x2='20' y2='75' stroke='%23F5F2ED' stroke-width='6'/><line x1='20' y1='75' x2='80' y2='75' stroke='%23F5F2ED' stroke-width='6'/><circle cx='80' cy='25' r='8' fill='%23B8962E'/><circle cx='20' cy='75' r='8' fill='%23B8962E'/></svg>">
+
+<!-- Mobile browser chrome color -->
+<meta name="theme-color" content="#0A0A0F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  /* ─── SKIP TO CONTENT ──────────────────────────────────────────────────── */
+  .skip-link {
+    position: absolute; top: -100px; left: 16px; z-index: 10000;
+    background: var(--gold); color: var(--ink);
+    font-family: var(--ff-sans); font-size: 13px; font-weight: 500;
+    padding: 10px 20px; text-decoration: none;
+    transition: top 0.2s;
+  }
+  .skip-link:focus { top: 16px; }
+
+  /* ─── RESET & BASE ─────────────────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:       #0A0A0F;
+    --ink-soft:  #1A1A2E;
+    --paper:     #F5F2ED;
+    --paper-dark:#EDE9E2;
+    --gold:      #B8962E;
+    --gold-light:#D4AE4A;
+    --gold-pale: #F0E6C8;
+    --slate:     #2C3E5A;
+    --slate-mid: #3D5273;
+    --white:     #FFFFFF;
+    --muted:     #6B6B7A;
+    --rule:      rgba(184,150,46,0.25);
+    --ff-serif:  'Cormorant Garamond', Georgia, serif;
+    --ff-sans:   'DM Sans', sans-serif;
+    --ff-mono:   'DM Mono', monospace;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--ff-sans);
+    background: var(--ink);
+    color: var(--paper);
+    overflow-x: hidden;
+  }
+
+  /* ─── CUSTOM CURSOR ────────────────────────────────────────────────────── */
+  .cursor {
+    position: fixed; top: 0; left: 0; z-index: 9999;
+    pointer-events: none;
+    width: 0; height: 0;
+  }
+  .cursor-dot {
+    position: fixed;
+    width: 7px; height: 7px;
+    background: var(--gold);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s;
+    z-index: 9999;
+  }
+  .cursor-ring {
+    position: fixed;
+    width: 36px; height: 36px;
+    border: 1px solid rgba(184,150,46,0.55);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9998;
+    transition: width 0.3s ease, height 0.3s ease, border-color 0.3s;
+  }
+  body.cursor-hover .cursor-ring {
+    width: 56px; height: 56px;
+    border-color: var(--gold);
+  }
+
+  /* ─── SCROLLBAR ────────────────────────────────────────────────────────── */
+  ::-webkit-scrollbar { width: 3px; }
+  ::-webkit-scrollbar-track { background: var(--ink); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); }
+
+
+  /* ─── FOCUS STYLES (keyboard navigation) ───────────────────────────────── */
+  :focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+  }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 4px;
+    border-radius: 1px;
+  }
+  /* Remove default outline for mouse users */
+  :focus:not(:focus-visible) { outline: none; }
+
+  /* ─── NAV ──────────────────────────────────────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 24px 60px;
+    background: linear-gradient(to bottom, rgba(10,10,15,0.95) 0%, transparent 100%);
+    backdrop-filter: blur(2px);
+    transition: all 0.4s ease;
+  }
+  nav.scrolled {
+    padding: 16px 60px;
+    background: rgba(10,10,15,0.97);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-logo {
+    text-decoration: none;
+    display: flex; align-items: center;
+    transition: opacity 0.3s;
+  }
+  .nav-logo:hover { opacity: 0.85; }
+  .nav-logo svg { display: block; }
+  .nav-links {
+    display: flex; align-items: center; gap: 40px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: var(--ff-sans);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(245,242,237,0.65);
+    text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute; bottom: -4px; left: 0; right: 0;
+    height: 1px; background: var(--gold);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--paper); }
+  .nav-links a:hover::after { transform: scaleX(1); }
+  .nav-cta {
+    font-family: var(--ff-sans);
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink) !important;
+    background: var(--gold);
+    padding: 10px 24px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s !important;
+    display: inline-block;
+  }
+  .nav-cta::after { display: none !important; }
+  .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  /* ─── HERO ─────────────────────────────────────────────────────────────── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    position: relative;
+    overflow: hidden;
+    padding: 0 60px;
+  }
+
+  /* Animated grid background */
+  .hero-grid {
+    position: absolute; inset: 0; z-index: 0;
+    background-image:
+      linear-gradient(rgba(184,150,46,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(184,150,46,0.04) 1px, transparent 1px);
+    background-size: 80px 80px;
+    animation: gridShift 20s linear infinite;
+  }
+  @keyframes gridShift {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(80px); }
+  }
+
+  /* Gradient overlays */
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0; z-index: 1;
+    background: radial-gradient(ellipse 80% 60% at 20% 50%,
+      rgba(44,62,90,0.4) 0%, transparent 70%);
+  }
+  .hero::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0; z-index: 1;
+    height: 200px;
+    background: linear-gradient(to bottom, transparent, var(--ink));
+  }
+
+  /* Decorative circle */
+  .hero-orb {
+    position: absolute; right: -10%; top: 50%;
+    transform: translateY(-50%);
+    width: 700px; height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(184,150,46,0.06) 0%, transparent 70%);
+    border: 1px solid rgba(184,150,46,0.08);
+    z-index: 1;
+    animation: orbPulse 8s ease-in-out infinite;
+  }
+  .hero-orb::before {
+    content: '';
+    position: absolute; inset: 60px;
+    border-radius: 50%;
+    border: 1px solid rgba(184,150,46,0.05);
+  }
+  .hero-orb::after {
+    content: '';
+    position: absolute; inset: 140px;
+    border-radius: 50%;
+    border: 1px solid rgba(184,150,46,0.04);
+  }
+  @keyframes orbPulse {
+    0%, 100% { transform: translateY(-50%) scale(1); opacity: 1; }
+    50% { transform: translateY(-50%) scale(1.03); opacity: 0.7; }
+  }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding-top: 140px;
+    max-width: 800px;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--ff-mono);
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    display: flex; align-items: center; gap: 16px;
+    opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards;
+  }
+  .hero-eyebrow::before {
+    content: '';
+    display: block; width: 40px; height: 1px;
+    background: var(--gold);
+  }
+
+  .hero-headline {
+    font-family: var(--ff-serif);
+    font-size: clamp(52px, 7vw, 90px);
+    font-weight: 300;
+    line-height: 1.0;
+    letter-spacing: -0.01em;
+    color: var(--paper);
+    margin-bottom: 12px;
+    opacity: 0; animation: fadeUp 0.8s ease 0.35s forwards;
+  }
+  .hero-headline em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-headline .line2 {
+    display: block;
+    padding-left: 80px;
+  }
+
+  .hero-sub {
+    font-family: var(--ff-serif);
+    font-size: clamp(18px, 2.2vw, 26px);
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(245,242,237,0.55);
+    margin-bottom: 48px;
+    margin-top: 16px;
+    line-height: 1.5;
+    max-width: 560px;
+    opacity: 0; animation: fadeUp 0.8s ease 0.5s forwards;
+  }
+
+  .hero-actions {
+    display: flex; gap: 20px; align-items: center;
+    opacity: 0; animation: fadeUp 0.8s ease 0.65s forwards;
+  }
+  .btn-primary {
+    font-family: var(--ff-sans);
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ink);
+    background: var(--gold);
+    padding: 16px 40px;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    display: inline-block;
+  }
+  .btn-primary:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(184,150,46,0.3);
+  }
+  .btn-ghost {
+    font-family: var(--ff-sans);
+    font-size: 12px; font-weight: 400;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(245,242,237,0.65);
+    text-decoration: none;
+    display: flex; align-items: center; gap: 10px;
+    transition: color 0.3s;
+  }
+  .btn-ghost:hover { color: var(--paper); }
+  .btn-ghost::after {
+    content: '→';
+    transition: transform 0.3s;
+  }
+  .btn-ghost:hover::after { transform: translateX(4px); }
+
+  .hero-stats {
+    position: relative; z-index: 2;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--rule);
+    padding: 40px 0;
+    margin-bottom: 0;
+    opacity: 0; animation: fadeUp 0.8s ease 0.8s forwards;
+    width: 100%;
+  }
+  .hero-stat {
+    padding: 0 40px;
+    border-right: 1px solid var(--rule);
+  }
+  .hero-stat:first-child { padding-left: 0; }
+  .hero-stat:last-child { border-right: none; padding-right: 0; }
+  .hero-stat-num {
+    font-family: var(--ff-serif);
+    font-size: 52px;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .hero-stat-label {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(245,242,237,0.45);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── SECTION SHARED ───────────────────────────────────────────────────── */
+  section { padding: 120px 60px; }
+
+  .section-label {
+    font-family: var(--ff-mono);
+    font-size: 10px; letter-spacing: 0.25em;
+    text-transform: uppercase; color: var(--gold);
+    display: flex; align-items: center; gap: 14px;
+    margin-bottom: 20px;
+  }
+  .section-label::before {
+    content: ''; display: block;
+    width: 30px; height: 1px; background: var(--gold);
+  }
+
+  .section-title {
+    font-family: var(--ff-serif);
+    font-size: clamp(36px, 5vw, 60px);
+    font-weight: 300; line-height: 1.1;
+    color: var(--paper);
+    margin-bottom: 24px;
+  }
+  .section-title em { font-style: italic; color: var(--gold); }
+
+  .section-body {
+    font-size: 16px; line-height: 1.8;
+    color: rgba(245,242,237,0.65);
+    max-width: 600px;
+  }
+
+  /* ─── PROVOCATION STRIP ────────────────────────────────────────────────── */
+  .provocation {
+    background: var(--gold);
+    padding: 36px 0;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+  }
+  .provocation-track {
+    display: flex; gap: 80px;
+    white-space: nowrap;
+    animation: marquee 25s linear infinite;
+  }
+  .provocation-track span {
+    font-family: var(--ff-serif);
+    font-size: 22px; font-weight: 400; font-style: italic;
+    color: var(--ink);
+    flex-shrink: 0;
+  }
+  .provocation-track .dot {
+    font-style: normal;
+    color: rgba(10,10,15,0.4);
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* ─── TENSION SECTION ──────────────────────────────────────────────────── */
+  .tension {
+    background: var(--ink-soft);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0;
+  }
+  .tension-left {
+    padding: 100px 80px;
+    border-right: 1px solid var(--rule);
+    position: relative;
+  }
+  .tension-left::before {
+    content: '"';
+    font-family: var(--ff-serif);
+    font-size: 280px;
+    color: rgba(184,150,46,0.05);
+    position: absolute;
+    top: -40px; left: 40px;
+    line-height: 1;
+    pointer-events: none;
+  }
+  .tension-right {
+    padding: 100px 80px;
+  }
+  .tension-quote {
+    font-family: var(--ff-serif);
+    font-size: clamp(24px, 3vw, 38px);
+    font-weight: 300; font-style: italic;
+    line-height: 1.4;
+    color: var(--paper);
+    margin-bottom: 32px;
+    position: relative; z-index: 1;
+  }
+  .tension-attr {
+    font-family: var(--ff-mono);
+    font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: flex; align-items: center; gap: 12px;
+  }
+  .tension-attr::before {
+    content: ''; display: block;
+    width: 24px; height: 1px; background: var(--gold);
+  }
+  .tension-list {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 24px;
+  }
+  .tension-item {
+    display: grid; grid-template-columns: 24px 1fr; gap: 16px;
+    align-items: start;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--rule);
+    opacity: 1; transform: translateX(0);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .tension-item.animate-in {
+    opacity: 0; transform: translateX(20px);
+  }
+  .tension-item.animate-in.visible { opacity: 1; transform: translateX(0); }
+  .tension-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .tension-num {
+    font-family: var(--ff-mono);
+    font-size: 10px; color: var(--gold);
+    padding-top: 4px;
+  }
+  .tension-text {
+    font-size: 15px; line-height: 1.7;
+    color: rgba(245,242,237,0.7);
+  }
+  .tension-text strong {
+    color: var(--paper); font-weight: 500;
+    display: block; margin-bottom: 4px;
+    font-family: var(--ff-serif);
+    font-size: 18px; font-style: italic;
+  }
+
+  /* ─── PILLARS ───────────────────────────────────────────────────────────── */
+  .pillars { background: var(--ink); }
+  .pillars-header {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; margin-bottom: 80px;
+    align-items: end;
+  }
+  .pillars-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+  }
+  .pillar {
+    background: var(--ink-soft);
+    padding: 56px 48px;
+    position: relative; overflow: hidden;
+    opacity: 1; transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease, background 0.4s;
+  }
+  .pillar.animate-in {
+    opacity: 0; transform: translateY(30px);
+  }
+  .pillar.animate-in.visible { opacity: 1; transform: translateY(0); }
+  .pillar:hover { background: rgba(44,62,90,0.5); }
+  .pillar::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px; background: var(--gold);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+  .pillar:hover::before { transform: scaleX(1); }
+  .pillar-num {
+    font-family: var(--ff-mono);
+    font-size: 10px; color: var(--gold);
+    letter-spacing: 0.2em; margin-bottom: 32px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .pillar-num::after {
+    content: ''; flex: 1; height: 1px;
+    background: var(--rule);
+  }
+  .pillar-title {
+    font-family: var(--ff-serif);
+    font-size: 26px; font-weight: 400; font-style: italic;
+    color: var(--paper); margin-bottom: 16px; line-height: 1.3;
+  }
+  .pillar-body {
+    font-size: 14px; line-height: 1.8;
+    color: rgba(245,242,237,0.55);
+  }
+  .pillar-accent {
+    position: absolute; bottom: -30px; right: -30px;
+    font-family: var(--ff-serif);
+    font-size: 120px; font-weight: 300; font-style: italic;
+    color: rgba(184,150,46,0.04);
+    line-height: 1; pointer-events: none;
+    transition: color 0.4s;
+  }
+  .pillar:hover .pillar-accent { color: rgba(184,150,46,0.07); }
+
+  /* ─── BELIEFS ───────────────────────────────────────────────────────────── */
+  .beliefs {
+    background: var(--ink-soft);
+    position: relative; overflow: hidden;
+  }
+  .beliefs::before {
+    content: '';
+    position: absolute; top: 0; right: 0;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(184,150,46,0.04) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .beliefs-grid {
+    display: grid; grid-template-columns: 1fr 1.4fr;
+    gap: 100px; align-items: start;
+  }
+  .beliefs-list {
+    display: flex; flex-direction: column; gap: 0;
+    margin-top: 60px;
+  }
+  .belief {
+    padding: 32px 0;
+    border-bottom: 1px solid var(--rule);
+    cursor: pointer;
+    transition: padding 0.3s;
+  }
+  .belief:first-child { border-top: 1px solid var(--rule); }
+  .belief-header {
+    display: flex; align-items: center;
+    justify-content: space-between; gap: 20px;
+  }
+  .belief-title {
+    font-family: var(--ff-serif);
+    font-size: 20px; font-weight: 400; font-style: italic;
+    color: rgba(245,242,237,0.65);
+    transition: color 0.3s;
+  }
+  .belief.active .belief-title { color: var(--paper); }
+  .belief-arrow {
+    color: var(--gold);
+    font-size: 18px;
+    transition: transform 0.3s;
+    flex-shrink: 0;
+  }
+  .belief.active .belief-arrow { transform: rotate(45deg); }
+  .belief-body {
+    font-size: 14px; line-height: 1.8;
+    color: rgba(245,242,237,0.55);
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.4s ease, margin-top 0.3s;
+  }
+  .belief.active .belief-body { max-height: 200px; margin-top: 16px; }
+
+  .beliefs-visual {
+    position: sticky; top: 120px;
+    display: flex; align-items: center; justify-content: center;
+    opacity: 1;
+  }
+  .beliefs-ring {
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    border: 1px solid var(--rule);
+    position: relative;
+    animation: slowRotate 30s linear infinite;
+    flex-shrink: 0;
+  }
+  .beliefs-ring::before {
+    content: '';
+    position: absolute; inset: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(184,150,46,0.1);
+  }
+  .beliefs-ring::after {
+    content: '';
+    position: absolute; inset: 90px;
+    border-radius: 50%;
+    border: 1px solid rgba(184,150,46,0.07);
+  }
+  .beliefs-ring-center {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: slowRotateReverse 30s linear infinite;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .beliefs-ring-center span {
+    font-family: var(--ff-serif);
+    font-size: 48px; font-weight: 300; font-style: italic;
+    color: var(--gold); line-height: 1;
+    display: block;
+  }
+  .beliefs-ring-center p {
+    font-family: var(--ff-mono);
+    font-size: 9px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: rgba(245,242,237,0.3);
+    margin-top: 8px;
+  }
+  .beliefs-dot {
+    position: absolute;
+    width: 8px; height: 8px; background: var(--gold);
+    border-radius: 50%; top: -4px; left: 50%; margin-left: -4px;
+  }
+  @keyframes slowRotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+  @keyframes slowRotateReverse {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to   { transform: translate(-50%, -50%) rotate(-360deg); }
+  }
+
+  /* ─── WHO WE SERVE ─────────────────────────────────────────────────────── */
+  .audience { background: var(--ink); }
+  .audience-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 2px; margin-top: 60px;
+  }
+  .audience-card {
+    background: var(--ink-soft);
+    padding: 48px 36px;
+    position: relative; overflow: hidden;
+    opacity: 1; transform: translateY(0);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  }
+  .audience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    z-index: 2;
+  }
+
+  .audience-icon {
+    width: 56px; height: 56px;
+    border: 1px solid var(--rule);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 32px;
+    font-family: var(--ff-mono); font-size: 14px;
+    color: var(--gold);
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .audience-card:hover .audience-icon {
+    border-color: var(--gold);
+    background: rgba(184,150,46,0.05);
+  }
+  .audience-title {
+    font-family: var(--ff-serif);
+    font-size: 26px; font-weight: 400; font-style: italic;
+    color: var(--paper); margin-bottom: 16px;
+  }
+  .audience-body {
+    font-size: 14px; line-height: 1.8;
+    color: rgba(245,242,237,0.55);
+    margin-bottom: 32px;
+  }
+  .audience-link {
+    font-family: var(--ff-mono);
+    font-size: 10px; letter-spacing: 0.15em;
+    text-transform: uppercase; color: var(--gold);
+    text-decoration: none;
+    display: flex; align-items: center; gap: 10px;
+    transition: gap 0.3s;
+  }
+  .audience-card:hover .audience-link { gap: 16px; }
+  .audience-bg {
+    position: absolute; bottom: -20px; right: -20px;
+    font-family: var(--ff-serif);
+    font-size: 100px; font-style: italic; font-weight: 300;
+    color: rgba(184,150,46,0.04); line-height: 1;
+    pointer-events: none;
+  }
+
+  /* ─── PROGRAMS ──────────────────────────────────────────────────────────── */
+  .programs { background: var(--paper); }
+  .programs .section-label { color: var(--gold); }
+  .programs .section-title { color: var(--ink); }
+  .programs .section-body { color: rgba(10,10,15,0.6); }
+  .programs-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 24px; margin-top: 60px;
+  }
+  .program-card {
+    background: var(--white);
+    padding: 48px 36px;
+    border-bottom: 3px solid transparent;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative; overflow: hidden;
+    opacity: 1; transform: translateY(0);
+  }
+  .program-card.animate-in {
+    opacity: 0; transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s;
+  }
+  .program-card.animate-in.visible { opacity: 1; transform: translateY(0); }
+  .program-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: var(--gold);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.4s ease;
+  }
+  .program-card:hover::before { transform: scaleX(1); }
+  .program-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  }
+  .program-tag {
+    font-family: var(--ff-mono);
+    font-size: 9px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold);
+    background: var(--gold-pale);
+    padding: 5px 12px; display: inline-block;
+    margin-bottom: 24px;
+  }
+  .program-title {
+    font-family: var(--ff-serif);
+    font-size: 22px; font-weight: 500;
+    color: var(--ink); margin-bottom: 12px; line-height: 1.3;
+  }
+  .program-duration {
+    font-family: var(--ff-mono);
+    font-size: 10px; color: var(--muted);
+    letter-spacing: 0.12em; margin-bottom: 16px;
+  }
+  .program-desc {
+    font-size: 13px; line-height: 1.8;
+    color: var(--muted); margin-bottom: 28px;
+  }
+  .program-link {
+    font-family: var(--ff-sans);
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink); text-decoration: none;
+    display: flex; align-items: center; gap: 10px;
+    transition: gap 0.3s, color 0.3s;
+  }
+  .program-link:hover { color: var(--gold); gap: 16px; }
+
+  /* ─── NETWORK ───────────────────────────────────────────────────────────── */
+  .network {
+    background: var(--slate);
+    position: relative; overflow: hidden;
+  }
+  .network::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(135deg, rgba(184,150,46,0.05) 0%, transparent 50%),
+      radial-gradient(ellipse 60% 80% at 80% 50%, rgba(184,150,46,0.06) 0%, transparent 70%);
+  }
+  .network-inner {
+    position: relative; z-index: 1;
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 100px; align-items: center;
+  }
+  .network-number {
+    font-family: var(--ff-serif);
+    font-size: 160px; font-weight: 300;
+    color: rgba(184,150,46,0.15); line-height: 1;
+    position: absolute; right: 0; top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  .network-partnerships {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 2px; margin-top: 48px;
+  }
+  .network-item {
+    background: rgba(255,255,255,0.04);
+    padding: 28px 24px;
+    border: 1px solid rgba(184,150,46,0.1);
+    text-align: center;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .network-item:hover {
+    background: rgba(184,150,46,0.06);
+    border-color: rgba(184,150,46,0.25);
+  }
+  .network-item-num {
+    font-family: var(--ff-serif);
+    font-size: 36px; font-weight: 300;
+    color: var(--gold); line-height: 1; margin-bottom: 6px;
+    opacity: 1;
+  }
+  .network-item-label {
+    font-size: 10px; letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(245,242,237,0.45);
+  }
+
+  /* ─── LOGO BARS ────────────────────────────────────────────────────────── */
+  .logo-bar {
+    background: var(--ink-soft);
+    padding: 64px 60px;
+    overflow: hidden;
+    border-top: 1px solid rgba(184,150,46,0.12);
+  }
+  .logo-bar-label {
+    font-family: var(--ff-mono); font-size: 9px;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    color: rgba(184,150,46,0.5);
+    text-align: center; margin-bottom: 40px;
+    display: flex; align-items: center; justify-content: center; gap: 20px;
+  }
+  .logo-bar-label::before,
+  .logo-bar-label::after {
+    content: ''; flex: 1; height: 1px;
+    background: rgba(184,150,46,0.15); max-width: 120px;
+  }
+  .logo-track-wrap {
+    overflow: hidden; position: relative;
+  }
+  .logo-track-wrap::before,
+  .logo-track-wrap::after {
+    content: '';
+    position: absolute; top: 0; bottom: 0; width: 80px;
+    z-index: 2; pointer-events: none;
+  }
+  .logo-track-wrap::before {
+    left: 0;
+    background: linear-gradient(to right, var(--ink-soft), transparent);
+  }
+  .logo-track-wrap::after {
+    right: 0;
+    background: linear-gradient(to left, var(--ink-soft), transparent);
+  }
+  .logo-track {
+    display: flex; align-items: center;
+    animation: scrollLogos 45s linear infinite;
+    width: max-content;
+    will-change: transform;
+  }
+  .logo-track:hover,
+  .logo-track-wrap:hover .logo-track { animation-play-state: paused; }
+  .logo-track-2 {
+    animation-duration: 55s;
+    animation-direction: reverse;
+  }
+  @keyframes scrollLogos {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  .logo-item {
+    padding: 0 40px;
+    border-right: 1px solid rgba(184,150,46,0.12);
+    white-space: nowrap;
+    font-family: var(--ff-sans);
+    font-size: 14px; font-weight: 300;
+    color: rgba(245,242,237,0.3);
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+    flex-shrink: 0;
+  }
+  .logo-item:hover { color: rgba(245,242,237,0.7); }
+  .logo-item.uni {
+    font-family: var(--ff-serif);
+    font-size: 17px; font-weight: 300;
+    color: rgba(245,242,237,0.35);
+    font-style: italic;
+  }
+  .logo-item.uni:hover { color: var(--paper); }
+  .logo-bar + .logo-bar {
+    border-top: 1px solid rgba(10,10,15,0.06);
+    padding-top: 48px;
+  }
+
+  /* ─── RESEARCH ─────────────────────────────────────────────────────────── */
+  .research {
+    background: var(--paper);
+    padding: 120px 60px;
+  }
+  .research-inner {
+    display: grid; grid-template-columns: 1fr 1.2fr;
+    gap: 100px; align-items: start;
+  }
+  .research .section-label { color: var(--gold); }
+  .research .section-title { color: var(--ink); }
+  .research .section-body  { color: rgba(10,10,15,0.6); }
+  .research-stats {
+    display: grid; grid-template-columns: repeat(3,1fr);
+    gap: 2px; margin-top: 40px;
+  }
+  .research-stat {
+    background: var(--ink);
+    padding: 24px 20px;
+    text-align: center;
+  }
+  .research-stat-num {
+    font-family: var(--ff-serif);
+    font-size: 40px; font-weight: 300;
+    color: var(--gold); line-height: 1;
+    margin-bottom: 6px;
+  }
+  .research-stat-num span {
+    font-size: 0.5em; color: var(--gold-lt);
+  }
+  .research-stat-label {
+    font-size: 9px; letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(245,242,237,0.4);
+  }
+  .research-pillars {
+    display: flex; flex-direction: column; gap: 2px;
+  }
+  .research-pillar {
+    background: white;
+    padding: 32px 36px;
+    border-left: 3px solid transparent;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .research-pillar:hover {
+    border-left-color: var(--gold);
+    background: var(--paper);
+  }
+  .research-pillar-highlight {
+    background: var(--ink);
+    border-left-color: var(--gold) !important;
+  }
+  .research-pillar-num {
+    font-family: var(--ff-mono);
+    font-size: 10px; letter-spacing: 0.2em;
+    color: var(--gold); margin-bottom: 10px;
+  }
+  .research-pillar-title {
+    font-family: var(--ff-serif);
+    font-size: 18px; font-weight: 500;
+    color: var(--ink); margin-bottom: 8px; line-height: 1.3;
+  }
+  .research-pillar-highlight .research-pillar-title { color: var(--paper); }
+  .research-pillar-body {
+    font-size: 13px; line-height: 1.75;
+    color: rgba(10,10,15,0.55);
+  }
+  .research-pillar-highlight .research-pillar-body {
+    color: rgba(245,242,237,0.5);
+  }
+
+  /* ─── CTA ───────────────────────────────────────────────────────────────── */
+  .cta-section {
+    background: var(--ink);
+    text-align: center;
+    padding: 160px 60px;
+    position: relative; overflow: hidden;
+  }
+  .cta-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 50%,
+      rgba(184,150,46,0.06) 0%, transparent 70%);
+  }
+  .cta-section .section-label {
+    justify-content: center;
+  }
+  .cta-section .section-label::before { display: none; }
+  .cta-section .section-label::after {
+    content: ''; display: block;
+    width: 30px; height: 1px; background: var(--gold);
+  }
+  .cta-headline {
+    font-family: var(--ff-serif);
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 300; line-height: 1.1;
+    color: var(--paper); margin: 0 auto 20px;
+    max-width: 700px; position: relative; z-index: 1;
+  }
+  .cta-headline em { font-style: italic; color: var(--gold); }
+  .cta-sub {
+    font-family: var(--ff-serif);
+    font-size: 20px; font-weight: 300; font-style: italic;
+    color: rgba(245,242,237,0.5);
+    margin-bottom: 56px; position: relative; z-index: 1;
+  }
+  .cta-actions {
+    display: flex; gap: 20px;
+    justify-content: center; align-items: center;
+    position: relative; z-index: 1;
+  }
+  .btn-large {
+    font-family: var(--ff-sans);
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ink); background: var(--gold);
+    padding: 20px 56px; text-decoration: none;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    display: inline-block;
+  }
+  .btn-large:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 16px 48px rgba(184,150,46,0.35);
+  }
+  .btn-large-ghost {
+    font-family: var(--ff-sans);
+    font-size: 12px; font-weight: 400;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(245,242,237,0.6); text-decoration: none;
+    border: 1px solid rgba(245,242,237,0.2);
+    padding: 20px 56px;
+    transition: color 0.3s, border-color 0.3s;
+    display: inline-block;
+  }
+  .btn-large-ghost:hover {
+    color: var(--paper);
+    border-color: rgba(245,242,237,0.5);
+  }
+
+  /* ─── FOOTER ────────────────────────────────────────────────────────────── */
+  footer {
+    background: var(--ink-soft);
+    padding: 60px;
+    border-top: 1px solid var(--rule);
+    display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 60px;
+  }
+  .footer-brand .nav-logo { margin-bottom: 16px; }
+  .footer-tagline {
+    font-family: var(--ff-serif);
+    font-size: 14px; font-style: italic;
+    color: rgba(245,242,237,0.4);
+    line-height: 1.6;
+  }
+  .footer-col-title {
+    font-family: var(--ff-mono);
+    font-size: 9px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-links a {
+    font-size: 13px; color: rgba(245,242,237,0.45);
+    text-decoration: none; transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--paper); }
+  .footer-bottom {
+    background: var(--ink-soft);
+    padding: 20px 60px;
+    border-top: 1px solid var(--rule);
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-copy {
+    font-family: var(--ff-mono);
+    font-size: 10px; letter-spacing: 0.1em;
+    color: rgba(245,242,237,0.25);
+  }
+
+  /* ─── SCROLL ANIMATIONS ─────────────────────────────────────────────────── */
+  .reveal {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.12s; }
+  .reveal-delay-2 { transition-delay: 0.24s; }
+  .reveal-delay-3 { transition-delay: 0.36s; }
+
+  /* ─── RESPONSIVE ────────────────────────────────────────────────────────── */
+  @media (max-width: 640px) {
+    .audience-grid { grid-template-columns: 1fr; }
+    .logo-bar { padding: 40px 24px; }
+    .logo-item { padding: 0 24px; font-size: 12px; }
+    .logo-item.uni { font-size: 13px; }
+  }
+
+  @media (max-width: 1024px) {
+    nav { padding: 20px 32px; }
+    .nav-links { gap: 24px; }
+    section { padding: 80px 32px; }
+    .hero { padding: 0 32px; }
+    .tension { grid-template-columns: 1fr; }
+    .tension-left { border-right: none; border-bottom: 1px solid var(--rule); padding: 60px 40px; }
+    .tension-right { padding: 60px 40px; }
+    .pillars-header { grid-template-columns: 1fr; gap: 24px; }
+    .pillars-grid { grid-template-columns: 1fr; }
+    .beliefs-grid { grid-template-columns: 1fr; }
+    .beliefs-visual { display: none; }
+    .audience-grid { grid-template-columns: 1fr 1fr; }
+    .research-inner { grid-template-columns: 1fr; gap: 48px; }
+    .research-stats { grid-template-columns: repeat(3,1fr); }
+    .programs-grid { grid-template-columns: 1fr; }
+    .network-inner { grid-template-columns: 1fr; }
+    .hero-stats { grid-template-columns: 1fr; }
+    .hero-stat { border-right: none; border-bottom: 1px solid var(--rule); padding: 24px 0; }
+    footer { grid-template-columns: 1fr 1fr; }
+    .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    .provocation { padding: 28px 32px; }
+    .cta-section { padding: 100px 32px; }
+  }
+</style>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- Custom Cursor -->
+<div class="cursor" aria-hidden="true">
+  <div class="cursor-ring"></div>
+  <div class="cursor-dot"></div>
+</div>
+
+<!-- Navigation -->
+<nav id="main-nav" aria-label="Main navigation">
+  <a href="#" class="nav-logo" aria-label="ZAI Institute — home">
+    <svg aria-hidden="true" width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Icon mark -->
+      <rect x="0.4" y="0.4" width="29.2" height="29.2" stroke="#B8962E" stroke-width="0.6" fill="none"/>
+      <line x1="6" y1="7" x2="24" y2="7" stroke="#F5F2ED" stroke-width="1.4"/>
+      <line x1="24" y1="7" x2="6" y2="23" stroke="#F5F2ED" stroke-width="1.4"/>
+      <line x1="6" y1="23" x2="24" y2="23" stroke="#F5F2ED" stroke-width="1.4"/>
+      <circle cx="24" cy="7" r="2" fill="#B8962E"/>
+      <circle cx="6" cy="23" r="2" fill="#B8962E"/>
+      <!-- Wordmark -->
+      <text x="38" y="21" font-family="Cormorant Garamond, Georgia, serif" font-size="20" font-weight="300" fill="#F5F2ED" letter-spacing="2">ZAI</text>
+      <line x1="82" y1="5" x2="82" y2="27" stroke="rgba(184,150,46,0.22)" stroke-width="0.4"/>
+      <text x="89" y="15" font-family="DM Sans, sans-serif" font-size="7" font-weight="400" fill="rgba(245,242,237,0.45)" letter-spacing="4">INSTITUTE</text>
+    </svg>
+  </a>
+  <ul class="nav-links" role="list" aria-label="Site sections">
+    <li><a href="#about">About</a></li>
+    <li><a href="#pillars">Approach</a></li>
+    <li><a href="#programs">Programs</a></li>
+    <li><a href="#audience">Who We Serve</a></li>
+    <li><a href="#network">Network</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="contact.html" class="nav-cta">Partner With Us</a></li>
+  </ul>
+</nav>
+
+<!-- Hero -->
+<main id="main-content">
+<section class="hero" aria-label="Hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-orb" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">ZAI Institute — Est. 2014</div>
+    <h1 class="hero-headline">
+      The future of work
+      <em><span class="line2">is already here.</span></em>
+    </h1>
+    <p class="hero-sub">
+      Is your institution ready — or still preparing people for the world that was?
+    </p>
+    <div class="hero-actions">
+      <a href="contact.html" class="btn-primary">Request a Conversation</a>
+      <a href="#about" class="btn-ghost">Our Story</a>
+    </div>
+  </div>
+
+  <div class="hero-stats" role="list" aria-label="ZAI Institute key statistics">
+    <div class="hero-stat" role="listitem">
+      <div class="hero-stat-num">60<span style="font-size:0.5em;color:var(--gold-light)">+</span></div>
+      <div class="hero-stat-label">University Partnerships</div>
+    </div>
+    <div class="hero-stat" role="listitem">
+      <div class="hero-stat-num">48<span style="font-size:0.5em;color:var(--gold-light)">cr</span></div>
+      <div class="hero-stat-label">AI Concentration Curriculum</div>
+    </div>
+    <div class="hero-stat" role="listitem">
+      <div class="hero-stat-num">30<span style="font-size:0.5em;color:var(--gold-light)">day</span></div>
+      <div class="hero-stat-label">Time to First Launch</div>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="provocation" aria-hidden="true">
+  <div class="provocation-track" id="marquee-track">
+    <span>The question is not whether AI will transform higher education</span>
+    <span class="dot">◆</span>
+    <span>It already has</span>
+    <span class="dot">◆</span>
+    <span>The question is whether your institution will lead — or react</span>
+    <span class="dot">◆</span>
+    <span>The future of work is already here</span>
+    <span class="dot">◆</span>
+    <span>The question is not whether AI will transform higher education</span>
+    <span class="dot">◆</span>
+    <span>It already has</span>
+    <span class="dot">◆</span>
+    <span>The question is whether your institution will lead — or react</span>
+    <span class="dot">◆</span>
+    <span>The future of work is already here</span>
+    <span class="dot">◆</span>
+  </div>
+</div>
+
+<!-- Tension / About -->
+<div class="tension" id="about" role="region" aria-label="Our story and the problem we solve">
+  <div class="tension-left">
+    <div class="section-label">What We Saw</div>
+    <blockquote class="tension-quote">
+      "The greatest untapped resource in education is not technology — it is the connection between university leadership and industry leadership."
+    </blockquote>
+    <div class="tension-attr">ZAI Institute Founding Principle</div>
+  </div>
+  <div class="tension-right">
+    <div class="section-label">The Problem We Solve</div>
+    <ul class="tension-list">
+      <li class="tension-item">
+        <div class="tension-num">01</div>
+        <div class="tension-text">
+          <strong>Universities are behind.</strong>
+          Curriculum committees cannot move at the speed AI demands. Graduates leave without the skills the workforce requires — through no fault of their own.
+        </div>
+      </li>
+      <li class="tension-item">
+        <div class="tension-num">02</div>
+        <div class="tension-text">
+          <strong>Employers cannot find talent.</strong>
+          Organizations are ready for AI-augmented work. The pipeline of AI-ready graduates is not keeping pace with demand.
+        </div>
+      </li>
+      <li class="tension-item">
+        <div class="tension-num">03</div>
+        <div class="tension-text">
+          <strong>Individuals are afraid.</strong>
+          Capable, talented people feel the quiet fear of falling behind. They deserve capability — not just reassurance.
+        </div>
+      </li>
+      <li class="tension-item">
+        <div class="tension-num">04</div>
+        <div class="tension-text">
+          <strong>The window is closing.</strong>
+          There is no later. The institutions that move with intention now will define the next era. The ones that wait will spend it catching up.
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Pillars -->
+<section class="pillars" id="pillars" aria-label="Our approach">
+  <div class="pillars-header">
+    <div>
+      <div class="section-label">Our Approach</div>
+      <h2 class="section-title">Four things that<br><em>set us apart</em></h2>
+    </div>
+    <p class="section-body">
+      We are not a platform. Not a consultant. Not a course vendor. We are an institute — built with the rigor, the relationships, and the resolve to make AI transformation durable.
+    </p>
+  </div>
+  <div class="pillars-grid">
+    <div class="pillar">
+      <div class="pillar-num">01 ——</div>
+      <div class="pillar-title">We Stay</div>
+      <div class="pillar-body">We are not consultants who deliver recommendations and disappear. We work alongside presidents, provosts, faculty, and industry leaders to build systems that last. The measure of our success is what your institution can sustain after we have built it together.</div>
+      <div class="pillar-accent" aria-hidden="true">I</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">02 ——</div>
+      <div class="pillar-title">Faculty Lead. We Enable.</div>
+      <div class="pillar-body">Faculty are the authors and stewards of curriculum. That does not change. What changes is the infrastructure, network intelligence, and AI-powered tools available to them — allowing curriculum to evolve at the pace the world demands without compromising academic judgment or institutional control.</div>
+      <div class="pillar-accent" aria-hidden="true">II</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">03 ——</div>
+      <div class="pillar-title">Credentials That Open Doors</div>
+      <div class="pillar-body">A ZAI Institute credential tells an employer something specific — this person understands AI, can work alongside it, and knows where the human advantage lies. We ensure our credentials carry academic weight with universities and market weight with employers. Both doors, simultaneously.</div>
+      <div class="pillar-accent" aria-hidden="true">III</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-num">04 ——</div>
+      <div class="pillar-title">A Network That Accelerates</div>
+      <div class="pillar-body">Knowledge without connection is incomplete. ZAI Institute graduates enter a curated ecosystem of executives, employers, and innovators actively building AI-ready organizations. This is not a directory. It is a deliberate, managed network designed to turn learning into opportunity.</div>
+      <div class="pillar-accent" aria-hidden="true">IV</div>
+    </div>
+  </div>
+</section>
+
+<!-- Beliefs -->
+<section class="beliefs" aria-label="What we believe">
+  <div class="beliefs-grid">
+    <div>
+      <div class="section-label">What We Believe</div>
+      <h2 class="section-title">Our<br><em>convictions</em></h2>
+      <div class="beliefs-list">
+        <div class="belief active" role="button" tabindex="0" aria-expanded="true">
+          <div class="belief-header">
+            <div class="belief-title">Universities are not in decline</div>
+            <div class="belief-arrow">+</div>
+          </div>
+          <div class="belief-body">They are on the edge of their most important reinvention. The institutions that embrace AI thoughtfully — as a force to harness rather than a threat to manage — will define the next era of higher education.</div>
+        </div>
+        <div class="belief" role="button" tabindex="0" aria-expanded="false">
+          <div class="belief-header">
+            <div class="belief-title">The human advantage is real</div>
+            <div class="belief-arrow">+</div>
+          </div>
+          <div class="belief-body">Creativity, judgment, emotional intelligence, ethical reasoning — these are not going away. But they only protect you when combined with the ability to work alongside AI, not in ignorance of it.</div>
+        </div>
+        <div class="belief" role="button" tabindex="0" aria-expanded="false">
+          <div class="belief-header">
+            <div class="belief-title">Connection is the untapped resource</div>
+            <div class="belief-arrow">+</div>
+          </div>
+          <div class="belief-body">The greatest resource in education is the connection between university leadership and industry leadership. When those two forces align, the transformation that results is faster, deeper, and more durable than either could achieve alone.</div>
+        </div>
+        <div class="belief" role="button" tabindex="0" aria-expanded="false">
+          <div class="belief-header">
+            <div class="belief-title">Urgency and patience coexist</div>
+            <div class="belief-arrow">+</div>
+          </div>
+          <div class="belief-body">The moment demands urgency. Transformation requires patience. The institutions that get this right hold both simultaneously — moving faster than comfortable, more carefully than the market demands. ZAI exists to help them do exactly that.</div>
+        </div>
+      </div>
+    </div>
+    <div class="beliefs-visual">
+      <div class="beliefs-ring" aria-hidden="true">
+        <div class="beliefs-dot"></div>
+        <div class="beliefs-ring-center">
+          <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.5" y="0.5" width="89" height="89" stroke="rgba(184,150,46,0.3)" stroke-width="0.6" fill="none"/>
+            <line x1="18" y1="22" x2="72" y2="22" stroke="#F5F2ED" stroke-width="1.8"/>
+            <line x1="72" y1="22" x2="18" y2="68" stroke="#F5F2ED" stroke-width="1.8"/>
+            <line x1="18" y1="68" x2="72" y2="68" stroke="#F5F2ED" stroke-width="1.8"/>
+            <circle cx="72" cy="22" r="4" fill="#B8962E"/>
+            <circle cx="18" cy="68" r="4" fill="#B8962E"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Audience -->
+<section class="audience" id="audience" aria-label="Who we serve">
+  <div class="section-label">Who We Serve</div>
+  <h2 class="section-title" style="margin-bottom:0">Four audiences.<br><em>One mission.</em></h2>
+  <div class="audience-grid">
+
+    <div class="audience-card">
+      <div class="audience-icon">∑</div>
+      <div class="audience-title">University Leaders</div>
+      <div class="audience-body">Presidents, provosts, and academic deans who cannot afford to graduate another class without AI fluency — and who want a partner with the content, technology, and track record to make it happen fast. We work alongside your faculty, not around them.</div>
+      <a href="contact.html" class="audience-link">Partner with ZAI →</a>
+      <div class="audience-bg" aria-hidden="true">U</div>
+    </div>
+
+    <div class="audience-card" style="transition-delay:0.1s">
+      <div class="audience-icon">◈</div>
+      <div class="audience-title">Organizations & Employers</div>
+      <div class="audience-body">CHROs, L&D leaders, and CEOs who need their workforce AI-ready now — not in two years. We deploy our certificate programs inside your organization, train your managers to coach AI adoption, and give your team credentials that signal real capability to the market.</div>
+      <a href="contact.html" class="audience-link">Train your organization →</a>
+      <div class="audience-bg" aria-hidden="true">O</div>
+    </div>
+
+    <div class="audience-card" style="transition-delay:0.2s">
+      <div class="audience-icon">◎</div>
+      <div class="audience-title">Learners & Professionals</div>
+      <div class="audience-body">Every person who has felt the quiet fear of falling behind — and who wants not just reassurance but actual capability that changes what they can do and how they are valued. Our programs meet you where you are and move you to where the market is going.</div>
+      <a href="#programs" class="audience-link">Explore programs →</a>
+      <div class="audience-bg" aria-hidden="true">L</div>
+    </div>
+
+    <div class="audience-card" style="transition-delay:0.3s">
+      <div class="audience-icon">◑</div>
+      <div class="audience-title">Research Partners</div>
+      <div class="audience-body">Institutions, foundations, and policy organizations seeking rigorous data on AI readiness across higher education and the workforce. Our University AI Readiness Study provides the benchmarks the field has been missing — and founding partners shape the research agenda.</div>
+      <a href="#research" class="audience-link">Join the study →</a>
+      <div class="audience-bg" aria-hidden="true">R</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Programs -->
+<section class="programs" id="programs" aria-label="Our programs">
+  <div class="section-label" style="color:var(--gold)">Our Programs</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:48px">
+    <h2 class="section-title" style="color:var(--ink)">Programs built for<br><em style="color:var(--gold)">where we are now.</em></h2>
+    <p class="section-body" style="color:rgba(10,10,15,0.6)">Every ZAI Institute program is evergreen — continuously updated as the AI landscape evolves, powered by Gogentic AI, and designed to remain relevant not just at graduation but throughout a career.</p>
+  </div>
+  <div class="programs-grid" role="list" aria-label="ZAI Institute programs">
+    <div class="program-card">
+      <div class="program-tag">Certificate — Foundation</div>
+      <div class="program-title">How to Be Indispensable in the Age of AI — Foundation</div>
+      <div class="program-duration">4 Hours · Asynchronous · Self-Paced</div>
+      <div class="program-desc">The foundational AI readiness program. Equips every student and professional with the mindset, skills, and strategies to remain indispensable alongside AI. Deployable university-wide as a requirement or orientation complement.</div>
+      <a href="contact.html" class="program-link">Learn More →</a>
+    </div>
+    <div class="program-card">
+      <div class="program-tag">Certificate — Professional</div>
+      <div class="program-title">How to Be Indispensable in the Age of AI — Professional</div>
+      <div class="program-duration">32 Hours · 8 Modules · Executive Network Included</div>
+      <div class="program-desc">A comprehensive deep dive from AI literacy to practical mastery. Eight modules covering AI tools, data literacy, ethics, industry applications, and career strategy. Includes capstone project and executive network access.</div>
+      <a href="contact.html" class="program-link">Learn More →</a>
+    </div>
+    <div class="program-card">
+      <div class="program-tag">Institutional · Faculty & Staff</div>
+      <div class="program-title">University AI Readiness Training</div>
+      <div class="program-duration">5 Sessions · Live + Async · All Levels</div>
+      <div class="program-desc">Purpose-built for academic and administrative professionals. Transforms potential anxiety about AI into confidence and competitive advantage — turning faculty into champions for student AI programs rather than obstacles to them.</div>
+      <a href="contact.html" class="program-link">Learn More →</a>
+    </div>
+    <div class="program-card" style="background:var(--ink);border:1px solid rgba(184,150,46,0.2)">
+      <div class="program-tag" style="background:rgba(184,150,46,0.1)">Coming · Full Concentration</div>
+      <div class="program-title" style="color:var(--paper)">AI & the Future of Work — 48 Credit Concentration</div>
+      <div class="program-duration" style="color:rgba(245,242,237,0.4)">48 Credit Hours · Full Undergraduate Pathway</div>
+      <div class="program-desc" style="color:rgba(245,242,237,0.5)">A complete undergraduate concentration in Artificial Intelligence and the Future of Work. Built modularly from our existing programs, designed for institutions ready to make AI readiness a core academic identity.</div>
+      <a href="contact.html" class="program-link" style="color:var(--gold)">Join the Waitlist →</a>
+    </div>
+  </div>
+</section>
+
+<!-- Network -->
+<section class="network" id="network" aria-label="The ZAI Network">
+  <div class="network-inner">
+    <div>
+      <div class="section-label">The ZAI Network</div>
+      <h2 class="section-title">Knowledge without<br><em>connection</em><br>is incomplete.</h2>
+      <p class="section-body" style="margin-bottom:32px">
+        ZAI Institute graduates enter a curated ecosystem of executives, employers, and innovators who are actively building the AI-ready organizations of the future. Built over years of deep partnership across academia and industry.
+      </p>
+      <a href="contact.html" class="btn-primary" style="display:inline-block">Access the Network</a>
+      <div class="network-partnerships">
+        <div class="network-item">
+          <div class="network-item-num">60+</div>
+          <div class="network-item-label">University Partners</div>
+        </div>
+        <div class="network-item">
+          <div class="network-item-num">∞</div>
+          <div class="network-item-label">Executive Connections</div>
+        </div>
+        <div class="network-item">
+          <div class="network-item-num">48</div>
+          <div class="network-item-label">US States Represented</div>
+        </div>
+      </div>
+    </div>
+    <div style="position:relative">
+      <div class="network-number" aria-hidden="true">60+</div>
+    </div>
+  </div>
+</section>
+
+<!-- Logo Bars -->
+<div class="logo-bar" role="region" aria-label="Corporate network logos">
+  <div class="logo-bar-label">Executives in our network represent organizations including</div>
+  <div class="logo-track-wrap">
+    <div class="logo-track" aria-label="Corporate network"><span class="logo-item">Accenture</span><span class="logo-item">Aetna</span><span class="logo-item">AIG</span><span class="logo-item">AT&T</span><span class="logo-item">Bank of America</span><span class="logo-item">BlueCross BlueShield</span><span class="logo-item">Cigna</span><span class="logo-item">Coldwell Banker</span><span class="logo-item">Comcast</span><span class="logo-item">Deloitte</span><span class="logo-item">Delta Dental</span><span class="logo-item">Dow Jones</span><span class="logo-item">Estée Lauder</span><span class="logo-item">Forbes</span><span class="logo-item">The Hartford</span><span class="logo-item">iHeartMedia</span><span class="logo-item">Intel</span><span class="logo-item">Johnson &amp; Johnson</span><span class="logo-item">Marriott</span><span class="logo-item">Mastercard</span><span class="logo-item">Merck</span><span class="logo-item">Microsoft</span><span class="logo-item">Morgan Stanley</span><span class="logo-item">New York Life</span><span class="logo-item">Nielsen</span><span class="logo-item">Novartis</span><span class="logo-item">Oppenheimer Funds</span><span class="logo-item">Prudential</span><span class="logo-item">Salesforce</span><span class="logo-item">TD Ameritrade</span><span class="logo-item">Adobe</span><span class="logo-item">IBM</span><span class="logo-item">Dun &amp; Bradstreet</span><span class="logo-item">Allstate</span><span class="logo-item">JPMorgan Chase</span><span class="logo-item">Oracle</span><span class="logo-item">Bristol Myers Squibb</span><span class="logo-item">MetLife</span><span class="logo-item">Crum &amp; Forster</span><span class="logo-item">The New York Times</span><span class="logo-item" aria-hidden="true">Accenture</span><span class="logo-item" aria-hidden="true">Aetna</span><span class="logo-item" aria-hidden="true">AIG</span><span class="logo-item" aria-hidden="true">AT&T</span><span class="logo-item" aria-hidden="true">Bank of America</span><span class="logo-item" aria-hidden="true">BlueCross BlueShield</span><span class="logo-item" aria-hidden="true">Cigna</span><span class="logo-item" aria-hidden="true">Coldwell Banker</span><span class="logo-item" aria-hidden="true">Comcast</span><span class="logo-item" aria-hidden="true">Deloitte</span><span class="logo-item" aria-hidden="true">Delta Dental</span><span class="logo-item" aria-hidden="true">Dow Jones</span><span class="logo-item" aria-hidden="true">Estée Lauder</span><span class="logo-item" aria-hidden="true">Forbes</span><span class="logo-item" aria-hidden="true">The Hartford</span><span class="logo-item" aria-hidden="true">iHeartMedia</span><span class="logo-item" aria-hidden="true">Intel</span><span class="logo-item" aria-hidden="true">Johnson &amp; Johnson</span><span class="logo-item" aria-hidden="true">Marriott</span><span class="logo-item" aria-hidden="true">Mastercard</span><span class="logo-item" aria-hidden="true">Merck</span><span class="logo-item" aria-hidden="true">Microsoft</span><span class="logo-item" aria-hidden="true">Morgan Stanley</span><span class="logo-item" aria-hidden="true">New York Life</span><span class="logo-item" aria-hidden="true">Nielsen</span><span class="logo-item" aria-hidden="true">Novartis</span><span class="logo-item" aria-hidden="true">Oppenheimer Funds</span><span class="logo-item" aria-hidden="true">Prudential</span><span class="logo-item" aria-hidden="true">Salesforce</span><span class="logo-item" aria-hidden="true">TD Ameritrade</span><span class="logo-item" aria-hidden="true">Adobe</span><span class="logo-item" aria-hidden="true">IBM</span><span class="logo-item" aria-hidden="true">Dun &amp; Bradstreet</span><span class="logo-item" aria-hidden="true">Allstate</span><span class="logo-item" aria-hidden="true">JPMorgan Chase</span><span class="logo-item" aria-hidden="true">Oracle</span><span class="logo-item" aria-hidden="true">Bristol Myers Squibb</span><span class="logo-item" aria-hidden="true">MetLife</span><span class="logo-item" aria-hidden="true">Crum &amp; Forster</span><span class="logo-item" aria-hidden="true">The New York Times</span></div>
+  </div>
+</div>
+
+<div class="logo-bar logo-bar-unis" role="region" aria-label="University partner logos">
+  <div class="logo-bar-label">University partners include</div>
+  <div class="logo-track-wrap">
+    <div class="logo-track logo-track-2" aria-label="University partners"><span class="logo-item uni">UCLA</span><span class="logo-item uni">University of Miami</span><span class="logo-item uni">Seton Hall University</span><span class="logo-item uni">University of Colorado Colorado Springs</span><span class="logo-item uni">University of Minnesota Mankato</span><span class="logo-item uni">University of Richmond</span><span class="logo-item uni">Ohio State University</span><span class="logo-item uni">University of San Francisco</span><span class="logo-item uni">University of Colorado Boulder</span><span class="logo-item uni" aria-hidden="true">UCLA</span><span class="logo-item uni" aria-hidden="true">University of Miami</span><span class="logo-item uni" aria-hidden="true">Seton Hall University</span><span class="logo-item uni" aria-hidden="true">University of Colorado Colorado Springs</span><span class="logo-item uni" aria-hidden="true">University of Minnesota Mankato</span><span class="logo-item uni" aria-hidden="true">University of Richmond</span><span class="logo-item uni" aria-hidden="true">Ohio State University</span><span class="logo-item uni" aria-hidden="true">University of San Francisco</span><span class="logo-item uni" aria-hidden="true">University of Colorado Boulder</span></div>
+  </div>
+</div>
+
+<!-- Research -->
+<section class="research" id="research" aria-label="Research and insight">
+  <div class="research-inner">
+    <div class="research-left">
+      <div class="section-label">Research & Insight</div>
+      <h2 class="section-title">The <em>University AI<br>Readiness Study</em></h2>
+      <p class="section-body" style="margin-bottom:36px">The definitive benchmark for how higher education institutions are preparing — or failing to prepare — students, faculty, and staff for an AI-driven economy. ZAI Institute leads the only longitudinal study of its kind across American universities.</p>
+      <div class="research-stats">
+        <div class="research-stat">
+          <div class="research-stat-num">60<span>+</span></div>
+          <div class="research-stat-label">Participating Universities</div>
+        </div>
+        <div class="research-stat">
+          <div class="research-stat-num">3</div>
+          <div class="research-stat-label">Research Dimensions</div>
+        </div>
+        <div class="research-stat">
+          <div class="research-stat-num">12<span>mo</span></div>
+          <div class="research-stat-label">Longitudinal Tracking</div>
+        </div>
+      </div>
+      <a href="contact.html" class="btn-primary" style="margin-top:40px;display:inline-block">Become a Founding Institution</a>
+    </div>
+    <div class="research-right">
+      <div class="research-pillars">
+        <div class="research-pillar">
+          <div class="research-pillar-num">01</div>
+          <div class="research-pillar-title">Student AI Readiness</div>
+          <div class="research-pillar-body">Baseline and longitudinal measurement of AI fluency, confidence, and practical capability across undergraduate and graduate populations. Benchmarked nationally by institution type, major, and cohort year.</div>
+        </div>
+        <div class="research-pillar">
+          <div class="research-pillar-num">02</div>
+          <div class="research-pillar-title">Faculty & Institutional Adoption</div>
+          <div class="research-pillar-body">How are faculty integrating AI into pedagogy? How are institutions governing AI use, academic integrity, and curriculum evolution? The first rigorous data set measuring adoption at the institutional level.</div>
+        </div>
+        <div class="research-pillar">
+          <div class="research-pillar-num">03</div>
+          <div class="research-pillar-title">Workforce Alignment</div>
+          <div class="research-pillar-body">The gap between what universities are producing and what employers need. Measured annually. Published publicly. Used by CHROs, boards, and policy makers to drive investment and curriculum change.</div>
+        </div>
+        <div class="research-pillar research-pillar-highlight">
+          <div class="research-pillar-num" style="color:var(--gold)">◆</div>
+          <div class="research-pillar-title">Founding institutions receive</div>
+          <div class="research-pillar-body">Full institutional benchmark report · Recognition in all published findings · Priority access to national data · Co-marketing as an AI-forward institution · No cost to participate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="contact" aria-label="Partner with ZAI Institute">
+  <div class="section-label">Begin the Conversation</div>
+  <h2 class="cta-headline">
+    The institutions that move<br>with intention <em>now</em><br>will define what comes next.
+  </h2>
+  <p class="cta-sub">Which side of that sentence does your institution want to be on?</p>
+  <div class="cta-actions">
+    <a href="contact.html" class="btn-large">Request a Partnership Conversation</a>
+    <a href="#programs" class="btn-large-ghost">Explore Programs</a>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer role="contentinfo" aria-label="Site footer">
+  <div class="footer-brand">
+    <a href="#" class="nav-logo" aria-label="ZAI Institute — home">
+      <svg aria-hidden="true" width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0.4" y="0.4" width="29.2" height="29.2" stroke="#B8962E" stroke-width="0.6" fill="none"/>
+        <line x1="6" y1="7" x2="24" y2="7" stroke="#F5F2ED" stroke-width="1.4"/>
+        <line x1="24" y1="7" x2="6" y2="23" stroke="#F5F2ED" stroke-width="1.4"/>
+        <line x1="6" y1="23" x2="24" y2="23" stroke="#F5F2ED" stroke-width="1.4"/>
+        <circle cx="24" cy="7" r="2" fill="#B8962E"/>
+        <circle cx="6" cy="23" r="2" fill="#B8962E"/>
+        <text x="38" y="21" font-family="Cormorant Garamond, Georgia, serif" font-size="20" font-weight="300" fill="#F5F2ED" letter-spacing="2">ZAI</text>
+        <line x1="82" y1="5" x2="82" y2="27" stroke="rgba(184,150,46,0.22)" stroke-width="0.4"/>
+        <text x="89" y="15" font-family="DM Sans, sans-serif" font-size="7" font-weight="400" fill="rgba(245,242,237,0.45)" letter-spacing="4">INSTITUTE</text>
+      </svg>
+    </a>
+    <p class="footer-tagline">Transforming Education<br>for the Age of AI</p>
+  </div>
+  <div>
+    <div class="footer-col-title">Programs</div>
+    <ul class="footer-links">
+      <li><a href="#programs">How to Be Indispensable — Foundation</a></li>
+      <li><a href="#programs">How to Be Indispensable — Professional</a></li>
+      <li><a href="#programs">Faculty AI Training</a></li>
+      <li><a href="#programs">Corporate AI Training</a></li>
+      <li><a href="#programs">AI Concentration</a></li>
+      <li><a href="#research">AI Readiness Study</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Institute</div>
+    <ul class="footer-links">
+      <li><a href="#about">Our Story</a></li>
+      <li><a href="#pillars">Our Approach</a></li>
+      <li><a href="#network">The Network</a></li>
+      <li><a href="#audience">Who We Serve</a></li>
+      <li><a href="contact.html">Partner With Us</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Contact</div>
+    <ul class="footer-links">
+      <li><a href="mailto:info@zaiinstitute.ai">info@zaiinstitute.ai</a></li>
+      <li><a href="tel:+18883847020">(888) 384-7020</a></li>
+      <li><a href="#">Fort Lauderdale, FL</a></li>
+      <li><a href="contact.html">Schedule a Call</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span class="footer-copy">© 2026 ZAI Institute, LLC. All rights reserved.</span>
+  <span class="footer-copy">A Zschool Company</span>
+</div>
+
+<script>
+  // ─── CURSOR ────────────────────────────────────────────────────────────────
+  const dot  = document.querySelector('.cursor-dot');
+  const ring = document.querySelector('.cursor-ring');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+
+  // Only activate on non-touch devices
+  if (window.matchMedia('(pointer: fine)').matches) {
+    document.body.style.cursor = 'none';
+
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      dot.style.left = mx + 'px';
+      dot.style.top  = my + 'px';
+    });
+
+    function animateRing() {
+      rx += (mx - rx) * 0.1;
+      ry += (my - ry) * 0.1;
+      ring.style.left = rx + 'px';
+      ring.style.top  = ry + 'px';
+      requestAnimationFrame(animateRing);
+    }
+    animateRing();
+
+    document.querySelectorAll('a, button, [role="button"]').forEach(el => {
+      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+    });
+
+    document.addEventListener('mouseleave', () => {
+      dot.style.opacity = '0'; ring.style.opacity = '0';
+    });
+    document.addEventListener('mouseenter', () => {
+      dot.style.opacity = '1'; ring.style.opacity = '1';
+    });
+  } else {
+    // Touch device — hide cursor elements entirely
+    if (dot) dot.style.display = 'none';
+    if (ring) ring.style.display = 'none';
+  }
+
+  // ─── HERO FALLBACK — ensure hero content visible even if animation fails ──
+  setTimeout(() => {
+    document.querySelectorAll('.hero-eyebrow, .hero-headline, .hero-sub, .hero-actions, .hero-stats').forEach(el => {
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+    });
+  }, 1500);
+
+  // ─── NAV SCROLL ────────────────────────────────────────────────────────────
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // ─── INTERSECTION OBSERVER ─────────────────────────────────────────────────
+  // Reveal elements: start hidden, animate in on scroll
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.05, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal, .animate-in').forEach(el => observer.observe(el));
+
+  // Fallback: ensure all animated elements become visible after 2s
+  setTimeout(() => {
+    document.querySelectorAll('.reveal, .animate-in').forEach(el => {
+      el.classList.add('visible');
+    });
+  }, 2000);
+
+  // ─── STAGGER DELAYS via JS (applied once on load) ───────────────────────────
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    // already has CSS transition-delay via class; no override needed
+  });
+
+  // ─── BELIEFS ACCORDION ────────────────────────────────────────────────────
+  document.querySelectorAll('.belief').forEach(belief => {
+    const toggle = () => {
+      document.querySelectorAll('.belief').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-expanded', 'false');
+      });
+      belief.classList.add('active');
+      belief.setAttribute('aria-expanded', 'true');
+    };
+    belief.addEventListener('click', toggle);
+    belief.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    });
+  });
+
+  // ─── SMOOTH ACTIVE NAV ─────────────────────────────────────────────────────
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
+      const target = document.querySelector(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Highlight active nav link on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+  function updateActiveNav() {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop - 120;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveNav);
+  updateActiveNav();
+
+</script>
+</body>
+</html>
