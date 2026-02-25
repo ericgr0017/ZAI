@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Partner With Us — ZAI Institute</title>
+
+<!-- Primary SEO -->
+<meta name="description" content="Start a conversation with ZAI Institute. We partner with university leaders and organizations to close the AI readiness gap — deployable in 30 days.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://zaiinstitute.ai/contact">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zaiinstitute.ai/contact">
+<meta property="og:title" content="Partner With Us — ZAI Institute">
+<meta property="og:description" content="Start a conversation with ZAI Institute. We partner with university leaders and organizations to close the AI readiness gap.">
+<meta property="og:image" content="https://zaiinstitute.ai/og-image.png">
+<meta property="og:site_name" content="ZAI Institute">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Partner With Us — ZAI Institute">
+<meta name="twitter:description" content="Start a conversation with ZAI Institute.">
+<meta name="twitter:image" content="https://zaiinstitute.ai/og-image.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect x='1' y='1' width='98' height='98' stroke='%23B8962E' stroke-width='1.5' fill='%230A0A0F'/><line x1='20' y1='25' x2='80' y2='25' stroke='%23F5F2ED' stroke-width='6'/><line x1='80' y1='25' x2='20' y2='75' stroke='%23F5F2ED' stroke-width='6'/><line x1='20' y1='75' x2='80' y2='75' stroke='%23F5F2ED' stroke-width='6'/><circle cx='80' cy='25' r='8' fill='%23B8962E'/><circle cx='20' cy='75' r='8' fill='%23B8962E'/></svg>">
+<meta name="theme-color" content="#0A0A0F">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:       #0A0A0F;
+    --ink-soft:  #1A1A2E;
+    --paper:     #F5F2ED;
+    --paper-dark:#EDE9E2;
+    --gold:      #B8962E;
+    --gold-light:#D4AE4A;
+    --gold-pale: #F0E6C8;
+    --slate:     #2C3E5A;
+    --white:     #FFFFFF;
+    --muted:     #6B6B7A;
+    --rule:      rgba(184,150,46,0.25);
+    --ff-serif:  'Cormorant Garamond', Georgia, serif;
+    --ff-sans:   'DM Sans', sans-serif;
+    --ff-mono:   'DM Mono', monospace;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--ff-sans);
+    background: var(--ink);
+    color: var(--paper);
+    overflow-x: hidden;
+  }
+
+  /* ─── SKIP LINK ─────────────────────────────────────────────────────────── */
+  .skip-link {
+    position: absolute; top: -100px; left: 16px; z-index: 10000;
+    background: var(--gold); color: var(--ink);
+    font-family: var(--ff-sans); font-size: 13px; font-weight: 500;
+    padding: 10px 20px; text-decoration: none;
+    transition: top 0.2s;
+  }
+  .skip-link:focus { top: 16px; }
+
+  /* ─── CURSOR ─────────────────────────────────────────────────────────────── */
+  .cursor-dot {
+    position: fixed; width: 7px; height: 7px;
+    background: var(--gold); border-radius: 50%;
+    pointer-events: none; transform: translate(-50%, -50%);
+    z-index: 9999; transition: width 0.2s, height 0.2s;
+  }
+  .cursor-ring {
+    position: fixed; width: 36px; height: 36px;
+    border: 1px solid rgba(184,150,46,0.55); border-radius: 50%;
+    pointer-events: none; transform: translate(-50%, -50%);
+    z-index: 9998; transition: width 0.3s, height 0.3s, border-color 0.3s;
+  }
+  body.cursor-hover .cursor-ring { width: 56px; height: 56px; border-color: var(--gold); }
+
+  /* ─── SCROLLBAR ──────────────────────────────────────────────────────────── */
+  ::-webkit-scrollbar { width: 3px; }
+  ::-webkit-scrollbar-track { background: var(--ink); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); }
+
+  /* ─── FOCUS ──────────────────────────────────────────────────────────────── */
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+  :focus:not(:focus-visible) { outline: none; }
+
+  /* ─── NAV ────────────────────────────────────────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 24px 60px;
+    background: linear-gradient(to bottom, rgba(10,10,15,0.95) 0%, transparent 100%);
+    backdrop-filter: blur(2px);
+    transition: all 0.4s ease;
+  }
+  nav.scrolled {
+    padding: 16px 60px;
+    background: rgba(10,10,15,0.97);
+    border-bottom: 1px solid var(--rule);
+  }
+  .nav-logo { text-decoration: none; display: flex; align-items: center; transition: opacity 0.3s; }
+  .nav-logo:hover { opacity: 0.85; }
+  .nav-logo svg { display: block; }
+  .nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
+  .nav-links a {
+    font-family: var(--ff-sans); font-size: 12px; font-weight: 400;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(245,242,237,0.65); text-decoration: none;
+    transition: color 0.3s; position: relative;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+    height: 1px; background: var(--gold);
+    transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--paper); }
+  .nav-links a:hover::after { transform: scaleX(1); }
+  .nav-links a.active { color: var(--gold); }
+  .nav-cta {
+    font-family: var(--ff-sans); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--ink) !important; background: var(--gold);
+    padding: 10px 24px; text-decoration: none;
+    transition: background 0.3s, transform 0.2s !important; display: inline-block;
+  }
+  .nav-cta::after { display: none !important; }
+  .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+  /* ─── PAGE HEADER ────────────────────────────────────────────────────────── */
+  .page-header {
+    padding: 160px 60px 80px;
+    position: relative; overflow: hidden;
+    border-bottom: 1px solid var(--rule);
+  }
+  .page-header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(rgba(184,150,46,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(184,150,46,0.04) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+  .page-header::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(44,62,90,0.3) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .page-header-inner {
+    position: relative; z-index: 1;
+    max-width: 700px;
+  }
+  .page-eyebrow {
+    font-family: var(--ff-mono); font-size: 11px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 24px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .page-eyebrow::before {
+    content: ''; display: block; width: 40px; height: 1px; background: var(--gold);
+  }
+  .page-title {
+    font-family: var(--ff-serif);
+    font-size: clamp(48px, 6vw, 80px);
+    font-weight: 300; line-height: 1.05;
+    color: var(--paper); margin-bottom: 20px;
+  }
+  .page-title em { font-style: italic; color: var(--gold); }
+  .page-subtitle {
+    font-family: var(--ff-serif);
+    font-size: clamp(16px, 2vw, 22px);
+    font-weight: 300; font-style: italic;
+    color: rgba(245,242,237,0.5); line-height: 1.6;
+    max-width: 560px;
+  }
+
+  /* ─── MAIN LAYOUT ────────────────────────────────────────────────────────── */
+  .contact-body {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    min-height: calc(100vh - 400px);
+  }
+
+  /* ─── LEFT PANEL ─────────────────────────────────────────────────────────── */
+  .contact-left {
+    padding: 80px 60px;
+    background: var(--ink-soft);
+    border-right: 1px solid var(--rule);
+    position: sticky; top: 0; height: fit-content;
+  }
+  .section-label {
+    font-family: var(--ff-mono); font-size: 10px;
+    letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 40px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .section-label::after {
+    content: ''; flex: 1; height: 1px;
+    background: rgba(184,150,46,0.15); max-width: 80px;
+  }
+
+  /* Audience cards */
+  .audience-options {
+    display: flex; flex-direction: column; gap: 2px;
+    margin-bottom: 56px;
+  }
+  .audience-option {
+    padding: 28px 32px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(184,150,46,0.08);
+    border-left: 3px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .audience-option:hover,
+  .audience-option.selected {
+    background: rgba(184,150,46,0.05);
+    border-color: rgba(184,150,46,0.15);
+    border-left-color: var(--gold);
+  }
+  .audience-option-title {
+    font-family: var(--ff-serif);
+    font-size: 18px; font-weight: 400; font-style: italic;
+    color: var(--paper); margin-bottom: 8px; line-height: 1.3;
+  }
+  .audience-option-desc {
+    font-size: 12px; line-height: 1.7;
+    color: rgba(245,242,237,0.4);
+  }
+
+  /* Contact details */
+  .contact-details {
+    display: flex; flex-direction: column; gap: 24px;
+  }
+  .contact-detail {
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .contact-detail-label {
+    font-family: var(--ff-mono); font-size: 9px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(184,150,46,0.5);
+  }
+  .contact-detail-value {
+    font-size: 14px; color: rgba(245,242,237,0.7);
+    text-decoration: none; transition: color 0.3s;
+  }
+  .contact-detail-value:hover { color: var(--paper); }
+  .contact-rule {
+    height: 1px; background: var(--rule); margin: 8px 0;
+  }
+
+  /* ─── RIGHT PANEL — FORM ─────────────────────────────────────────────────── */
+  .contact-right {
+    padding: 80px 70px;
+    background: var(--ink);
+  }
+
+  /* Form header -->*/
+  .form-header {
+    margin-bottom: 48px;
+  }
+  .form-title {
+    font-family: var(--ff-serif);
+    font-size: 32px; font-weight: 300;
+    color: var(--paper); margin-bottom: 12px; line-height: 1.2;
+  }
+  .form-title em { font-style: italic; color: var(--gold); }
+  .form-subtitle {
+    font-size: 14px; line-height: 1.7;
+    color: rgba(245,242,237,0.45);
+  }
+
+  /* Form grid */
+  .form-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+  .form-group {
+    display: flex; flex-direction: column; gap: 8px;
+  }
+  .form-group.full { grid-column: 1 / -1; }
+
+  label {
+    font-family: var(--ff-mono); font-size: 9px;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: rgba(184,150,46,0.6);
+  }
+  label .required {
+    color: var(--gold); margin-left: 3px;
+  }
+
+  input, select, textarea {
+    font-family: var(--ff-sans); font-size: 14px;
+    color: var(--paper);
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(184,150,46,0.15);
+    padding: 14px 18px;
+    outline: none;
+    transition: border-color 0.3s, background 0.3s;
+    width: 100%;
+    -webkit-appearance: none;
+    border-radius: 0;
+  }
+  input::placeholder, textarea::placeholder {
+    color: rgba(245,242,237,0.2);
+  }
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--gold);
+    background: rgba(184,150,46,0.04);
+  }
+  select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B8962E' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 44px;
+  }
+  select option {
+    background: var(--ink-soft); color: var(--paper);
+  }
+  textarea {
+    resize: vertical; min-height: 140px; line-height: 1.6;
+  }
+
+  /* Hidden Netlify field */
+  .hidden { display: none; }
+
+  /* Interest selector (syncs with left panel) */
+  .interest-pills {
+    display: flex; gap: 8px; flex-wrap: wrap;
+  }
+  .interest-pill {
+    font-family: var(--ff-mono); font-size: 9px;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    padding: 8px 16px;
+    border: 1px solid rgba(184,150,46,0.2);
+    color: rgba(245,242,237,0.4);
+    cursor: pointer; transition: all 0.3s;
+    background: transparent;
+    user-select: none;
+  }
+  .interest-pill:hover {
+    border-color: rgba(184,150,46,0.5);
+    color: rgba(245,242,237,0.7);
+  }
+  .interest-pill.active {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--ink);
+  }
+
+  /* Submit button */
+  .form-footer {
+    margin-top: 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; flex-wrap: wrap;
+  }
+  .form-note {
+    font-size: 12px; line-height: 1.6;
+    color: rgba(245,242,237,0.25); max-width: 320px;
+  }
+  .btn-submit {
+    font-family: var(--ff-sans); font-size: 12px; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--ink); background: var(--gold);
+    padding: 18px 48px; border: none; cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+    flex-shrink: 0;
+    position: relative; overflow: hidden;
+  }
+  .btn-submit:hover {
+    background: var(--gold-light);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(184,150,46,0.3);
+  }
+  .btn-submit:active { transform: translateY(0); }
+  .btn-submit.loading { pointer-events: none; opacity: 0.7; }
+
+  /* ─── SUCCESS STATE ───────────────────────────────────────────────────────── */
+  .success-state {
+    display: none;
+    text-align: center; padding: 80px 40px;
+  }
+  .success-state.visible { display: flex; flex-direction: column; align-items: center; }
+  .success-icon {
+    width: 80px; height: 80px;
+    border: 1px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 32px; font-size: 28px; color: var(--gold);
+  }
+  .success-title {
+    font-family: var(--ff-serif);
+    font-size: 40px; font-weight: 300; font-style: italic;
+    color: var(--paper); margin-bottom: 16px;
+  }
+  .success-body {
+    font-size: 15px; line-height: 1.8;
+    color: rgba(245,242,237,0.5); max-width: 420px;
+    margin-bottom: 40px;
+  }
+  .btn-back {
+    font-family: var(--ff-sans); font-size: 12px;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: var(--gold); text-decoration: none;
+    display: flex; align-items: center; gap: 10px;
+    transition: gap 0.3s;
+  }
+  .btn-back:hover { gap: 16px; }
+
+  /* ─── BOTTOM STRIP ───────────────────────────────────────────────────────── */
+  .bottom-strip {
+    background: var(--ink-soft);
+    border-top: 1px solid var(--rule);
+    padding: 48px 60px;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .strip-item {
+    padding: 0 40px;
+    border-right: 1px solid var(--rule);
+  }
+  .strip-item:first-child { padding-left: 0; }
+  .strip-item:last-child { border-right: none; }
+  .strip-num {
+    font-family: var(--ff-serif);
+    font-size: 44px; font-weight: 300;
+    color: var(--gold); line-height: 1; margin-bottom: 6px;
+  }
+  .strip-label {
+    font-size: 11px; letter-spacing: 0.12em;
+    text-transform: uppercase; color: rgba(245,242,237,0.35);
+  }
+
+  /* ─── FOOTER ─────────────────────────────────────────────────────────────── */
+  footer {
+    background: var(--ink-soft);
+    padding: 40px 60px;
+    border-top: 1px solid var(--rule);
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 16px;
+  }
+  .footer-copy {
+    font-family: var(--ff-mono); font-size: 10px;
+    letter-spacing: 0.1em; color: rgba(245,242,237,0.25);
+  }
+  .footer-back {
+    font-family: var(--ff-mono); font-size: 10px;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(184,150,46,0.5); text-decoration: none;
+    transition: color 0.3s;
+  }
+  .footer-back:hover { color: var(--gold); }
+
+  /* ─── RESPONSIVE ─────────────────────────────────────────────────────────── */
+  @media (max-width: 1024px) {
+    nav { padding: 20px 32px; }
+    .page-header { padding: 120px 32px 60px; }
+    .contact-body { grid-template-columns: 1fr; }
+    .contact-left { position: static; padding: 60px 32px; }
+    .contact-right { padding: 60px 32px; }
+    .form-grid { grid-template-columns: 1fr; }
+    .form-group.full { grid-column: 1; }
+    .bottom-strip { grid-template-columns: 1fr; gap: 24px; }
+    .strip-item { border-right: none; border-bottom: 1px solid var(--rule); padding: 0 0 24px; }
+    .strip-item:last-child { border-bottom: none; padding-bottom: 0; }
+    footer { padding: 32px; }
+  }
+</style>
+</head>
+
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
+<!-- Navigation -->
+<nav id="main-nav" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo" aria-label="ZAI Institute — home">
+    <svg width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0.4" y="0.4" width="29.2" height="29.2" stroke="#B8962E" stroke-width="0.6" fill="none"/>
+      <line x1="6" y1="7" x2="24" y2="7" stroke="#F5F2ED" stroke-width="1.4"/>
+      <line x1="24" y1="7" x2="6" y2="23" stroke="#F5F2ED" stroke-width="1.4"/>
+      <line x1="6" y1="23" x2="24" y2="23" stroke="#F5F2ED" stroke-width="1.4"/>
+      <circle cx="24" cy="7" r="2" fill="#B8962E"/>
+      <circle cx="6" cy="23" r="2" fill="#B8962E"/>
+      <text x="38" y="21" font-family="Cormorant Garamond, Georgia, serif" font-size="20" font-weight="300" fill="#F5F2ED" letter-spacing="2">ZAI</text>
+      <line x1="82" y1="5" x2="82" y2="27" stroke="rgba(184,150,46,0.22)" stroke-width="0.4"/>
+      <text x="89" y="15" font-family="DM Sans, sans-serif" font-size="7" font-weight="400" fill="rgba(245,242,237,0.45)" letter-spacing="4">INSTITUTE</text>
+    </svg>
+  </a>
+  <ul class="nav-links" role="list" aria-label="Site sections">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#pillars">Approach</a></li>
+    <li><a href="index.html#programs">Programs</a></li>
+    <li><a href="index.html#audience">Who We Serve</a></li>
+    <li><a href="index.html#network">Network</a></li>
+    <li><a href="index.html#research">Research</a></li>
+    <li><a href="contact.html" class="nav-cta active" aria-current="page">Partner With Us</a></li>
+  </ul>
+</nav>
+
+<main id="main-content">
+
+  <!-- Page Header -->
+  <header class="page-header">
+    <div class="page-header-inner">
+      <div class="page-eyebrow">Begin the Conversation</div>
+      <h1 class="page-title">Let's build<br>something <em>lasting.</em></h1>
+      <p class="page-subtitle">
+        We don't take on every partnership. We take on the right ones — institutions and organizations ready to move with intention. If that's you, we want to hear from you.
+      </p>
+    </div>
+  </header>
+
+  <!-- Contact Body -->
+  <div class="contact-body">
+
+    <!-- Left Panel -->
+    <aside class="contact-left" aria-label="Partnership information">
+      <div class="section-label">Who We Work With</div>
+
+      <div class="audience-options" role="list">
+        <div class="audience-option selected" role="listitem" data-type="university" tabindex="0" aria-label="University leaders option">
+          <div class="audience-option-title">University Leaders</div>
+          <div class="audience-option-desc">Presidents, provosts, and academic deans ready to make AI readiness a core institutional identity — not a future initiative.</div>
+        </div>
+        <div class="audience-option" role="listitem" data-type="organization" tabindex="0" aria-label="Organizations and employers option">
+          <div class="audience-option-title">Organizations & Employers</div>
+          <div class="audience-option-desc">CHROs, L&D leaders, and CEOs who need their workforce AI-ready now — with credentials that mean something in the market.</div>
+        </div>
+      </div>
+
+      <div class="section-label">Get in Touch</div>
+      <div class="contact-details">
+        <div class="contact-detail">
+          <span class="contact-detail-label">Email</span>
+          <a href="mailto:info@zaiinstitute.ai" class="contact-detail-value">info@zaiinstitute.ai</a>
+        </div>
+        <div class="contact-rule"></div>
+        <div class="contact-detail">
+          <span class="contact-detail-label">Phone</span>
+          <a href="tel:+18883847020" class="contact-detail-value">(888) 384-7020</a>
+        </div>
+        <div class="contact-rule"></div>
+        <div class="contact-detail">
+          <span class="contact-detail-label">Location</span>
+          <span class="contact-detail-value">Fort Lauderdale, FL</span>
+        </div>
+        <div class="contact-rule"></div>
+        <div class="contact-detail">
+          <span class="contact-detail-label">Response Time</span>
+          <span class="contact-detail-value">Within one business day</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Panel — Form -->
+    <div class="contact-right">
+
+      <!-- The Form -->
+      <div id="form-container">
+        <div class="form-header">
+          <h2 class="form-title">Tell us about<br>your <em>institution.</em></h2>
+          <p class="form-subtitle">We read every submission personally. No auto-replies, no sales queue — a real conversation with someone who knows the work.</p>
+        </div>
+
+        <!-- Netlify Form — data-netlify="true" enables Netlify Forms -->
+        <form
+          name="zai-contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          action="/thank-you"
+          id="contact-form"
+          aria-label="Partnership inquiry form"
+          novalidate
+        >
+          <!-- Netlify hidden fields -->
+          <input type="hidden" name="form-name" value="zai-contact"/>
+          <p class="hidden"><label>Don't fill this out: <input name="bot-field"/></label></p>
+
+          <!-- Interest type — syncs with left panel -->
+          <input type="hidden" name="inquiry-type" id="inquiry-type" value="University Leaders"/>
+
+          <div class="form-grid">
+
+            <!-- Name -->
+            <div class="form-group">
+              <label for="name">Full Name <span class="required" aria-hidden="true">*</span></label>
+              <input
+                type="text" id="name" name="name"
+                placeholder="Dr. Jane Smith"
+                required autocomplete="name"
+                aria-required="true"
+              />
+            </div>
+
+            <!-- Role -->
+            <div class="form-group">
+              <label for="role">Role / Title <span class="required" aria-hidden="true">*</span></label>
+              <input
+                type="text" id="role" name="role"
+                placeholder="President, Provost, CHRO..."
+                required
+                aria-required="true"
+              />
+            </div>
+
+            <!-- Organization -->
+            <div class="form-group full">
+              <label for="organization">Organization / University <span class="required" aria-hidden="true">*</span></label>
+              <input
+                type="text" id="organization" name="organization"
+                placeholder="Institution or company name"
+                required autocomplete="organization"
+                aria-required="true"
+              />
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+              <label for="email">Email Address <span class="required" aria-hidden="true">*</span></label>
+              <input
+                type="email" id="email" name="email"
+                placeholder="you@institution.edu"
+                required autocomplete="email"
+                aria-required="true"
+              />
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel" id="phone" name="phone"
+                placeholder="(555) 000-0000"
+                autocomplete="tel"
+              />
+            </div>
+
+            <!-- I am interested in -->
+            <div class="form-group full">
+              <label>I am inquiring about</label>
+              <div class="interest-pills" role="group" aria-label="Area of interest">
+                <div class="interest-pill active" data-value="How to Be Indispensable" role="checkbox" tabindex="0" aria-checked="true">How to Be Indispensable</div>
+                <div class="interest-pill" data-value="Faculty AI Training" role="checkbox" tabindex="0" aria-checked="false">Faculty AI Training</div>
+                <div class="interest-pill" data-value="AI Readiness Study" role="checkbox" tabindex="0" aria-checked="false">AI Readiness Study</div>
+                <div class="interest-pill" data-value="Corporate Training" role="checkbox" tabindex="0" aria-checked="false">Corporate Training</div>
+                <div class="interest-pill" data-value="AI Concentration" role="checkbox" tabindex="0" aria-checked="false">AI Concentration</div>
+                <div class="interest-pill" data-value="General Partnership" role="checkbox" tabindex="0" aria-checked="false">General Partnership</div>
+              </div>
+              <input type="hidden" name="interests" id="interests-hidden" value="How to Be Indispensable"/>
+            </div>
+
+            <!-- Message -->
+            <div class="form-group full">
+              <label for="message">What would you like to discuss? <span class="required" aria-hidden="true">*</span></label>
+              <textarea
+                id="message" name="message"
+                placeholder="Tell us about your institution, your timeline, and what you're hoping to accomplish. The more context you share, the more useful our first conversation will be."
+                required aria-required="true"
+              ></textarea>
+            </div>
+
+          </div>
+
+          <div class="form-footer">
+            <p class="form-note">By submitting this form you agree to be contacted by ZAI Institute regarding your inquiry. We do not share your information with third parties.</p>
+            <button type="submit" class="btn-submit" id="submit-btn" aria-label="Submit partnership inquiry">
+              Send Inquiry
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Success State -->
+      <div class="success-state" id="success-state" role="alert" aria-live="polite">
+        <div class="success-icon" aria-hidden="true">✦</div>
+        <h2 class="success-title">We'll be in touch.</h2>
+        <p class="success-body">
+          Thank you for reaching out. Someone from our team will respond within one business day. We look forward to the conversation.
+        </p>
+        <a href="index.html" class="btn-back">← Back to ZAI Institute</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Stats Strip -->
+  <div class="bottom-strip" aria-label="ZAI Institute statistics" role="list">
+    <div class="strip-item" role="listitem">
+      <div class="strip-num">60+</div>
+      <div class="strip-label">University Partners</div>
+    </div>
+    <div class="strip-item" role="listitem">
+      <div class="strip-num">30</div>
+      <div class="strip-label">Days to First Launch</div>
+    </div>
+    <div class="strip-item" role="listitem">
+      <div class="strip-num">1</div>
+      <div class="strip-label">Business Day Response</div>
+    </div>
+  </div>
+
+</main>
+
+<!-- Footer -->
+<footer role="contentinfo">
+  <span class="footer-copy">© 2026 ZAI Institute, LLC. All rights reserved. · A Zschool Company</span>
+  <a href="index.html" class="footer-back">← Back to main site</a>
+</footer>
+
+<script>
+  // ─── CURSOR ────────────────────────────────────────────────────────────────
+  const dot  = document.querySelector('.cursor-dot');
+  const ring = document.querySelector('.cursor-ring');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+
+  if (window.matchMedia('(pointer: fine)').matches) {
+    document.body.style.cursor = 'none';
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      dot.style.left = mx + 'px';
+      dot.style.top  = my + 'px';
+    });
+    function animateRing() {
+      rx += (mx - rx) * 0.1;
+      ry += (my - ry) * 0.1;
+      ring.style.left = rx + 'px';
+      ring.style.top  = ry + 'px';
+      requestAnimationFrame(animateRing);
+    }
+    animateRing();
+    document.querySelectorAll('a, button, [role="button"], [role="checkbox"], .audience-option, .interest-pill').forEach(el => {
+      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+    });
+  } else {
+    if (dot) dot.style.display = 'none';
+    if (ring) ring.style.display = 'none';
+  }
+
+  // ─── NAV SCROLL ────────────────────────────────────────────────────────────
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // ─── AUDIENCE PANEL SYNC ───────────────────────────────────────────────────
+  const audienceOptions = document.querySelectorAll('.audience-option');
+  const inquiryInput    = document.getElementById('inquiry-type');
+
+  function selectAudience(option) {
+    audienceOptions.forEach(o => o.classList.remove('selected'));
+    option.classList.add('selected');
+    const type = option.dataset.type === 'university' ? 'University Leaders' : 'Organizations & Employers';
+    inquiryInput.value = type;
+  }
+
+  audienceOptions.forEach(option => {
+    option.addEventListener('click', () => selectAudience(option));
+    option.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectAudience(option); }
+    });
+  });
+
+  // ─── INTEREST PILLS ────────────────────────────────────────────────────────
+  const pills         = document.querySelectorAll('.interest-pill');
+  const interestsHidden = document.getElementById('interests-hidden');
+  let selectedInterests = ['How to Be Indispensable'];
+
+  function updateInterests() {
+    interestsHidden.value = selectedInterests.join(', ') || 'None selected';
+  }
+
+  pills.forEach(pill => {
+    const toggle = () => {
+      const val = pill.dataset.value;
+      if (pill.classList.contains('active')) {
+        if (selectedInterests.length > 1) {
+          pill.classList.remove('active');
+          pill.setAttribute('aria-checked', 'false');
+          selectedInterests = selectedInterests.filter(i => i !== val);
+        }
+      } else {
+        pill.classList.add('active');
+        pill.setAttribute('aria-checked', 'true');
+        selectedInterests.push(val);
+      }
+      updateInterests();
+    };
+    pill.addEventListener('click', toggle);
+    pill.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    });
+  });
+
+  // ─── FORM SUBMISSION ───────────────────────────────────────────────────────
+  const form        = document.getElementById('contact-form');
+  const submitBtn   = document.getElementById('submit-btn');
+  const formContainer = document.getElementById('form-container');
+  const successState  = document.getElementById('success-state');
+
+  // Client-side validation
+  function validateForm() {
+    const required = form.querySelectorAll('[required]');
+    let valid = true;
+    required.forEach(field => {
+      field.style.borderColor = '';
+      if (!field.value.trim()) {
+        field.style.borderColor = '#DC2626';
+        valid = false;
+      }
+    });
+    // Email format check
+    const email = document.getElementById('email');
+    if (email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+      email.style.borderColor = '#DC2626';
+      valid = false;
+    }
+    return valid;
+  }
+
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      // Scroll to first error
+      const firstError = form.querySelector('[style*="DC2626"]');
+      if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      return;
+    }
+
+    submitBtn.classList.add('loading');
+    submitBtn.textContent = 'Sending...';
+
+    try {
+      const formData = new FormData(form);
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString(),
+      });
+
+      if (response.ok) {
+        // Show success
+        formContainer.style.display = 'none';
+        successState.classList.add('visible');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        
