@@ -35,9 +35,84 @@
 
 <!-- Mobile browser chrome color -->
 <meta name="theme-color" content="#0A0A0F">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Structured Data — Organization + EducationalOrganization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "EducationalOrganization"],
+  "@id": "https://zaiinstitute.ai/#organization",
+  "name": "ZAI Institute",
+  "url": "https://zaiinstitute.ai",
+  "logo": "https://zaiinstitute.ai/og-image.png",
+  "description": "ZAI Institute partners with universities and industry to close the AI readiness gap through turnkey certificate programs, faculty training, custom curriculum, and a national executive network — deployable in 30 days.",
+  "foundingDate": "2026",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+1-732-865-0200",
+    "email": "info@zaiinstitute.ai",
+    "contactType": "partnerships"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/company/zaiinstitute"
+  ],
+  "knowsAbout": [
+    "Artificial Intelligence Education",
+    "Executive Education",
+    "University AI Readiness",
+    "Faculty AI Training",
+    "AI Certificate Programs",
+    "Workforce AI Transformation"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "ZAI Institute Programs",
+    "itemListElement": [
+      {
+        "@type": "Course",
+        "name": "How to Be Indispensable in the Age of AI — Foundation",
+        "description": "A 4-hour, 4-module asynchronous certificate program building foundational AI literacy and a personal readiness strategy.",
+        "provider": { "@id": "https://zaiinstitute.ai/#organization" },
+        "educationalLevel": "Foundation",
+        "timeRequired": "PT4H"
+      },
+      {
+        "@type": "Course",
+        "name": "How to Be Indispensable in the Age of AI — Professional",
+        "description": "A 32-hour, 8-module executive certificate program with capstone project, applied portfolio, and direct employer connections through the ZAI Executive Network.",
+        "provider": { "@id": "https://zaiinstitute.ai/#organization" },
+        "educationalLevel": "Professional",
+        "timeRequired": "PT32H"
+      },
+      {
+        "@type": "Course",
+        "name": "University AI Readiness Training",
+        "description": "A 5-session faculty and staff training program combining live and asynchronous instruction to prepare educators to lead AI-integrated learning.",
+        "provider": { "@id": "https://zaiinstitute.ai/#organization" }
+      }
+    ]
+  }
+}
+</script>
+
+<!-- Structured Data — WebSite (enables sitelinks search box) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ZAI Institute",
+  "url": "https://zaiinstitute.ai",
+  "publisher": { "@id": "https://zaiinstitute.ai/#organization" }
+}
+</script>
 
 <style>
   /* ─── SKIP TO CONTENT ──────────────────────────────────────────────────── */
@@ -52,6 +127,7 @@
 
   /* ─── RESET & BASE ─────────────────────────────────────────────────────── */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  h3 { font-size: inherit; font-weight: inherit; }
 
   :root {
     --ink:       #0A0A0F;
@@ -1656,25 +1732,25 @@
   <div class="pillars-grid">
     <div class="pillar">
       <div class="pillar-num">01 ——</div>
-      <div class="pillar-title">We Stay</div>
+      <h3 class="pillar-title">We Stay</h3>
       <div class="pillar-body">We are not consultants who deliver recommendations and disappear. We work alongside presidents, provosts, faculty, and industry leaders to build systems that last. The measure of our success is what your institution can sustain after we have built it together.</div>
       <div class="pillar-accent" aria-hidden="true">I</div>
     </div>
     <div class="pillar">
       <div class="pillar-num">02 ——</div>
-      <div class="pillar-title">Faculty Lead. We Enable.</div>
+      <h3 class="pillar-title">Faculty Lead. We Enable.</h3>
       <div class="pillar-body">Faculty are the authors and stewards of curriculum. That does not change. What changes is the infrastructure, network intelligence, and AI-powered tools available to them — allowing curriculum to evolve at the pace the world demands without compromising academic judgment or institutional control.</div>
       <div class="pillar-accent" aria-hidden="true">II</div>
     </div>
     <div class="pillar">
       <div class="pillar-num">03 ——</div>
-      <div class="pillar-title">Credentials That Open Doors</div>
+      <h3 class="pillar-title">Credentials That Open Doors</h3>
       <div class="pillar-body">A ZAI Institute credential tells an employer something specific — this person understands AI, can work alongside it, and knows where the human advantage lies. We ensure our credentials carry academic weight with universities and market weight with employers. Both doors, simultaneously.</div>
       <div class="pillar-accent" aria-hidden="true">III</div>
     </div>
     <div class="pillar">
       <div class="pillar-num">04 ——</div>
-      <div class="pillar-title">A Network That Accelerates</div>
+      <h3 class="pillar-title">A Network That Accelerates</h3>
       <div class="pillar-body">Knowledge without connection is incomplete. ZAI Institute graduates enter a curated ecosystem of executives, employers, and innovators actively building AI-ready organizations. This is not a directory. It is a deliberate, managed network designed to turn learning into opportunity.</div>
       <div class="pillar-accent" aria-hidden="true">IV</div>
     </div>
@@ -1690,35 +1766,35 @@
       <div class="beliefs-list">
         <div class="belief active" role="button" tabindex="0" aria-expanded="true">
           <div class="belief-header">
-            <div class="belief-title">Universities are not in decline</div>
+            <h3 class="belief-title">Universities are not in decline</h3>
             <div class="belief-arrow">+</div>
           </div>
           <div class="belief-body">They are on the edge of their most important reinvention. The institutions that embrace AI thoughtfully — as a force to harness rather than a threat to manage — will define the next era of higher education.</div>
         </div>
         <div class="belief" role="button" tabindex="0" aria-expanded="false">
           <div class="belief-header">
-            <div class="belief-title">The human advantage is real</div>
+            <h3 class="belief-title">The human advantage is real</h3>
             <div class="belief-arrow">+</div>
           </div>
           <div class="belief-body">Creativity, judgment, emotional intelligence, ethical reasoning — these are not going away. But they only protect you when combined with the ability to work alongside AI, not in ignorance of it.</div>
         </div>
         <div class="belief" role="button" tabindex="0" aria-expanded="false">
           <div class="belief-header">
-            <div class="belief-title">Connection is the untapped resource</div>
+            <h3 class="belief-title">Connection is the untapped resource</h3>
             <div class="belief-arrow">+</div>
           </div>
           <div class="belief-body">The greatest resource in education is the connection between university leadership and industry leadership. When those two forces align, the transformation that results is faster, deeper, and more durable than either could achieve alone.</div>
         </div>
         <div class="belief" role="button" tabindex="0" aria-expanded="false">
           <div class="belief-header">
-            <div class="belief-title">Urgency and patience coexist</div>
+            <h3 class="belief-title">Urgency and patience coexist</h3>
             <div class="belief-arrow">+</div>
           </div>
           <div class="belief-body">The moment demands urgency. Transformation requires patience. The institutions that get this right hold both simultaneously — moving faster than comfortable, more carefully than the market demands. ZAI exists to help them do exactly that.</div>
         </div>
         <div class="belief" role="button" tabindex="0" aria-expanded="false">
           <div class="belief-header">
-            <div class="belief-title">Credentials should prove capability, not completion</div>
+            <h3 class="belief-title">Credentials should prove capability, not completion</h3>
             <div class="belief-arrow">+</div>
           </div>
           <div class="belief-body">The era of assessing knowledge through multiple-choice exams is ending. What matters is what a person can do — the problems they can solve, the work they can show, the judgment they can demonstrate. ZAI programs are designed around applied projects, professional portfolios, and real-world evaluation — because a credential that proves capability is the only credential worth earning and the only one worth hiring for.</div>
@@ -1835,14 +1911,14 @@
   <!-- LAYER 1: Flagship Programs -->
   <div class="program-layer">
     <div class="program-layer-num">01</div>
-    <div class="program-layer-title">Flagship Programs — <em>deploy in 30 days</em></div>
+    <h3 class="program-layer-title">Flagship Programs — <em>deploy in 30 days</em></h3>
   </div>
   <p class="program-layer-sub">Proven, battle-tested programs ready for immediate deployment. No new hires, no curriculum committee approval, no 18-month build cycle. These are the programs 60+ universities already run — generating tuition revenue from day one.</p>
 
   <div class="programs-grid three-col">
     <div class="program-card">
       <div class="program-tag">Certificate — Foundation</div>
-      <div class="program-title">How to Be Indispensable in the Age of AI — Foundation</div>
+      <h3 class="program-title">How to Be Indispensable in the Age of AI — Foundation</h3>
       <div class="program-duration">4 Hours · 4 Modules · Asynchronous</div>
       <div class="program-desc">Students leave knowing where AI creates advantage and where human judgment remains irreplaceable — and with a personal strategy for staying on the right side of that line. Designed for university-wide deployment as a graduation requirement, orientation complement, or gen-ed offering.</div>
       <div class="program-outcome"><strong>Students walk away with:</strong> A personal AI readiness assessment, a written action plan for their field, and the foundational literacy to engage confidently in every course that follows. Assessed through applied deliverables, not exams.</div>
@@ -1851,7 +1927,7 @@
     </div>
     <div class="program-card">
       <div class="program-tag">Certificate — Professional</div>
-      <div class="program-title">How to Be Indispensable in the Age of AI — Professional</div>
+      <h3 class="program-title">How to Be Indispensable in the Age of AI — Professional</h3>
       <div class="program-duration">32 Hours · 8 Modules · Executive Network Included</div>
       <div class="program-desc">Eight progressively challenging modules where students don't just learn about AI — they use it to solve real problems, build a portfolio of applied work, and present their capstone to working executives. Graduates enter the ZAI Executive Network with credentials employers recognize.</div>
       <div class="program-outcome"><strong>Students walk away with:</strong> A capstone project applying AI to a real industry challenge, a professional portfolio of demonstrated work, direct connections to hiring executives, and a credential that proves what they can do — not what they memorized. No multiple choice. No final exam. Assessed entirely through applied work and executive evaluation.</div>
@@ -1860,7 +1936,7 @@
     </div>
     <div class="program-card">
       <div class="program-tag">Institutional · Faculty & Staff</div>
-      <div class="program-title">University AI Readiness Training</div>
+      <h3 class="program-title">University AI Readiness Training</h3>
       <div class="program-duration">5 Sessions · Live + Async · All Levels</div>
       <div class="program-desc">Faculty are the gatekeepers of curriculum change. This program doesn't lecture them about AI — it puts AI tools in their hands and lets them experience the transformation firsthand. Skeptics become champions. Champions become leaders of AI-integrated learning in their own departments.</div>
       <div class="program-outcome"><strong>Faculty walk away with:</strong> Hands-on experience with AI tools relevant to their discipline, a practical plan for integrating AI into their own courses, and the confidence to lead rather than resist the transition. Designed as a working studio — faculty build and test real course modifications, not watch presentations.</div>
@@ -1872,7 +1948,7 @@
   <!-- LAYER 2: Custom Curriculum -->
   <div class="program-layer">
     <div class="program-layer-num">02</div>
-    <div class="program-layer-title">Custom Curriculum — <em>built to your specifications</em></div>
+    <h3 class="program-layer-title">Custom Curriculum — <em>built to your specifications</em></h3>
   </div>
   <p class="program-layer-sub">Your institution is not generic. Your curriculum shouldn't be either. Tell us what you need and we build it — aligned to your learning objectives, your accreditation requirements, and your institutional brand. Deployable within 30 days.</p>
 
@@ -1929,14 +2005,14 @@
   <!-- LAYER 3: Enterprise + 48-Credit -->
   <div class="program-layer">
     <div class="program-layer-num">03</div>
-    <div class="program-layer-title">Deep Integration — <em>for institutions ready to lead</em></div>
+    <h3 class="program-layer-title">Deep Integration — <em>for institutions ready to lead</em></h3>
   </div>
   <p class="program-layer-sub">For universities making AI readiness a core institutional identity and employers building AI-fluent organizations at scale.</p>
 
   <div class="programs-grid">
     <div class="program-card">
       <div class="program-tag">Corporate · Workforce</div>
-      <div class="program-title">Enterprise AI Readiness Training</div>
+      <h3 class="program-title">Enterprise AI Readiness Training</h3>
       <div class="program-duration">Custom Format · On-Site or Virtual · Scalable</div>
       <div class="program-desc">Your workforce doesn't need another e-learning module. They need to solve real problems in your business with AI and come out the other side with demonstrated capability. We build programs around your industry, your tools, and your strategic priorities — from executive workshops to company-wide deployment.</div>
       <div class="program-outcome"><strong>Your team walks away with:</strong> Hands-on AI capability demonstrated against your actual business challenges, credentials that prove competence to the market, and managers equipped to coach AI adoption across their teams. Assessment is project-based — your team solves real problems, not hypothetical ones.</div>
@@ -1944,7 +2020,7 @@
     </div>
     <div class="program-card" style="background:var(--ink);border:1px solid rgba(184,150,46,0.2)">
       <div class="program-tag" style="background:rgba(184,150,46,0.1)">Coming · Full Concentration</div>
-      <div class="program-title" style="color:var(--paper)">AI & the Future of Work — 48 Credit Concentration</div>
+      <h3 class="program-title" style="color:var(--paper)">AI & the Future of Work — 48 Credit Concentration</h3>
       <div class="program-duration" style="color:rgba(245,242,237,0.4)">48 Credit Hours · Studio-Based · Portfolio-Assessed</div>
       <div class="program-desc" style="color:rgba(245,242,237,0.5)">This is not 48 credits of courses. It is an integrated, studio-based pathway where students build, ship, and defend real AI projects across their undergraduate career. Each studio challenges students to apply AI to progressively complex problems — working in teams, iterating on feedback, and assembling a professional portfolio that demonstrates what they can do, not what they sat through. Assessment is entirely competency-based: no final exams, no multiple choice. Students demonstrate mastery through the work itself — evaluated by faculty, industry mentors, and peers. Designed for institutions ready to make AI readiness a core academic identity and a model for what the degree becomes next.</div>
       <a href="contact.html" class="program-link" style="color:var(--gold)">Join the Waitlist →</a>
@@ -2014,22 +2090,22 @@
       <div class="network-value-grid">
         <div class="network-value-card">
           <div class="network-value-icon">◆</div>
-          <div class="network-value-name">Direct Employer Access</div>
+          <h3 class="network-value-name">Direct Employer Access</h3>
           <div class="network-value-desc">Graduates connect with hiring executives at Fortune 500 companies who actively seek AI-ready talent — not job boards, not algorithms, real relationships with real decision-makers.</div>
         </div>
         <div class="network-value-card">
           <div class="network-value-icon">◆</div>
-          <div class="network-value-name">Executive Mentorship</div>
+          <h3 class="network-value-name">Executive Mentorship</h3>
           <div class="network-value-desc">Industry leaders who serve as advisors, mentors, and capstone evaluators. Students don't just learn theory — they present their work to the people who hire for the roles they want.</div>
         </div>
         <div class="network-value-card">
           <div class="network-value-icon">◆</div>
-          <div class="network-value-name">Institutional Credibility</div>
+          <h3 class="network-value-name">Institutional Credibility</h3>
           <div class="network-value-desc">When a university partners with ZAI, their name joins a network that includes R1 flagships, regional leaders, and Fortune 500 employers. The association elevates everyone in it.</div>
         </div>
         <div class="network-value-card">
           <div class="network-value-icon">◆</div>
-          <div class="network-value-name">Career-Long Value</div>
+          <h3 class="network-value-name">Career-Long Value</h3>
           <div class="network-value-desc">Network access doesn't expire at graduation. Members stay connected as their careers evolve — turning a certificate into a professional community that compounds over time.</div>
         </div>
       </div>
@@ -2083,22 +2159,22 @@
       <div class="research-pillars">
         <div class="research-pillar">
           <div class="research-pillar-num">01</div>
-          <div class="research-pillar-title">Student AI Readiness</div>
+          <h3 class="research-pillar-title">Student AI Readiness</h3>
           <div class="research-pillar-body">Baseline and longitudinal measurement of AI fluency, confidence, and practical capability across undergraduate and graduate populations. Benchmarked nationally by institution type, major, and cohort year.</div>
         </div>
         <div class="research-pillar">
           <div class="research-pillar-num">02</div>
-          <div class="research-pillar-title">Faculty & Institutional Adoption</div>
+          <h3 class="research-pillar-title">Faculty & Institutional Adoption</h3>
           <div class="research-pillar-body">How are faculty integrating AI into pedagogy? How are institutions governing AI use, academic integrity, and curriculum evolution? The first rigorous data set measuring adoption at the institutional level.</div>
         </div>
         <div class="research-pillar">
           <div class="research-pillar-num">03</div>
-          <div class="research-pillar-title">Workforce Alignment</div>
+          <h3 class="research-pillar-title">Workforce Alignment</h3>
           <div class="research-pillar-body">The gap between what universities are producing and what employers need. Measured annually. Published publicly. Used by CHROs, boards, and policy makers to drive investment and curriculum change.</div>
         </div>
         <div class="research-pillar research-pillar-highlight">
           <div class="research-pillar-num" style="color:var(--gold)">◆</div>
-          <div class="research-pillar-title">Founding institutions receive</div>
+          <h3 class="research-pillar-title">Founding institutions receive</h3>
           <div class="research-pillar-body">Full institutional benchmark report · Recognition in all published findings · Priority access to national data · Co-marketing as an AI-forward institution · No cost to participate</div>
         </div>
       </div>
@@ -2168,7 +2244,7 @@
   <div>
     <div class="footer-col-title">Contact</div>
     <ul class="footer-links">
-      <li><a href="/cdn-cgi/l/email-protection#8ce5e2eae3ccf6ede5e5e2fff8e5f8f9f8e9a2ede5"><span class="__cf_email__" data-cfemail="ec85828a83ac968d8585829f988598999889c28d85">[email&#160;protected]</span></a></li>
+      <li><a href="mailto:info@zaiinstitute.ai">info@zaiinstitute.ai</a></li>
       <li><a href="tel:+18883847020">(888) 384-7020</a></li>
       <li><a href="#">Fort Lauderdale, FL</a></li>
       <li><a href="contact.html">Schedule a Call</a></li>
@@ -2179,7 +2255,7 @@
   <span class="footer-copy">© 2026 ZAI Institute, LLC. All rights reserved.</span>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   // ─── CURSOR ────────────────────────────────────────────────────────────────
   const dot  = document.querySelector('.cursor-dot');
   const ring = document.querySelector('.cursor-ring');
