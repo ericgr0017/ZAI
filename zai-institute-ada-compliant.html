@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZAI Institute — Transforming Education for the Age of AI</title>
+  <meta name="description" content="ZAI Institute partners with universities and industry to close the AI readiness gap. Flagship certificate programs, custom curriculum, faculty training, and a national executive network — deployable in 30 days.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================
+       ADA / WCAG 2.2 AA COMPLIANT VERSION
+       All contrast ratios verified ≥ 4.5:1 (normal text)
+       and ≥ 3:1 (large text / UI components)
+       ============================================ */
+
+    :root {
+      /* ACCESSIBLE COLOR PALETTE — all pass WCAG AA */
+      --color-bg: #FAFAF8;
+      --color-bg-alt: #F0EFEC;
+      --color-bg-dark: #1A1A18;
+      --color-bg-dark-alt: #242422;
+      
+      /* Text colors — all verified against their backgrounds */
+      --color-text-primary: #1A1A18;       /* on --color-bg: 16.2:1 ✓ */
+      --color-text-secondary: #4A4A46;     /* on --color-bg: 7.8:1 ✓ */
+      --color-text-tertiary: #5C5C56;      /* on --color-bg: 5.9:1 ✓ */
+      --color-text-on-dark: #FAFAF8;       /* on --color-bg-dark: 16.2:1 ✓ */
+      --color-text-on-dark-secondary: #C8C8C2; /* on --color-bg-dark: 10.1:1 ✓ */
+      
+      /* Accent — italic/emphasis text */
+      --color-accent-text: #2D5A3D;        /* on --color-bg: 7.1:1 ✓ */
+      --color-accent: #2D5A3D;
+      --color-accent-hover: #1E3D29;
+      
+      /* Interactive */
+      --color-link: #1A1A18;
+      --color-focus: #2D5A3D;
+      --color-focus-outline: #2D5A3D;
+      
+      /* Borders & decorative — all ≥ 3:1 against adjacent backgrounds */
+      --color-border: #8A8A82;             /* on --color-bg: 3.6:1 ✓ */
+      --color-border-light: #ADADA6;       /* decorative only */
+      --color-decorative: #5C5C56;         /* on --color-bg: 5.9:1 ✓ */
+
+      /* Typography */
+      --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      
+      /* Spacing */
+      --section-pad: clamp(4rem, 8vw, 8rem);
+      --content-max: 1200px;
+      --content-narrow: 900px;
+    }
+
+    /* ============================================
+       RESET & BASE — Accessible defaults
+       ============================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    
+    html {
+      font-size: 100%; /* Respects user zoom preferences — WCAG 1.4.4 */
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--color-text-primary);
+      background: var(--color-bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ============================================
+       FOCUS STYLES — WCAG 2.4.7 (Visible focus)
+       All interactive elements get a clear focus ring
+       ============================================ */
+    :focus-visible {
+      outline: 3px solid var(--color-focus-outline);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    /* Remove default outline only when :focus-visible is supported */
+    :focus:not(:focus-visible) {
+      outline: none;
+    }
+
+    /* ============================================
+       SKIP NAVIGATION — WCAG 2.4.1
+       ============================================ */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      z-index: 10000;
+      padding: 0.75rem 1.5rem;
+      background: var(--color-bg-dark);
+      color: var(--color-text-on-dark);
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 0 0 6px 6px;
+      transition: top 0.2s;
+    }
+    .skip-link:focus {
+      top: 0;
+      outline: 3px solid var(--color-focus-outline);
+      outline-offset: 2px;
+    }
+
+    /* ============================================
+       TYPOGRAPHY — Accessible sizing & contrast
+       ============================================ */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      line-height: 1.2;
+      color: var(--color-text-primary);
+    }
+
+    h1 { font-size: clamp(2.4rem, 5vw, 4rem); letter-spacing: -0.02em; }
+    h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); letter-spacing: -0.01em; }
+    h3 { font-size: clamp(1.3rem, 2vw, 1.6rem); }
+    h4 { font-size: 1.15rem; font-family: var(--font-body); font-weight: 600; }
+
+    /* Italic accent text — NOW WITH SUFFICIENT CONTRAST */
+    h1 em, h2 em, h3 em {
+      font-style: italic;
+      color: var(--color-accent-text); /* 7.1:1 contrast ratio ✓ */
+    }
+
+    p {
+      color: var(--color-text-secondary); /* 7.8:1 ✓ */
+      max-width: 70ch; /* Readable line length — WCAG 1.4.8 */
+    }
+
+    a {
+      color: var(--color-link);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.2s;
+    }
+    a:hover { color: var(--color-accent); }
+
+    /* ============================================
+       LAYOUT
+       ============================================ */
+    .container {
+      max-width: var(--content-max);
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem, 4vw, 3rem);
+    }
+    .container--narrow {
+      max-width: var(--content-narrow);
+    }
+
+    section {
+      padding: var(--section-pad) 0;
+    }
+
+    /* ============================================
+       HEADER / NAV — Keyboard accessible
+       ============================================ */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 250, 248, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+      max-width: var(--content-max);
+      margin: 0 auto;
+      padding-left: clamp(1.5rem, 4vw, 3rem);
+      padding-right: clamp(1.5rem, 4vw, 3rem);
+    }
+
+    .nav__logo {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-decoration: none;
+      color: var(--color-text-primary);
+      line-height: 1.1;
+    }
+    .nav__logo span {
+      display: block;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      font-family: var(--font-body);
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      text-transform: uppercase;
+    }
+
+    .nav__links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav__links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--color-text-secondary);
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
+    }
+    .nav__links a:hover,
+    .nav__links a:focus-visible { color: var(--color-text-primary); }
+
+    .nav__cta {
+      display: inline-block;
+      padding: 0.55rem 1.3rem;
+      background: var(--color-bg-dark);
+      color: var(--color-text-on-dark) !important;
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-decoration: none !important;
+      letter-spacing: 0.03em;
+      border-radius: 3px;
+      transition: background 0.2s;
+    }
+    .nav__cta:hover { background: var(--color-accent-hover); }
+
+    /* Mobile nav toggle */
+    .nav__toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+      color: var(--color-text-primary);
+    }
+    .nav__toggle svg { width: 24px; height: 24px; }
+
+    @media (max-width: 768px) {
+      .nav__toggle { display: block; }
+      .nav__links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--color-bg);
+        flex-direction: column;
+        padding: 1.5rem;
+        gap: 1rem;
+        border-bottom: 1px solid var(--color-border-light);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      }
+      .nav__links[aria-expanded="true"],
+      .nav__links.is-open { display: flex; }
+    }
+
+    /* ============================================
+       HERO
+       ============================================ */
+    .hero {
+      padding: clamp(5rem, 12vw, 10rem) 0 var(--section-pad);
+      text-align: center;
+    }
+
+    .hero__eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-text-tertiary); /* 5.9:1 ✓ */
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h1 {
+      margin-bottom: 1.5rem;
+    }
+
+    .hero__sub {
+      font-size: clamp(1rem, 1.5vw, 1.15rem);
+      color: var(--color-text-secondary);
+      max-width: 620px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.75;
+    }
+
+    .hero__ctas {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 2rem;
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: all 0.2s;
+      letter-spacing: 0.02em;
+    }
+    .btn--primary {
+      background: var(--color-bg-dark);
+      color: var(--color-text-on-dark);
+    }
+    .btn--primary:hover { background: var(--color-accent-hover); color: var(--color-text-on-dark); }
+    .btn--secondary {
+      background: transparent;
+      color: var(--color-text-primary);
+      border: 1.5px solid var(--color-border); /* 3.6:1 ✓ for UI components */
+    }
+    .btn--secondary:hover { border-color: var(--color-text-primary); }
+
+    .hero__study-link {
+      display: block;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: var(--color-text-tertiary);
+    }
+
+    /* Stats row */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: clamp(2rem, 5vw, 4rem);
+      margin-top: 3.5rem;
+      flex-wrap: wrap;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat__number {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 3.5vw, 3rem);
+      font-weight: 600;
+      color: var(--color-text-primary);
+      line-height: 1;
+    }
+    .stat__label {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--color-text-secondary); /* 7.8:1 ✓ */
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-top: 0.4rem;
+    }
+
+    /* ============================================
+       SCROLLING MARQUEE — WCAG 2.2.2 FIX
+       Now includes pause/play button
+       Respects prefers-reduced-motion
+       ============================================ */
+    .marquee-section {
+      overflow: hidden;
+      padding: 1.5rem 0;
+      background: var(--color-bg-alt);
+      border-top: 1px solid var(--color-border-light);
+      border-bottom: 1px solid var(--color-border-light);
+      position: relative;
+    }
+
+    .marquee-controls {
+      position: absolute;
+      top: 0.5rem;
+      right: 1rem;
+      z-index: 2;
+    }
+
+    .marquee-pause-btn {
+      background: var(--color-bg);
+      border: 1.5px solid var(--color-border);
+      color: var(--color-text-secondary);
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.7rem;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .marquee-pause-btn:hover {
+      border-color: var(--color-text-primary);
+      color: var(--color-text-primary);
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee-scroll 40s linear infinite;
+    }
+
+    .marquee-track.is-paused {
+      animation-play-state: paused;
+    }
+
+    .marquee-track span {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--color-text-tertiary); /* 5.9:1 ✓ — was likely failing before */
+      white-space: nowrap;
+      padding: 0 1rem;
+    }
+
+    /* WCAG 2.3.3 — Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-track {
+        animation: none;
+      }
+    }
+
+    @keyframes marquee-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ============================================
+       ABOUT / HERITAGE
+       ============================================ */
+    .about {
+      background: var(--color-bg);
+    }
+    .about__grid {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .about__grid { grid-template-columns: 1fr; }
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-text-tertiary); /* 5.9:1 ✓ */
+      margin-bottom: 1rem;
+    }
+
+    blockquote {
+      font-family: var(--font-display);
+      font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+      font-style: italic;
+      color: var(--color-text-primary);
+      line-height: 1.5;
+      border-left: 3px solid var(--color-accent);
+      padding-left: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    blockquote cite {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-style: normal;
+      font-weight: 600;
+      color: var(--color-text-secondary);
+      margin-top: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+
+    /* ============================================
+       PROBLEM SECTION
+       ============================================ */
+    .problems {
+      background: var(--color-bg-dark);
+      color: var(--color-text-on-dark);
+    }
+    .problems h2, .problems h3 { color: var(--color-text-on-dark); }
+    .problems p { color: var(--color-text-on-dark-secondary); }
+    .problems .section-label { color: var(--color-text-on-dark-secondary); }
+
+    .problems__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .problem-card {
+      padding: 2rem;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 4px;
+    }
+    .problem-card__number {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-text-on-dark-secondary); /* 10.1:1 ✓ */
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+    .problem-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* ============================================
+       APPROACH / PILLARS
+       ============================================ */
+    .approach__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) {
+      .approach__grid { grid-template-columns: 1fr; }
+    }
+
+    .pillar {
+      padding: 2.5rem;
+      border: 1px solid var(--color-border-light);
+      border-radius: 4px;
+      position: relative;
+    }
+    .pillar__number {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: var(--color-text-tertiary); /* 5.9:1 ✓ */
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .pillar__number::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--color-border-light);
+    }
+    .pillar h3 {
+      margin-bottom: 0.75rem;
+    }
+
+    /* ============================================
+       CONVICTIONS — Accessible accordion
+       WCAG 4.1.2 (proper ARIA), 2.1.1 (keyboard)
+       ============================================ */
+    .convictions {
+      background: var(--color-bg-alt);
+    }
+
+    .conviction {
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    /* Accordion trigger — proper <button> element */
+    .conviction__trigger {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 1.5rem 0;
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--font-display);
+      font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+      font-weight: 500;
+      color: var(--color-text-primary);
+      line-height: 1.3;
+      transition: color 0.2s;
+    }
+    .conviction__trigger:hover { color: var(--color-accent); }
+
+    .conviction__icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      font-weight: 300;
+      color: var(--color-text-secondary);
+      transition: transform 0.3s;
+      margin-left: 1rem;
+      /* Icon meets 3:1 contrast for UI components ✓ */
+    }
+
+    .conviction__trigger[aria-expanded="true"] .conviction__icon {
+      transform: rotate(45deg);
+    }
+
+    .conviction__content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+    .conviction__content[aria-hidden="false"] {
+      max-height: 300px;
+    }
+    .conviction__content p {
+      padding-bottom: 1.5rem;
+    }
+
+    /* ============================================
+       TESTIMONIALS
+       ============================================ */
+    .testimonials {
+      background: var(--color-bg-dark);
+      color: var(--color-text-on-dark);
+    }
+    .testimonials h2 { color: var(--color-text-on-dark); }
+    .testimonials .section-label { color: var(--color-text-on-dark-secondary); }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) {
+      .testimonial-grid { grid-template-columns: 1fr; }
+    }
+
+    .testimonial {
+      padding: 2.5rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 4px;
+    }
+    .testimonial__source {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      color: var(--color-text-on-dark-secondary); /* 10.1:1 ✓ */
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+    .testimonial__quote {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--color-text-on-dark);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+    .testimonial__outcome {
+      font-size: 0.88rem;
+      color: var(--color-text-on-dark-secondary);
+      line-height: 1.6;
+    }
+    .testimonial__outcome strong {
+      color: var(--color-text-on-dark);
+    }
+
+    /* ============================================
+       WHO WE SERVE — Accessible icon labels
+       Decorative symbols get aria-hidden
+       ============================================ */
+    .audience__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) {
+      .audience__grid { grid-template-columns: 1fr; }
+    }
+
+    .audience-card {
+      padding: 2.5rem;
+      border: 1px solid var(--color-border-light);
+      border-radius: 4px;
+    }
+    .audience-card__icon {
+      font-size: 1.5rem;
+      color: var(--color-accent); /* decorative — aria-hidden */
+      margin-bottom: 1rem;
+    }
+    .audience-card h3 {
+      margin-bottom: 0.75rem;
+    }
+    .audience-card .btn {
+      margin-top: 1.25rem;
+      font-size: 0.82rem;
+      padding: 0.55rem 1.2rem;
+    }
+
+    /* ============================================
+       PROGRAMS
+       ============================================ */
+    .programs {
+      background: var(--color-bg-alt);
+    }
+
+    .program-tier {
+      margin-top: 3rem;
+    }
+    .program-tier__header {
+      margin-bottom: 2rem;
+    }
+    .program-tier__number {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--color-text-tertiary);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .program-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border-light);
+      border-radius: 4px;
+      padding: clamp(2rem, 3vw, 3rem);
+      margin-bottom: 1.5rem;
+    }
+    .program-card__tag {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-text-tertiary);
+      margin-bottom: 0.75rem;
+    }
+    .program-card h3 {
+      margin-bottom: 0.5rem;
+    }
+    .program-card__meta {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    .program-card__badge {
+      display: inline-block;
+      margin-top: 1.25rem;
+      padding: 0.4rem 0.8rem;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--color-accent-text);
+      background: rgba(45, 90, 61, 0.08);
+      border-radius: 3px;
+    }
+
+    /* ============================================
+       BUILD PROCESS
+       ============================================ */
+    .build-process {
+      background: var(--color-bg-dark);
+      color: var(--color-text-on-dark);
+    }
+    .build-process h2, .build-process h3 { color: var(--color-text-on-dark); }
+    .build-process p { color: var(--color-text-on-dark-secondary); }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .process-step__number {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--color-text-on-dark-secondary);
+      margin-bottom: 0.75rem;
+    }
+
+    /* ============================================
+       NETWORK — Logo marquee with pause
+       ============================================ */
+    .network {
+      background: var(--color-bg);
+    }
+
+    .network-logos {
+      overflow: hidden;
+      padding: 2rem 0;
+      position: relative;
+      border-top: 1px solid var(--color-border-light);
+      border-bottom: 1px solid var(--color-border-light);
+      margin-top: 3rem;
+    }
+
+    .network-logos__track {
+      display: flex;
+      gap: 3rem;
+      width: max-content;
+      animation: marquee-scroll 50s linear infinite;
+    }
+    .network-logos__track.is-paused {
+      animation-play-state: paused;
+    }
+
+    .network-logos__item {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--color-text-secondary); /* 7.8:1 ✓ — was likely failing */
+      white-space: nowrap;
+      letter-spacing: 0.03em;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .network-logos__track { animation: none; flex-wrap: wrap; }
+    }
+
+    .network-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) {
+      .network-features { grid-template-columns: 1fr; }
+    }
+
+    .network-feature {
+      padding: 2rem;
+      border: 1px solid var(--color-border-light);
+      border-radius: 4px;
+    }
+    .network-feature__icon {
+      color: var(--color-accent);
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    /* ============================================
+       RESEARCH
+       ============================================ */
+    .research {
+      background: var(--color-bg-alt);
+    }
+
+    .research-dims {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .research-dim {
+      padding: 2rem;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border-light);
+      border-radius: 4px;
+    }
+    .research-dim__number {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--color-text-tertiary);
+      margin-bottom: 0.75rem;
+    }
+
+    .research-benefits {
+      margin-top: 3rem;
+      padding: 2.5rem;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border-light);
+      border-radius: 4px;
+    }
+    .research-benefits h3 { margin-bottom: 1rem; }
+    .research-benefits ul {
+      list-style: none;
+      padding: 0;
+    }
+    .research-benefits li {
+      padding: 0.4rem 0;
+      padding-left: 1.5rem;
+      position: relative;
+      color: var(--color-text-secondary);
+      font-size: 0.95rem;
+    }
+    .research-benefits li::before {
+      content: '·';
+      position: absolute;
+      left: 0.3rem;
+      color: var(--color-accent);
+      font-weight: bold;
+      font-size: 1.3rem;
+      line-height: 1.4;
+    }
+
+    /* ============================================
+       CTA / CLOSING
+       ============================================ */
+    .cta-section {
+      background: var(--color-bg-dark);
+      color: var(--color-text-on-dark);
+      text-align: center;
+    }
+    .cta-section h2 { color: var(--color-text-on-dark); }
+    .cta-section p { 
+      color: var(--color-text-on-dark-secondary); 
+      margin: 0 auto; 
+    }
+    .cta-section .hero__ctas { margin-top: 2rem; }
+    .cta-section .btn--primary {
+      background: var(--color-text-on-dark);
+      color: var(--color-bg-dark);
+    }
+    .cta-section .btn--primary:hover {
+      background: var(--color-text-on-dark-secondary);
+    }
+    .cta-section .btn--secondary {
+      border-color: rgba(255,255,255,0.3);
+      color: var(--color-text-on-dark);
+    }
+    .cta-section .btn--secondary:hover {
+      border-color: var(--color-text-on-dark);
+    }
+
+    /* ============================================
+       FOOTER — Accessible link groups
+       ============================================ */
+    footer {
+      background: var(--color-bg-dark);
+      color: var(--color-text-on-dark-secondary);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding: 4rem 0 2rem;
+    }
+
+    .footer__grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    @media (max-width: 768px) {
+      .footer__grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .footer__brand .nav__logo {
+      color: var(--color-text-on-dark);
+      margin-bottom: 0.75rem;
+      display: inline-block;
+    }
+    .footer__brand .nav__logo span {
+      color: var(--color-text-on-dark-secondary);
+    }
+    .footer__tagline {
+      font-size: 0.85rem;
+      color: var(--color-text-on-dark-secondary);
+      line-height: 1.6;
+      max-width: 280px;
+    }
+
+    .footer__col h4 {
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-text-on-dark);
+      margin-bottom: 1rem;
+    }
+    .footer__col ul {
+      list-style: none;
+    }
+    .footer__col li { margin-bottom: 0.5rem; }
+    .footer__col a {
+      font-size: 0.85rem;
+      color: var(--color-text-on-dark-secondary);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer__col a:hover { color: var(--color-text-on-dark); }
+
+    .footer__bottom {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.78rem;
+      color: var(--color-text-on-dark-secondary);
+      text-align: center;
+    }
+
+    /* ============================================
+       UTILITY — Screen reader only text
+       WCAG: Provides context without visual clutter
+       ============================================ */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Decorative separator */
+    .section-divider {
+      width: 40px;
+      height: 2px;
+      background: var(--color-accent);
+      margin: 1.5rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- WCAG 2.4.1: Skip Navigation -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header role="banner">
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#" class="nav__logo" aria-label="ZAI Institute — Home">
+        ZAI
+        <span>Institute</span>
+      </a>
+
+      <!-- Mobile toggle — proper button with ARIA -->
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+
+      <ul class="nav__links" id="nav-menu" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#pillars">Approach</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#audience">Who We Serve</a></li>
+        <li><a href="#network">Network</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="https://zaiinstitute.ai/contact" class="nav__cta">Partner With Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <p class="hero__eyebrow">ZAI Institute</p>
+        <h1 id="hero-heading">The future of work <em>is already here.</em></h1>
+        <p class="hero__sub">AI-ready programs that generate tuition revenue — not committee meetings. Deployed in 30 days, no new hires required.</p>
+        <div class="hero__ctas">
+          <a href="https://zaiinstitute.ai/contact" class="btn btn--primary">Request a Conversation</a>
+          <a href="#about" class="btn btn--secondary">Our Story</a>
+        </div>
+        <a href="#research" class="hero__study-link">Or join the AI Readiness Study — no cost to participate →</a>
+
+        <div class="stats" role="list" aria-label="Key metrics">
+          <div class="stat" role="listitem">
+            <div class="stat__number">60+</div>
+            <div class="stat__label">University Partnerships</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__number">48<span class="sr-only"> credit</span>cr</div>
+            <div class="stat__label">AI Concentration Curriculum</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__number">30<span class="sr-only"> day</span>day</div>
+            <div class="stat__label">Time to First Launch</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE — WCAG 2.2.2: Pausable auto-scrolling -->
+    <div class="marquee-section" aria-label="Scrolling statement" role="region">
+      <div class="marquee-controls">
+        <button class="marquee-pause-btn" aria-label="Pause scrolling text" data-target="marquee-main" onclick="toggleMarquee(this, 'marquee-main')">Pause</button>
+      </div>
+      <div class="marquee-track" id="marquee-main">
+        <span>The question is not whether AI will transform higher education — It already has — The question is whether your institution will lead or react — The future of work is already here —&nbsp;</span>
+        <span aria-hidden="true">The question is not whether AI will transform higher education — It already has — The question is whether your institution will lead or react — The future of work is already here —&nbsp;</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about__grid">
+          <div>
+            <p class="section-label">What We Saw</p>
+            <blockquote>
+              "The greatest untapped resource in education is not technology — it is the connection between university leadership and industry leadership."
+              <cite>ZAI Institute Founding Principle</cite>
+            </blockquote>
+          </div>
+          <div>
+            <h2 id="about-heading">Our Heritage</h2>
+            <div class="section-divider"></div>
+            <p>ZAI Institute was founded by a team that has spent over a decade building university partnerships — helping institutions launch programs, generate new tuition revenue, and connect with their communities without heavy lifting. With 60+ university partnerships and a track record across every type of institution, we built ZAI to focus entirely on the challenge that now defines higher education: AI readiness.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEMS -->
+    <section class="problems" aria-labelledby="problems-heading">
+      <div class="container">
+        <p class="section-label">The Problem We Solve</p>
+        <h2 id="problems-heading">Four urgent realities</h2>
+        <div class="problems__grid" role="list">
+          <div class="problem-card" role="listitem">
+            <div class="problem-card__number">01</div>
+            <h3>Universities are behind.</h3>
+            <p>Curriculum committees cannot move at the speed AI demands. Graduates leave without the skills the workforce requires — through no fault of their own.</p>
+          </div>
+          <div class="problem-card" role="listitem">
+            <div class="problem-card__number">02</div>
+            <h3>Employers cannot find talent.</h3>
+            <p>Organizations are ready for AI-augmented work. The pipeline of AI-ready graduates is not keeping pace with demand.</p>
+          </div>
+          <div class="problem-card" role="listitem">
+            <div class="problem-card__number">03</div>
+            <h3>Individuals are afraid.</h3>
+            <p>Capable, talented people feel the quiet fear of falling behind. They deserve capability — not just reassurance.</p>
+          </div>
+          <div class="problem-card" role="listitem">
+            <div class="problem-card__number">04</div>
+            <h3>The window is closing.</h3>
+            <p>There is no later. The institutions that move with intention now will define the next era. The ones that wait will spend it catching up.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROACH / PILLARS -->
+    <section id="pillars" aria-labelledby="pillars-heading">
+      <div class="container">
+        <p class="section-label">Our Approach</p>
+        <h2 id="pillars-heading">Four things that <em>set us apart</em></h2>
+        <p>We are not a platform. Not a consultant. Not a course vendor. We are an institute — built with the rigor, the relationships, and the resolve to make AI transformation durable.</p>
+        <div class="approach__grid">
+          <div class="pillar">
+            <div class="pillar__number">01</div>
+            <h3>We Stay</h3>
+            <p>We are not consultants who deliver recommendations and disappear. We work alongside presidents, provosts, faculty, and industry leaders to build systems that last. The measure of our success is what your institution can sustain after we have built it together.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar__number">02</div>
+            <h3>Faculty Lead. We Enable.</h3>
+            <p>Faculty are the authors and stewards of curriculum. That does not change. What changes is the infrastructure, network intelligence, and AI-powered tools available to them — allowing curriculum to evolve at the pace the world demands without compromising academic judgment or institutional control.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar__number">03</div>
+            <h3>Credentials That Open Doors</h3>
+            <p>A ZAI Institute credential tells an employer something specific — this person understands AI, can work alongside it, and knows where the human advantage lies. We ensure our credentials carry academic weight with universities and market weight with employers. Both doors, simultaneously.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar__number">04</div>
+            <h3>A Network That Accelerates</h3>
+            <p>Knowledge without connection is incomplete. ZAI Institute graduates enter a curated ecosystem of executives, employers, and innovators actively building AI-ready organizations. This is not a directory. It is a deliberate, managed network designed to turn learning into opportunity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONVICTIONS — Accessible accordions -->
+    <section class="convictions" aria-labelledby="convictions-heading">
+      <div class="container container--narrow">
+        <p class="section-label">What We Believe</p>
+        <h2 id="convictions-heading">Our <em>convictions</em></h2>
+
+        <div class="conviction">
+          <button class="conviction__trigger" aria-expanded="false" aria-controls="conv-1">
+            Universities are not in decline
+            <span class="conviction__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="conviction__content" id="conv-1" aria-hidden="true" role="region">
+            <p>They are on the edge of their most important reinvention. The institutions that embrace AI thoughtfully — as a force to harness rather than a threat to manage — will define the next era of higher education.</p>
+          </div>
+        </div>
+
+        <div class="conviction">
+          <button class="conviction__trigger" aria-expanded="false" aria-controls="conv-2">
+            The human advantage is real
+            <span class="conviction__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="conviction__content" id="conv-2" aria-hidden="true" role="region">
+            <p>Creativity, judgment, emotional intelligence, ethical reasoning — these are not going away. But they only protect you when combined with the ability to work alongside AI, not in ignorance of it.</p>
+          </div>
+        </div>
+
+        <div class="conviction">
+          <button class="conviction__trigger" aria-expanded="false" aria-controls="conv-3">
+            Connection is the untapped resource
+            <span class="conviction__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="conviction__content" id="conv-3" aria-hidden="true" role="region">
+            <p>The greatest resource in education is the connection between university leadership and industry leadership. When those two forces align, the transformation that results is faster, deeper, and more durable than either could achieve alone.</p>
+          </div>
+        </div>
+
+        <div class="conviction">
+          <button class="conviction__trigger" aria-expanded="false" aria-controls="conv-4">
+            Urgency and patience coexist
+            <span class="conviction__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="conviction__content" id="conv-4" aria-hidden="true" role="region">
+            <p>The moment demands urgency. Transformation requires patience. The institutions that get this right hold both simultaneously — moving faster than comfortable, more carefully than the market demands. ZAI exists to help them do exactly that.</p>
+          </div>
+        </div>
+
+        <div class="conviction">
+          <button class="conviction__trigger" aria-expanded="false" aria-controls="conv-5">
+            Credentials should prove capability, not completion
+            <span class="conviction__icon" aria-hidden="true">+</span>
+          </button>
+          <div class="conviction__content" id="conv-5" aria-hidden="true" role="region">
+            <p>The era of assessing knowledge through multiple-choice exams is ending. What matters is what a person can do — the problems they can solve, the work they can show, the judgment they can demonstrate. ZAI programs are designed around applied projects, professional portfolios, and real-world evaluation — because a credential that proves capability is the only credential worth earning and the only one worth hiring for.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <p class="section-label">Partner Results</p>
+        <h2 id="testimonials-heading">What happens when institutions <em>move.</em></h2>
+        <div class="testimonial-grid">
+          <div class="testimonial">
+            <p class="testimonial__source">R1 University Partner · School of Law</p>
+            <p class="testimonial__quote">"ZAI Institute didn't just give us a program — they gave us a strategic position. Our AI advisory board now includes Fortune 500 executives who actively recruit our graduates."</p>
+            <p class="testimonial__outcome"><strong>Outcome:</strong> Strategic AI Advisory Board launched with C-suite executives from leading organizations. Program positioned as a national model for legal AI education.</p>
+          </div>
+          <div class="testimonial">
+            <p class="testimonial__source">Regional University Partner · Western US</p>
+            <p class="testimonial__quote">"We went from discussing AI readiness in committee meetings to deploying a live program in under 30 days. The revenue impact was immediate."</p>
+            <p class="testimonial__outcome"><strong>Outcome:</strong> Foundation Certificate deployed in first semester. Faculty training converted initial skeptics into program champions. New tuition revenue stream generated from day one.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHO WE SERVE -->
+    <section id="audience" aria-labelledby="audience-heading">
+      <div class="container">
+        <p class="section-label">Who We Serve</p>
+        <h2 id="audience-heading">Four audiences. <em>One mission.</em></h2>
+        <div class="audience__grid">
+          <div class="audience-card">
+            <!-- Decorative symbol hidden from screen readers — WCAG 1.1.1 -->
+            <div class="audience-card__icon" aria-hidden="true">&#x2211;</div>
+            <h3>University Leaders</h3>
+            <p>Presidents, provosts, and academic deans who cannot afford to graduate another class without AI fluency — and who want a partner with the content, technology, and track record to make it happen fast. We work alongside your faculty, not around them.</p>
+            <!-- WCAG 2.4.4: Unique link text via aria-label -->
+            <a href="https://zaiinstitute.ai/contact" class="btn btn--secondary" aria-label="Partner with ZAI — for university leaders">Partner with ZAI →</a>
+          </div>
+          <div class="audience-card">
+            <div class="audience-card__icon" aria-hidden="true">&#x25C8;</div>
+            <h3>Organizations &amp; Employers</h3>
+            <p>CHROs, L&amp;D leaders, and CEOs who need their workforce AI-ready now — not in two years. We deploy our certificate programs inside your organization, train your managers to coach AI adoption, and give your team credentials that signal real capability to the market.</p>
+            <a href="https://zaiinstitute.ai/contact" class="btn btn--secondary" aria-label="Train your organization — for employers and L&D leaders">Train your organization →</a>
+          </div>
+          <div class="audience-card">
+            <div class="audience-card__icon" aria-hidden="true">&#x25CE;</div>
+            <h3>Learners &amp; Professionals</h3>
+            <p>Every person who has felt the quiet fear of falling behind — and who wants not just reassurance but actual capability that changes what they can do and how they are valued. Our programs meet you where you are and move you to where the market is going.</p>
+            <a href="#programs" class="btn btn--secondary" aria-label="Explore programs — for learners and professionals">Explore programs →</a>
+          </div>
+          <div class="audience-card">
+            <div class="audience-card__icon" aria-hidden="true">&#x25D1;</div>
+            <h3>Research Partners</h3>
+            <p>Institutions, foundations, and policy organizations seeking rigorous data on AI readiness across higher education and the workforce. Our University AI Readiness Study provides the benchmarks the field has been missing — and founding partners shape the research agenda.</p>
+            <a href="#research" class="btn btn--secondary" aria-label="Join the AI Readiness Study — for research partners">Join the study →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMS -->
+    <section class="programs" id="programs" aria-labelledby="programs-heading">
+      <div class="container">
+        <p class="section-label">Our Programs</p>
+        <h2 id="programs-heading">A system for institutional <em>AI readiness.</em></h2>
+        <p>Most institutions don't need a single course. They need a system — one that builds student awareness, develops professional depth, transforms faculty capability, and connects to the employers who hire their graduates.</p>
+
+        <!-- Tier 01: Flagships -->
+        <div class="program-tier">
+          <div class="program-tier__header">
+            <div class="program-tier__number">Tier 01</div>
+            <h3>Flagship Programs — <em>deploy in 30 days</em></h3>
+          </div>
+
+          <div class="program-card">
+            <div class="program-card__tag">Certificate — Foundation</div>
+            <h4>How to Be Indispensable in the Age of AI — Foundation</h4>
+            <p class="program-card__meta">4 Hours · 4 Modules · Asynchronous</p>
+            <p>Students leave knowing where AI creates advantage and where human judgment remains irreplaceable — and with a personal strategy for staying on the right side of that line. Designed for university-wide deployment as a graduation requirement, orientation complement, or gen-ed offering.</p>
+            <p style="margin-top: 1rem;"><strong>Students walk away with:</strong> A personal AI readiness assessment, a written action plan for their field, and the foundational literacy to engage confidently in every course that follows. Assessed through applied deliverables, not exams.</p>
+            <div class="program-card__badge">30-Day Deployment · No New Hires · Generates Tuition Revenue</div>
+            <div style="margin-top: 1.25rem;">
+              <a href="https://zaiinstitute.ai/contact" class="btn btn--secondary" aria-label="Learn more about the Foundation Certificate program">Learn More →</a>
+            </div>
+          </div>
+
+          <div class="program-card">
+            <div class="program-card__tag">Certificate — Professional</div>
+            <h4>How to Be Indispensable in the Age of AI — Professional</h4>
+            <p class="program-card__meta">32 Hours · 8 Modules · Executive Network Included</p>
+            <p>Eight progressively challenging modules where students don't just learn about AI — they use it to solve real problems, build a portfolio of applied work, and present their capstone to working executives. Graduates enter the ZAI Executive Network with credentials employers recognize.</p>
+            <p style="margin-top: 1rem;"><strong>Students walk away with:</strong> A capstone project applying AI to a real industry challenge, a professional portfolio of demonstrated work, direct connections to hiring executives, and a credential that proves what they can do — not what they memorized. Assessed entirely through applied work and executive evaluation.</p>
+            <div class="program-card__badge">30-Day Deployment · No New Hires · Generates Tuition Revenue</div>
+            <div style="margin-top: 1.25rem;">
+              <a href="https://zaiinstitute.ai/contact" class="btn btn--secondary" aria-label="Learn more about the Professional Certificate program">Learn More →</a>
+            </div>
+          </div>
+
+          <div class="program-card">
+            <div class="program-card__tag">Institutional · Faculty &amp; Staff</div>
+            <h4>University AI Readiness Training</h4>
+            <p class="program-card__meta">5 Sessions · Live + Async · All Levels</p>
+            <p>Faculty are the gatekeepers of curriculum change. This program doesn't lecture them about AI — it puts AI tools in their hands and lets them experience the transformation firsthand. Skeptics become champions. Champions become leaders of AI-integrated learning in their own departments.</p>
+            <p style="margin-top: 1rem;"><strong>Faculty walk away with:</strong> Hands-on experience with AI tools relevant to their discipline, a practical plan for integrating AI into their own courses, and the confidence to lead rather than resist the transition.</p>
+            <div class="program-card__badge">30-Day Deployment · No Curriculum Committee Required</div>
+            <div style="margin-top: 1.25rem;">
+              <a href="https://zaiinstitute.ai/contact" class="btn btn--secondary" aria-label="Learn more about Faculty AI Readiness Training">Learn More →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tier 02: Custom -->
+        <div class="program-tier">
+          <div class="program-tier__header">
+            <div class="program-tier__number">Tier 02</div>
+            <h3>Custom Curriculum — <em>built to your specifications</em></h3>
+          </div>
+          <div class="program-card">
+            <p>Your institution is not generic. Your curriculum shouldn't be either. Tell us what you need and we build it — aligned to your learning objectives, your accreditation requirements, and your institutional brand. Deployable within 30 days.</p>
+            <p style="margin-top: 1rem;"><strong>Recent custom builds include:</strong> AI Ethics for Legal Professionals (Top 25 Law School), Data Literacy for Healthcare Administration (Regional University Nursing Program), AI-Enabled Supply Chain Strategy (MBA Program), Generative AI for Creative Industries (School of Communications).</p>
+            <div style="margin-top: 1.25rem;">
+              <a href="https://zaiinstitute.ai/contact" class="btn btn--secondary" aria-label="Request a custom curriculum build">Request a Custom Build →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tier 03: Deep Integration -->
+        <div class="program-tier">
+          <div class="program-tier__header">
+            <div class="program-tier__number">Tier 03</div>
+            <h3>Deep Integration — <em>for institutions ready to lead</em></h3>
+          </div>
+
+          <div class="program-card">
+            <div class="program-card__tag">Corporate · Workforce</div>
+            <h4>Enterprise AI Readiness Training</h4>
+            <p class="program-card__meta">Custom Format · On-Site or Virtual · Scalable</p>
+            <p>Your workforce doesn't need another e-learning module. They need to solve real problems in your business with AI and come out the other side with demonstrated capability. We build programs around your industry, your tools, and your strategic priorities.</p>
+            <div style="margin-top: 1.25rem;">
+              <a href="https://zaiinstitute.ai/contact" class="btn btn--secondary" aria-label="Learn more about Enterprise AI Readiness Training">Learn More →</a>
+            </div>
+          </div>
+
+          <div class="program-card">
+            <div class="program-card__tag">Coming · Full Concentration</div>
+            <h4>AI &amp; the Future of Work — 48 Credit Concentration</h4>
+            <p class="program-card__meta">48 Credit Hours · Studio-Based · Portfolio-Assessed</p>
+            <p>An integrated, studio-based pathway where students build, ship, and defend real AI projects across their undergraduate career. Assessment is entirely competency-based: students demonstrate mastery through the work itself — evaluated by faculty, industry mentors, and peers.</p>
+            <div style="margin-top: 1.25rem;">
+              <a href="https://zaiinstitute.ai/contact" class="btn btn--secondary" aria-label="Join the waitlist for the 48-credit AI Concentration">Join the Waitlist →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW PROGRAMS ARE BUILT -->
+    <section class="build-process" aria-labelledby="process-heading">
+      <div class="container">
+        <h2 id="process-heading">How Every ZAI Program Is Built</h2>
+        <div class="process-steps" role="list">
+          <div role="listitem">
+            <div class="process-step__number">01</div>
+            <h3>Human-Led Design</h3>
+            <p>Instructional architects define the learning objectives, assessment strategy, and pedagogical structure. Assessment is designed around demonstrated capability — applied projects, professional portfolios, and real-world evaluation.</p>
+          </div>
+          <div role="listitem">
+            <div class="process-step__number">02</div>
+            <h3>AI-Accelerated Build</h3>
+            <p>Our proprietary development platform builds the course framework at speed — drawing from our module library and generating custom content aligned to the design specification.</p>
+          </div>
+          <div role="listitem">
+            <div class="process-step__number">03</div>
+            <h3>Three-Layer Review</h3>
+            <p>Every program passes through three independent reviews: instructional design quality, subject matter accuracy, and institutional compliance. Nothing reaches students without all three sign-offs.</p>
+          </div>
+          <div role="listitem">
+            <div class="process-step__number">04</div>
+            <h3>Continuous Evolution</h3>
+            <p>AI moves fast. Our programs evolve with it. Every ZAI curriculum is updated continuously — not annually — so your students learn what the market demands today, not what it demanded last year.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NETWORK -->
+    <section class="network" id="network" aria-labelledby="network-heading">
+      <div class="container">
+        <h2 id="network-heading">Knowledge without <em>connection</em> is incomplete.</h2>
+        <p>ZAI Institute graduates don't just earn a credential — they enter a living network of 50,000+ executives across virtually every major industry in America. This is not a LinkedIn group. It is a curated, managed ecosystem where learning converts directly into career opportunity.</p>
+
+        <div class="stats" role="list" aria-label="Network metrics" style="margin-top: 2.5rem; justify-content: flex-start;">
+          <div class="stat" role="listitem">
+            <div class="stat__number">50k+</div>
+            <div class="stat__label">Executive Connections</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__number">60+</div>
+            <div class="stat__label">University Partners</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__number">500+</div>
+            <div class="stat__label">Companies Represented</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Company logo marquee — pausable -->
+      <div class="network-logos" aria-label="Companies represented in the ZAI Network" role="region">
+        <div class="marquee-controls" style="top: 0.5rem; right: 1rem;">
+          <button class="marquee-pause-btn" aria-label="Pause scrolling company names" onclick="toggleMarquee(this, 'network-marquee')">Pause</button>
+        </div>
+        <div class="network-logos__track" id="network-marquee">
+          <span class="network-logos__item">Accenture</span>
+          <span class="network-logos__item">Aetna</span>
+          <span class="network-logos__item">AIG</span>
+          <span class="network-logos__item">AT&amp;T</span>
+          <span class="network-logos__item">Bank of America</span>
+          <span class="network-logos__item">BlueCross BlueShield</span>
+          <span class="network-logos__item">Cigna</span>
+          <span class="network-logos__item">Comcast</span>
+          <span class="network-logos__item">Deloitte</span>
+          <span class="network-logos__item">Estée Lauder</span>
+          <span class="network-logos__item">Forbes</span>
+          <span class="network-logos__item">Intel</span>
+          <span class="network-logos__item">Johnson &amp; Johnson</span>
+          <span class="network-logos__item">Marriott</span>
+          <span class="network-logos__item">Mastercard</span>
+          <span class="network-logos__item">Merck</span>
+          <span class="network-logos__item">Microsoft</span>
+          <span class="network-logos__item">Morgan Stanley</span>
+          <span class="network-logos__item">Nielsen</span>
+          <span class="network-logos__item">Novartis</span>
+          <span class="network-logos__item">Prudential</span>
+          <span class="network-logos__item">Salesforce</span>
+          <span class="network-logos__item">Adobe</span>
+          <span class="network-logos__item">IBM</span>
+          <span class="network-logos__item">JPMorgan Chase</span>
+          <span class="network-logos__item">Oracle</span>
+          <span class="network-logos__item">Bristol Myers Squibb</span>
+          <span class="network-logos__item">MetLife</span>
+          <span class="network-logos__item">The New York Times</span>
+          <!-- Duplicate for seamless loop — hidden from screen readers -->
+          <span class="network-logos__item" aria-hidden="true">Accenture</span>
+          <span class="network-logos__item" aria-hidden="true">Aetna</span>
+          <span class="network-logos__item" aria-hidden="true">AIG</span>
+          <span class="network-logos__item" aria-hidden="true">AT&amp;T</span>
+          <span class="network-logos__item" aria-hidden="true">Bank of America</span>
+          <span class="network-logos__item" aria-hidden="true">BlueCross BlueShield</span>
+          <span class="network-logos__item" aria-hidden="true">Cigna</span>
+          <span class="network-logos__item" aria-hidden="true">Comcast</span>
+          <span class="network-logos__item" aria-hidden="true">Deloitte</span>
+          <span class="network-logos__item" aria-hidden="true">Estée Lauder</span>
+          <span class="network-logos__item" aria-hidden="true">Forbes</span>
+          <span class="network-logos__item" aria-hidden="true">Intel</span>
+          <span class="network-logos__item" aria-hidden="true">Johnson &amp; Johnson</span>
+          <span class="network-logos__item" aria-hidden="true">Marriott</span>
+          <span class="network-logos__item" aria-hidden="true">Mastercard</span>
+          <span class="network-logos__item" aria-hidden="true">Merck</span>
+          <span class="network-logos__item" aria-hidden="true">Microsoft</span>
+          <span class="network-logos__item" aria-hidden="true">Morgan Stanley</span>
+          <span class="network-logos__item" aria-hidden="true">Nielsen</span>
+          <span class="network-logos__item" aria-hidden="true">Novartis</span>
+          <span class="network-logos__item" aria-hidden="true">Prudential</span>
+          <span class="network-logos__item" aria-hidden="true">Salesforce</span>
+          <span class="network-logos__item" aria-hidden="true">Adobe</span>
+          <span class="network-logos__item" aria-hidden="true">IBM</span>
+          <span class="network-logos__item" aria-hidden="true">JPMorgan Chase</span>
+          <span class="network-logos__item" aria-hidden="true">Oracle</span>
+          <span class="network-logos__item" aria-hidden="true">Bristol Myers Squibb</span>
+          <span class="network-logos__item" aria-hidden="true">MetLife</span>
+          <span class="network-logos__item" aria-hidden="true">The New York Times</span>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="network-features">
+          <div class="network-feature">
+            <div class="network-feature__icon" aria-hidden="true">&#x25C6;</div>
+            <h3>Direct Employer Access</h3>
+            <p>Graduates connect with hiring executives at Fortune 500 companies who actively seek AI-ready talent — real relationships with real decision-makers.</p>
+          </div>
+          <div class="network-feature">
+            <div class="network-feature__icon" aria-hidden="true">&#x25C6;</div>
+            <h3>Executive Mentorship</h3>
+            <p>Industry leaders who serve as advisors, mentors, and capstone evaluators. Students present their work to the people who hire for the roles they want.</p>
+          </div>
+          <div class="network-feature">
+            <div class="network-feature__icon" aria-hidden="true">&#x25C6;</div>
+            <h3>Institutional Credibility</h3>
+            <p>When a university partners with ZAI, their name joins a network that includes R1 flagships, regional leaders, and Fortune 500 employers.</p>
+          </div>
+          <div class="network-feature">
+            <div class="network-feature__icon" aria-hidden="true">&#x25C6;</div>
+            <h3>Career-Long Value</h3>
+            <p>Network access doesn't expire at graduation. Members stay connected as their careers evolve — turning a certificate into a professional community that compounds over time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESEARCH -->
+    <section class="research" id="research" aria-labelledby="research-heading">
+      <div class="container">
+        <p class="section-label">Research &amp; Insight</p>
+        <h2 id="research-heading">The <em>University AI Readiness Study</em></h2>
+        <p>The definitive benchmark for how higher education institutions are preparing — or failing to prepare — students, faculty, and staff for an AI-driven economy. ZAI Institute leads the only longitudinal study of its kind across American universities.</p>
+
+        <div class="stats" role="list" aria-label="Research metrics" style="margin-top: 2.5rem; justify-content: flex-start;">
+          <div class="stat" role="listitem">
+            <div class="stat__number">60+</div>
+            <div class="stat__label">Participating Universities</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__number">3</div>
+            <div class="stat__label">Research Dimensions</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__number">12<span class="sr-only"> month</span>mo</div>
+            <div class="stat__label">Longitudinal Tracking</div>
+          </div>
+        </div>
+
+        <div class="research-dims">
+          <div class="research-dim">
+            <div class="research-dim__number">01</div>
+            <h3>Student AI Readiness</h3>
+            <p>Baseline and longitudinal measurement of AI fluency, confidence, and practical capability across undergraduate and graduate populations. Benchmarked nationally by institution type, major, and cohort year.</p>
+          </div>
+          <div class="research-dim">
+            <div class="research-dim__number">02</div>
+            <h3>Faculty &amp; Institutional Adoption</h3>
+            <p>How are faculty integrating AI into pedagogy? How are institutions governing AI use, academic integrity, and curriculum evolution? The first rigorous data set measuring adoption at the institutional level.</p>
+          </div>
+          <div class="research-dim">
+            <div class="research-dim__number">03</div>
+            <h3>Workforce Alignment</h3>
+            <p>The gap between what universities are producing and what employers need. Measured annually. Published publicly. Used by CHROs, boards, and policy makers to drive investment and curriculum change.</p>
+          </div>
+        </div>
+
+        <div class="research-benefits">
+          <h3>Founding institutions receive</h3>
+          <ul>
+            <li>Full institutional benchmark report</li>
+            <li>Recognition in all published findings</li>
+            <li>Priority access to national data</li>
+            <li>Co-marketing as an AI-forward institution</li>
+            <li>No cost to participate</li>
+          </ul>
+          <div style="margin-top: 1.5rem;">
+            <a href="https://zaiinstitute.ai/contact" class="btn btn--primary" aria-label="Become a founding institution in the AI Readiness Study">Become a Founding Institution</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" aria-labelledby="cta-heading">
+      <div class="container container--narrow" style="text-align: center;">
+        <h2 id="cta-heading">The institutions that move with intention <em>now</em> will define what comes next.</h2>
+        <p style="margin-top: 1rem;">Which side of that sentence does your institution want to be on?</p>
+        <div class="hero__ctas" style="margin-top: 2.5rem;">
+          <a href="https://zaiinstitute.ai/contact" class="btn btn--primary" aria-label="Request a partnership conversation with ZAI Institute">Request a Partnership Conversation</a>
+          <a href="#research" class="btn btn--secondary" aria-label="Join the AI Readiness Study">Join the AI Readiness Study</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="nav__logo" aria-label="ZAI Institute — Home">
+            ZAI
+            <span>Institute</span>
+          </a>
+          <p class="footer__tagline">Transforming Education for the Age of AI</p>
+        </div>
+
+        <nav class="footer__col" aria-label="Programs">
+          <h4>Programs</h4>
+          <ul>
+            <li><a href="#programs">Foundation Certificate</a></li>
+            <li><a href="#programs">Professional Certificate</a></li>
+            <li><a href="#programs">Faculty AI Training</a></li>
+            <li><a href="#programs">Corporate AI Training</a></li>
+            <li><a href="#programs">AI Concentration</a></li>
+            <li><a href="#research">AI Readiness Study</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer__col" aria-label="Institute information">
+          <h4>Institute</h4>
+          <ul>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#pillars">Our Approach</a></li>
+            <li><a href="#network">The Network</a></li>
+            <li><a href="#audience">Who We Serve</a></li>
+            <li><a href="https://zaiinstitute.ai/contact">Partner With Us</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:info@zaiinstitute.ai">info@zaiinstitute.ai</a></li>
+            <li><a href="tel:+18883847020">(888) 384-7020</a></li>
+            <li>Fort Lauderdale, FL</li>
+            <li><a href="https://zaiinstitute.ai/contact">Schedule a Call</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        &copy; 2026 ZAI Institute, LLC. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ JAVASCRIPT ============ -->
+  <script>
+    // ============================================
+    // MARQUEE PAUSE/PLAY — WCAG 2.2.2
+    // ============================================
+    function toggleMarquee(btn, trackId) {
+      const track = document.getElementById(trackId);
+      if (!track) return;
+      
+      const isPaused = track.classList.toggle('is-paused');
+      btn.textContent = isPaused ? 'Play' : 'Pause';
+      btn.setAttribute('aria-label', 
+        isPaused ? 'Resume scrolling text' : 'Pause scrolling text'
+      );
+    }
+
+    // ============================================
+    // ACCORDION — WCAG 4.1.2, 2.1.1
+    // Keyboard accessible with proper ARIA states
+    // ============================================
+    document.querySelectorAll('.conviction__trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+        const content = document.getElementById(trigger.getAttribute('aria-controls'));
+        
+        trigger.setAttribute('aria-expanded', !isExpanded);
+        content.setAttribute('aria-hidden', isExpanded);
+      });
+
+      // Keyboard support — Enter and Space
+      trigger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          trigger.click();
+        }
+      });
+    });
+
+    // ============================================
+    // MOBILE NAV TOGGLE — Accessible
+    // ============================================
+    const navToggle = document.querySelector('.nav__toggle');
+    const navMenu = document.getElementById('nav-menu');
+    
+    if (navToggle && navMenu) {
+      navToggle.addEventListener('click', () => {
+        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', !isExpanded);
+        navMenu.classList.toggle('is-open');
+        navMenu.setAttribute('aria-expanded', !isExpanded);
+      });
+    }
+  </script>
+
+</body>
+</html>
