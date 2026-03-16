@@ -76,7 +76,7 @@ nav .nav-inner {
   letter-spacing: 0.3em; color: #fff;
   text-decoration: none; display: flex; align-items: center; gap: 14px;
 }
-.nav-logo .z-mark { flex-shrink: 0; }
+.nav-logo .z-mark { flex-shrink: 0; display: block; width: 36px; height: 36px; min-width: 36px; }
 .nav-logo .logo-text { display: flex; flex-direction: column; gap: 2px; }
 .nav-logo .logo-zai { font-size: 22px; font-weight: 600; color: var(--gold); letter-spacing: 0.25em; }
 .nav-logo .logo-inst { font-size: 10px; letter-spacing: 0.4em; color: rgba(255,255,255,0.6); }
@@ -786,6 +786,7 @@ footer {
 .footer-brand .footer-logo-row {
   display: flex; align-items: center; gap: 14px;
 }
+.footer-brand .footer-logo-row .z-mark { flex-shrink: 0; display: block; width: 42px; height: 42px; min-width: 42px; }
 .footer-brand .logo-text { display: flex; flex-direction: column; gap: 2px; }
 .footer-brand .logo-zai {
   font-family: var(--mono); font-size: 22px; font-weight: 600;
@@ -852,8 +853,8 @@ footer {
 <nav>
   <div class="nav-inner">
     <a href="#" class="nav-logo">
-      <svg class="z-mark" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="1" y="1" width="34" height="34" stroke="#B8962E" stroke-width="1.2" fill="none"/>
+      <svg class="z-mark" width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;">
+        <rect x="1" y="1" width="34" height="34" stroke="#B8962E" stroke-width="1.2" fill="transparent"/>
         <line x1="8" y1="10" x2="28" y2="10" stroke="#F5F2ED" stroke-width="2.2" stroke-linecap="round"/>
         <line x1="28" y1="10" x2="8" y2="26" stroke="#F5F2ED" stroke-width="2.2" stroke-linecap="round"/>
         <line x1="8" y1="26" x2="28" y2="26" stroke="#F5F2ED" stroke-width="2.2" stroke-linecap="round"/>
@@ -1288,8 +1289,8 @@ footer {
   <div class="footer-inner">
     <div class="footer-brand">
       <div class="footer-logo-row">
-        <svg class="z-mark" width="42" height="42" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="1" y="1" width="34" height="34" stroke="#B8962E" stroke-width="1.2" fill="none"/>
+        <svg class="z-mark" width="42" height="42" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" style="overflow:visible;">
+          <rect x="1" y="1" width="34" height="34" stroke="#B8962E" stroke-width="1.2" fill="transparent"/>
           <line x1="8" y1="10" x2="28" y2="10" stroke="#F5F2ED" stroke-width="2.2" stroke-linecap="round"/>
           <line x1="28" y1="10" x2="8" y2="26" stroke="#F5F2ED" stroke-width="2.2" stroke-linecap="round"/>
           <line x1="8" y1="26" x2="28" y2="26" stroke="#F5F2ED" stroke-width="2.2" stroke-linecap="round"/>
