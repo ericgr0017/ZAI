@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZAI Institute — Transforming Education for the Age of AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   ZAI INSTITUTE — ENHANCED COLOR SYSTEM
+   Brand-compliant palette with expanded range
+   ============================================================ */
+:root {
+  /* Core Brand (unchanged) */
+  --ink: #0A0A0F;
+  --ink-soft: #1A1A2E;
+  --gold: #B8962E;
+  --gold-light: #D4AE4A;
+  --gold-pale: #F5EDD4;
+  --gold-accessible: #7D6415;
+  --gold-accessible-light: #886E1A;
+  --paper: #F5F2ED;
+  --slate: #2C3E5A;
+  --muted: #6B6B7A;
+
+  /* NEW — Extended Palette (complementary to brand) */
+  --slate-deep: #1B2A40;
+  --slate-mid: #3D5478;
+  --slate-light: #5A7399;
+  --teal: #1A5C6B;
+  --teal-soft: #2A7A8A;
+  --teal-pale: #E4F2F5;
+  --warm: #8B5E3C;
+  --warm-light: #C49A6C;
+  --warm-pale: #F8F0E6;
+  --sage: #4A6B5A;
+  --sage-light: #6B8E7A;
+
+  /* Typography */
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Inter', -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', 'Courier New', monospace;
+
+  /* Spacing */
+  --section-pad: clamp(80px, 10vw, 140px);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 10, 15, 0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(184, 150, 46, 0.15);
+  transition: background 0.4s;
+}
+nav .nav-inner {
+  max-width: 1280px; margin: 0 auto;
+  padding: 18px 40px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: var(--mono); font-size: 13px;
+  letter-spacing: 0.3em; color: #fff;
+  text-decoration: none; display: flex; align-items: center; gap: 14px;
+}
+.z-mark {
+  flex-shrink: 0;
+  width: 36px; height: 36px; min-width: 36px;
+  display: block;
+  background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='34' height='34' stroke='%23B8962E' stroke-width='1.2' fill='none'/%3E%3Cline x1='8' y1='10' x2='28' y2='10' stroke='%23F5F2ED' stroke-width='2.2' stroke-linecap='round'/%3E%3Cline x1='28' y1='10' x2='8' y2='26' stroke='%23F5F2ED' stroke-width='2.2' stroke-linecap='round'/%3E%3Cline x1='8' y1='26' x2='28' y2='26' stroke='%23F5F2ED' stroke-width='2.2' stroke-linecap='round'/%3E%3Ccircle cx='28' cy='10' r='2.5' fill='%23B8962E'/%3E%3Ccircle cx='8' cy='26' r='2.5' fill='%23B8962E'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.z-mark-lg {
+  width: 42px; height: 42px; min-width: 42px;
+}
+.nav-logo .logo-text { display: flex; flex-direction: column; gap: 2px; }
+.nav-logo .logo-zai { font-size: 22px; font-weight: 600; color: var(--gold); letter-spacing: 0.25em; }
+.nav-logo .logo-inst { font-size: 10px; letter-spacing: 0.4em; color: rgba(255,255,255,0.6); }
+nav ul { list-style: none; display: flex; gap: 32px; }
+nav ul li a {
+  font-family: var(--sans); font-size: 13px; font-weight: 500;
+  color: rgba(255,255,255,0.7); text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: color 0.3s;
+}
+nav ul li a:hover { color: var(--gold); }
+
+/* ============================================================
+   HERO — Deep layered gradient with texture
+   ============================================================ */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex; align-items: center;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 80%, rgba(26, 92, 107, 0.25) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(44, 62, 90, 0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 90% 80% at 50% 50%, rgba(26, 26, 46, 0.9) 0%, rgba(10, 10, 15, 1) 70%);
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(184,150,46,0.03) 60px, rgba(184,150,46,0.03) 61px),
+    repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(184,150,46,0.03) 60px, rgba(184,150,46,0.03) 61px);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 200px;
+  background: linear-gradient(to top, var(--paper), transparent);
+  pointer-events: none;
+}
+.hero-glow {
+  position: absolute; top: -100px; right: -100px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(184,150,46,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: glow-drift 8s ease-in-out infinite alternate;
+}
+@keyframes glow-drift {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(-60px, 40px) scale(1.15); }
+}
+.hero-glow-2 {
+  position: absolute; bottom: -50px; left: -80px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(26,92,107,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: glow-drift-2 10s ease-in-out infinite alternate;
+}
+@keyframes glow-drift-2 {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(40px, -30px) scale(1.1); }
+}
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 1280px; margin: 0 auto;
+  padding: 160px 40px 120px;
+}
+.hero-eyebrow {
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.25em;
+  color: var(--gold); text-transform: uppercase;
+  margin-bottom: 24px;
+  opacity: 0; animation: fade-up 0.8s ease forwards 0.2s;
+}
+.hero h1 {
+  font-family: var(--serif); font-size: clamp(42px, 5.5vw, 72px);
+  font-weight: 400; line-height: 1.1; color: #fff;
+  max-width: 800px;
+  margin-bottom: 28px;
+  opacity: 0; animation: fade-up 0.8s ease forwards 0.4s;
+}
+.hero h1 em {
+  font-style: italic; color: var(--gold-light);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-sub {
+  font-family: var(--sans); font-size: 18px; line-height: 1.7;
+  color: rgba(255,255,255,0.65); max-width: 580px;
+  margin-bottom: 40px;
+  opacity: 0; animation: fade-up 0.8s ease forwards 0.6s;
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-ctas {
+  display: flex; gap: 16px; flex-wrap: wrap;
+  opacity: 0; animation: fade-up 0.8s ease forwards 0.8s;
+}
+.btn-gold {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--ink); font-family: var(--sans); font-size: 14px; font-weight: 600;
+  text-decoration: none; letter-spacing: 0.02em;
+  border: none; cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(184,150,46,0.3);
+}
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 32px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.8);
+  font-family: var(--sans); font-size: 14px; font-weight: 500;
+  text-decoration: none; letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: border-color 0.3s, color 0.3s;
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+/* Hero Stats Bar */
+.hero-stats {
+  position: relative; z-index: 2;
+  max-width: 1280px; margin: -60px auto 0; padding: 0 40px;
+}
+.hero-stats-inner {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  background: rgba(27, 42, 64, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(184,150,46,0.2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.stat-card {
+  padding: 36px 32px;
+  text-align: center;
+  position: relative;
+}
+.stat-card:not(:last-child)::after {
+  content: '';
+  position: absolute; right: 0; top: 20%; height: 60%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(184,150,46,0.3), transparent);
+}
+.stat-number {
+  font-family: var(--serif); font-size: 42px; font-weight: 700;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.stat-label {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.5); text-transform: uppercase;
+  margin-top: 8px;
+}
+
+/* ============================================================
+   MARQUEE — Ticker strip
+   ============================================================ */
+.marquee-section {
+  background: linear-gradient(135deg, var(--slate-deep) 0%, var(--ink-soft) 100%);
+  padding: 28px 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(184,150,46,0.1);
+  border-bottom: 1px solid rgba(184,150,46,0.1);
+}
+.marquee-track {
+  display: flex; gap: 24px;
+  animation: marquee-scroll 40s linear infinite;
+  width: max-content;
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-item {
+  font-family: var(--serif); font-size: 17px; font-style: italic;
+  color: rgba(255,255,255,0.55);
+  white-space: nowrap;
+  display: flex; align-items: center; gap: 24px;
+}
+.marquee-item .diamond {
+  color: var(--gold); font-size: 10px; opacity: 0.6;
+}
+
+/* ============================================================
+   ABOUT / HERITAGE
+   ============================================================ */
+.about-section {
+  padding: var(--section-pad) 40px;
+  max-width: 1280px; margin: 0 auto;
+}
+.section-eyebrow {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.25em;
+  color: var(--gold-accessible); text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.section-heading {
+  font-family: var(--serif); font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400; line-height: 1.2;
+  color: var(--ink); margin-bottom: 20px;
+}
+.section-heading em {
+  font-style: italic; color: var(--slate);
+}
+.about-quote {
+  position: relative;
+  max-width: 700px; margin: 40px 0;
+  padding: 32px 0 32px 32px;
+  border-left: 3px solid var(--gold);
+}
+.about-quote blockquote {
+  font-family: var(--serif); font-size: 22px; font-style: italic;
+  line-height: 1.6; color: var(--slate);
+}
+.about-quote cite {
+  display: block; margin-top: 12px;
+  font-family: var(--mono); font-size: 11px; font-style: normal;
+  letter-spacing: 0.15em; color: var(--gold-accessible); text-transform: uppercase;
+}
+.about-body {
+  font-size: 16px; line-height: 1.8; color: var(--muted);
+  max-width: 680px; margin-top: 24px;
+}
+
+/* Problem Cards */
+.problems-section {
+  background: linear-gradient(180deg, var(--paper) 0%, var(--warm-pale) 40%, var(--paper) 100%);
+  padding: var(--section-pad) 40px;
+}
+.problems-inner {
+  max-width: 1280px; margin: 0 auto;
+}
+.problems-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px; margin-top: 48px;
+}
+.problem-card {
+  position: relative;
+  padding: 40px 32px;
+  background: #fff;
+  border: 1px solid rgba(10,10,15,0.06);
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.problem-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(10,10,15,0.08);
+}
+.problem-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+}
+.problem-card:nth-child(1)::before { background: linear-gradient(90deg, var(--slate), var(--slate-mid)); }
+.problem-card:nth-child(2)::before { background: linear-gradient(90deg, var(--teal), var(--teal-soft)); }
+.problem-card:nth-child(3)::before { background: linear-gradient(90deg, var(--warm), var(--warm-light)); }
+.problem-card:nth-child(4)::before { background: linear-gradient(90deg, var(--gold), var(--gold-light)); }
+.problem-num {
+  font-family: var(--mono); font-size: 12px; font-weight: 600;
+  letter-spacing: 0.1em; margin-bottom: 16px;
+}
+.problem-card:nth-child(1) .problem-num { color: var(--slate); }
+.problem-card:nth-child(2) .problem-num { color: var(--teal); }
+.problem-card:nth-child(3) .problem-num { color: var(--warm); }
+.problem-card:nth-child(4) .problem-num { color: var(--gold); }
+.problem-card h3 {
+  font-family: var(--serif); font-size: 22px; font-weight: 600;
+  color: var(--ink); margin-bottom: 12px;
+}
+.problem-card p {
+  font-size: 15px; line-height: 1.7; color: var(--muted);
+}
+
+/* ============================================================
+   APPROACH / PILLARS
+   ============================================================ */
+.approach-section {
+  position: relative;
+  background: linear-gradient(160deg, var(--ink) 0%, var(--slate-deep) 50%, var(--ink-soft) 100%);
+  padding: var(--section-pad) 40px;
+  overflow: hidden;
+}
+.approach-section::before {
+  content: '';
+  position: absolute; top: -200px; right: -200px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(26,92,107,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.approach-inner {
+  max-width: 1280px; margin: 0 auto; position: relative; z-index: 1;
+}
+.approach-section .section-eyebrow { color: var(--gold); }
+.approach-section .section-heading { color: #fff; }
+.approach-section .section-heading em { color: var(--gold-light); }
+.approach-intro {
+  font-size: 17px; line-height: 1.7;
+  color: rgba(255,255,255,0.6); max-width: 680px;
+  margin-bottom: 60px;
+}
+.pillars-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+}
+.pillar-card {
+  padding: 48px 40px;
+  position: relative;
+  transition: background 0.4s;
+}
+.pillar-card:nth-child(1) { background: rgba(44, 62, 90, 0.25); }
+.pillar-card:nth-child(2) { background: rgba(26, 92, 107, 0.2); }
+.pillar-card:nth-child(3) { background: rgba(139, 94, 60, 0.15); }
+.pillar-card:nth-child(4) { background: rgba(184, 150, 46, 0.12); }
+.pillar-card:hover { background: rgba(255,255,255,0.06); }
+.pillar-number {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.2em;
+  margin-bottom: 16px;
+}
+.pillar-card:nth-child(1) .pillar-number { color: var(--slate-light); }
+.pillar-card:nth-child(2) .pillar-number { color: var(--teal-soft); }
+.pillar-card:nth-child(3) .pillar-number { color: var(--warm-light); }
+.pillar-card:nth-child(4) .pillar-number { color: var(--gold-light); }
+.pillar-card h3 {
+  font-family: var(--serif); font-size: 26px; font-weight: 600;
+  color: #fff; margin-bottom: 16px;
+}
+.pillar-card p {
+  font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.55);
+}
+
+/* ============================================================
+   WHO WE SERVE — Audience Cards (rich color)
+   ============================================================ */
+.audience-section {
+  padding: var(--section-pad) 40px;
+  max-width: 1280px; margin: 0 auto;
+}
+.audience-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 24px; margin-top: 48px;
+}
+.audience-card {
+  position: relative; padding: 48px 40px;
+  overflow: hidden; transition: transform 0.4s;
+  min-height: 280px; display: flex; flex-direction: column; justify-content: flex-end;
+}
+.audience-card:hover { transform: translateY(-4px); }
+.audience-card::before {
+  content: '';
+  position: absolute; inset: 0;
+  opacity: 0.08;
+  transition: opacity 0.4s;
+}
+.audience-card:hover::before { opacity: 0.12; }
+
+/* Each card gets its own color world */
+.audience-card.card-university {
+  background: linear-gradient(145deg, var(--slate-deep), var(--slate));
+  border: 1px solid rgba(90, 115, 153, 0.3);
+}
+.audience-card.card-employers {
+  background: linear-gradient(145deg, #0F3B3F, var(--teal));
+  border: 1px solid rgba(42, 122, 138, 0.3);
+}
+.audience-card.card-learners {
+  background: linear-gradient(145deg, #3D2A1A, var(--warm));
+  border: 1px solid rgba(196, 154, 108, 0.3);
+}
+.audience-card.card-research {
+  background: linear-gradient(145deg, #2A3A2A, var(--sage));
+  border: 1px solid rgba(107, 142, 122, 0.3);
+}
+.audience-symbol {
+  font-family: var(--serif); font-size: 56px; font-weight: 300;
+  position: absolute; top: 24px; right: 32px;
+  opacity: 0.15; color: #fff;
+}
+.audience-eyebrow {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; margin-bottom: 12px;
+}
+.card-university .audience-eyebrow { color: var(--slate-light); }
+.card-employers .audience-eyebrow { color: var(--teal-soft); }
+.card-learners .audience-eyebrow { color: var(--warm-light); }
+.card-research .audience-eyebrow { color: var(--sage-light); }
+.audience-card h3 {
+  font-family: var(--serif); font-size: 26px; font-weight: 600;
+  color: #fff; margin-bottom: 14px;
+}
+.audience-card p {
+  font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.6);
+  margin-bottom: 20px;
+}
+.audience-link {
+  font-family: var(--sans); font-size: 13px; font-weight: 600;
+  text-decoration: none; letter-spacing: 0.02em;
+  transition: opacity 0.3s;
+}
+.card-university .audience-link { color: var(--slate-light); }
+.card-employers .audience-link { color: var(--teal-soft); }
+.card-learners .audience-link { color: var(--warm-light); }
+.card-research .audience-link { color: var(--sage-light); }
+.audience-link:hover { opacity: 0.7; }
+
+/* ============================================================
+   PROGRAMS — Tiered with color coding
+   ============================================================ */
+.programs-section {
+  background: linear-gradient(180deg, var(--paper) 0%, #fff 30%, var(--teal-pale) 60%, var(--paper) 100%);
+  padding: var(--section-pad) 40px;
+}
+.programs-inner {
+  max-width: 1280px; margin: 0 auto;
+}
+.programs-tier {
+  margin-bottom: 64px;
+}
+.tier-header {
+  display: flex; align-items: baseline; gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid rgba(10,10,15,0.06);
+}
+.tier-num {
+  font-family: var(--mono); font-size: 13px; font-weight: 600;
+  letter-spacing: 0.1em; color: var(--gold-accessible-light);
+}
+.tier-title {
+  font-family: var(--serif); font-size: 28px; font-weight: 600;
+  color: var(--ink);
+}
+.tier-title em { font-style: italic; color: var(--slate); }
+.tier-desc {
+  font-size: 15px; line-height: 1.7; color: var(--muted);
+  max-width: 600px; margin-bottom: 32px;
+}
+
+.programs-grid {
+  display: grid; gap: 24px;
+}
+.programs-grid.two-col { grid-template-columns: repeat(2, 1fr); }
+
+.program-card {
+  background: #fff;
+  border: 1px solid rgba(10,10,15,0.06);
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.program-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(10,10,15,0.06);
+}
+.program-card::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 4px;
+}
+.program-card.prog-foundation::after { background: linear-gradient(90deg, var(--slate), var(--slate-mid)); }
+.program-card.prog-professional::after { background: linear-gradient(90deg, var(--teal), var(--teal-soft)); }
+.program-card.prog-faculty::after { background: linear-gradient(90deg, var(--warm), var(--warm-light)); }
+.program-card.prog-custom::after { background: linear-gradient(90deg, var(--gold), var(--gold-light)); }
+.program-card.prog-enterprise::after { background: linear-gradient(90deg, var(--sage), var(--sage-light)); }
+.program-card.prog-concentration::after { background: linear-gradient(90deg, var(--ink), var(--slate)); }
+
+.program-badge {
+  display: inline-block;
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  margin-bottom: 16px;
+}
+.prog-foundation .program-badge { background: rgba(44,62,90,0.1); color: var(--slate); }
+.prog-professional .program-badge { background: rgba(26,92,107,0.1); color: var(--teal); }
+.prog-faculty .program-badge { background: rgba(139,94,60,0.1); color: var(--warm); }
+.prog-custom .program-badge { background: rgba(184,150,46,0.1); color: var(--gold-accessible); }
+.prog-enterprise .program-badge { background: rgba(74,107,90,0.1); color: var(--sage); }
+.prog-concentration .program-badge { background: rgba(10,10,15,0.08); color: var(--ink); }
+
+.program-card h3 {
+  font-family: var(--serif); font-size: 24px; font-weight: 600;
+  color: var(--ink); margin-bottom: 8px;
+}
+.program-meta {
+  font-family: var(--mono); font-size: 12px;
+  color: var(--muted); letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+.program-card > p {
+  font-size: 15px; line-height: 1.7; color: var(--muted);
+  margin-bottom: 20px;
+}
+.program-deploy {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em;
+  color: var(--gold-accessible-light); text-transform: uppercase;
+}
+.program-deploy::before {
+  content: '\u26A1'; font-size: 13px;
+}
+
+/* ============================================================
+   NETWORK — Dark section with color-coded logos
+   ============================================================ */
+.network-section {
+  position: relative;
+  background: linear-gradient(135deg, var(--ink) 0%, var(--slate-deep) 40%, var(--ink-soft) 100%);
+  padding: var(--section-pad) 40px;
+  overflow: hidden;
+}
+.network-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 50% 40% at 70% 30%, rgba(184,150,46,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 50% at 20% 70%, rgba(26,92,107,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.network-inner {
+  max-width: 1280px; margin: 0 auto; position: relative; z-index: 1;
+}
+.network-section .section-eyebrow { color: var(--gold); }
+.network-section .section-heading { color: #fff; }
+.network-section .section-heading em { color: var(--gold-light); }
+
+.network-stats {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 32px; margin: 48px 0;
+}
+.network-stat {
+  text-align: center; padding: 32px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.network-stat .stat-value {
+  font-family: var(--serif); font-size: 48px; font-weight: 700;
+  margin-bottom: 8px;
+}
+.network-stat:nth-child(1) .stat-value {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.network-stat:nth-child(2) .stat-value {
+  background: linear-gradient(135deg, var(--teal-soft), var(--slate-light));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.network-stat:nth-child(3) .stat-value {
+  background: linear-gradient(135deg, var(--warm-light), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.network-stat .stat-name {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.55); text-transform: uppercase;
+}
+
+/* Scrolling company names */
+.network-scroll {
+  margin: 48px -40px 0;
+  overflow: hidden;
+}
+.scroll-track {
+  display: flex; gap: 48px;
+  animation: scroll-left 50s linear infinite;
+  width: max-content;
+}
+.scroll-track.reverse { animation-direction: reverse; animation-duration: 55s; }
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.company-name {
+  font-family: var(--sans); font-size: 15px; font-weight: 500;
+  color: rgba(255,255,255,0.5);
+  white-space: nowrap;
+  transition: color 0.3s;
+}
+.company-name:hover { color: rgba(255,255,255,0.8); }
+.network-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(184,150,46,0.2), transparent);
+  margin: 24px 0;
+}
+
+/* University partners row */
+.uni-track .company-name {
+  color: rgba(212, 174, 74, 0.7);
+}
+.uni-track .company-name:hover { color: var(--gold-light); }
+
+/* Network features grid */
+.network-features {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 2px; margin-top: 48px;
+}
+.network-feature {
+  padding: 32px 28px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.04);
+  transition: background 0.3s;
+}
+.network-feature:hover { background: rgba(255,255,255,0.06); }
+.feature-icon {
+  font-size: 20px; margin-bottom: 16px;
+  display: inline-block;
+}
+.network-feature:nth-child(1) .feature-icon { color: var(--gold); }
+.network-feature:nth-child(2) .feature-icon { color: var(--teal-soft); }
+.network-feature:nth-child(3) .feature-icon { color: var(--slate-light); }
+.network-feature:nth-child(4) .feature-icon { color: var(--warm-light); }
+.network-feature h4 {
+  font-family: var(--serif); font-size: 18px; font-weight: 600;
+  color: #fff; margin-bottom: 10px;
+}
+.network-feature p {
+  font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.55);
+}
+
+/* ============================================================
+   RESEARCH
+   ============================================================ */
+.research-section {
+  background: linear-gradient(180deg, var(--paper), var(--gold-pale) 50%, var(--paper));
+  padding: var(--section-pad) 40px;
+}
+.research-inner {
+  max-width: 1280px; margin: 0 auto;
+}
+.research-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px; margin-top: 48px;
+}
+.research-card {
+  background: #fff;
+  padding: 40px 32px;
+  border: 1px solid rgba(10,10,15,0.06);
+  transition: transform 0.3s;
+}
+.research-card:hover { transform: translateY(-3px); }
+.research-card .r-num {
+  font-family: var(--mono); font-size: 28px; font-weight: 600;
+  margin-bottom: 16px;
+}
+.research-card:nth-child(1) .r-num { color: var(--slate); }
+.research-card:nth-child(2) .r-num { color: var(--teal); }
+.research-card:nth-child(3) .r-num { color: var(--warm); }
+.research-card h3 {
+  font-family: var(--serif); font-size: 22px; font-weight: 600;
+  color: var(--ink); margin-bottom: 12px;
+}
+.research-card p {
+  font-size: 14px; line-height: 1.7; color: var(--muted);
+}
+
+/* ============================================================
+   CTA SECTION
+   ============================================================ */
+.cta-section {
+  position: relative;
+  background: var(--ink);
+  padding: var(--section-pad) 40px;
+  text-align: center;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 50% 50%, rgba(184,150,46,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cta-inner {
+  max-width: 700px; margin: 0 auto; position: relative; z-index: 1;
+}
+.cta-section .section-heading {
+  color: #fff; text-align: center; margin-bottom: 20px;
+}
+.cta-section .section-heading em { color: var(--gold-light); }
+.cta-sub {
+  font-size: 17px; line-height: 1.7;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 40px;
+}
+.cta-buttons {
+  display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  background: var(--ink);
+  border-top: 1px solid rgba(184,150,46,0.15);
+  padding: 60px 40px 40px;
+}
+.footer-inner {
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 48px;
+}
+.footer-brand .footer-logo-row {
+  display: flex; align-items: center; gap: 14px;
+}
+.footer-brand .logo-text { display: flex; flex-direction: column; gap: 2px; }
+.footer-brand .logo-zai {
+  font-family: var(--mono); font-size: 22px; font-weight: 600;
+  color: var(--gold); letter-spacing: 0.25em;
+}
+.footer-brand .logo-inst {
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.4em; color: rgba(255,255,255,0.4);
+  display: block;
+}
+
+.footer-tagline {
+  font-family: var(--serif); font-size: 15px; font-style: italic;
+  color: rgba(255,255,255,0.55);
+  margin-top: 16px; max-width: 250px; line-height: 1.5;
+}
+.footer-col h4 {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em;
+  color: var(--gold); text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a {
+  font-size: 14px; color: rgba(255,255,255,0.55);
+  text-decoration: none; transition: color 0.3s;
+}
+.footer-col ul li a:hover { color: rgba(255,255,255,0.8); }
+.footer-bottom {
+  max-width: 1280px; margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+}
+.footer-bottom p {
+  font-size: 12px; color: rgba(255,255,255,0.5);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  nav ul { display: none; }
+  .hero-stats-inner { grid-template-columns: 1fr; }
+  .stat-card:not(:last-child)::after { display: none; }
+  .pillars-grid { grid-template-columns: 1fr; }
+  .audience-grid { grid-template-columns: 1fr; }
+  .programs-grid.two-col { grid-template-columns: 1fr; }
+  .network-stats { grid-template-columns: 1fr; }
+  .network-features { grid-template-columns: repeat(2, 1fr); }
+  .research-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .hero-content { padding: 130px 20px 100px; }
+  .network-features { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">
+      <span class="z-mark" role="img" aria-label="ZAI Institute logo"></span>
+      <div class="logo-text">
+        <span class="logo-zai">ZAI</span>
+        <span class="logo-inst">INSTITUTE</span>
+      </div>
+    </a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="leadership.html">Leadership</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#audience">Who We Serve</a></li>
+      <li><a href="#network">Network</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="contact.html">Partner With Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">ZAI Institute</p>
+    <h1>The future of work <em>is already here.</em></h1>
+    <p class="hero-sub">AI-ready programs that generate tuition revenue — not committee meetings. Deployed in 30 days, no new hires required.</p>
+    <div class="hero-ctas">
+      <a href="contact.html" class="btn-gold">Request a Conversation</a>
+      <a href="#about" class="btn-outline">Our Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="hero-stats">
+  <div class="hero-stats-inner">
+    <div class="stat-card">
+      <div class="stat-number">60+</div>
+      <div class="stat-label">University Partnerships</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">48cr</div>
+      <div class="stat-label">AI Concentration Curriculum</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-number">30day</div>
+      <div class="stat-label">Time to First Launch</div>
+    </div>
+  </div>
+</div>
+
+<!-- MARQUEE -->
+<section class="marquee-section">
+  <div class="marquee-track">
+    <span class="marquee-item">The question is not whether AI will transform higher education <span class="diamond">&#x25C6;</span></span>
+    <span class="marquee-item">It already has <span class="diamond">&#x25C6;</span></span>
+    <span class="marquee-item">The question is whether your institution will lead — or react <span class="diamond">&#x25C6;</span></span>
+    <span class="marquee-item">The future of work is already here <span class="diamond">&#x25C6;</span></span>
+    <span class="marquee-item">The question is not whether AI will transform higher education <span class="diamond">&#x25C6;</span></span>
+    <span class="marquee-item">It already has <span class="diamond">&#x25C6;</span></span>
+    <span class="marquee-item">The question is whether your institution will lead — or react <span class="diamond">&#x25C6;</span></span>
+    <span class="marquee-item">The future of work is already here <span class="diamond">&#x25C6;</span></span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+  <p class="section-eyebrow">What We Saw</p>
+  <div class="about-quote">
+    <blockquote>"The greatest untapped resource in education is not technology — it is the connection between university leadership and industry leadership."</blockquote>
+    <cite>ZAI Institute Founding Principle</cite>
+  </div>
+  <p class="section-eyebrow" style="margin-top:48px;">Our Heritage</p>
+  <p class="about-body">ZAI Institute was founded by a team that has spent over a decade building university partnerships — helping institutions launch programs, generate new tuition revenue, and connect with their communities without heavy lifting. With 60+ university partnerships and a track record across every type of institution, we built ZAI to focus entirely on the challenge that now defines higher education: AI readiness.</p>
+</section>
+
+<!-- PROBLEMS -->
+<section class="problems-section">
+  <div class="problems-inner">
+    <p class="section-eyebrow">The Problem We Solve</p>
+    <h2 class="section-heading">Four forces <em>demanding action.</em></h2>
+    <div class="problems-grid">
+      <div class="problem-card">
+        <div class="problem-num">01</div>
+        <h3>Universities are behind.</h3>
+        <p>Curriculum committees cannot move at the speed AI demands. Graduates leave without the skills the workforce requires — through no fault of their own.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">02</div>
+        <h3>Employers cannot find talent.</h3>
+        <p>Organizations are ready for AI-augmented work. The pipeline of AI-ready graduates is not keeping pace with demand.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">03</div>
+        <h3>Individuals are afraid.</h3>
+        <p>Capable, talented people feel the quiet fear of falling behind. They deserve capability — not just reassurance.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-num">04</div>
+        <h3>The window is closing.</h3>
+        <p>There is no later. The institutions that move with intention now will define the next era. The ones that wait will spend it catching up.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section class="approach-section" id="approach">
+  <div class="approach-inner">
+    <p class="section-eyebrow">Our Approach</p>
+    <h2 class="section-heading">Four things that <em>set us apart.</em></h2>
+    <p class="approach-intro">We are not a platform. Not a consultant. Not a course vendor. We are an institute — built with the rigor, the relationships, and the resolve to make AI transformation durable.</p>
+    <div class="pillars-grid">
+      <div class="pillar-card">
+        <div class="pillar-number">01 ——</div>
+        <h3>We Stay</h3>
+        <p>We are not consultants who deliver recommendations and disappear. We work alongside presidents, provosts, faculty, and industry leaders to build systems that last. The measure of our success is what your institution can sustain after we have built it together.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-number">02 ——</div>
+        <h3>Faculty Lead. We Enable.</h3>
+        <p>Faculty are the authors and stewards of curriculum. That does not change. What changes is the infrastructure, network intelligence, and AI-powered tools available to them — allowing curriculum to evolve at the pace the world demands.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-number">03 ——</div>
+        <h3>Credentials That Open Doors</h3>
+        <p>A ZAI Institute credential tells an employer something specific — this person understands AI, can work alongside it, and knows where the human advantage lies. Both academic weight and market weight. Both doors, simultaneously.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-number">04 ——</div>
+        <h3>A Network That Accelerates</h3>
+        <p>Knowledge without connection is incomplete. ZAI Institute graduates enter a curated ecosystem of executives, employers, and innovators actively building AI-ready organizations. This is not a directory. It is a deliberate, managed network.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE SERVE -->
+<section class="audience-section" id="audience">
+  <p class="section-eyebrow">Who We Serve</p>
+  <h2 class="section-heading">Four audiences. <em>One mission.</em></h2>
+  <div class="audience-grid">
+    <div class="audience-card card-university">
+      <span class="audience-symbol">&Sigma;</span>
+      <p class="audience-eyebrow">University Leaders</p>
+      <h3>Presidents, Provosts &amp; Deans</h3>
+      <p>Who cannot afford to graduate another class without AI fluency — and who want a partner with the content, technology, and track record to make it happen fast. We work alongside your faculty, not around them.</p>
+      <a href="contact.html" class="audience-link">Partner with ZAI &rarr;</a>
+    </div>
+    <div class="audience-card card-employers">
+      <span class="audience-symbol">&loz;</span>
+      <p class="audience-eyebrow">Organizations &amp; Employers</p>
+      <h3>CHROs, L&amp;D Leaders &amp; CEOs</h3>
+      <p>Who need their workforce AI-ready now — not in two years. We deploy certificate programs inside your organization, train your managers, and give your team credentials that signal real capability.</p>
+      <a href="contact.html" class="audience-link">Train your organization &rarr;</a>
+    </div>
+    <div class="audience-card card-learners">
+      <span class="audience-symbol">&cir;</span>
+      <p class="audience-eyebrow">Learners &amp; Professionals</p>
+      <h3>Every Person Ready to Move</h3>
+      <p>Who has felt the quiet fear of falling behind — and who wants not just reassurance but actual capability that changes what they can do and how they are valued. Our programs meet you where you are.</p>
+      <a href="#programs" class="audience-link">Explore programs &rarr;</a>
+    </div>
+    <div class="audience-card card-research">
+      <span class="audience-symbol">&there4;</span>
+      <p class="audience-eyebrow">Research Partners</p>
+      <h3>Institutions &amp; Foundations</h3>
+      <p>Seeking rigorous data on AI readiness across higher education and the workforce. Our University AI Readiness Study provides the benchmarks the field has been missing.</p>
+      <a href="#research" class="audience-link">Join the study &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section class="programs-section" id="programs">
+  <div class="programs-inner">
+    <p class="section-eyebrow">Our Programs</p>
+    <h2 class="section-heading">A system for institutional <em>AI readiness.</em></h2>
+
+    <!-- TIER 1: FLAGSHIP -->
+    <div class="programs-tier">
+      <div class="tier-header">
+        <span class="tier-num">01</span>
+        <h3 class="tier-title">Flagship Programs — <em>deploy in 30 days</em></h3>
+      </div>
+      <p class="tier-desc">Proven, battle-tested programs ready for immediate deployment. No new hires, no curriculum committee approval, no 18-month build cycle.</p>
+      <div class="programs-grid two-col">
+        <div class="program-card prog-foundation">
+          <span class="program-badge">Certificate — Foundation</span>
+          <h3>How to Be Indispensable in the Age of AI — Foundation</h3>
+          <p class="program-meta">4 Hours &middot; 4 Modules &middot; Asynchronous</p>
+          <p>Students leave knowing where AI creates advantage and where human judgment remains irreplaceable — with a personal strategy for staying on the right side of that line.</p>
+          <span class="program-deploy">30-Day Deployment &middot; Generates Tuition Revenue</span>
+        </div>
+        <div class="program-card prog-professional">
+          <span class="program-badge">Certificate — Professional</span>
+          <h3>How to Be Indispensable in the Age of AI — Professional</h3>
+          <p class="program-meta">32 Hours &middot; 8 Modules &middot; Executive Network Included</p>
+          <p>Eight progressively challenging modules where students use AI to solve real problems, build a portfolio of applied work, and present their capstone to working executives.</p>
+          <span class="program-deploy">30-Day Deployment &middot; Generates Tuition Revenue</span>
+        </div>
+        <div class="program-card prog-faculty">
+          <span class="program-badge">Institutional &middot; Faculty &amp; Staff</span>
+          <h3>University AI Readiness Training</h3>
+          <p class="program-meta">5 Sessions &middot; Live + Async &middot; All Levels</p>
+          <p>Faculty are the gatekeepers of curriculum change. This program puts AI tools in their hands and lets them experience the transformation firsthand. Skeptics become champions.</p>
+          <span class="program-deploy">30-Day Deployment &middot; No Committee Required</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 2: CUSTOM -->
+    <div class="programs-tier">
+      <div class="tier-header">
+        <span class="tier-num">02</span>
+        <h3 class="tier-title">Custom Curriculum — <em>built to your specifications</em></h3>
+      </div>
+      <p class="tier-desc">Your institution is not generic. Your curriculum shouldn't be either. We build it — aligned to your learning objectives, your accreditation requirements, and your institutional brand.</p>
+      <div class="programs-grid">
+        <div class="program-card prog-custom">
+          <span class="program-badge">Custom Build</span>
+          <h3>You don't pick from our menu. We build to your order.</h3>
+          <p class="program-meta">Scope &rarr; Build &rarr; Review &amp; Certify &rarr; Deploy</p>
+          <p>ZAI Institute maintains a library of proven program modules across dozens of disciplines. But every institution we partner with has unique needs. Recent custom builds include AI Ethics for Legal Professionals, Data Literacy for Healthcare Administration, AI-Enabled Supply Chain Strategy, and Generative AI for Creative Industries.</p>
+          <span class="program-deploy">Deployable Within 30 Days</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TIER 3: DEEP INTEGRATION -->
+    <div class="programs-tier">
+      <div class="tier-header">
+        <span class="tier-num">03</span>
+        <h3 class="tier-title">Deep Integration — <em>for institutions ready to lead</em></h3>
+      </div>
+      <div class="programs-grid two-col">
+        <div class="program-card prog-enterprise">
+          <span class="program-badge">Corporate &middot; Workforce</span>
+          <h3>Enterprise AI Readiness Training</h3>
+          <p class="program-meta">Custom Format &middot; On-Site or Virtual &middot; Scalable</p>
+          <p>Your workforce needs to solve real problems in your business with AI. We build programs around your industry, your tools, and your strategic priorities — from executive workshops to company-wide deployment.</p>
+        </div>
+        <div class="program-card prog-concentration">
+          <span class="program-badge">Coming &middot; Full Concentration</span>
+          <h3>AI &amp; the Future of Work — 48 Credit Concentration</h3>
+          <p class="program-meta">48 Credit Hours &middot; Studio-Based &middot; Portfolio-Assessed</p>
+          <p>An integrated, studio-based pathway where students build, ship, and defend real AI projects across their undergraduate career. Assessment is entirely competency-based.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NETWORK -->
+<section class="network-section" id="network">
+  <div class="network-inner">
+    <p class="section-eyebrow">The ZAI Network</p>
+    <h2 class="section-heading">Knowledge without <em>connection</em> is incomplete.</h2>
+
+    <div class="network-stats">
+      <div class="network-stat">
+        <div class="stat-value">50k+</div>
+        <div class="stat-name">Executive Connections</div>
+      </div>
+      <div class="network-stat">
+        <div class="stat-value">60+</div>
+        <div class="stat-name">University Partners</div>
+      </div>
+      <div class="network-stat">
+        <div class="stat-value">500+</div>
+        <div class="stat-name">Companies Represented</div>
+      </div>
+    </div>
+
+    <!-- Company scrolling row 1 -->
+    <div class="network-scroll">
+      <div class="scroll-track">
+        <span class="company-name">Accenture</span>
+        <span class="company-name">Aetna</span>
+        <span class="company-name">AIG</span>
+        <span class="company-name">AT&amp;T</span>
+        <span class="company-name">Bank of America</span>
+        <span class="company-name">BlueCross BlueShield</span>
+        <span class="company-name">Cigna</span>
+        <span class="company-name">Comcast</span>
+        <span class="company-name">Deloitte</span>
+        <span class="company-name">Dow Jones</span>
+        <span class="company-name">Est&eacute;e Lauder</span>
+        <span class="company-name">Forbes</span>
+        <span class="company-name">Intel</span>
+        <span class="company-name">Johnson &amp; Johnson</span>
+        <span class="company-name">Marriott</span>
+        <span class="company-name">Mastercard</span>
+        <span class="company-name">Merck</span>
+        <span class="company-name">Microsoft</span>
+        <span class="company-name">Morgan Stanley</span>
+        <span class="company-name">Novartis</span>
+        <span class="company-name">Prudential</span>
+        <span class="company-name">Salesforce</span>
+        <span class="company-name">JPMorgan Chase</span>
+        <span class="company-name">Oracle</span>
+        <span class="company-name">IBM</span>
+        <span class="company-name">Adobe</span>
+        <!-- duplicate for seamless loop -->
+        <span class="company-name">Accenture</span>
+        <span class="company-name">Aetna</span>
+        <span class="company-name">AIG</span>
+        <span class="company-name">AT&amp;T</span>
+        <span class="company-name">Bank of America</span>
+        <span class="company-name">BlueCross BlueShield</span>
+        <span class="company-name">Cigna</span>
+        <span class="company-name">Comcast</span>
+        <span class="company-name">Deloitte</span>
+        <span class="company-name">Dow Jones</span>
+        <span class="company-name">Est&eacute;e Lauder</span>
+        <span class="company-name">Forbes</span>
+        <span class="company-name">Intel</span>
+        <span class="company-name">Johnson &amp; Johnson</span>
+        <span class="company-name">Marriott</span>
+        <span class="company-name">Mastercard</span>
+        <span class="company-name">Merck</span>
+        <span class="company-name">Microsoft</span>
+        <span class="company-name">Morgan Stanley</span>
+        <span class="company-name">Novartis</span>
+        <span class="company-name">Prudential</span>
+        <span class="company-name">Salesforce</span>
+        <span class="company-name">JPMorgan Chase</span>
+        <span class="company-name">Oracle</span>
+        <span class="company-name">IBM</span>
+        <span class="company-name">Adobe</span>
+      </div>
+    </div>
+
+    <div class="network-divider"></div>
+
+    <!-- University scrolling row -->
+    <div class="network-scroll">
+      <div class="scroll-track reverse uni-track">
+        <span class="company-name">UCLA</span>
+        <span class="company-name">University of Miami</span>
+        <span class="company-name">Seton Hall University</span>
+        <span class="company-name">University of Colorado Colorado Springs</span>
+        <span class="company-name">University of Minnesota Mankato</span>
+        <span class="company-name">University of Richmond</span>
+        <span class="company-name">Ohio State University</span>
+        <span class="company-name">University of San Francisco</span>
+        <span class="company-name">University of Colorado Boulder</span>
+        <!-- duplicate -->
+        <span class="company-name">UCLA</span>
+        <span class="company-name">University of Miami</span>
+        <span class="company-name">Seton Hall University</span>
+        <span class="company-name">University of Colorado Colorado Springs</span>
+        <span class="company-name">University of Minnesota Mankato</span>
+        <span class="company-name">University of Richmond</span>
+        <span class="company-name">Ohio State University</span>
+        <span class="company-name">University of San Francisco</span>
+        <span class="company-name">University of Colorado Boulder</span>
+      </div>
+    </div>
+
+    <!-- Network features -->
+    <div class="network-features">
+      <div class="network-feature">
+        <div class="feature-icon">&#x25C6;</div>
+        <h4>Direct Employer Access</h4>
+        <p>Graduates connect with hiring executives at Fortune 500 companies who actively seek AI-ready talent.</p>
+      </div>
+      <div class="network-feature">
+        <div class="feature-icon">&#x25C6;</div>
+        <h4>Executive Mentorship</h4>
+        <p>Industry leaders serve as advisors, mentors, and capstone evaluators.</p>
+      </div>
+      <div class="network-feature">
+        <div class="feature-icon">&#x25C6;</div>
+        <h4>Institutional Credibility</h4>
+        <p>Your name joins a network that includes R1 flagships, regional leaders, and Fortune 500 employers.</p>
+      </div>
+      <div class="network-feature">
+        <div class="feature-icon">&#x25C6;</div>
+        <h4>Career-Long Value</h4>
+        <p>Network access doesn't expire at graduation. A professional community that compounds over time.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:48px;">
+      <a href="leadership.html" style="font-family:var(--sans); font-size:14px; font-weight:600; color:var(--gold); text-decoration:none; letter-spacing:0.02em; transition:opacity 0.3s;">Meet the executives and academics who guide our programs &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section class="research-section" id="research">
+  <div class="research-inner">
+    <p class="section-eyebrow">Research &amp; Insight</p>
+    <h2 class="section-heading">The <em>University AI Readiness Study</em></h2>
+    <div class="research-grid">
+      <div class="research-card">
+        <div class="r-num">01</div>
+        <h3>Student AI Readiness</h3>
+        <p>Baseline and longitudinal measurement of AI fluency, confidence, and practical capability across undergraduate and graduate populations.</p>
+      </div>
+      <div class="research-card">
+        <div class="r-num">02</div>
+        <h3>Faculty &amp; Institutional Adoption</h3>
+        <p>How are faculty integrating AI into pedagogy? The first rigorous data set measuring adoption at the institutional level.</p>
+      </div>
+      <div class="research-card">
+        <div class="r-num">03</div>
+        <h3>Workforce Alignment</h3>
+        <p>The gap between what universities are producing and what employers need. Measured annually. Published publicly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <p class="section-eyebrow" style="color:var(--gold);">Begin the Conversation</p>
+    <h2 class="section-heading">The institutions that move with intention <em>now</em> will define what comes next.</h2>
+    <p class="cta-sub">Which side of that sentence does your institution want to be on?</p>
+    <div class="cta-buttons">
+      <a href="contact.html" class="btn-gold">Request a Partnership Conversation</a>
+      <a href="#research" class="btn-outline">Join the AI Readiness Study</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-row">
+        <span class="z-mark z-mark-lg" role="img" aria-label="ZAI Institute logo"></span>
+        <div class="logo-text">
+          <span class="logo-zai">ZAI</span>
+          <span class="logo-inst">INSTITUTE</span>
+        </div>
+      </div>
+      <p class="footer-tagline">Transforming Education for the Age of AI</p>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="#programs">Indispensable — Foundation</a></li>
+        <li><a href="#programs">Indispensable — Professional</a></li>
+        <li><a href="#programs">Faculty AI Training</a></li>
+        <li><a href="#programs">Corporate AI Training</a></li>
+        <li><a href="#programs">AI Concentration</a></li>
+        <li><a href="#research">AI Readiness Study</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Institute</h4>
+      <ul>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="leadership.html">Leadership</a></li>
+        <li><a href="#approach">Our Approach</a></li>
+        <li><a href="#network">The Network</a></li>
+        <li><a href="#audience">Who We Serve</a></li>
+        <li><a href="contact.html">Partner With Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="/cdn-cgi/l/email-protection#0e676068614e746f6767607d7a677a7b7a6b206f67"><span class="__cf_email__" data-cfemail="8de4e3ebe2cdf7ece4e4e3fef9e4f9f8f9e8a3ece4">[email&#160;protected]</span></a></li>
+        <li><a href="tel:+18883847020">(888) 384-7020</a></li>
+        <li><a href="#">Fort Lauderdale, FL</a></li>
+        <li><a href="contact.html">Schedule a Call</a></li>
+      </ul>
+    </div>
+  
