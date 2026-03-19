@@ -35,7 +35,7 @@
     .nav-logo .logo-text { display: flex; flex-direction: column; gap: 2px; }
     .nav-logo .logo-zai { font-size: 22px; font-weight: 600; color: var(--gold); letter-spacing: 0.25em; }
     .nav-logo .logo-inst { font-size: 10px; letter-spacing: 0.4em; color: rgba(255,255,255,0.6); }
-    nav ul { list-style: none; display: flex; gap: 28px; }
+    nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
     nav ul li a { font-family: var(--sans); font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.7); text-decoration: none; letter-spacing: 0.02em; transition: color 0.3s; }
     nav ul li a:hover { color: var(--gold); }
     .nav-cta a { border: 1px solid rgba(184,150,46,0.5) !important; padding: 8px 20px !important; color: var(--gold) !important; }
@@ -88,19 +88,18 @@
   <div class="nav-inner">
     <a href="https://zaiinstitute.ai" class="nav-logo">
       <span class="z-mark" role="img" aria-label="ZAI Institute logo"></span>
-      <div class="logo-text"><span class="logo-zai">ZAI</span><span class="logo-inst">INSTITUTE</span></div>
+      <div class="logo-text">
+        <span class="logo-zai">ZAI</span>
+        <span class="logo-inst">INSTITUTE</span>
+      </div>
     </a>
     <ul>
       <li><a href="https://zaiinstitute.ai/#about">About</a></li>
       <li><a href="https://zaiinstitute.ai/leadership.html">Leadership</a></li>
-      <li><a href="https://zaiinstitute.ai/#approach">Approach</a></li>
-      <li><a href="https://zaiinstitute.ai/#programs">Programs</a></li>
-      <li><a href="https://zaiinstitute.ai/#audience">Who We Serve</a></li>
-      <li><a href="https://zaiinstitute.ai/#network">Network</a></li>
       <li><a href="https://zaiinstitute.ai/#research">Research</a></li>
-      <li><a href="https://zaiinstitute.ai/insights/index.html" class="active">Insights</a></li>
-      <li><a href="https://zaiinstitute.ai/for-universities.html">For Universities</a></li>
-      <li class="nav-cta"><a href="https://zaiinstitute.ai/contact.html">Partner With Us</a></li>
+      <li><a href="https://zaiinstitute.ai/insights/index.html">Insights</a></li>
+      <li class="nav-audience-uni"><a href="https://zaiinstitute.ai/for-universities.html">For Universities</a></li>
+      <li class="nav-audience-org"><a href="https://zaiinstitute.ai/for-organizations.html">For Organizations</a></li>
     </ul>
   </div>
 </nav>
