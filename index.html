@@ -831,10 +831,7 @@ footer {
   font-size: 12px; color: rgba(255,255,255,0.5);
 }
 
-/* ============================================================
-   UNIVERSITY LEADERS — Enhanced Card + Dedicated Section
-   ============================================================ */
-/* Enhanced card proof strip */
+/* Card proof strip */
 .card-proof {
   display: flex; gap: 28px; margin-bottom: 20px;
   padding-top: 18px;
@@ -850,191 +847,6 @@ footer {
   text-transform: uppercase; color: rgba(255,255,255,0.3);
 }
 
-/* Dedicated section */
-.univ-section {
-  position: relative;
-  background: linear-gradient(160deg, var(--ink) 0%, var(--slate-deep) 50%, var(--ink-soft) 100%);
-  padding: var(--section-pad) 40px;
-  overflow: hidden;
-}
-.univ-section::before {
-  content: '';
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse 50% 40% at 70% 20%, rgba(44,62,90,0.2) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 50% at 20% 80%, rgba(184,150,46,0.06) 0%, transparent 60%);
-  pointer-events: none;
-}
-.univ-inner {
-  max-width: 1280px; margin: 0 auto; position: relative; z-index: 1;
-}
-.univ-header { max-width: 800px; margin-bottom: 72px; }
-.univ-eyebrow {
-  font-family: var(--mono); font-size: 11px; letter-spacing: 0.25em;
-  text-transform: uppercase; color: var(--slate-light); margin-bottom: 20px;
-}
-.univ-heading {
-  font-family: var(--serif); font-size: clamp(34px, 4.5vw, 50px);
-  font-weight: 400; color: #fff; line-height: 1.15; margin-bottom: 22px;
-}
-.univ-heading em { font-style: italic; color: var(--gold-light); }
-.univ-subhead {
-  font-size: 17px; line-height: 1.8;
-  color: rgba(255,255,255,0.5); max-width: 640px;
-}
-
-/* Three-column value grid */
-.univ-value-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 2px; margin-bottom: 72px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.04);
-}
-.univ-value-card {
-  padding: 44px 36px; background: rgba(10,10,15,0.6);
-  position: relative; transition: background 0.4s;
-}
-.univ-value-card:hover { background: rgba(255,255,255,0.03); }
-.univ-value-num {
-  font-family: var(--serif); font-size: 44px; font-weight: 300;
-  color: var(--gold); opacity: 0.2;
-  position: absolute; top: 28px; right: 32px; line-height: 1;
-}
-.univ-value-icon {
-  font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em;
-  text-transform: uppercase; color: var(--slate-light);
-  margin-bottom: 22px; display: block;
-}
-.univ-value-card h3 {
-  font-family: var(--serif); font-size: 23px; font-weight: 600;
-  color: #fff; margin-bottom: 14px; line-height: 1.25;
-}
-.univ-value-card p {
-  font-size: 14px; line-height: 1.75; color: rgba(255,255,255,0.45);
-}
-
-/* Proof strip */
-.univ-proof-strip {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: 2px; margin-bottom: 72px;
-  background: rgba(184,150,46,0.06);
-  border: 1px solid rgba(184,150,46,0.12);
-}
-.univ-proof-item {
-  padding: 36px 32px; background: rgba(10,10,15,0.6); text-align: center;
-}
-.univ-proof-item .num {
-  font-family: var(--serif); font-size: 36px; font-weight: 700;
-  line-height: 1; margin-bottom: 6px;
-  background: linear-gradient(135deg, var(--gold-light), var(--gold));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-.univ-proof-item .label {
-  font-family: var(--mono); font-size: 10px; letter-spacing: 0.12em;
-  text-transform: uppercase; color: rgba(255,255,255,0.35); line-height: 1.5;
-}
-
-/* Partnership timeline */
-.univ-timeline { margin-bottom: 72px; }
-.univ-timeline-header { margin-bottom: 44px; }
-.univ-timeline-header h3 {
-  font-family: var(--serif); font-size: 28px; font-weight: 400;
-  color: #fff; margin-bottom: 10px;
-}
-.univ-timeline-header p {
-  font-size: 15px; color: rgba(255,255,255,0.4); max-width: 520px;
-}
-.timeline-track {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: 0; position: relative;
-}
-.timeline-track::before {
-  content: ''; position: absolute; top: 28px; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, var(--gold) 0%, rgba(184,150,46,0.12) 100%);
-}
-.timeline-step { padding: 0 20px 0 0; position: relative; }
-.timeline-dot {
-  width: 11px; height: 11px; border-radius: 50%;
-  background: rgba(10,10,15,0.8); border: 2px solid var(--gold);
-  margin-bottom: 22px; position: relative; z-index: 2;
-  transition: background 0.3s;
-}
-.timeline-step:hover .timeline-dot { background: var(--gold); }
-.timeline-step:first-child .timeline-dot { background: var(--gold); }
-.timeline-week {
-  font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em;
-  text-transform: uppercase; color: var(--gold); margin-bottom: 8px;
-}
-.timeline-step h4 {
-  font-family: var(--serif); font-size: 18px; font-weight: 600;
-  color: #fff; margin-bottom: 8px; line-height: 1.3;
-}
-.timeline-step p {
-  font-size: 13px; line-height: 1.65; color: rgba(255,255,255,0.38);
-}
-
-/* Deliverables grid */
-.univ-deliverables { margin-bottom: 72px; }
-.univ-deliverables h3 {
-  font-family: var(--serif); font-size: 28px; font-weight: 400;
-  color: #fff; margin-bottom: 36px;
-}
-.deliverables-grid {
-  display: grid; grid-template-columns: repeat(2, 1fr);
-  gap: 2px; background: rgba(255,255,255,0.03);
-}
-.deliverable-item {
-  padding: 32px 36px; background: rgba(10,10,15,0.6);
-  display: flex; gap: 18px; align-items: flex-start;
-  transition: background 0.3s;
-}
-.deliverable-item:hover { background: rgba(255,255,255,0.02); }
-.deliverable-marker {
-  font-size: 16px; color: var(--gold); opacity: 0.5;
-  flex-shrink: 0; margin-top: 2px;
-}
-.deliverable-item h4 {
-  font-family: var(--sans); font-size: 14px; font-weight: 600;
-  color: rgba(255,255,255,0.85); margin-bottom: 5px;
-}
-.deliverable-item p {
-  font-size: 13px; line-height: 1.65; color: rgba(255,255,255,0.38);
-}
-
-/* Section CTA */
-.univ-cta {
-  text-align: center; padding: 56px 40px;
-  border-top: 1px solid rgba(184,150,46,0.12);
-}
-.univ-cta h3 {
-  font-family: var(--serif); font-size: clamp(24px, 3vw, 34px);
-  font-weight: 400; color: #fff; margin-bottom: 10px; line-height: 1.2;
-}
-.univ-cta h3 em { font-style: italic; color: var(--gold-light); }
-.univ-cta p {
-  font-size: 15px; color: rgba(255,255,255,0.38); margin-bottom: 28px;
-}
-.univ-cta-btn {
-  display: inline-block; font-family: var(--sans);
-  font-size: 14px; font-weight: 600; letter-spacing: 0.03em;
-  color: var(--ink); background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  padding: 15px 36px; text-decoration: none;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.univ-cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(184,150,46,0.3);
-}
-.univ-cta-secondary {
-  display: block; margin-top: 14px;
-  font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em;
-  color: rgba(255,255,255,0.28); text-decoration: none;
-  transition: color 0.3s;
-}
-.univ-cta-secondary:hover { color: var(--gold); }
-
 /* ============================================================
    RESPONSIVE
    ============================================================ */
@@ -1044,11 +856,6 @@ footer {
   .stat-card:not(:last-child)::after { display: none; }
   .pillars-grid { grid-template-columns: 1fr; }
   .audience-grid { grid-template-columns: 1fr; }
-  .univ-value-grid { grid-template-columns: 1fr; }
-  .timeline-track { grid-template-columns: 1fr; gap: 28px; }
-  .timeline-track::before { display: none; }
-  .univ-proof-strip { grid-template-columns: repeat(2, 1fr); }
-  .deliverables-grid { grid-template-columns: 1fr; }
   .card-proof { flex-wrap: wrap; gap: 16px; }
   .programs-grid.two-col { grid-template-columns: 1fr; }
   .network-stats { grid-template-columns: 1fr; }
@@ -1059,7 +866,6 @@ footer {
 @media (max-width: 600px) {
   .hero-content { padding: 130px 20px 100px; }
   .network-features { grid-template-columns: 1fr; }
-  .univ-proof-strip { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr; }
 }
 </style>
@@ -1230,7 +1036,7 @@ footer {
           <span class="card-proof-label">Upfront Cost</span>
         </div>
       </div>
-      <a href="#for-universities" class="audience-link">See how it works &rarr;</a>
+      <a href="for-universities.html" class="audience-link">See how it works &rarr;</a>
     </div>
     <div class="audience-card card-employers">
       <span class="audience-symbol">&loz;</span>
@@ -1252,150 +1058,6 @@ footer {
       <h3>Institutions &amp; Foundations</h3>
       <p>Seeking rigorous data on AI readiness across higher education and the workforce. Our University AI Readiness Study provides the benchmarks the field has been missing.</p>
       <a href="#research" class="audience-link">Join the study &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<!-- FOR UNIVERSITY LEADERS — Dedicated Deep-Dive -->
-<section class="univ-section" id="for-universities">
-  <div class="univ-inner">
-    <div class="univ-header">
-      <p class="univ-eyebrow">For University Leaders</p>
-      <h2 class="univ-heading">AI programs that generate <em>revenue</em> — not meetings.</h2>
-      <p class="univ-subhead">Your board wants innovation. Your faculty want autonomy. Your students need capability. Your budget needs revenue. We built a system that delivers all four — inside your institution, under your brand, in 30 days.</p>
-    </div>
-
-    <!-- Three-column value proposition -->
-    <div class="univ-value-grid">
-      <div class="univ-value-card">
-        <span class="univ-value-num">01</span>
-        <span class="univ-value-icon">The financial case</span>
-        <h3>Revenue from day one.</h3>
-        <p>Our programs generate tuition revenue on your existing cost structure. No new faculty lines. No capital expenditure. No committee approvals. Students pay tuition; your institution keeps it. We provide the curriculum, the technology, and the support.</p>
-      </div>
-      <div class="univ-value-card">
-        <span class="univ-value-num">02</span>
-        <span class="univ-value-icon">The speed case</span>
-        <h3>First cohort in 30 days.</h3>
-        <p>Curriculum committees take 12–18 months. Your competitors are already enrolling. Our deployment model bypasses the bottleneck — launching through your CE division, professional studies unit, or provost's office with full academic integrity intact.</p>
-      </div>
-      <div class="univ-value-card">
-        <span class="univ-value-num">03</span>
-        <span class="univ-value-icon">The faculty case</span>
-        <h3>Faculty lead. We enable.</h3>
-        <p>We don't replace your faculty or circumvent governance. We give them tools, content, and an executive network that makes AI integration possible — on their terms, at a pace that doesn't compromise academic rigor.</p>
-      </div>
-    </div>
-
-    <!-- Proof strip -->
-    <div class="univ-proof-strip">
-      <div class="univ-proof-item">
-        <div class="num">60+</div>
-        <div class="label">University<br>Partners</div>
-      </div>
-      <div class="univ-proof-item">
-        <div class="num">30</div>
-        <div class="label">Days to<br>First Launch</div>
-      </div>
-      <div class="univ-proof-item">
-        <div class="num">48cr</div>
-        <div class="label">Full AI<br>Concentration</div>
-      </div>
-      <div class="univ-proof-item">
-        <div class="num">500+</div>
-        <div class="label">Companies in<br>the Network</div>
-      </div>
-    </div>
-
-    <!-- Partnership timeline -->
-    <div class="univ-timeline">
-      <div class="univ-timeline-header">
-        <h3>How a partnership begins.</h3>
-        <p>From first conversation to enrolled students — the fastest path in higher education.</p>
-      </div>
-      <div class="timeline-track">
-        <div class="timeline-step">
-          <div class="timeline-dot"></div>
-          <div class="timeline-week">Week 1</div>
-          <h4>Discovery Call</h4>
-          <p>We learn your institutional goals, student population, existing programs, and competitive landscape. You learn our model, our track record, and our limitations.</p>
-        </div>
-        <div class="timeline-step">
-          <div class="timeline-dot"></div>
-          <div class="timeline-week">Week 2</div>
-          <h4>Program Selection &amp; Customization</h4>
-          <p>Choose from flagship programs or scope a custom build. We align curriculum to your brand, learning objectives, and accreditation requirements.</p>
-        </div>
-        <div class="timeline-step">
-          <div class="timeline-dot"></div>
-          <div class="timeline-week">Weeks 3–4</div>
-          <h4>Integration &amp; Faculty Onboarding</h4>
-          <p>Content loaded into your LMS or ours. Faculty receive training. Marketing materials delivered in your institutional brand. Everything tested.</p>
-        </div>
-        <div class="timeline-step">
-          <div class="timeline-dot"></div>
-          <div class="timeline-week">Day 30</div>
-          <h4>First Cohort Enrolled</h4>
-          <p>Students are learning. Revenue is flowing. Your institution is offering something 95% of your peers are still debating in committee.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- What you get -->
-    <div class="univ-deliverables">
-      <h3>What your institution receives.</h3>
-      <div class="deliverables-grid">
-        <div class="deliverable-item">
-          <span class="deliverable-marker">&#x25C6;</span>
-          <div>
-            <h4>Battle-tested curriculum</h4>
-            <p>Programs built and refined across 60+ institutions — not theoretical course outlines, but content that has been taught, assessed, and improved.</p>
-          </div>
-        </div>
-        <div class="deliverable-item">
-          <span class="deliverable-marker">&#x25C6;</span>
-          <div>
-            <h4>Your brand, completely</h4>
-            <p>Students see your institution's name, your colors, your credential. ZAI operates as infrastructure — invisible to your students and your market.</p>
-          </div>
-        </div>
-        <div class="deliverable-item">
-          <span class="deliverable-marker">&#x25C6;</span>
-          <div>
-            <h4>AI teaching assistant — 24/7</h4>
-            <p>Every enrolled student gets an AI-powered TA that answers questions, provides feedback, and escalates to human faculty when needed. Always on.</p>
-          </div>
-        </div>
-        <div class="deliverable-item">
-          <span class="deliverable-marker">&#x25C6;</span>
-          <div>
-            <h4>Executive network access</h4>
-            <p>Your students and alumni connect with 50,000+ executives across Fortune 500 companies. Capstone projects evaluated by working industry leaders.</p>
-          </div>
-        </div>
-        <div class="deliverable-item">
-          <span class="deliverable-marker">&#x25C6;</span>
-          <div>
-            <h4>Evergreen content updates</h4>
-            <p>AI moves fast. Your curriculum stays current without your faculty having to chase every development. We update continuously — you approve changes.</p>
-          </div>
-        </div>
-        <div class="deliverable-item">
-          <span class="deliverable-marker">&#x25C6;</span>
-          <div>
-            <h4>Enrollment &amp; marketing support</h4>
-            <p>We don't just build programs and walk away. Co-marketing playbooks, enrollment page templates, and outreach sequences tailored to your student base.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- CTA -->
-    <div class="univ-cta">
-      <h3>Your peer institutions are <em>already enrolling.</em></h3>
-      <p>A 30-minute conversation is all it takes to see if this fits.</p>
-      <a href="contact.html" class="univ-cta-btn">Request a Partnership Conversation</a>
-      <a href="#programs" class="univ-cta-secondary">Or explore our programs first &darr;</a>
     </div>
   </div>
 </section>
