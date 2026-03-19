@@ -81,13 +81,17 @@ nav .nav-inner {
 .nav-logo .logo-text { display: flex; flex-direction: column; gap: 2px; }
 .nav-logo .logo-zai { font-size: 22px; font-weight: 600; color: var(--gold); letter-spacing: 0.25em; }
 .nav-logo .logo-inst { font-size: 10px; letter-spacing: 0.4em; color: rgba(255,255,255,0.6); }
-nav ul { list-style: none; display: flex; gap: 32px; }
+nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
 nav ul li a {
   font-family: var(--sans); font-size: 13px; font-weight: 500;
   color: rgba(255,255,255,0.7); text-decoration: none;
   letter-spacing: 0.02em; transition: color 0.3s;
 }
 nav ul li a:hover, nav ul li a.active { color: var(--gold); }
+.nav-audience-uni a { border: 1px solid rgba(184,150,46,0.5); padding: 7px 16px; color: var(--gold) !important; transition: background 0.2s !important; }
+.nav-audience-uni a:hover { background: rgba(184,150,46,0.1) !important; }
+.nav-audience-org a { background: var(--gold); padding: 7px 16px; color: #0A0A0F !important; font-weight: 600 !important; transition: opacity 0.2s !important; }
+.nav-audience-org a:hover { opacity: 0.85 !important; }
 
 /* Shared components */
 .section-eyebrow {
@@ -531,12 +535,10 @@ footer {
     <ul>
       <li><a href="index.html#about">About</a></li>
       <li><a href="#" class="active">Leadership</a></li>
-      <li><a href="index.html#approach">Approach</a></li>
-      <li><a href="index.html#programs">Programs</a></li>
-      <li><a href="index.html#network">Network</a></li>
       <li><a href="index.html#research">Research</a></li>
       <li><a href="insights/index.html">Insights</a></li>
-      <li><a href="contact.html">Partner With Us</a></li>
+      <li class="nav-audience-uni"><a href="for-universities.html">For Universities</a></li>
+      <li class="nav-audience-org"><a href="for-organizations.html">For Organizations</a></li>
     </ul>
   </div>
 </nav>
