@@ -488,9 +488,24 @@
   }
   .footer-back:hover { color: var(--gold); }
 
+
+  /* MOBILE MENU */
+  .hamburger{display:none;cursor:pointer;background:none;border:none;padding:8px;z-index:101}
+  .hamburger span{display:block;width:22px;height:2px;background:var(--gold);margin:5px 0;transition:all 0.3s}
+  .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+  .hamburger.active span:nth-child(2){opacity:0}
+  .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+  .mobile-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,15,0.98);z-index:98;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+  .mobile-overlay.open{display:flex}
+  .mobile-overlay a{font-family:var(--ff-serif);font-size:28px;color:rgba(245,242,237,0.7);text-decoration:none;transition:color 0.3s}
+  .mobile-overlay a:hover{color:var(--gold)}
+  .mobile-overlay .mob-cta{font-family:var(--ff-sans);font-size:14px;font-weight:600;color:var(--ink);background:var(--gold);padding:14px 32px;margin-top:16px;text-decoration:none}
+
   /* ─── RESPONSIVE ─────────────────────────────────────────────────────────── */
   @media (max-width: 1024px) {
     nav { padding: 20px 32px; }
+    .nav-links { display: none !important; }
+    .hamburger { display: block; }
     .page-header { padding: 120px 32px 60px; }
     .contact-body { grid-template-columns: 1fr; }
     .contact-left { position: static; padding: 60px 32px; }
@@ -533,9 +548,11 @@
     <li><a href="index.html#audience">Who We Serve</a></li>
     <li><a href="index.html#network">Network</a></li>
     <li><a href="index.html#research">Research</a></li>
+    <li><a href="platform.html">Platform</a></li>
     <li><a href="contact.html" class="nav-cta active" aria-current="page">Partner With Us</a></li>
   </ul>
-</nav>
+  <button class="hamburger" onclick="document.querySelector('.mobile-overlay').classList.toggle('open');this.classList.toggle('active')" aria-label="Menu"><span></span><span></span><span></span></button></nav>
+<div class="mobile-overlay"><a href="index.html#about">About</a><a href="platform.html">Platform</a><a href="index.html#programs">Programs</a><a href="index.html#research">Research</a><a href="insights/index.html">Insights</a><a href="contact.html" class="mob-cta">Partner With Us</a></div>
 
 <main id="main-content">
 
