@@ -534,6 +534,7 @@ footer {
   .stat-card:not(:last-child)::after { display: none; }
   .card-grid { grid-template-columns: 1fr; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
+  [style*="grid-template-columns: repeat(3"] { grid-template-columns: 1fr !important; }
 }
 @media (max-width: 600px) {
   .hero-content { padding: 130px 20px 80px; }
@@ -558,6 +559,7 @@ footer {
       <li><a href="index.html#about">About</a></li>
       <li><a href="#" class="active">Leadership</a></li>
       <li><a href="index.html#research">Research</a></li>
+      <li><a href="case-studies/">Case Studies</a></li>
       <li><a href="insights/index.html">Insights</a></li>
       <li class="nav-audience-uni"><a href="for-universities.html">For Universities</a></li>
       <li class="nav-audience-org"><a href="for-organizations.html">For Organizations</a></li>
@@ -583,7 +585,7 @@ footer {
 <!-- STATS BAR -->
 <div class="hero-stats">
   <div class="hero-stats-inner">
-    <div class="stat-card"><div class="stat-number">26</div><div class="stat-label">Leadership Team</div></div>
+    <div class="stat-card"><div class="stat-number">25+</div><div class="stat-label">Advisory Board</div></div>
     <div class="stat-card"><div class="stat-number">60+</div><div class="stat-label">University Partners</div></div>
     <div class="stat-card"><div class="stat-number">50k+</div><div class="stat-label">Executive Network</div></div>
     <div class="stat-card"><div class="stat-number">500+</div><div class="stat-label">Companies Represented</div></div>
@@ -611,332 +613,41 @@ footer {
       <div class="card-chevron">&#9662;</div>
       <div class="card-bio">Eric built ZAI Institute on a decade of experience at the intersection of universities and industry. As Managing Director at Rutgers Business School, he created Johnson &amp; Johnson’s flagship Digital Marketing program — deployed globally and the origin proof-of-concept for the ZAI model. Author of 12 titles including <em>Strategic AI</em> and <em>Strategic Digital Marketing</em> (McGraw-Hill). Wharton School, University of Pennsylvania, NYU School of Law.</div>
     </div>
-    <div class="card" data-accent="teal" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">AM</div>
+    </div>
+
+    <!-- Advisory Network Description -->
+    <div style="margin-top: 48px; padding: 56px 48px; background: #fff; border: 1px solid rgba(10,10,15,0.06);">
+      <p style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold-accessible); margin-bottom: 20px;">Advisory Network</p>
+      <h3 style="font-family: var(--serif); font-size: 30px; font-weight: 600; color: var(--ink); margin-bottom: 16px; line-height: 1.25;">25+ executives and academics <em style="font-style:italic; color: var(--slate);">shaping every program.</em></h3>
+      <p style="font-size: 16px; line-height: 1.8; color: var(--muted); max-width: 640px; margin-bottom: 40px;">Our advisory board includes senior leaders from the organizations that define their industries — guiding curriculum, evaluating capstone projects, mentoring students, and connecting graduates to opportunity. Every ZAI program carries their expertise.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 40px;">
         <div>
-          <div class="card-name">Andre Magni</div>
-          <div class="card-org">Microsoft</div>
+          <p style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--slate); margin-bottom: 14px;">Industries Represented</p>
+          <p style="font-size: 14px; line-height: 1.8; color: var(--muted);">Technology &amp; Cloud Computing, Healthcare &amp; Life Sciences, Financial Services &amp; Banking, Management Consulting, Consumer Products, Media &amp; Entertainment, Supply Chain &amp; Operations, Data Science &amp; Analytics</p>
+        </div>
+        <div>
+          <p style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px;">Roles &amp; Seniority</p>
+          <p style="font-size: 14px; line-height: 1.8; color: var(--muted);">C-Suite Executives, SVPs &amp; VPs of AI Strategy, Global Heads of Product &amp; Platform, Chief Quality &amp; Medical Officers, Directors of Research &amp; Innovation, University Department Chairs &amp; Tenured Faculty</p>
+        </div>
+        <div>
+          <p style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--warm); margin-bottom: 14px;">Organizations</p>
+          <p style="font-size: 14px; line-height: 1.8; color: var(--muted);">Microsoft, Google, Meta, Adobe, PwC, EY, Bloomberg, Johnson &amp; Johnson, Kaiser Permanente, Mayo Clinic, JPMorgan Chase, Bank of America, Verizon, ServiceNow, Coca-Cola, Est&eacute;e Lauder, Experian, and more</p>
         </div>
       </div>
-      <div class="card-title">Cloud &amp; AI Leader — US Retail &amp; CPG</div>
-      <div class="card-affiliation">La Roche University &middot; Strategic AI</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">Andr&eacute; leads the Data &amp; AI Architecture organization for US Enterprise Retail &amp; CPG at Microsoft. Previously Head of Cloud Customer Engineering at Google, he advises executives on enterprise AI strategies and speaks at industry conferences worldwide.</div>
-    </div>
-    <div class="card" data-accent="warm" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">GW</div>
-        <div>
-          <div class="card-name">Giselle Willick</div>
-          <div class="card-org">Kaiser Permanente</div>
-        </div>
+
+      <div style="padding-top: 32px; border-top: 1px solid rgba(10,10,15,0.06);">
+        <p style="font-family: var(--serif); font-size: 20px; font-style: italic; color: var(--slate); line-height: 1.5; max-width: 560px;">Advisors serve as capstone evaluators, curriculum reviewers, executive mentors, and the bridge between academic programs and the employers who hire their graduates.</p>
       </div>
-      <div class="card-title">Chief Officer, Quality &amp; Systems of Care</div>
-      <div class="card-affiliation">University of San Francisco &middot; Strategic AI</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">Dr. Willick provides strategic direction for ambulatory quality and clinical services supporting 4.8 million members at Kaiser Permanente. Her portfolio spans Precision Medicine, Population Health, Remote Patient Monitoring, Research, and Graduate Medical Education.</div>
     </div>
-    <div class="card" data-accent="gold" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">SC</div>
-        <div>
-          <div class="card-name">Sherry Comes</div>
-          <div class="card-org">PwC</div>
-        </div>
-      </div>
-      <div class="card-title">Applied AI &amp; Emerging Tech Leader</div>
-      <div class="card-affiliation">Univ. of Colorado Colorado Springs &middot; Women in Leadership with AI</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">One of the original IBM Watson Distinguished Engineers, Sherry has spent decades inventing, scaling, and commercializing advanced technologies — repeatedly building category-defining AI solutions ahead of market adoption. She now leads applied AI and emerging technology initiatives at PwC.</div>
+
+    <div style="margin-top: 32px; padding: 36px 48px; background: rgba(44,62,90,0.04); border: 1px solid rgba(10,10,15,0.04); text-align: center;">
+      <p style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-accessible); margin-bottom: 12px;">Interested in joining the advisory network?</p>
+      <p style="font-size: 15px; color: var(--muted); margin-bottom: 20px;">We&rsquo;re selectively expanding our advisory board with senior executives who want to shape AI education at the university level.</p>
+      <a href="contact.html" style="font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--gold-accessible); text-decoration: none; letter-spacing: 0.02em;">Start a conversation &rarr;</a>
     </div>
-    <div class="card" data-accent="sage" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">BP</div>
-        <div>
-          <div class="card-name">Bovio Pulito</div>
-          <div class="card-org">Google</div>
-        </div>
-      </div>
-      <div class="card-title">Head of Platform Growth Partnerships</div>
-      <div class="card-affiliation">University of San Francisco &middot; Digital Marketing</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">Bovio drives strategy and negotiations for Google’s full suite of advertising products, having executed more than 100 commercial deals with industry leaders including Amazon, Disney, and Meta. An active investor and startup advisor with an MBA from UCLA Anderson.</div>
-    </div>
-    <div class="card" data-accent="ink" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">IG</div>
-        <div>
-          <div class="card-name">Ira Greenberg</div>
-          <div class="card-org">Southern Methodist University</div>
-        </div>
-      </div>
-      <div class="card-title">Professor &amp; Director, Center of Creative Computation</div>
-      
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">Professor Greenberg holds a joint appointment in SMU’s Meadows School of the Arts and the Lyle School of Engineering, and chairs the Division of Art. An internationally recognized artist, coder, and educator, he holds two National Science Foundation grants and is the author of three books on creative coding. BFA, Cornell University; MFA, University of Pennsylvania.</div>
-    </div>
-    <div class="card" data-accent="slate" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">VU</div>
-        <div>
-          <div class="card-name">Valerie Usmanova</div>
-          <div class="card-org">Meta</div>
-        </div>
-      </div>
-      <div class="card-title">Lead, Agentic AI GTM &amp; Monetization</div>
-      <div class="card-affiliation">University of San Francisco &middot; Digital Marketing</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">Valerie leads cross-channel go-to-market and monetization partnerships for AI agents at Meta. Previously a Senior Engagement Manager at McKinsey &amp; Company, she specialized in AI strategy, enterprise transformations, and product development.</div>
-    </div>
-    <div class="card" data-accent="teal" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">AP</div>
-        <div>
-          <div class="card-name">Alan Paris</div>
-          <div class="card-org">ServiceNow</div>
-        </div>
-      </div>
-      <div class="card-title">Global Head, FS Risk &amp; Compliance — Field CTO</div>
-      <div class="card-affiliation">University of San Francisco &middot; Strategic AI</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">Alan has driven more than $100 million in Annual Contract Value through enterprise platform strategy, AI enablement, and integrated risk solutions. A CAMS-certified anti-money laundering specialist with 25+ years spanning consulting, enterprise software, and financial institutions.</div>
-    </div>
-    <div class="card" data-accent="warm" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">VS</div>
-        <div>
-          <div class="card-name">Victoria Sosik</div>
-          <div class="card-org">Verizon</div>
-        </div>
-      </div>
-      <div class="card-title">Sr. Director of Experience Research</div>
-      <div class="card-affiliation">Seton Hall University &middot; Customer Experience</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">Victoria previously led UX Research teams at Google whose work shaped strategy impacting over one billion Google Maps users worldwide. She holds a Ph.D. in Human-Computer Interaction from Cornell University.</div>
-    </div>
-    <div class="card" data-accent="gold" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">EP</div>
-        <div>
-          <div class="card-name">Ewerton Pavan</div>
-          <div class="card-org">Bloomberg</div>
-        </div>
-      </div>
-      <div class="card-title">Global Head, Planning &amp; Strategy — Supply Chain</div>
-      <div class="card-affiliation">University of New Haven &middot; Transformative Leadership</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">A transformation and operations executive driving end-to-end digital innovation at Bloomberg LP. His leadership blends advanced analytics, automation, and lean methodologies to deliver large-scale organizational change across global operations.</div>
-    </div>
-    <div class="card" data-accent="sage" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">FA</div>
-        <div>
-          <div class="card-name">Francesca Aguilar</div>
-          <div class="card-org">Coca-Cola</div>
-        </div>
-      </div>
-      <div class="card-title">Director, Global Sports &amp; Entertainment Partnerships</div>
-      <div class="card-affiliation">Univ. of North Georgia &middot; Women in Leadership</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">Francesca brings over 25 years of experience at The Coca-Cola Company leading transformative global initiatives. Her work has shaped Coca-Cola’s presence at six FIFA World Cups, multiple Olympic Games, and Special Olympics World Games.</div>
-    </div>
-    <div class="card" data-accent="ink" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">WA</div>
-        <div>
-          <div class="card-name">Wael Adhami</div>
-          <div class="card-org">Johnson &amp; Johnson</div>
-        </div>
-      </div>
-      <div class="card-title">VP, Global Trade Compliance</div>
-      <div class="card-affiliation">Seton Hall University &middot; Customer Experience</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">Wael oversees regulatory strategy and compliance programs across one of the world’s largest and most complex healthcare enterprises, operating at the intersection of global commerce, regulatory frameworks, and organizational strategy.</div>
-    </div>
-    <div class="card" data-accent="slate" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">MD</div>
-        <div>
-          <div class="card-name">Morgan Dethman</div>
-          <div class="card-org">Bank of America</div>
-        </div>
-      </div>
-      <div class="card-title">VP, Sr. UX Design Strategist — Global Technology</div>
-      <div class="card-affiliation">Furman University &middot; Strategic AI</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">Morgan leads user experience strategy for a $5 million cross-channel portfolio supporting over 500 employee-facing applications. She specializes in designing AI interfaces that create institutional trust at enterprise scale.</div>
-    </div>
-    <div class="card" data-accent="teal" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">MV</div>
-        <div>
-          <div class="card-name">Mariana Venter</div>
-          <div class="card-org">Experian</div>
-        </div>
-      </div>
-      <div class="card-title">SVP, Global Finance Systems &amp; AI Engineering</div>
-      <div class="card-affiliation">University of San Francisco &middot; Strategic AI</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">Mariana oversees more than 35 financial applications, the organization’s finance data lake, and the delivery of production-grade AI solutions at Experian. Previously at Deloitte UK, she works at the intersection of finance, engineering, and enterprise-scale transformation.</div>
-    </div>
-    <div class="card" data-accent="warm" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">PK</div>
-        <div>
-          <div class="card-name">Pinar Kurt</div>
-          <div class="card-org">Johnson &amp; Johnson</div>
-        </div>
-      </div>
-      <div class="card-title">Sr. Director, Global Strategic Marketing</div>
-      <div class="card-affiliation">University of San Francisco &middot; Strategic AI</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">A science-driven innovation and business leader with a Ph.D. and extensive international experience across global healthcare and med-tech markets. At J&amp;J’s Biosense Webster division, she translates complex scientific advancements into scalable growth strategy.</div>
-    </div>
-    <div class="card" data-accent="gold" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">KS</div>
-        <div>
-          <div class="card-name">Karin Smith</div>
-          <div class="card-org">Microsoft</div>
-        </div>
-      </div>
-      <div class="card-title">Account Executive / Field CTO — Retail &amp; Consumer Goods</div>
-      <div class="card-affiliation">Minnesota State Univ., Mankato &middot; Women in Leadership with AI</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">A senior technology executive at Microsoft with more than two decades of experience navigating major technology transformations. She works directly with organizations to demystify emerging technologies and develop strategies for responsible, effective AI adoption.</div>
-    </div>
-    <div class="card" data-accent="sage" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">JG</div>
-        <div>
-          <div class="card-name">Jean Guan</div>
-          <div class="card-org">Blue Cross Blue Shield of MA</div>
-        </div>
-      </div>
-      <div class="card-title">COO Chief of Staff &amp; Head of Transformation</div>
-      <div class="card-affiliation">University of New Haven &middot; Women in Leadership with AI</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">An executive recognized for transforming complex, regulated operations. Known for operationalizing AI — integrating technology, process redesign, and cultural adoption to unlock enterprise value at scale.</div>
-    </div>
-    <div class="card" data-accent="ink" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">CRR</div>
-        <div>
-          <div class="card-name">Cathy Ryan Reneer</div>
-          <div class="card-org">JPMorgan Chase</div>
-        </div>
-      </div>
-      <div class="card-title">Managing Director</div>
-      <div class="card-affiliation">Webber International Univ. &middot; Women in Leadership</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">Cathy leads Identity Access Management Operations at JPMorgan Chase &amp; Co., supporting all lines of business with secure access provisioning across one of the world’s largest financial institutions.</div>
-    </div>
-    <div class="card" data-accent="slate" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">GD</div>
-        <div>
-          <div class="card-name">Gina Dunham</div>
-          <div class="card-org">Meta</div>
-        </div>
-      </div>
-      <div class="card-title">Chief of Staff, Data Center Design &amp; Construction</div>
-      <div class="card-affiliation">Ashland University &middot; Women in Leadership with AI</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">B.S. in Civil Engineering from MIT and an M.S. in Construction Management from UC Berkeley. After nearly 15 years in high tech — first at Oracle, then building and operating hyperscale data centers — Gina now serves as Chief of Staff to Meta’s Head of Data Center Design, Engineering, and Construction.</div>
-    </div>
-    <div class="card" data-accent="teal" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">KB</div>
-        <div>
-          <div class="card-name">Karla Blanco</div>
-          <div class="card-org">Thriving Human</div>
-        </div>
-      </div>
-      <div class="card-title">Founder &amp; CEO</div>
-      <div class="card-affiliation">Abilene Christian University &middot; Transformative Leadership</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">Author of four best-sellers with four TEDx talks. Over 26 years of corporate leadership within a Fortune 500 global corporation, leading initiatives in competitiveness, leadership, social impact, and inclusion. MBA in International Business; Stanford University Business School Executive Program.</div>
-    </div>
-    <div class="card" data-accent="warm" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">AG</div>
-        <div>
-          <div class="card-name">Amanda Gabriele</div>
-          <div class="card-org">Mayo Clinic</div>
-        </div>
-      </div>
-      <div class="card-title">Director, Analytics &amp; Insights Center of Excellence</div>
-      <div class="card-affiliation">Southern Connecticut State Univ. &middot; Strategic AI</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">Amanda leads enterprise-wide strategy across data engineering, data platforms, governance, quality, operations, and advanced analytics at Mayo Clinic — one of the world’s most respected healthcare institutions.</div>
-    </div>
-    <div class="card" data-accent="gold" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">BL</div>
-        <div>
-          <div class="card-name">Bryan Liebert</div>
-          <div class="card-org">World Wide Technology</div>
-        </div>
-      </div>
-      <div class="card-title">Chief Information Security Officer — Field CISO</div>
-      <div class="card-affiliation">Ashland University &middot; Strategic AI</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">A seasoned cybersecurity executive with over 30 years of experience guiding organizations through complex security challenges. He provides strategic leadership in cybersecurity risk management, regulatory compliance, and the development of enterprise security programs.</div>
-    </div>
-    <div class="card" data-accent="sage" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">NM</div>
-        <div>
-          <div class="card-name">Nirmal Merchant</div>
-          <div class="card-org">Adobe</div>
-        </div>
-      </div>
-      <div class="card-title">Director, Professional Services GenAI &amp; Creative Velocity</div>
-      <div class="card-affiliation">University of San Francisco &middot; Strategic AI</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">Over 20 years leading professional services strategy and delivery across consulting, product development, and enterprise transformation. Known as an influential leader adept at defining strategy, establishing alignment, and excelling in execution.</div>
-    </div>
-    <div class="card" data-accent="ink" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">ABW</div>
-        <div>
-          <div class="card-name">Ananda Box Williams</div>
-          <div class="card-org">Est&eacute;e Lauder Companies</div>
-        </div>
-      </div>
-      <div class="card-title">Vice President — Brand Quality</div>
-      <div class="card-affiliation">University of New Haven &middot; Transformative Leadership</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">Ananda leads global quality strategy across multiple skincare brands, driving right-first-time innovation. Over 25 years of leadership across Global Supply Chain, Quality, Manufacturing, and R&amp;D at Est&eacute;e Lauder, Unilever, and Colgate-Palmolive.</div>
-    </div>
-    <div class="card" data-accent="slate" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">TF</div>
-        <div>
-          <div class="card-name">Torrell Funderburk</div>
-          <div class="card-org">Sealed Air Corporation</div>
-        </div>
-      </div>
-      <div class="card-title">Global CISO</div>
-      <div class="card-affiliation">Furman University &middot; Strategic AI</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">Recognized among the top global CISOs. He has led large-scale enterprise technology and cybersecurity programs and spoken on the world’s leading stages on emerging technologies, workforce gaps, and the role of security in driving innovation.</div>
-    </div>
-    <div class="card" data-accent="teal" onclick="this.classList.toggle('expanded')">
-      <div class="card-header">
-        <div class="card-avatar">WS</div>
-        <div>
-          <div class="card-name">William Scheideler</div>
-          <div class="card-org">EY</div>
-        </div>
-      </div>
-      <div class="card-title">Director, UX Design &amp; Cross Product Design Lead</div>
-      <div class="card-affiliation">Seton Hall University &middot; Customer Experience</div>
-      <div class="card-chevron">&#9662;</div>
-      <div class="card-bio">An Experience Design Director and Strategist at Ernst &amp; Young with over 15 years of visual design, UX, and service design experience. He drives a human-centered approach across complex enterprise engagements.</div>
-    </div>
-    </div>
+
+  </div>
 </section>
 
 <!-- NETWORK TICKER BAND -->
@@ -1074,6 +785,7 @@ footer {
         <li><a href="#">Leadership</a></li>
         <li><a href="index.html#approach">Our Approach</a></li>
         <li><a href="index.html#network">The Network</a></li>
+        <li><a href="case-studies/">Case Studies</a></li>
       <li><a href="insights/index.html">Insights</a></li>
         <li><a href="contact.html">Partner With Us</a></li>
       </ul>
