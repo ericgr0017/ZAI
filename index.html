@@ -440,6 +440,7 @@ nav ul li a:hover { color: var(--gold); }
   position: absolute; inset: 0;
   opacity: 0.08;
   transition: opacity 0.4s;
+  pointer-events: none;
 }
 .audience-card:hover::before { opacity: 0.12; }
 
@@ -464,6 +465,7 @@ nav ul li a:hover { color: var(--gold); }
   font-family: var(--serif); font-size: 56px; font-weight: 300;
   position: absolute; top: 24px; right: 32px;
   opacity: 0.15; color: #fff;
+  pointer-events: none;
 }
 .audience-eyebrow {
   font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em;
@@ -485,6 +487,7 @@ nav ul li a:hover { color: var(--gold); }
   font-family: var(--sans); font-size: 13px; font-weight: 600;
   text-decoration: none; letter-spacing: 0.02em;
   transition: opacity 0.3s;
+  position: relative; z-index: 2;
 }
 .card-university .audience-link { color: var(--slate-light); }
 .card-employers .audience-link { color: var(--teal-soft); }
