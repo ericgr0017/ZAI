@@ -406,6 +406,18 @@ footer { background: var(--ink); border-top: 1px solid rgba(184,150,46,0.15); pa
   .proof-item:not(:last-child)::after { display: none; }
   .footer-inner { grid-template-columns: 1fr; }
 }
+/* MOBILE MENU */
+.hamburger{display:none;cursor:pointer;background:none;border:none;padding:8px;z-index:101}
+.hamburger span{display:block;width:22px;height:2px;background:var(--gold,#B8962E);margin:5px 0;transition:all 0.3s}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mobile-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,15,0.98);z-index:98;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+.mobile-overlay.open{display:flex}
+.mobile-overlay a{font-family:var(--serif,Georgia);font-size:28px;color:rgba(255,255,255,0.7);text-decoration:none;transition:color 0.3s}
+.mobile-overlay a:hover{color:var(--gold,#B8962E)}
+.mobile-overlay .mob-cta{font-family:var(--sans,sans-serif);font-size:14px;font-weight:600;color:#0A0A0F;background:var(--gold,#B8962E);padding:14px 32px;margin-top:16px;text-decoration:none}
+@media(max-width:900px){.hamburger{display:block}}
 </style>
 </head>
 <body>
@@ -425,10 +437,12 @@ footer { background: var(--ink); border-top: 1px solid rgba(184,150,46,0.15); pa
       <li><a href="index.html#programs">Programs</a></li>
       <li><a href="index.html#research">Research</a></li>
       <li><a href="insights/index.html">Insights</a></li>
+      <li><a href="platform.html">Platform</a></li>
       <li><a href="contact.html">Partner With Us</a></li>
     </ul>
   </div>
 </nav>
+<div class="mobile-overlay"><a href="index.html#about">About</a><a href="platform.html">Platform</a><a href="index.html#programs">Programs</a><a href="index.html#research">Research</a><a href="insights/index.html">Insights</a><a href="contact.html" class="mob-cta">Partner With Us</a></div>
 
 <!-- HERO -->
 <section class="hero">
@@ -636,7 +650,8 @@ footer { background: var(--ink); border-top: 1px solid rgba(184,150,46,0.15); pa
         <li><a href="index.html#network">The Network</a></li>
         <li><a href="index.html#audience">Who We Serve</a></li>
         <li><a href="insights/index.html">Insights</a></li>
-        <li><a href="contact.html">Partner With Us</a></li>
+        <li><a href="platform.html">Platform</a></li>
+      <li><a href="contact.html">Partner With Us</a></li>
       </ul>
     </div>
     <div class="footer-col">
