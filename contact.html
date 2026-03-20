@@ -505,6 +505,7 @@
   @media (max-width: 1024px) {
     nav { padding: 20px 32px; }
     .nav-links { display: none !important; }
+    nav ul { display: none !important; }
     .hamburger { display: block; }
     .page-header { padding: 120px 32px 60px; }
     .contact-body { grid-template-columns: 1fr; }
@@ -541,18 +542,23 @@
       <text x="89" y="15" font-family="DM Sans, sans-serif" font-size="7" font-weight="400" fill="rgba(245,242,237,0.45)" letter-spacing="4">INSTITUTE</text>
     </svg>
   </a>
-  <ul class="nav-links" role="list" aria-label="Site sections">
-    <li><a href="index.html#about">About</a></li>
-    <li><a href="index.html#pillars">Approach</a></li>
-    <li><a href="index.html#programs">Programs</a></li>
-    <li><a href="index.html#audience">Who We Serve</a></li>
-    <li><a href="index.html#network">Network</a></li>
-    <li><a href="index.html#research">Research</a></li>
-    <li><a href="platform.html">Platform</a></li>
-    <li><a href="contact.html" class="nav-cta active" aria-current="page">Partner With Us</a></li>
-  </ul>
-  <button class="hamburger" onclick="document.querySelector('.mobile-overlay').classList.toggle('open');this.classList.toggle('active')" aria-label="Menu"><span></span><span></span><span></span></button></nav>
-<div class="mobile-overlay"><a href="index.html#about">About</a><a href="platform.html">Platform</a><a href="index.html#programs">Programs</a><a href="index.html#research">Research</a><a href="insights/index.html">Insights</a><a href="contact.html" class="mob-cta">Partner With Us</a></div>
+  <ul>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="platform.html">Platform</a></li>
+      <li><a href="index.html#programs">Programs</a></li>
+      <li><a href="insights/index.html">Insights</a></li>
+      <li><a href="contact.html">Partner With Us</a></li>
+    </ul>
+  <button class="hamburger" onclick="document.querySelector('.mobile-overlay').classList.toggle('open');this.classList.toggle('active')" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+<div class="mobile-overlay">
+  <a href="index.html#about">About</a>
+  <a href="platform.html">Platform</a>
+  <a href="index.html#programs">Programs</a>
+  <a href="insights/index.html">Insights</a>
+  <a href="contact.html" class="mob-cta">Partner With Us</a>
+</div>
+
 
 <main id="main-content">
 
