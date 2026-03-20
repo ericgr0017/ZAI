@@ -13,14 +13,136 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": "EducationalOrganization",
+  "@id": "https://zaiinstitute.ai/#organization",
   "name": "ZAI Institute",
   "url": "https://zaiinstitute.ai",
-  "description": "ZAI Institute partners with universities to design, market, and deliver AI executive education programs under university partner brands.",
+  "description": "ZAI Institute partners with universities to design, market, and deliver AI executive education programs under university partner brands. 60+ university partnerships. Programs deploy in 30 days with no new faculty hires required.",
   "telephone": "+18883847020",
-  "email": "egreenberg@zaiinstitute.ai",
-  "address": { "@type": "PostalAddress", "addressLocality": "Fort Lauderdale", "addressRegion": "FL" },
-  "sameAs": ["https://www.linkedin.com/company/zai-institute"]
+  "email": "info@zaiinstitute.ai",
+  "address": { "@type": "PostalAddress", "addressLocality": "Fort Lauderdale", "addressRegion": "FL", "addressCountry": "US" },
+  "sameAs": ["https://www.linkedin.com/company/zai-institute"],
+  "foundingDate": "2014",
+  "areaServed": "US",
+  "numberOfEmployees": { "@type": "QuantitativeValue", "minValue": 10, "maxValue": 50 },
+  "knowsAbout": ["Artificial Intelligence", "Executive Education", "University Partnerships", "Continuing Education", "AI Workforce Training", "Faculty AI Training", "AI Curriculum Development"],
+  "hasCredential": {
+    "@type": "EducationalOccupationalCredential",
+    "name": "ZAI Institute AI Certificate",
+    "credentialCategory": "Certificate"
+  },
+  "makesOffer": [
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Course",
+        "name": "How to Be Indispensable in the Age of AI — Foundation Certificate",
+        "description": "A 4-hour asynchronous AI foundation certificate program that universities deploy under their own brand. Students learn where AI creates advantage and where human judgment remains irreplaceable.",
+        "provider": { "@type": "EducationalOrganization", "name": "ZAI Institute" },
+        "timeRequired": "PT4H",
+        "educationalLevel": "Professional",
+        "deliveryMode": "Online",
+        "isAccessibleForFree": false,
+        "hasCourseInstance": {
+          "@type": "CourseInstance",
+          "courseMode": "Online",
+          "courseWorkload": "PT4H"
+        }
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Course",
+        "name": "How to Be Indispensable in the Age of AI — Professional Certificate",
+        "description": "A 32-hour, 8-module professional AI certificate with executive network access and capstone evaluation by industry leaders. Deployed under university brands in 30 days.",
+        "provider": { "@type": "EducationalOrganization", "name": "ZAI Institute" },
+        "timeRequired": "PT32H",
+        "educationalLevel": "Professional",
+        "deliveryMode": "Online",
+        "numberOfCredits": { "@type": "StructuredValue", "value": "32 hours" }
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Course",
+        "name": "University AI Readiness Training for Faculty",
+        "description": "A 5-session faculty training program that transforms AI skeptics into AI champions. Live and asynchronous delivery, deployable without committee approval.",
+        "provider": { "@type": "EducationalOrganization", "name": "ZAI Institute" },
+        "educationalLevel": "Professional",
+        "deliveryMode": "Blended",
+        "audience": { "@type": "EducationalAudience", "educationalRole": "Faculty" }
+      }
+    },
+    {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Course",
+        "name": "Enterprise AI Readiness Training",
+        "description": "Custom AI training programs deployed inside organizations through university continuing education partnerships. Industry-specific curriculum with university-issued credentials.",
+        "provider": { "@type": "EducationalOrganization", "name": "ZAI Institute" },
+        "educationalLevel": "Professional",
+        "deliveryMode": "Blended"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How quickly can a university launch an AI program with ZAI Institute?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ZAI Institute deploys AI certificate programs within 30 days of the initial conversation. Programs launch under the university's brand through their continuing education or professional studies division, with no new faculty hires, no curriculum committee approval, and no capital expenditure required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does ZAI Institute replace university faculty?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. ZAI Institute works alongside existing faculty, not around them. Faculty remain the authors and stewards of curriculum. ZAI provides infrastructure, content, AI-powered tools, and an executive network that enables faculty to integrate AI at a pace that doesn't compromise academic rigor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many universities partner with ZAI Institute?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ZAI Institute has partnered with over 60 universities across the United States, ranging from R1 research universities to regional institutions, delivering AI executive education programs under each university's own brand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the cost model for universities partnering with ZAI Institute?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ZAI Institute programs generate tuition revenue for partner universities with no upfront cost. Universities keep tuition revenue while ZAI provides curriculum, technology, AI teaching assistants, and ongoing content updates. The model is designed to be revenue-positive from the first cohort."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What AI programs does ZAI Institute offer for universities?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ZAI Institute offers a tiered program system: a 4-hour Foundation Certificate, a 32-hour Professional Certificate with executive network access, Faculty AI Readiness Training (5 sessions), custom curriculum builds aligned to institutional specifications, Enterprise AI Training through university partnerships, and a 48-credit AI concentration for undergraduate programs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is ZAI Institute different from an OPM or online program manager?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unlike OPMs, ZAI Institute does not take a percentage of tuition revenue, does not manage enrollment or marketing on behalf of the university, and does not replace faculty. ZAI provides curriculum infrastructure, AI-powered teaching tools, and an executive network. The university retains full brand ownership, faculty control, and revenue. ZAI operates as invisible infrastructure behind the university's brand."
+      }
+    }
+  ]
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -889,7 +1011,9 @@ footer {
       <li><a href="#about">About</a></li>
       <li><a href="leadership.html">Leadership</a></li>
       <li><a href="#research">Research</a></li>
-      <li><a href="insights/index.html">Insights</a></li>
+      <li><a href="case-studies/">Case Studies</a></li>
+      <li><a href="case-studies/">Case Studies</a></li>
+        <li><a href="insights/index.html">Insights</a></li>
       <li class="nav-audience-uni"><a href="for-universities.html">For Universities</a></li>
       <li class="nav-audience-org"><a href="for-organizations.html">For Organizations</a></li>
     </ul>
@@ -1352,6 +1476,8 @@ footer {
         <li><a href="#approach">Our Approach</a></li>
         <li><a href="#network">The Network</a></li>
         <li><a href="#audience">Who We Serve</a></li>
+        <li><a href="case-studies/">Case Studies</a></li>
+      <li><a href="case-studies/">Case Studies</a></li>
         <li><a href="insights/index.html">Insights</a></li>
         <li><a href="contact.html">Partner With Us</a></li>
       </ul>
