@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The AI Readiness Gap — 2026 Enterprise Survey Findings — ZAI Institute</title>
+    <meta name="description" content="69 senior leaders across 8 industries reveal the gap between AI urgency and organizational readiness. Original research from ZAI Institute, Q1 2026.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="The AI Readiness Gap — 2026 Enterprise Survey Findings">
+    <meta property="og:description" content="61% of leaders rate themselves AI-proficient. Only 17% say the same about their organizations. Original research from 69 senior leaders across 8 industries.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://zaiinstitute.ai/insights/ai-readiness-gap-2026">
+    <meta property="og:site_name" content="ZAI Institute">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The AI Readiness Gap — 2026 Enterprise Survey Findings">
+    <meta name="twitter:description" content="61% of leaders rate themselves AI-proficient. Only 17% say the same about their organizations.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ========== RESET & BASE ========== */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0a0a0a;
+            --bg-card: #111111;
+            --bg-elevated: #1a1a1a;
+            --bg-accent: #0d1b2a;
+            --text-primary: #e8e8e8;
+            --text-secondary: #999999;
+            --text-muted: #666666;
+            --accent: #4a9eff;
+            --accent-dim: rgba(74, 158, 255, 0.15);
+            --accent-glow: rgba(74, 158, 255, 0.08);
+            --border: #222222;
+            --border-light: #2a2a2a;
+            --gold: #c9a94e;
+            --serif: 'Playfair Display', Georgia, serif;
+            --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #6db3ff; }
+
+        /* ========== NAV ========== */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            background: rgba(10, 10, 10, 0.92);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+        .nav-logo {
+            font-family: var(--sans);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        .nav-logo span { display: block; font-size: 0.55rem; font-weight: 400; letter-spacing: 0.08em; color: var(--text-muted); margin-top: 2px; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { font-size: 0.8rem; color: var(--text-secondary); letter-spacing: 0.03em; text-decoration: none; transition: color 0.2s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--text-primary); }
+
+        .nav-toggle { display: none; background: none; border: none; color: var(--text-primary); font-size: 1.5rem; cursor: pointer; }
+
+        /* ========== HERO ========== */
+        .hero {
+            padding: 160px 2rem 80px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .hero-meta {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .hero-meta .diamond { color: var(--accent); font-size: 0.6rem; }
+        .hero-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: var(--accent-dim);
+            border: 1px solid rgba(74, 158, 255, 0.25);
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--accent);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+        .hero h1 {
+            font-family: var(--serif);
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+        .hero h1 em { font-style: italic; color: var(--accent); }
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            max-width: 640px;
+        }
+
+        /* ========== KEY STATS BANNER ========== */
+        .stats-banner {
+            max-width: 800px;
+            margin: 0 auto 4rem;
+            padding: 0 2rem;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .stat-item {
+            background: var(--bg-card);
+            padding: 1.5rem 1rem;
+            text-align: center;
+        }
+        .stat-number {
+            font-family: var(--serif);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1;
+            margin-bottom: 0.4rem;
+        }
+        .stat-label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            line-height: 1.4;
+        }
+
+        /* ========== ARTICLE BODY ========== */
+        .article {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem 6rem;
+        }
+        .article p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .article h2 {
+            font-family: var(--serif);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 4rem 0 1.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+        }
+        .article h2 em { font-style: italic; color: var(--accent); }
+
+        .article h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 2.5rem 0 1rem;
+            letter-spacing: 0.02em;
+        }
+
+        .finding-number {
+            display: inline-block;
+            font-family: var(--serif);
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        /* ========== DATA TABLES ========== */
+        .data-table-wrap {
+            margin: 1.5rem 0 2rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+        }
+        .data-table thead th {
+            background: var(--bg-accent);
+            color: var(--accent);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 0.9rem 1.2rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .data-table thead th:not(:first-child) { text-align: center; }
+        .data-table tbody td {
+            padding: 0.75rem 1.2rem;
+            border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+        .data-table tbody td:not(:first-child) { text-align: center; }
+        .data-table tbody tr:last-child td { border-bottom: none; }
+        .data-table tbody tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+        .data-table .highlight { color: var(--accent); font-weight: 600; }
+
+        /* ========== BAR CHARTS ========== */
+        .bar-chart { margin: 1.5rem 0 2rem; }
+        .bar-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.6rem;
+            gap: 1rem;
+        }
+        .bar-label {
+            flex: 0 0 240px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-align: right;
+        }
+        .bar-track {
+            flex: 1;
+            height: 28px;
+            background: var(--bg-elevated);
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+        }
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), #6db3ff);
+            border-radius: 4px;
+            transition: width 1s ease;
+            position: relative;
+        }
+        .bar-fill.gold { background: linear-gradient(90deg, #8a7030, var(--gold)); }
+        .bar-value {
+            flex: 0 0 45px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* ========== PULL QUOTES ========== */
+        .pull-quote {
+            margin: 2.5rem 0;
+            padding: 1.5rem 2rem;
+            border-left: 3px solid var(--accent);
+            background: var(--accent-glow);
+            border-radius: 0 8px 8px 0;
+        }
+        .pull-quote p {
+            font-family: var(--serif);
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--text-primary) !important;
+            line-height: 1.7;
+            margin-bottom: 0.5rem !important;
+        }
+        .pull-quote .attribution {
+            font-family: var(--sans);
+            font-size: 0.8rem;
+            font-style: normal;
+            color: var(--text-muted);
+        }
+
+        /* ========== CALLOUT BOXES ========== */
+        .callout {
+            margin: 2rem 0;
+            padding: 1.5rem 2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+        .callout-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 0.8rem;
+        }
+        .callout p { font-size: 0.95rem; margin-bottom: 0; }
+
+        /* ========== DUAL STAT COMPARISON ========== */
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+        .comparison-side {
+            background: var(--bg-card);
+            padding: 2rem;
+            text-align: center;
+        }
+        .comparison-side .big-number {
+            font-family: var(--serif);
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        .comparison-side .big-number.blue { color: var(--accent); }
+        .comparison-side .big-number.dim { color: var(--text-muted); }
+        .comparison-side .desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+        .comparison-side .desc strong { color: var(--text-primary); }
+
+        /* ========== SECTION DIVIDER ========== */
+        .divider {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .divider-line {
+            border: none;
+            border-top: 1px solid var(--border);
+        }
+        .diamond-divider {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            letter-spacing: 0.5em;
+            margin: 3rem 0;
+        }
+
+        /* ========== AUTHOR ========== */
+        .author-box {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            padding: 2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin: 4rem 0 3rem;
+        }
+        .author-initials {
+            flex-shrink: 0;
+            width: 56px;
+            height: 56px;
+            background: var(--accent-dim);
+            border: 1px solid rgba(74, 158, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--serif);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        .author-info h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+        .author-info .role {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.6rem;
+        }
+        .author-info p {
+            font-size: 0.85rem !important;
+            color: var(--text-secondary) !important;
+            line-height: 1.6 !important;
+        }
+
+        /* ========== CTA ========== */
+        .cta-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem 6rem;
+            text-align: center;
+        }
+        .cta-section h3 {
+            font-family: var(--serif);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .cta-section h3 em { font-style: italic; color: var(--accent); }
+        .cta-section p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            transition: all 0.2s;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: #000;
+        }
+        .btn-primary:hover { background: #6db3ff; color: #000; }
+        .btn-secondary {
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+        .btn-secondary:hover { border-color: var(--text-muted); color: var(--text-primary); }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            border-top: 1px solid var(--border);
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        .footer-logo {
+            font-family: var(--sans);
+            font-weight: 700;
+            font-size: 0.85rem;
+            letter-spacing: 0.15em;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .footer-tagline { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 2rem; }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        .footer-links a { font-size: 0.8rem; color: var(--text-muted); }
+        .footer-links a:hover { color: var(--text-primary); }
+        .footer-copy { font-size: 0.7rem; color: var(--text-muted); }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .nav-links.open {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 72px;
+                left: 0;
+                right: 0;
+                background: var(--bg);
+                border-bottom: 1px solid var(--border);
+                padding: 1.5rem 2rem;
+                gap: 1rem;
+            }
+            .nav-toggle { display: block; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .comparison { grid-template-columns: 1fr; }
+            .bar-label { flex: 0 0 140px; font-size: 0.75rem; }
+            .hero { padding: 120px 1.5rem 60px; }
+            .article { padding: 0 1.5rem 4rem; }
+        }
+
+        /* ========== ANIMATIONS ========== */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-up {
+            opacity: 0;
+            animation: fadeUp 0.6s ease forwards;
+        }
+        .fade-up:nth-child(2) { animation-delay: 0.1s; }
+        .fade-up:nth-child(3) { animation-delay: 0.2s; }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a href="https://zaiinstitute.ai/" class="nav-logo">ZAI<br>Institute<span>INSTITUTE</span></a>
+        <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle menu">☰</button>
+        <ul class="nav-links">
+            <li><a href="https://zaiinstitute.ai/#about">About</a></li>
+            <li><a href="https://zaiinstitute.ai/platform">Platform</a></li>
+            <li><a href="https://zaiinstitute.ai/insights/" class="active">Insights</a></li>
+            <li><a href="https://zaiinstitute.ai/for-universities">For Universities</a></li>
+            <li><a href="https://zaiinstitute.ai/for-organizations">For Organizations</a></li>
+            <li><a href="https://zaiinstitute.ai/contact">Partner With Us</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+    <div class="hero-badge fade-up">Research Report</div>
+    <div class="hero-meta fade-up">
+        ZAI Institute Research <span class="diamond">◆</span> March 2026 <span class="diamond">◆</span> 12 min read
+    </div>
+    <h1 class="fade-up">The AI Readiness Gap: How Organizations Are Navigating the Transition to an <em>AI-Powered Workforce</em></h1>
+    <p class="hero-subtitle fade-up">Findings from the 2026 Enterprise AI Readiness Survey — 69 senior leaders, 8 industries, Q1 2026.</p>
+</header>
+
+<!-- KEY STATS -->
+<div class="stats-banner">
+    <div class="stats-grid">
+        <div class="stat-item">
+            <div class="stat-number">69</div>
+            <div class="stat-label">Senior Leaders<br>Surveyed</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Industries<br>Represented</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">30%</div>
+            <div class="stat-label">C-Suite or<br>EVP/SVP</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">3.57</div>
+            <div class="stat-label">Mean Urgency<br>(out of 5)</div>
+        </div>
+    </div>
+</div>
+
+<!-- ARTICLE -->
+<article class="article">
+
+    <!-- EXECUTIVE SUMMARY -->
+    <p>Artificial intelligence is no longer a speculative technology — it is an operational imperative. Yet for most organizations, the path from awareness to readiness remains unclear, under-resourced, and strategically fragmented.</p>
+
+    <p>The ZAI Institute 2026 Enterprise AI Readiness Survey captured insights from 69 senior leaders spanning eight industries, five organizational tiers, and companies ranging from under 500 to over 50,000 employees. The findings reveal a workforce that recognizes AI's transformative potential but is struggling to translate that recognition into structured action.</p>
+
+    <!-- ==================== FINDING 1 ==================== -->
+    <h2><em>Finding 1</em> — The AI Fluency Gap</h2>
+
+    <p>The survey reveals a stark and consistent gap between how leaders rate their own AI capabilities and how they assess their organizations. This fluency gap is not a marginal difference — it is a structural divide that shapes every downstream challenge from training to investment to competitive positioning.</p>
+
+    <div class="comparison">
+        <div class="comparison-side">
+            <div class="big-number blue">61%</div>
+            <div class="desc">of leaders rate <strong>personal</strong> AI fluency as<br>Proficient or Expert</div>
+        </div>
+        <div class="comparison-side">
+            <div class="big-number dim">17%</div>
+            <div class="desc">say the same about their<br><strong>organization's</strong> AI fluency</div>
+        </div>
+    </div>
+
+    <h3>Personal AI Fluency</h3>
+    <div class="data-table-wrap">
+        <table class="data-table">
+            <thead><tr><th>Fluency Level</th><th>Count</th><th>%</th></tr></thead>
+            <tbody>
+                <tr><td>Expert</td><td>14</td><td class="highlight">20%</td></tr>
+                <tr><td>Proficient</td><td>28</td><td class="highlight">41%</td></tr>
+                <tr><td>Developing</td><td>16</td><td>23%</td></tr>
+                <tr><td>Beginner</td><td>9</td><td>13%</td></tr>
+                <tr><td>None</td><td>1</td><td>1%</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Organizational AI Fluency</h3>
+    <div class="data-table-wrap">
+        <table class="data-table">
+            <thead><tr><th>Fluency Level</th><th>Count</th><th>%</th></tr></thead>
+            <tbody>
+                <tr><td>Strong</td><td>12</td><td>17%</td></tr>
+                <tr><td>Moderate</td><td>32</td><td>46%</td></tr>
+                <tr><td>Weak</td><td>19</td><td>28%</td></tr>
+                <tr><td>Very Weak</td><td>6</td><td>9%</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>When mapped against each other, 34% of respondents report personal fluency that exceeds their organization's level, while only 29% report the inverse. This gap is especially pronounced among C-Suite and EVP-level leaders, who often possess Expert-level personal fluency while describing their organizations as Moderate.</p>
+
+    <p>The implications are significant: the leaders most equipped to drive AI transformation are embedded in organizations that have not yet caught up. Without structured programs to close this gap, individual expertise remains siloed and unreplicated.</p>
+
+    <div class="pull-quote">
+        <p>"Dedicating specific, strategic time to it. There's an emphasis on self-learning, which is great for some, but doesn't apply to the masses, and it's caused massive gaps in literacy across the board."</p>
+        <span class="attribution">— Director</span>
+    </div>
+
+    <!-- ==================== FINDING 2 ==================== -->
+    <h2><em>Finding 2</em> — Urgency Outpaces Investment</h2>
+
+    <p>AI readiness urgency among senior leaders is high and climbing. But formal investment in AI training and development remains conspicuously low, creating a dangerous disconnect between strategic intent and operational commitment.</p>
+
+    <p>More than half (55%) of respondents rate urgency at 4 or 5 on a 5-point scale. C-Suite and EVP respondents rate urgency even higher, with a mean of 3.81 compared to 3.46 among VPs, Directors, and Managers. Seniority correlates with alarm.</p>
+
+    <h3>Formal Investment in AI Training</h3>
+    <div class="bar-chart">
+        <div class="bar-row">
+            <div class="bar-label">Yes — significant</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 16%"></div></div>
+            <div class="bar-value">16%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Yes — modest</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 43%"></div></div>
+            <div class="bar-value">43%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">No — discussed only</div>
+            <div class="bar-track"><div class="bar-fill gold" style="width: 19%"></div></div>
+            <div class="bar-value">19%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">No — not a priority</div>
+            <div class="bar-track"><div class="bar-fill gold" style="width: 22%"></div></div>
+            <div class="bar-value">22%</div>
+        </div>
+    </div>
+
+    <p>Only 16% of organizations are making significant investments in AI training. A combined 41% have either only discussed AI training or do not consider it a priority. At the enterprise level (50,000+ employees), 67% report significant investment, compared to just 14% of organizations under 500 employees.</p>
+
+    <div class="callout">
+        <div class="callout-title">The Budget Black Hole</div>
+        <p>64% of respondents report that their AI training budget is either unknown or entirely unbudgeted. Among those who can quantify it, the overwhelming majority spend under $5,000 per year. This is not a resourcing challenge — it is an absence of strategic prioritization.</p>
+    </div>
+
+    <div class="pull-quote">
+        <p>"We're a small organization, so finding the time and money to invest in being AI-ready is a challenge. Plus, there's a lot of uncertainty around training time versus the speed of change in AI."</p>
+        <span class="attribution">— C-Suite, Professional Services</span>
+    </div>
+
+    <!-- ==================== FINDING 3 ==================== -->
+    <h2><em>Finding 3</em> — Current Training Is Not Working</h2>
+
+    <p>For organizations that have deployed some form of AI training, the results are underwhelming. Satisfaction is low, formats are fragmented, and a significant number of organizations have done nothing at all.</p>
+
+    <div class="comparison">
+        <div class="comparison-side">
+            <div class="big-number dim">42%</div>
+            <div class="desc">of respondents report<br><strong>no AI training at all</strong></div>
+        </div>
+        <div class="comparison-side">
+            <div class="big-number dim">20%</div>
+            <div class="desc">of those with training are<br><strong>"very satisfied"</strong></div>
+        </div>
+    </div>
+
+    <h3>Training Formats in Use</h3>
+    <div class="bar-chart">
+        <div class="bar-row">
+            <div class="bar-label">None / No training</div>
+            <div class="bar-track"><div class="bar-fill gold" style="width: 42%"></div></div>
+            <div class="bar-value">42%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Online self-paced</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 41%"></div></div>
+            <div class="bar-value">41%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Internal workshops</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 39%"></div></div>
+            <div class="bar-value">39%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Conferences</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 16%"></div></div>
+            <div class="bar-value">16%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Vendor-led training</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 13%"></div></div>
+            <div class="bar-value">13%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">University-led programs</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 9%"></div></div>
+            <div class="bar-value">9%</div>
+        </div>
+    </div>
+
+    <p>University-led programs — which typically offer the greatest rigor and credentialing — are utilized by only 9% of respondents. Among those with active training, nearly 40% are neutral on satisfaction and 10% are dissatisfied. Organizations are checking the training box, but the programs are not meeting leadership expectations.</p>
+
+    <div class="pull-quote">
+        <p>"AI being so unregulated and released to the masses without clear instruction I think is the biggest issue. There's not a lot of thoughtful engagement with it."</p>
+        <span class="attribution">— Director</span>
+    </div>
+
+    <!-- ==================== FINDING 4 ==================== -->
+    <h2><em>Finding 4</em> — Time, Not Budget, Is the Primary Barrier</h2>
+
+    <p>When asked to identify their biggest barriers to AI readiness, respondents painted a picture that challenges conventional assumptions. Budget constraints — often cited as the default obstacle — ranked fifth.</p>
+
+    <h3>Top Barriers to AI Readiness</h3>
+    <div class="bar-chart">
+        <div class="bar-row">
+            <div class="bar-label">Lack of time</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 55%"></div></div>
+            <div class="bar-value">55%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">No clear training program</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 52%"></div></div>
+            <div class="bar-value">52%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Unclear ROI</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 36%"></div></div>
+            <div class="bar-value">36%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Field moves too fast</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 26%"></div></div>
+            <div class="bar-value">26%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Cultural resistance</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 26%"></div></div>
+            <div class="bar-value">26%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Budget constraints</div>
+            <div class="bar-track"><div class="bar-fill gold" style="width: 25%"></div></div>
+            <div class="bar-value">25%</div>
+        </div>
+    </div>
+
+    <p>The dominance of "lack of time" (55%) and "no clear training program" (52%) reveals a workforce that is willing but structurally unable to engage. These are not attitudinal problems — they are program design problems. Leaders do not need to be convinced that AI matters. They need training that fits into their operational reality: flexible, fast to deploy, and immediately relevant.</p>
+
+    <div class="pull-quote">
+        <p>"Purely time. So much to digest and intake in ratio to operational focus."</p>
+        <span class="attribution">— C-Suite, Professional Services</span>
+    </div>
+
+    <div class="pull-quote">
+        <p>"The gun just went off at the starting line. We have no idea how AI will impact our industry or how quickly."</p>
+        <span class="attribution">— Vice President, Professional Services</span>
+    </div>
+
+    <!-- ==================== FINDING 5 ==================== -->
+    <h2><em>Finding 5</em> — What Leaders Actually Want</h2>
+
+    <p>The survey asked respondents to rate the importance of eight factors when evaluating an AI training program. The results draw a clear profile of what the market is demanding — and what it is not.</p>
+
+    <h3>Program Decision Factors — Critical + Important</h3>
+    <div class="bar-chart">
+        <div class="bar-row">
+            <div class="bar-label">Curriculum Relevance</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 83%"></div></div>
+            <div class="bar-value">83%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Faculty Quality</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 83%"></div></div>
+            <div class="bar-value">83%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Speed to Deploy</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 78%"></div></div>
+            <div class="bar-value">78%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Cost</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 76%"></div></div>
+            <div class="bar-value">76%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Flexible Delivery</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 76%"></div></div>
+            <div class="bar-value">76%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Peer Network</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 52%"></div></div>
+            <div class="bar-value">52%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Custom Program</div>
+            <div class="bar-track"><div class="bar-fill gold" style="width: 30%"></div></div>
+            <div class="bar-value">30%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">University Brand</div>
+            <div class="bar-track"><div class="bar-fill gold" style="width: 30%"></div></div>
+            <div class="bar-value">30%</div>
+        </div>
+    </div>
+
+    <p>The top tier is unambiguous: leaders want programs that are relevant to their actual work (83%), taught by qualified faculty (83%), deployable quickly (78%), cost-effective (76%), and flexible in delivery (76%). These five attributes form the baseline for any credible executive AI education offering.</p>
+
+    <p>The bottom tier is equally instructive. University brand recognition (30%) and program customization (30%) rank last. Leaders are not buying prestige — they are buying outcomes.</p>
+
+    <h3>Top Skill Priorities</h3>
+    <div class="bar-chart">
+        <div class="bar-row">
+            <div class="bar-label">AI Ethics, Risk & Compliance</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 52%"></div></div>
+            <div class="bar-value">52%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Automation & Workflows</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 51%"></div></div>
+            <div class="bar-value">51%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Prompt Engineering</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 46%"></div></div>
+            <div class="bar-value">46%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">AI Strategy & Governance</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 43%"></div></div>
+            <div class="bar-value">43%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">AI for Business Functions</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 42%"></div></div>
+            <div class="bar-value">42%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Data Literacy</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 33%"></div></div>
+            <div class="bar-value">33%</div>
+        </div>
+        <div class="bar-row">
+            <div class="bar-label">Leading AI-Era Teams</div>
+            <div class="bar-track"><div class="bar-fill" style="width: 28%"></div></div>
+            <div class="bar-value">28%</div>
+        </div>
+    </div>
+
+    <!-- ==================== FINDING 6 ==================== -->
+    <h2><em>Finding 6</em> — Competitive Positioning & Board Attention</h2>
+
+    <p>The survey reveals a leadership class that is largely uncertain about its competitive position on AI and increasingly bringing the topic to the board level — but often without a clear framework for action.</p>
+
+    <div class="comparison">
+        <div class="comparison-side">
+            <div class="big-number dim">35%</div>
+            <div class="desc">describe themselves as<br><strong>behind peers</strong> on AI</div>
+        </div>
+        <div class="comparison-side">
+            <div class="big-number blue">81%</div>
+            <div class="desc">have AI on the<br><strong>board agenda</strong> in some form</div>
+        </div>
+    </div>
+
+    <p>Only 17% of respondents believe their organization is ahead of its peers. A combined 35% describe themselves as behind, with nearly a fifth saying they do not even have enough information to make a competitive assessment.</p>
+
+    <p>Among organizations that assess themselves as "behind and aware," only 26% have AI as an active board item, compared to 58% of those who consider themselves ahead of peers. Competitive leaders are not just investing more — they are governing more deliberately.</p>
+
+    <h3>AI Fluency as a Future Talent Requirement</h3>
+    <div class="data-table-wrap">
+        <table class="data-table">
+            <thead><tr><th>View</th><th>%</th></tr></thead>
+            <tbody>
+                <tr><td>Baseline requirement for all leadership</td><td class="highlight">40%</td></tr>
+                <tr><td>Expected for select roles</td><td>26%</td></tr>
+                <tr><td>Differentiator, not requirement</td><td>19%</td></tr>
+                <tr><td>Hard to predict</td><td>15%</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>Forty percent of respondents expect AI fluency to become a baseline requirement for all leadership roles. The talent market is signaling clearly: AI literacy is becoming non-negotiable.</p>
+
+    <!-- ==================== FINDING 7 ==================== -->
+    <h2><em>Finding 7</em> — The University Partnership Opportunity</h2>
+
+    <p>One of the most revealing aspects of the survey is the current ambivalence toward university-led AI training — and the massive opportunity that ambivalence represents.</p>
+
+    <h3>Willingness to Partner with a University</h3>
+    <div class="data-table-wrap">
+        <table class="data-table">
+            <thead><tr><th>Response</th><th>Count</th><th>%</th></tr></thead>
+            <tbody>
+                <tr><td>Definitely yes</td><td>2</td><td>3%</td></tr>
+                <tr><td>Probably yes</td><td>7</td><td>10%</td></tr>
+                <tr><td>Unsure</td><td>36</td><td class="highlight">54%</td></tr>
+                <tr><td>Probably not</td><td>17</td><td>25%</td></tr>
+                <tr><td>Definitely not</td><td>5</td><td>7%</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <p>Only 13% are definitive or probable advocates for university partnerships. But 54% — the largest segment — are unsure. This is not rejection. It is an open market waiting for the right value proposition.</p>
+
+    <p>This uncertainty exists alongside clear demand signals. Respondents want curriculum relevance (83%), faculty quality (83%), and speed to deploy (78%) — all attributes that well-designed university programs can deliver. But university brand alone ranks low (30%), which means institutions cannot rely on name recognition. They must lead with outcomes.</p>
+
+    <div class="pull-quote">
+        <p>"The field is filled with skilled AI groups and groups that are not skilled but sell AI, making the decision-making process more difficult."</p>
+        <span class="attribution">— C-Suite, Professional Services</span>
+    </div>
+
+    <!-- ==================== CONCLUSIONS ==================== -->
+    <h2>Conclusions & <em>Strategic Implications</em></h2>
+
+    <p>The 2026 Enterprise AI Readiness Survey paints a picture of an executive workforce that is personally engaged, strategically anxious, and programmatically under-served. The gap between individual fluency and organizational capability is wide and growing. Investment lags urgency. Training efforts, where they exist, are failing to satisfy. And the market is actively looking for solutions that combine relevance, speed, quality, and flexibility.</p>
+
+    <h3>For Organizations</h3>
+
+    <p><strong>Treat AI readiness as an infrastructure investment, not a training line item.</strong> The organizations that report being ahead of their peers are not just spending more — they have AI as an active board agenda item and a strategic priority with executive sponsorship.</p>
+
+    <p><strong>Address the time barrier with program design, not more content.</strong> Leaders are not asking for more resources to learn about AI. They are asking for programs that respect their time constraints: asynchronous, modular, immediately applicable, and fast to deploy.</p>
+
+    <p><strong>Close the fluency gap between leaders and their teams.</strong> Individual expertise does not translate to organizational capability without structured diffusion. Formal programs, cohort-based learning, and embedded application are required.</p>
+
+    <h3>For Education Providers</h3>
+
+    <p><strong>Lead with outcomes, not prestige.</strong> University brand ranks last among program decision factors. Institutions must position themselves around curriculum relevance, instructor credibility, and deployment speed.</p>
+
+    <p><strong>Design for the unsatisfied majority.</strong> With only 20% of current training participants reporting high satisfaction, there is a clear opening for programs that deliver on relevance and rigor. The bar is not high — but it has not been cleared.</p>
+
+    <p><strong>Prioritize ethics, automation, and applied AI in curriculum design.</strong> The top skill priorities — AI ethics and compliance (52%), automation and workflow transformation (51%), and prompt engineering (46%) — reflect a market that wants both strategic guardrails and a practical toolkit.</p>
+
+    <div class="diamond-divider">◆ &nbsp; ◆ &nbsp; ◆</div>
+
+    <!-- METHODOLOGY NOTE -->
+    <div class="callout">
+        <div class="callout-title">Methodology</div>
+        <p>The ZAI Institute 2026 Enterprise AI Readiness Survey was distributed in March 2026 through the ZAI Advisory Network to professionals in leadership and management roles across multiple industries. 69 completed responses were collected and analyzed. The respondent pool represents C-Suite (23%), EVP/SVP (7%), VP (15%), Director (23%), and Senior Manager/Manager (32%) across Professional Services, Healthcare, Technology, Government/Nonprofit, Financial Services, Manufacturing, Consumer Goods, and other industries. Organizational size ranged from under 500 to over 50,000 employees.</p>
+    </div>
+
+    <!-- AUTHOR -->
+    <div class="author-box">
+        <div class="author-initials">EG</div>
+        <div class="author-info">
+            <h4>Eric Greenberg</h4>
+            <div class="role">Founder & CEO, ZAI Institute</div>
+            <p>Eric built ZAI Institute on a decade of experience at the intersection of universities and industry. Author of <em>Strategic AI</em> and <em>Strategic Digital Marketing</em> (McGraw-Hill).</p>
+        </div>
+    </div>
+
+</article>
+
+<!-- CTA -->
+<section class="cta-section">
+    <h3>Ready to close the <em>readiness gap?</em></h3>
+    <p>We partner with university leaders and organizations ready to make AI readiness a core institutional capability.</p>
+    <div class="cta-buttons">
+        <a href="https://zaiinstitute.ai/contact" class="btn btn-primary">Request a Conversation</a>
+        <a href="https://zaiinstitute.ai/insights/" class="btn btn-secondary">← All Insights</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-logo">ZAI INSTITUTE</div>
+    <div class="footer-tagline">The Institution Behind the Institutions</div>
+    <div class="footer-links">
+        <a href="https://zaiinstitute.ai/#about">About</a>
+        <a href="https://zaiinstitute.ai/platform">Platform</a>
+        <a href="https://zaiinstitute.ai/insights/">Insights</a>
+        <a href="https://zaiinstitute.ai/for-universities">For Universities</a>
+        <a href="https://zaiinstitute.ai/for-organizations">For Organizations</a>
+        <a href="https://zaiinstitute.ai/contact">Partner With Us</a>
+    </div>
+    <div class="footer-copy">© 2026 ZAI Institute. All rights reserved.</div>
+</footer>
+
+</body>
+</html>
