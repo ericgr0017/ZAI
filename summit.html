@@ -697,11 +697,11 @@ footer {
     <div class="reg-price">Registration: <strong>$995</strong></div>
     <div class="reg-note">As a benefit of your advisory role, your program is covering half.</div>
     <div class="reg-your-price">$495</div>
-    <div class="reg-your-label">Your investment</div>
+    <div class="reg-your-label">Your investment &mdash; payment confirms your seat</div>
     <div class="reg-line"></div>
 
     <div id="registration-form">
-      <form id="summitForm" class="summit-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <form id="summitForm" class="summit-form" action="https://formspree.io/f/xwvwdver" method="POST">
         <div class="form-grid">
           <div class="form-group">
             <label>First Name</label>
@@ -744,18 +744,18 @@ footer {
           </div>
         </div>
         <div class="form-submit">
-          <button type="submit">Confirm My Seat</button>
+          <button type="submit">Continue to Payment &rarr;</button>
         </div>
       </form>
     </div>
 
     <div class="form-success" id="successMessage">
-      <h3>Your Seat Is Confirmed</h3>
-      <p>Thank you for representing your university program at the National Higher Education AI Summit. You will receive a confirmation email with full details shortly.</p>
+      <h3>Redirecting to Payment...</h3>
+      <p>If you are not redirected automatically, <a href="https://zohosecurepay.com/checkout/7afnyve-yztom4f9qqtid/ZAI-National-Advisor-AI-Summit--Virtual-Leadership-Session" style="color: var(--gold); text-decoration: underline;">click here to complete your registration</a>.</p>
     </div>
 
     <div class="form-footer-text">
-      If your schedule does not allow you to attend, please let your program director know so the invitation can be extended to another advisor.
+      Your seat is confirmed only upon payment. If your schedule does not allow you to attend, please let your program director know so the invitation can be extended to another advisor.
     </div>
     <div class="reg-scarcity">Limited Seats Available</div>
   </div>
@@ -815,12 +815,22 @@ document.querySelectorAll('.anim').forEach(el => observer.observe(el));
 document.getElementById('summitForm').addEventListener('submit', async (e) => {
   e.preventDefault();
   const form = e.target;
+  const btn = form.querySelector('button[type="submit"]');
+  btn.textContent = 'Processing...';
+  btn.disabled = true;
   try {
     await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
     document.getElementById('registration-form').style.display = 'none';
     document.getElementById('successMessage').style.display = 'block';
+    // Redirect to Zoho Checkout after brief delay
+    // REPLACE the URL below with your Zoho Checkout payment page URL
+    setTimeout(() => {
+      window.location.href = 'https://zohosecurepay.com/checkout/7afnyve-yztom4f9qqtid/ZAI-National-Advisor-AI-Summit--Virtual-Leadership-Session';
+    }, 1500);
   } catch (err) {
-    alert('There was an issue submitting your registration. Please try again or email egreenberg@zaiinstitute.ai');
+    btn.textContent = 'Continue to Payment →';
+    btn.disabled = false;
+    alert('There was an issue. Please try again or email egreenberg@zaiinstitute.ai');
   }
 });
 </script>
