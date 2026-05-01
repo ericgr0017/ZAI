@@ -1,152 +1,481 @@
-ZAI
-INSTITUTE
-← Back to Insights
-RESEARCH SURVEY
-The Agent Readiness Gap — 2026 Survey
-The conversation about AI is shifting. A year ago, organizations asked how their people would use AI. Today, the question is what work AI agents will do on their own.
-This 4-minute survey explores how ready organizations actually are. Your responses will be aggregated into a research report published by ZAI Institute later this year. No names, companies, or identifying details will be shared.
-9 questions  ◊  ~4 minutes  ◊  Anonymous
-QUESTION 1
-Which best describes your current role?
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Agent Readiness Gap — 2026 Survey | ZAI Institute</title>
+<meta name="description" content="A 4-minute survey on how organizations are preparing for AI agents that do the work, not just help with it. Findings will be published by ZAI Institute.">
+<style>
+  :root {
+    --ink: #0A0A0F;
+    --gold: #B8962E;
+    --paper: #F5F2ED;
+    --slate: #2C3E5A;
+    --rule: rgba(10,10,15,0.12);
+    --muted: rgba(10,10,15,0.62);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
 
-C-Suite (CEO, CFO, CTO, COO, etc.)
+  /* HEADER */
+  .site-header {
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper);
+  }
+  .site-header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .site-logo {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  .site-back {
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .site-back:hover { color: var(--gold); }
 
-EVP / SVP
+  /* HERO */
+  .hero {
+    padding: 72px 0 40px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  h1 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 500;
+    font-size: 44px;
+    line-height: 1.12;
+    margin: 0 0 24px;
+    color: var(--ink);
+  }
+  h1 em { font-style: italic; color: var(--gold); }
+  .lede {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--slate);
+    margin: 0 0 8px;
+  }
+  .meta-line {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 24px;
+    letter-spacing: 0.04em;
+  }
 
-Vice President
+  /* FORM */
+  .form-section {
+    padding: 56px 0 80px;
+  }
+  .question {
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .question:last-of-type {
+    border-bottom: none;
+  }
+  .q-label {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+  .q-text {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 24px;
+    line-height: 1.35;
+    margin: 0 0 8px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+  .q-helper {
+    font-size: 14px;
+    color: var(--muted);
+    margin: 0 0 20px;
+  }
 
-Director
+  /* RADIO + CHECKBOX */
+  .options { margin-top: 16px; }
+  .option {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .option:hover {
+    background: rgba(184, 150, 46, 0.08);
+    border-color: var(--gold);
+  }
+  .option input[type="radio"],
+  .option input[type="checkbox"] {
+    margin-right: 12px;
+    margin-top: 4px;
+    accent-color: var(--gold);
+    flex-shrink: 0;
+  }
+  .option-text {
+    font-size: 15px;
+    line-height: 1.45;
+    color: var(--ink);
+  }
+  .option input:checked ~ .option-text {
+    font-weight: 600;
+  }
 
-Senior Manager / Manager
+  /* TEXTAREA */
+  textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 14px 16px;
+    font-family: inherit;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--ink);
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    resize: vertical;
+    transition: border-color 0.15s;
+  }
+  textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    background: white;
+  }
 
-Other
-QUESTION 2
-Which best describes your industry?
+  /* SUBMIT */
+  .submit-section {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 2px solid var(--ink);
+    text-align: center;
+  }
+  .submit-button {
+    display: inline-block;
+    padding: 16px 48px;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .submit-button:hover { background: var(--gold); color: var(--ink); }
+  .submit-helper {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 16px;
+  }
 
-Professional Services / Consulting
+  /* THANK YOU STATE */
+  #thank-you { display: none; padding: 80px 0; text-align: center; }
+  #thank-you h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    margin: 0 0 16px;
+    font-weight: 500;
+  }
+  #thank-you h2 em { color: var(--gold); font-style: italic; }
+  #thank-you p {
+    font-size: 17px;
+    color: var(--slate);
+    max-width: 480px;
+    margin: 0 auto 32px;
+  }
 
-Healthcare / Life Sciences / Pharma
+  /* FOOTER */
+  .site-footer {
+    background: var(--paper);
+    border-top: 1px solid var(--rule);
+    padding: 28px 0;
+  }
+  .site-footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 28px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--muted);
+  }
 
-Technology / Software
+  @media (max-width: 720px) {
+    h1 { font-size: 32px; }
+    .q-text { font-size: 20px; }
+    .hero { padding: 56px 0 32px; }
+  }
+</style>
+</head>
+<body>
 
-Financial Services / Insurance
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="/" class="site-logo">ZAI<br>INSTITUTE</a>
+    <a href="/insights/" class="site-back">← Back to Insights</a>
+  </div>
+</header>
 
-Manufacturing / Industrial
+<section class="hero">
+  <div class="container">
+    <div class="eyebrow">Research Survey</div>
+    <h1>The <em>Agent Readiness</em> Gap — 2026 Survey</h1>
+    <p class="lede">The conversation about AI is shifting. A year ago, organizations asked how their people would use AI. Today, the question is what work AI agents will do on their own.</p>
+    <p class="lede">This 4-minute survey explores how ready organizations actually are. Your responses will be aggregated into a research report published by ZAI Institute later this year. No names, companies, or identifying details will be shared.</p>
+    <div class="meta-line">9 questions &nbsp;◊&nbsp; ~4 minutes &nbsp;◊&nbsp; Anonymous</div>
+  </div>
+</section>
 
-Consumer Goods / Retail
+<section class="form-section">
+  <div class="container">
 
-Government / Nonprofit / Education
+    <form id="survey-form" action="https://formspree.io/f/mvzlgpny" method="POST">
 
-Other
-QUESTION 3
-Which best describes your organization's current use of AI agents?
-By "agents" we mean software that completes work autonomously, not just chatbots that answer questions.
+      <input type="hidden" name="_subject" value="ZAI Survey Response — Agent Readiness Gap (May 2026)">
 
-We have agents in production doing real work today
+      <!-- Q1 -->
+      <div class="question">
+        <div class="q-label">Question 1</div>
+        <p class="q-text">Which best describes your current role?</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="q1_role" value="c_suite" required><span class="option-text">C-Suite (CEO, CFO, CTO, COO, etc.)</span></label>
+          <label class="option"><input type="radio" name="q1_role" value="evp_svp"><span class="option-text">EVP / SVP</span></label>
+          <label class="option"><input type="radio" name="q1_role" value="vp"><span class="option-text">Vice President</span></label>
+          <label class="option"><input type="radio" name="q1_role" value="director"><span class="option-text">Director</span></label>
+          <label class="option"><input type="radio" name="q1_role" value="manager"><span class="option-text">Senior Manager / Manager</span></label>
+          <label class="option"><input type="radio" name="q1_role" value="other"><span class="option-text">Other</span></label>
+        </div>
+      </div>
 
-We are piloting agents in one or more areas
+      <!-- Q2 -->
+      <div class="question">
+        <div class="q-label">Question 2</div>
+        <p class="q-text">Which best describes your industry?</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="q2_industry" value="prof_services" required><span class="option-text">Professional Services / Consulting</span></label>
+          <label class="option"><input type="radio" name="q2_industry" value="healthcare"><span class="option-text">Healthcare / Life Sciences / Pharma</span></label>
+          <label class="option"><input type="radio" name="q2_industry" value="tech"><span class="option-text">Technology / Software</span></label>
+          <label class="option"><input type="radio" name="q2_industry" value="financial"><span class="option-text">Financial Services / Insurance</span></label>
+          <label class="option"><input type="radio" name="q2_industry" value="manufacturing"><span class="option-text">Manufacturing / Industrial</span></label>
+          <label class="option"><input type="radio" name="q2_industry" value="consumer"><span class="option-text">Consumer Goods / Retail</span></label>
+          <label class="option"><input type="radio" name="q2_industry" value="govt_nonprofit"><span class="option-text">Government / Nonprofit / Education</span></label>
+          <label class="option"><input type="radio" name="q2_industry" value="other"><span class="option-text">Other</span></label>
+        </div>
+      </div>
 
-We are exploring or evaluating, but nothing is live
+      <!-- Q3 -->
+      <div class="question">
+        <div class="q-label">Question 3</div>
+        <p class="q-text">Which best describes your organization's current use of AI agents?</p>
+        <p class="q-helper">By "agents" we mean software that completes work autonomously, not just chatbots that answer questions.</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="q3_agent_status" value="in_production" required><span class="option-text">We have agents in production doing real work today</span></label>
+          <label class="option"><input type="radio" name="q3_agent_status" value="piloting"><span class="option-text">We are piloting agents in one or more areas</span></label>
+          <label class="option"><input type="radio" name="q3_agent_status" value="exploring"><span class="option-text">We are exploring or evaluating, but nothing is live</span></label>
+          <label class="option"><input type="radio" name="q3_agent_status" value="not_started"><span class="option-text">We have not started</span></label>
+          <label class="option"><input type="radio" name="q3_agent_status" value="unsure"><span class="option-text">I am not sure</span></label>
+        </div>
+      </div>
 
-We have not started
+      <!-- Q4 -->
+      <div class="question">
+        <div class="q-label">Question 4</div>
+        <p class="q-text">Where do you see the strongest near-term opportunity for AI agents in your organization?</p>
+        <p class="q-helper">Choose up to three.</p>
+        <div class="options">
+          <label class="option"><input type="checkbox" name="q4_opportunity_areas" value="cust_service"><span class="option-text">Customer service and support</span></label>
+          <label class="option"><input type="checkbox" name="q4_opportunity_areas" value="sales"><span class="option-text">Sales and outbound prospecting</span></label>
+          <label class="option"><input type="checkbox" name="q4_opportunity_areas" value="marketing"><span class="option-text">Marketing content and campaigns</span></label>
+          <label class="option"><input type="checkbox" name="q4_opportunity_areas" value="hr"><span class="option-text">Recruiting and HR operations</span></label>
+          <label class="option"><input type="checkbox" name="q4_opportunity_areas" value="finance"><span class="option-text">Finance and accounting workflows</span></label>
+          <label class="option"><input type="checkbox" name="q4_opportunity_areas" value="it_eng"><span class="option-text">IT and engineering (code, ops, security)</span></label>
+          <label class="option"><input type="checkbox" name="q4_opportunity_areas" value="research"><span class="option-text">Research and analysis</span></label>
+          <label class="option"><input type="checkbox" name="q4_opportunity_areas" value="knowledge"><span class="option-text">Internal knowledge management</span></label>
+          <label class="option"><input type="checkbox" name="q4_opportunity_areas" value="compliance"><span class="option-text">Compliance and risk monitoring</span></label>
+          <label class="option"><input type="checkbox" name="q4_opportunity_areas" value="exec_support"><span class="option-text">Executive decision support</span></label>
+        </div>
+      </div>
 
-I am not sure
-QUESTION 4
-Where do you see the strongest near-term opportunity for AI agents in your organization?
-Choose up to three.
+      <!-- Q5 -->
+      <div class="question">
+        <div class="q-label">Question 5</div>
+        <p class="q-text">How would you describe your organization's policy for human oversight of AI agents?</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="q5_oversight_policy" value="formal_policy" required><span class="option-text">We have a clear policy with named accountable owners</span></label>
+          <label class="option"><input type="radio" name="q5_oversight_policy" value="informal"><span class="option-text">We have informal guidelines but no formal policy</span></label>
+          <label class="option"><input type="radio" name="q5_oversight_policy" value="in_progress"><span class="option-text">We are working on it but nothing is in place</span></label>
+          <label class="option"><input type="radio" name="q5_oversight_policy" value="not_addressed"><span class="option-text">We have not addressed this yet</span></label>
+          <label class="option"><input type="radio" name="q5_oversight_policy" value="na"><span class="option-text">Not applicable, no agents in use</span></label>
+        </div>
+      </div>
 
-Customer service and support
+      <!-- Q6 -->
+      <div class="question">
+        <div class="q-label">Question 6</div>
+        <p class="q-text">When an AI agent makes a meaningful decision in your organization, who is accountable for the outcome?</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="q6_accountability" value="deployer" required><span class="option-text">The human who deployed the agent</span></label>
+          <label class="option"><input type="radio" name="q6_accountability" value="reviewer"><span class="option-text">The human who reviews the agent's output</span></label>
+          <label class="option"><input type="radio" name="q6_accountability" value="dept"><span class="option-text">The team or department that uses the agent</span></label>
+          <label class="option"><input type="radio" name="q6_accountability" value="vendor"><span class="option-text">The vendor who built the agent</span></label>
+          <label class="option"><input type="radio" name="q6_accountability" value="undecided"><span class="option-text">We have not decided</span></label>
+          <label class="option"><input type="radio" name="q6_accountability" value="na"><span class="option-text">Not applicable</span></label>
+        </div>
+      </div>
 
-Sales and outbound prospecting
+      <!-- Q7 -->
+      <div class="question">
+        <div class="q-label">Question 7</div>
+        <p class="q-text">How would you rate your trust in the output of a well-deployed AI agent compared to the output of a competent human employee doing the same work today?</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="q7_trust_comparison" value="agent_much_more" required><span class="option-text">I trust the agent significantly more</span></label>
+          <label class="option"><input type="radio" name="q7_trust_comparison" value="agent_slightly"><span class="option-text">I trust the agent slightly more</span></label>
+          <label class="option"><input type="radio" name="q7_trust_comparison" value="equal"><span class="option-text">I trust them about the same</span></label>
+          <label class="option"><input type="radio" name="q7_trust_comparison" value="human_slightly"><span class="option-text">I trust the human slightly more</span></label>
+          <label class="option"><input type="radio" name="q7_trust_comparison" value="human_much_more"><span class="option-text">I trust the human significantly more</span></label>
+        </div>
+      </div>
 
-Marketing content and campaigns
+      <!-- Q8 -->
+      <div class="question">
+        <div class="q-label">Question 8</div>
+        <p class="q-text">Two years from now, what percentage of your organization's total work do you expect will be performed primarily by AI agents rather than humans?</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="q8_two_year_forecast" value="under_5" required><span class="option-text">Less than 5%</span></label>
+          <label class="option"><input type="radio" name="q8_two_year_forecast" value="five_15"><span class="option-text">5 to 15%</span></label>
+          <label class="option"><input type="radio" name="q8_two_year_forecast" value="fifteen_30"><span class="option-text">15 to 30%</span></label>
+          <label class="option"><input type="radio" name="q8_two_year_forecast" value="thirty_50"><span class="option-text">30 to 50%</span></label>
+          <label class="option"><input type="radio" name="q8_two_year_forecast" value="over_50"><span class="option-text">More than 50%</span></label>
+          <label class="option"><input type="radio" name="q8_two_year_forecast" value="unsure"><span class="option-text">I cannot predict</span></label>
+        </div>
+      </div>
 
-Recruiting and HR operations
+      <!-- Q9 -->
+      <div class="question">
+        <div class="q-label">Question 9</div>
+        <p class="q-text">What is the single biggest barrier to deploying AI agents in your organization right now?</p>
+        <div class="options">
+          <label class="option"><input type="radio" name="q9_biggest_barrier" value="expertise" required><span class="option-text">Lack of internal expertise to build or evaluate agents</span></label>
+          <label class="option"><input type="radio" name="q9_biggest_barrier" value="accuracy"><span class="option-text">Concerns about accuracy, hallucination, or reliability</span></label>
+          <label class="option"><input type="radio" name="q9_biggest_barrier" value="security"><span class="option-text">Concerns about security, privacy, or compliance</span></label>
+          <label class="option"><input type="radio" name="q9_biggest_barrier" value="resistance"><span class="option-text">Workforce resistance or fear of replacement</span></label>
+          <label class="option"><input type="radio" name="q9_biggest_barrier" value="roi"><span class="option-text">Unclear ROI or business case</span></label>
+          <label class="option"><input type="radio" name="q9_biggest_barrier" value="leadership"><span class="option-text">No leadership mandate to move forward</span></label>
+          <label class="option"><input type="radio" name="q9_biggest_barrier" value="budget"><span class="option-text">Budget constraints</span></label>
+          <label class="option"><input type="radio" name="q9_biggest_barrier" value="no_need"><span class="option-text">We do not see a meaningful need yet</span></label>
+        </div>
+      </div>
 
-Finance and accounting workflows
+      <!-- Q10 -->
+      <div class="question">
+        <div class="q-label">Question 10 (Optional)</div>
+        <p class="q-text">What else should leaders understand about preparing for an agent-driven workforce?</p>
+        <p class="q-helper">Anything you want to share. Will not be attributed.</p>
+        <textarea name="q10_open_response" rows="5" placeholder="Optional"></textarea>
+      </div>
 
-IT and engineering (code, ops, security)
+      <div class="submit-section">
+        <button type="submit" class="submit-button">Submit Response</button>
+        <p class="submit-helper">Your responses are anonymous. Aggregated findings will be published by ZAI Institute later this year.</p>
+      </div>
 
-Research and analysis
+    </form>
 
-Internal knowledge management
+    <div id="thank-you">
+      <h2>Thank you for <em>contributing</em></h2>
+      <p>Your response has been recorded. The aggregated findings will be published by ZAI Institute later this year. We will share the report with the ZAI Advisory Network when it goes live.</p>
+      <a href="/insights/" style="display: inline-block; padding: 12px 28px; background: var(--ink); color: var(--paper); text-decoration: none; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; border-radius: 2px;">Read Our Latest Research</a>
+    </div>
 
-Compliance and risk monitoring
+  </div>
+</section>
 
-Executive decision support
-QUESTION 5
-How would you describe your organization's policy for human oversight of AI agents?
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    ZAI Institute &nbsp;·&nbsp; The Institution Behind the Institutions
+  </div>
+</footer>
 
-We have a clear policy with named accountable owners
+<script>
+  // Limit Q4 (opportunity areas) to 3 selections max
+  const q4Boxes = document.querySelectorAll('input[name="q4_opportunity_areas"]');
+  q4Boxes.forEach(box => {
+    box.addEventListener('change', () => {
+      const checked = document.querySelectorAll('input[name="q4_opportunity_areas"]:checked');
+      if (checked.length >= 3) {
+        q4Boxes.forEach(b => { if (!b.checked) b.disabled = true; });
+      } else {
+        q4Boxes.forEach(b => b.disabled = false);
+      }
+    });
+  });
 
-We have informal guidelines but no formal policy
+  // Async submit with thank-you state
+  const form = document.getElementById('survey-form');
+  const thankYou = document.getElementById('thank-you');
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        form.style.display = 'none';
+        thankYou.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        alert('There was a problem submitting your response. Please try again or email egreenberg@zaiinstitute.ai.');
+      }
+    } catch (err) {
+      alert('There was a problem submitting your response. Please try again or email egreenberg@zaiinstitute.ai.');
+    }
+  });
+</script>
 
-We are working on it but nothing is in place
-
-We have not addressed this yet
-
-Not applicable, no agents in use
-QUESTION 6
-When an AI agent makes a meaningful decision in your organization, who is accountable for the outcome?
-
-The human who deployed the agent
-
-The human who reviews the agent's output
-
-The team or department that uses the agent
-
-The vendor who built the agent
-
-We have not decided
-
-Not applicable
-QUESTION 7
-How would you rate your trust in the output of a well-deployed AI agent compared to the output of a competent human employee doing the same work today?
-
-I trust the agent significantly more
-
-I trust the agent slightly more
-
-I trust them about the same
-
-I trust the human slightly more
-
-I trust the human significantly more
-QUESTION 8
-Two years from now, what percentage of your organization's total work do you expect will be performed primarily by AI agents rather than humans?
-
-Less than 5%
-
-5 to 15%
-
-15 to 30%
-
-30 to 50%
-
-More than 50%
-
-I cannot predict
-QUESTION 9
-What is the single biggest barrier to deploying AI agents in your organization right now?
-
-Lack of internal expertise to build or evaluate agents
-
-Concerns about accuracy, hallucination, or reliability
-
-Concerns about security, privacy, or compliance
-
-Workforce resistance or fear of replacement
-
-Unclear ROI or business case
-
-No leadership mandate to move forward
-
-Budget constraints
-
-We do not see a meaningful need yet
-QUESTION 10 (OPTIONAL)
-What else should leaders understand about preparing for an agent-driven workforce?
-Anything you want to share. Will not be attributed.
-SUBMIT RESPONSE
-Your responses are anonymous. Aggregated findings will be published by ZAI Institute later this year.
-ZAI Institute  ·  The Institution Behind the Institutions
+</body>
+</html>
