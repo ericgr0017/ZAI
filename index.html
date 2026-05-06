@@ -834,6 +834,103 @@ nav ul li a:hover { color: var(--gold); }
 }
 
 /* ============================================================
+   ADVISORS — Named individuals behind the network
+   ============================================================ */
+.advisors-section {
+  background: var(--paper);
+  padding: var(--section-pad) 40px;
+  position: relative;
+}
+.advisors-inner { max-width: 1280px; margin: 0 auto; }
+.advisors-intro {
+  max-width: 720px;
+  margin: 0 0 56px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+.advisors-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.advisor-card {
+  background: #fff;
+  border: 1px solid rgba(10,10,15,0.06);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.4s, box-shadow 0.4s, border-color 0.3s;
+}
+.advisor-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(10,10,15,0.06);
+  border-color: rgba(184,150,46,0.25);
+}
+.advisor-company-badge {
+  background: var(--paper);
+  border: 1px solid rgba(10,10,15,0.06);
+  padding: 18px 16px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  text-align: center;
+}
+.advisor-company-badge span {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+  line-height: 1.2;
+}
+.advisor-name {
+  font-family: var(--serif);
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 4px;
+  line-height: 1.25;
+}
+.advisor-title {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
+  margin-bottom: 14px;
+  flex-grow: 1;
+}
+.advisor-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-accessible-light);
+  padding-top: 12px;
+  border-top: 1px solid rgba(10,10,15,0.06);
+}
+.advisors-footnote {
+  margin-top: 56px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(10,10,15,0.08);
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+  font-style: italic;
+  font-family: var(--serif);
+}
+@media (max-width: 1024px) {
+  .advisors-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 720px) {
+  .advisors-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .advisors-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
    RESEARCH
    ============================================================ */
 .research-section {
@@ -1426,6 +1523,171 @@ footer {
   </div>
 </section>
 
+<!-- ADVISORS -->
+<section class="advisors-section" id="advisors">
+  <div class="advisors-inner">
+    <p class="section-eyebrow">The Advisory Network</p>
+    <h2 class="section-heading">The people <em>behind the names.</em></h2>
+    <p class="advisors-intro">A logo wall is not a network. The 50,000+ executives in the ZAI Institute network include named operators at the firms that defined the modern enterprise — leaders who teach, mentor, and evaluate alongside our university partners. A representative selection.</p>
+
+    <div class="advisors-grid">
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>Microsoft</span></div>
+        <p class="advisor-name">Andre Magni</p>
+        <p class="advisor-title">Cloud &amp; AI Leader, US Retail &amp; CPG</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>PwC</span></div>
+        <p class="advisor-name">Sherry Comes</p>
+        <p class="advisor-title">Applied AI &amp; Emerging Tech Leader</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>Google</span></div>
+        <p class="advisor-name">Bovio Pulito</p>
+        <p class="advisor-title">Head of Platform Growth Partnerships</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>Meta</span></div>
+        <p class="advisor-name">Valerie Usmanova</p>
+        <p class="advisor-title">Lead, Agentic AI GTM &amp; Monetization Partnerships</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>ServiceNow</span></div>
+        <p class="advisor-name">Alan Paris</p>
+        <p class="advisor-title">Global Head, Financial Services Risk &amp; Compliance · Field CTO</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>Verizon</span></div>
+        <p class="advisor-name">Victoria Sosik</p>
+        <p class="advisor-title">Sr. Director of Experience Research</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>Bloomberg</span></div>
+        <p class="advisor-name">Ewerton Pavan</p>
+        <p class="advisor-title">Global Head of Planning &amp; Strategy, Supply Chain</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>Johnson &amp; Johnson</span></div>
+        <p class="advisor-name">Wael Adhami</p>
+        <p class="advisor-title">Vice President, Global Trade Compliance</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>Bank of America</span></div>
+        <p class="advisor-name">Morgan Dethman</p>
+        <p class="advisor-title">VP, Senior UX Design Strategist · Global Technology &amp; Operations</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>Experian</span></div>
+        <p class="advisor-name">Mariana Venter</p>
+        <p class="advisor-title">SVP, Global Finance Systems &amp; AI Engineering</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>Johnson &amp; Johnson</span></div>
+        <p class="advisor-name">Pinar Kurt</p>
+        <p class="advisor-title">Sr. Director, Global Strategic Marketing · Biosense Webster</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>Microsoft</span></div>
+        <p class="advisor-name">Karin Smith</p>
+        <p class="advisor-title">Account Executive &amp; Field CTO, Retail &amp; Consumer Goods</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>BlueCross BlueShield MA</span></div>
+        <p class="advisor-name">Jean Guan</p>
+        <p class="advisor-title">COO Chief of Staff &amp; Head of Transformation Office</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>JPMorgan Chase</span></div>
+        <p class="advisor-name">Cathy Ryan Reneer</p>
+        <p class="advisor-title">Managing Director</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>Meta</span></div>
+        <p class="advisor-name">Gina Dunham</p>
+        <p class="advisor-title">Business Lead &amp; Chief of Staff</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>Mayo Clinic</span></div>
+        <p class="advisor-name">Amanda Gabriele</p>
+        <p class="advisor-title">Director, Consumer Insights &amp; Analytics</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>World Wide Technology</span></div>
+        <p class="advisor-name">Bryan Liebert</p>
+        <p class="advisor-title">Field CISO, East &amp; Public Sector</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>Estée Lauder</span></div>
+        <p class="advisor-name">Ananda Box Williams</p>
+        <p class="advisor-title">Vice President, Brand Quality</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>OverSpace</span></div>
+        <p class="advisor-name">Torrell Funderburk</p>
+        <p class="advisor-title">Global Chief Information Security Officer</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>EY</span></div>
+        <p class="advisor-name">William Scheideler</p>
+        <p class="advisor-title">Director, UX Design &amp; Cross Product Design Lead · EY Nexus</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>MicroVision</span></div>
+        <p class="advisor-name">Michael Semeniuk</p>
+        <p class="advisor-title">Senior Executive</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>Meta</span></div>
+        <p class="advisor-name">Nersa Acosta</p>
+        <p class="advisor-title">Senior Executive</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>USAF</span></div>
+        <p class="advisor-name">Joe Chapa</p>
+        <p class="advisor-title">Senior Executive · AI &amp; National Security</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>Porchlight Consulting</span></div>
+        <p class="advisor-name">Callie King</p>
+        <p class="advisor-title">Founder &amp; Principal</p>
+      </div>
+
+      <div class="advisor-card">
+        <div class="advisor-company-badge"><span>Google</span></div>
+        <p class="advisor-name">Janee Vane</p>
+        <p class="advisor-title">Head of Commerce</p>
+      </div>
+
+    </div>
+
+    <p class="advisors-footnote">A representative selection from a network of 50,000+ executives across 500+ companies.</p>
+  </div>
+</section>
+
 <!-- RESEARCH -->
 <section class="research-section" id="research">
   <div class="research-inner">
@@ -1494,6 +1756,7 @@ footer {
         <li><a href="#about">Our Story</a></li>
         <li><a href="#approach">Our Approach</a></li>
         <li><a href="#network">The Network</a></li>
+        <li><a href="#advisors">Advisory Network</a></li>
         <li><a href="#audience">Who We Serve</a></li>
         <li><a href="insights/index.html">Insights</a></li>
         <li><a href="platform.html">Platform</a></li>
