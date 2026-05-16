@@ -1,0 +1,11 @@
+---
+export interface Props {
+  variant?: 'dark' | 'light';
+}
+const { variant = 'dark' } = Astro.props;
+const className = variant === 'light' ? 'eyebrow eyebrow-on-light' : 'eyebrow';
+---
+
+<div class={className}>
+  <slot />
+</div>

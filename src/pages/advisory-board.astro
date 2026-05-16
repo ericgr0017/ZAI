@@ -1,0 +1,57 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import SectionHero from '@components/ui/SectionHero.astro';
+import Placeholder from '@components/ui/Placeholder.astro';
+---
+
+<BaseLayout
+  title="Advisory board"
+  description="The ZAI Institute Advisory Board: 25 senior operators from across the Fortune 500, at the inner circle of a broader network of 50,000 executives across 500+ companies."
+>
+  <SectionHero
+    eyebrow="Advisory board"
+    title="The inner circle of a wider network."
+    lede="The 25-person Advisory Board sits at the center of a broader network of 50,000 senior operators across 500+ companies."
+  />
+
+  <section class="bg-paper text-ink">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-24">
+      <div class="max-w-prose-wide mb-12">
+        <div class="eyebrow eyebrow-on-light mb-4">How the board works</div>
+        <Placeholder label="Two short paragraphs on how the Advisory Board operates: cadence, contribution model, what members give and receive." />
+      </div>
+
+      <hr class="rule-gold opacity-60 mb-12" />
+
+      <div class="eyebrow eyebrow-on-light mb-6">Members</div>
+
+      <Placeholder
+        label="Phase 4 will render the 26-member directory here: 25 from the existing public roster, plus Eric Greenberg as CEO."
+        note="Awaiting resolution on chair designation. v1.2 brand doc names Alan Paris as Chair; prior verbal direction was no Chair listed. Holding until Ian confirms."
+      />
+    </div>
+  </section>
+
+  <section class="bg-ink-soft text-paper">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-24">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+        <div>
+          <div class="font-mono text-4xl md:text-5xl text-gold">25</div>
+          <div class="mt-3 text-sm text-paper/80">Named advisors</div>
+        </div>
+        <div>
+          <div class="font-mono text-4xl md:text-5xl text-gold">50,000+</div>
+          <div class="mt-3 text-sm text-paper/80">Executives in the wider network</div>
+        </div>
+        <div>
+          <div class="font-mono text-4xl md:text-5xl text-gold">500+</div>
+          <div class="mt-3 text-sm text-paper/80">Companies represented</div>
+        </div>
+        <div>
+          <div class="font-mono text-4xl md:text-5xl text-gold">60+</div>
+          <div class="mt-3 text-sm text-paper/80">University partners served</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------------------------------------------------------------------
+   Base
+   --------------------------------------------------------------------- */
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: theme('colors.paper');
+  color: theme('colors.ink.DEFAULT');
+  font-family: theme('fontFamily.sans');
+  font-size: 1.125rem;
+  line-height: 1.6;
+  font-feature-settings: 'kern', 'liga', 'calt';
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 1rem;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Focus
+   --------------------------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid theme('colors.gold.DEFAULT');
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------------------------------------------------------------------
+   Skip link
+   --------------------------------------------------------------------- */
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: theme('colors.ink.DEFAULT');
+  color: theme('colors.paper');
+  padding: 0.75rem 1rem;
+  font-family: theme('fontFamily.sans');
+  font-size: 0.95rem;
+  border: 1px solid theme('colors.gold.DEFAULT');
+  z-index: 100;
+  transition: top 120ms ease-out;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ---------------------------------------------------------------------
+   Editorial primitives
+   --------------------------------------------------------------------- */
+
+.eyebrow {
+  font-family: theme('fontFamily.mono');
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: theme('colors.gold.DEFAULT');
+}
+
+.eyebrow-on-light {
+  color: theme('colors.gold.deep');
+}
+
+.display {
+  font-family: theme('fontFamily.display');
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+.rule-gold {
+  border: 0;
+  border-top: 1px solid theme('colors.gold.DEFAULT');
+  height: 0;
+}
+
+.rule-muted {
+  border: 0;
+  border-top: 1px solid theme('colors.muted');
+  opacity: 0.4;
+  height: 0;
+}
+
+/* ---------------------------------------------------------------------
+   Buttons
+   --------------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: theme('fontFamily.sans');
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.875rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+  border: 1px solid transparent;
+}
+
+.btn-primary {
+  background-color: theme('colors.gold.DEFAULT');
+  color: theme('colors.ink.DEFAULT');
+}
+
+.btn-primary:hover {
+  background-color: theme('colors.gold.light');
+}
+
+.btn-secondary {
+  background-color: theme('colors.ink.DEFAULT');
+  color: theme('colors.paper');
+  border-color: theme('colors.ink.DEFAULT');
+}
+
+.btn-secondary:hover {
+  background-color: theme('colors.ink.soft');
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: theme('colors.ink.DEFAULT');
+  border-color: theme('colors.ink.DEFAULT');
+}
+
+.btn-ghost:hover {
+  background-color: theme('colors.ink.DEFAULT');
+  color: theme('colors.paper');
+}
+
+.btn-ghost-light {
+  background-color: transparent;
+  color: theme('colors.paper');
+  border-color: theme('colors.paper');
+}
+
+.btn-ghost-light:hover {
+  background-color: theme('colors.paper');
+  color: theme('colors.ink.DEFAULT');
+}
+
+/* ---------------------------------------------------------------------
+   Reduced motion
+   --------------------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   Mobile menu (no JS framework, lightweight inline script in Header)
+   --------------------------------------------------------------------- */
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+body.menu-open .mobile-menu {
+  display: flex;
+}

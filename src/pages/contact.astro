@@ -1,0 +1,65 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import SectionHero from '@components/ui/SectionHero.astro';
+import Placeholder from '@components/ui/Placeholder.astro';
+---
+
+<BaseLayout
+  title="Contact"
+  description="Three ways to start a conversation with ZAI Institute: partner with us as a university, train your organization, or commission research."
+>
+  <SectionHero
+    eyebrow="Contact"
+    title="Start a conversation."
+    lede="Three doors in. Pick the one that fits."
+  />
+
+  <section class="bg-paper text-ink">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-24">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <article class="border-t-2 border-rule pt-6">
+          <div class="eyebrow eyebrow-on-light mb-4">For universities</div>
+          <h2 class="font-display text-2xl text-ink mb-3">Partner with us</h2>
+          <Placeholder label="One paragraph for university leaders. Frame the partnership conversation." />
+          <div class="mt-6 space-y-2 text-sm">
+            <a href="mailto:partnerships@zaiinstitute.ai" class="block text-gold-deep border-b border-gold pb-0.5 hover:text-ink">partnerships@zaiinstitute.ai</a>
+            <Placeholder label="Calendly link or Formspree form for university partnership inquiries." />
+          </div>
+        </article>
+
+        <article class="border-t-2 border-rule pt-6">
+          <div class="eyebrow eyebrow-on-light mb-4">For organizations</div>
+          <h2 class="font-display text-2xl text-ink mb-3">Train your organization</h2>
+          <Placeholder label="One paragraph for enterprise training buyers." />
+          <div class="mt-6 space-y-2 text-sm">
+            <a href="mailto:training@zaiinstitute.ai" class="block text-gold-deep border-b border-gold pb-0.5 hover:text-ink">training@zaiinstitute.ai</a>
+            <Placeholder label="Calendly link or Formspree form for enterprise training inquiries." />
+          </div>
+        </article>
+
+        <article class="border-t-2 border-rule pt-6">
+          <div class="eyebrow eyebrow-on-light mb-4">For research buyers</div>
+          <h2 class="font-display text-2xl text-ink mb-3">Commission research</h2>
+          <Placeholder label="One paragraph for research buyers. Frame the discovery conversation." />
+          <div class="mt-6 space-y-2 text-sm">
+            <a href="mailto:research@zaiinstitute.ai" class="block text-gold-deep border-b border-gold pb-0.5 hover:text-ink">research@zaiinstitute.ai</a>
+            <Placeholder label="Calendly link or Formspree form for research engagement inquiries." />
+          </div>
+        </article>
+      </div>
+
+      <hr class="rule-muted mt-16 mb-10" />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-prose-wide">
+        <div>
+          <div class="eyebrow eyebrow-on-light mb-3">Phone</div>
+          <a href="tel:+18883847020" class="font-mono text-xl text-ink hover:text-gold-deep">(888) 384-7020</a>
+        </div>
+        <div>
+          <div class="eyebrow eyebrow-on-light mb-3">Office</div>
+          <div class="text-body text-ink">Fort Lauderdale, Florida</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

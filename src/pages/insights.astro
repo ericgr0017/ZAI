@@ -1,0 +1,85 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import SectionHero from '@components/ui/SectionHero.astro';
+import Placeholder from '@components/ui/Placeholder.astro';
+---
+
+<BaseLayout
+  title="Insights"
+  description="Published research from ZAI Institute on AI readiness, AI skills, and agent readiness in the enterprise."
+>
+  <SectionHero
+    eyebrow="Insights"
+    title="Published research from the institute."
+    lede="Reports informed by structured interviews with senior operators across the Fortune 500. New work added as the corpus grows."
+  />
+
+  <section class="bg-paper text-ink">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-24">
+      <ul class="divide-y divide-light-border/60">
+        <li class="py-8 md:py-10 first:pt-0">
+          <article class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <div class="md:col-span-3">
+              <div class="font-mono text-xs uppercase tracking-wide-cap text-muted">Report</div>
+              <div class="font-mono text-xs text-muted mt-1">2026</div>
+            </div>
+            <div class="md:col-span-9">
+              <h2 class="font-display text-h2 text-ink">AI readiness gap</h2>
+              <div class="mt-4 max-w-prose-wide">
+                <Placeholder label="Two-sentence summary of the AI Readiness Gap report." />
+              </div>
+              <a
+                href="/insights/ai-readiness-gap-2026.html"
+                class="inline-block mt-5 text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink"
+              >
+                Read the report &rsaquo;
+              </a>
+            </div>
+          </article>
+        </li>
+
+        <li class="py-8 md:py-10">
+          <article class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <div class="md:col-span-3">
+              <div class="font-mono text-xs uppercase tracking-wide-cap text-muted">Report</div>
+              <div class="font-mono text-xs text-muted mt-1">2026</div>
+            </div>
+            <div class="md:col-span-9">
+              <h2 class="font-display text-h2 text-ink">AI skills gap</h2>
+              <div class="mt-4 max-w-prose-wide">
+                <Placeholder label="Two-sentence summary of the AI Skills Gap report." />
+              </div>
+              <a
+                href="/insights/ai-skills-gap-2026.html"
+                class="inline-block mt-5 text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink"
+              >
+                Read the report &rsaquo;
+              </a>
+            </div>
+          </article>
+        </li>
+
+        <li class="py-8 md:py-10">
+          <article class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <div class="md:col-span-3">
+              <div class="font-mono text-xs uppercase tracking-wide-cap text-muted">Forthcoming</div>
+              <div class="font-mono text-xs text-muted mt-1">2026</div>
+            </div>
+            <div class="md:col-span-9">
+              <h2 class="font-display text-h2 text-ink">Agent readiness gap</h2>
+              <div class="mt-4 max-w-prose-wide">
+                <Placeholder label="Two-sentence summary of the forthcoming Agent Readiness Gap report." />
+              </div>
+              <a
+                href="/agent-readiness-survey/"
+                class="inline-block mt-5 text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink"
+              >
+                Participate in the survey &rsaquo;
+              </a>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </div>
+  </section>
+</BaseLayout>
