@@ -1,0 +1,71 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-ink text-paper">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-20">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-12">
+      <div class="md:col-span-5">
+        <div class="flex items-baseline gap-2">
+          <span class="font-display text-3xl text-gold leading-none">ZAI</span>
+          <span class="h-5 w-px bg-gold/60" aria-hidden="true"></span>
+          <span class="font-sans text-xs tracking-[0.22em] uppercase text-paper">Institute</span>
+        </div>
+        <p class="mt-6 font-display italic text-xl text-paper/85 max-w-prose-narrow">
+          The institution behind the institutions.
+        </p>
+      </div>
+
+      <div class="md:col-span-3">
+        <div class="eyebrow mb-4">Site</div>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/for-universities" class="hover:text-gold-light">For universities</a></li>
+          <li><a href="/for-organizations" class="hover:text-gold-light">For organizations</a></li>
+          <li><a href="/research" class="hover:text-gold-light">Research</a></li>
+          <li><a href="/advisory-board" class="hover:text-gold-light">Advisory board</a></li>
+          <li><a href="/insights" class="hover:text-gold-light">Insights</a></li>
+          <li><a href="/contact" class="hover:text-gold-light">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-4">
+        <div class="eyebrow mb-4">Contact</div>
+        <address class="not-italic text-sm space-y-2 text-paper/85">
+          <div>
+            <a href="tel:+18883847020" class="font-mono hover:text-gold-light">(888) 384-7020</a>
+          </div>
+          <div>
+            <a href="mailto:research@zaiinstitute.ai" class="hover:text-gold-light">research@zaiinstitute.ai</a>
+            <span class="block text-xs text-muted">Research engagements</span>
+          </div>
+          <div>
+            <a href="mailto:partnerships@zaiinstitute.ai" class="hover:text-gold-light">partnerships@zaiinstitute.ai</a>
+            <span class="block text-xs text-muted">University partnerships</span>
+          </div>
+          <div>
+            <a href="mailto:training@zaiinstitute.ai" class="hover:text-gold-light">training@zaiinstitute.ai</a>
+            <span class="block text-xs text-muted">Organization training</span>
+          </div>
+          <div class="pt-3 text-xs text-muted">
+            Fort Lauderdale, Florida
+          </div>
+        </address>
+      </div>
+    </div>
+
+    <hr class="rule-gold opacity-40 mt-14 mb-6" />
+
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 text-xs text-paper/60 font-mono">
+      <div>&copy; {year} ZAI Institute LLC</div>
+      <div class="flex items-center gap-5">
+        <a
+          href="https://www.linkedin.com/company/zaiinstitute"
+          rel="noopener"
+          class="hover:text-gold-light"
+        >
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,65 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import SectionHero from '@components/ui/SectionHero.astro';
+import Placeholder from '@components/ui/Placeholder.astro';
+---
+
+<BaseLayout
+  title="Research"
+  description="ZAI Institute conducts structured qualitative research with senior operators on enterprise AI adoption. Custom engagements, subscription intelligence, and published reports."
+>
+  <SectionHero
+    eyebrow="Research"
+    title="Structured intelligence from the people doing the work."
+    lede="Placeholder lede for corporate research buyers. Position the research operation as primary-source, operator-grade."
+  />
+
+  <section class="bg-paper text-ink">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-24 space-y-16">
+      <div>
+        <div class="eyebrow eyebrow-on-light mb-4">Methodology</div>
+        <Placeholder label="How the research is conducted. Structured qualitative interviews with senior operators. Sampling, instrument, synthesis." />
+      </div>
+      <hr class="rule-muted" />
+      <div>
+        <div class="eyebrow eyebrow-on-light mb-4">Corpus</div>
+        <Placeholder label="What the research corpus contains. Number of interviews, industries covered, seniority distribution." />
+      </div>
+      <hr class="rule-muted" />
+      <div>
+        <div class="eyebrow eyebrow-on-light mb-4">Custom engagements</div>
+        <Placeholder label="Describe the three engagement tiers without listing pricing. Focus on scope, timeline, deliverables, who they fit." note="Pricing per Ian: NOT public, reserved for discovery conversations." />
+      </div>
+      <hr class="rule-muted" />
+      <div>
+        <div class="eyebrow eyebrow-on-light mb-4">Subscription intelligence</div>
+        <Placeholder label="The recurring intelligence offering. What subscribers receive, cadence, format, who it serves." />
+      </div>
+      <hr class="rule-muted" />
+      <div>
+        <div class="eyebrow eyebrow-on-light mb-4">Published research</div>
+        <Placeholder label="Two sentences framing the public report library and linking to /insights." />
+        <a href="/insights" class="inline-block mt-4 text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink">
+          Browse published research &rsaquo;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-ink text-paper">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-24">
+      <div class="max-w-prose-wide">
+        <div class="eyebrow mb-6">Commission research</div>
+        <h2 class="font-display text-h2 text-paper">
+          Start with a discovery conversation.
+        </h2>
+        <p class="mt-6 text-body-lg text-paper/85">
+          <Placeholder label="One sentence framing the discovery process for research buyers." />
+        </p>
+        <div class="mt-10">
+          <a href="/contact" class="btn btn-primary">Commission research</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
