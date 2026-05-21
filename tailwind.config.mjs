@@ -12,7 +12,11 @@ export default {
           DEFAULT: '#B8962E',
           light: '#D4AE4A',
           pale: '#F5EDD4',
-          deep: '#8B6F1F',
+          // Body-text fallback on light backgrounds. v1.2 spec said "#8B6F1F
+          // or similar" — that exact value fails WCAG AA at body sizes. We
+          // use #6B5618, a slightly darker variant of the same hue, which
+          // passes 4.5:1 against Paper. Stays in family per v1.2 allowance.
+          deep: '#6B5618',
         },
         paper: '#F5F2ED',
         slate: {
