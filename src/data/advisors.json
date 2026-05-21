@@ -1,0 +1,35 @@
+{
+  "chair": {
+    "name": "Alan Paris",
+    "title": "Global Head, Financial Services Risk & Compliance · Field CTO",
+    "company": "ServiceNow"
+  },
+  "members": [
+    { "name": "Nersa Acosta", "title": "Senior Executive", "company": "Meta" },
+    { "name": "Wael Adhami", "title": "Vice President, Global Trade Compliance", "company": "Johnson & Johnson" },
+    { "name": "Ananda Box Williams", "title": "Vice President, Brand Quality", "company": "Estée Lauder" },
+    { "name": "Joe Chapa", "title": "Senior Executive · AI & National Security", "company": "USAF" },
+    { "name": "Sherry Comes", "title": "Applied AI & Emerging Tech Leader", "company": "PwC" },
+    { "name": "Morgan Dethman", "title": "VP, Senior UX Design Strategist · Global Technology & Operations", "company": "Bank of America" },
+    { "name": "Gina Dunham", "title": "Business Lead & Chief of Staff", "company": "Meta" },
+    { "name": "Torrell Funderburk", "title": "Global Chief Information Security Officer", "company": "OverSpace" },
+    { "name": "Amanda Gabriele", "title": "Director, Consumer Insights & Analytics", "company": "Mayo Clinic" },
+    { "name": "Ian Greenberg", "title": "CEO", "company": "ZAI Institute" },
+    { "name": "Ira Greenberg", "title": "Professor and Director, SMU Center for Creative Computation", "company": "Southern Methodist University" },
+    { "name": "Jean Guan", "title": "COO, Chief of Staff & Head of Transformation Office", "company": "BlueCross BlueShield MA" },
+    { "name": "Callie King", "title": "Founder & Principal", "company": "Porchlight Consulting" },
+    { "name": "Pinar Kurt", "title": "Sr. Director, Global Strategic Marketing · Biosense Webster", "company": "Johnson & Johnson" },
+    { "name": "Bryan Liebert", "title": "Field CISO, East & Public Sector", "company": "World Wide Technology" },
+    { "name": "Andre Magni", "title": "Cloud & AI Leader, US Retail & CPG", "company": "Microsoft" },
+    { "name": "Ewerton Pavan", "title": "Global Head of Planning & Strategy, Supply Chain", "company": "Bloomberg" },
+    { "name": "Bovio Pulito", "title": "Head of Platform Growth Partnerships", "company": "Google" },
+    { "name": "Cathy Ryan Reneer", "title": "Managing Director", "company": "JPMorgan Chase" },
+    { "name": "William Scheideler", "title": "Director, UX Design & Cross Product Design Lead · EY Nexus", "company": "EY" },
+    { "name": "Michael Semeniuk", "title": "Senior Executive", "company": "MicroVision" },
+    { "name": "Karin Smith", "title": "Account Executive & Field CTO, Retail & Consumer Goods", "company": "Microsoft" },
+    { "name": "Victoria Sosik", "title": "Sr. Director of Experience Research", "company": "Verizon" },
+    { "name": "Valerie Usmanova", "title": "Lead, Agentic AI GTM & Monetization Partnerships", "company": "Meta" },
+    { "name": "Janee Vane", "title": "Head of Commerce", "company": "Google" },
+    { "name": "Mariana Venter", "title": "SVP, Global Finance Systems & AI Engineering", "company": "Experian" }
+  ]
+}
