@@ -1,0 +1,22 @@
+{
+  "url": "https://deploy-preview-1--exquisite-pony-4a10e3.netlify.app/research/",
+  "wordCount": 594,
+  "sentenceCount": 37,
+  "averageSentenceLength": 16.05,
+  "averageSyllablesPerWord": 1.75,
+  "fleschReadingEase": 42.3,
+  "fleschKincaidGrade": 11.4,
+  "passiveRatePercent": 29.7,
+  "longSentenceCount": 4,
+  "longSentences": [
+    "The institute s research function does one thing well: structured qualitative interviews with senior operators at the Fortune 500 and the AI platform vendors who serve them.",
+    "Our partnership with thirty-plus universities means our advisory boards carry the names of the institutions we serve, and the people in the room lead at the companies shaping what comes next.",
+    "Custom engagements Most of the institute's research is commissioned by AI platform vendors, large enterprises, and investment firms with a specific question that the public reports do not answer.",
+    "Subscribers receive monthly briefings drawn from the most recent additions to the corpus, access to the corpus for their own analyst teams, quarterly executive sessions with the institute's principal "
+  ],
+  "flags": {
+    "sentenceLengthOver25": "OK",
+    "passiveOver15Percent": "FLAG",
+    "gradeOutsideTarget": "OK"
+  }
+}

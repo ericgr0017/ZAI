@@ -1,0 +1,23 @@
+{
+  "url": "https://deploy-preview-1--exquisite-pony-4a10e3.netlify.app/for-universities/",
+  "wordCount": 698,
+  "sentenceCount": 46,
+  "averageSentenceLength": 15.17,
+  "averageSyllablesPerWord": 1.75,
+  "fleschReadingEase": 43.3,
+  "fleschKincaidGrade": 11,
+  "passiveRatePercent": 4.3,
+  "longSentenceCount": 7,
+  "longSentences": [
+    "Continuing education departments are under pressure to launch AI programs without budget for new faculty, without a year of curriculum work, and without taking on accreditation risk.",
+    "Women in Leadership in the Age of AI A cohort for women executives navigating the AI shift inside organizations where the meeting rules are changing and the rooms are not yet equitably composed.",
+    "Generative AI for Value Hands-on practice with the generative tools, focused on the workflows where they actually create measurable value rather than the demos that promise it.",
+    "How to Be Irreplaceable in the Age of AI For the individual contributor or mid-career professional asking what to learn, what to drop, and how to position themselves as AI reshapes their function.",
+    "Agentic AI Leadership For leaders preparing to deploy autonomous AI agents in their operations, with focus on the organizational, governance, and human-judgment decisions that determine whether agents"
+  ],
+  "flags": {
+    "sentenceLengthOver25": "OK",
+    "passiveOver15Percent": "OK",
+    "gradeOutsideTarget": "OK"
+  }
+}
