@@ -1,11 +1,10 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
-import Placeholder from '@components/ui/Placeholder.astro';
 ---
 
 <BaseLayout
   title="ZAI Institute"
-  description="ZAI Institute is the institution behind the institutions. We partner with universities and enterprises to launch AI executive education programs in 30 days."
+  description="ZAI Institute is where universities launch AI programs, where enterprises train their workforce, and where senior operators think clearly about what AI is changing in their industry."
 >
   <section class="bg-ink text-paper">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 py-24 md:py-36">
@@ -14,9 +13,12 @@ import Placeholder from '@components/ui/Placeholder.astro';
         <h1 class="font-display text-h1 text-paper">
           The institution behind the institutions.
         </h1>
-        <div class="mt-8 max-w-prose-narrow">
-          <Placeholder label="Homepage hero lede. Two to three sentences positioning ZAI Institute across Programs, Research, and Network. Copy from Ian." />
-        </div>
+        <p class="mt-8 text-body-lg text-paper/85 max-w-prose-narrow">
+          ZAI Institute is where universities go to launch AI programs, where enterprises go to train
+          their workforce, and where senior operators go to think clearly about what AI is changing in
+          their industry. The three are one organization on purpose. The research informs the programs.
+          The network sharpens both.
+        </p>
       </div>
     </div>
   </section>
@@ -24,46 +26,64 @@ import Placeholder from '@components/ui/Placeholder.astro';
   <section class="bg-paper text-ink">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-24">
       <div class="eyebrow eyebrow-on-light mb-6">What we do</div>
-      <h2 class="font-display text-h2 text-muted max-w-prose-wide opacity-70">
-        [Placeholder: section title introducing the three product lines at equal weight]
+      <h2 class="font-display text-h2 text-ink max-w-prose-wide">
+        Programs that ship. Research that informs. A network that opens the room.
       </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 mt-12">
         <article>
           <div class="eyebrow eyebrow-on-light mb-3">01 &middot; Programs</div>
-          <h3 class="font-display text-2xl text-muted mb-3 opacity-70">
-            [Placeholder: Programs card title]
+          <h3 class="font-display text-2xl text-ink mb-3">
+            Launch in 30 days.
           </h3>
-          <Placeholder label="Programs card body. 30-day deployment, university partnerships, faculty enablement, custom curriculum." />
-          <a href="/for-universities" class="inline-block mt-4 text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink">
-            For universities &rsaquo;
-          </a>
-          <span class="mx-2 text-muted">/</span>
-          <a href="/for-organizations" class="inline-block mt-4 text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink">
-            For organizations &rsaquo;
-          </a>
+          <p class="text-body text-ink/90">
+            University partners launch AI executive education programs under their own name in thirty
+            days. No new hires. No risk to accreditation. Faculty are trained, curriculum is built, and
+            the first cohort fills before the next semester begins.
+          </p>
+          <div class="mt-5">
+            <a href="/for-universities" class="inline-block text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink">
+              For universities &rsaquo;
+            </a>
+            <span class="mx-2 text-muted">/</span>
+            <a href="/for-organizations" class="inline-block text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink">
+              For organizations &rsaquo;
+            </a>
+          </div>
         </article>
 
         <article>
           <div class="eyebrow eyebrow-on-light mb-3">02 &middot; Research</div>
-          <h3 class="font-display text-2xl text-muted mb-3 opacity-70">
-            [Placeholder: Research card title]
+          <h3 class="font-display text-2xl text-ink mb-3">
+            Primary source, operator-grade.
           </h3>
-          <Placeholder label="Research card body. Commercial engagements, subscription intelligence, published reports. Methodology and corpus summary." />
-          <a href="/research" class="inline-block mt-4 text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink">
-            Research engagements &rsaquo;
-          </a>
+          <p class="text-body text-ink/90">
+            We interview senior operators about what they are actually building, what is working, and
+            what is not. The corpus informs the published reports and the custom engagements that
+            follow. It is built for the people making the decision, not for the briefing deck.
+          </p>
+          <div class="mt-5">
+            <a href="/research" class="inline-block text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink">
+              Research engagements &rsaquo;
+            </a>
+          </div>
         </article>
 
         <article>
           <div class="eyebrow eyebrow-on-light mb-3">03 &middot; Network</div>
-          <h3 class="font-display text-2xl text-muted mb-3 opacity-70">
-            [Placeholder: Network card title]
+          <h3 class="font-display text-2xl text-ink mb-3">
+            Twenty-five, then fifty thousand.
           </h3>
-          <Placeholder label="Network card body. Advisory Board of 25, broader network of 50,000+ executives across 500+ companies." />
-          <a href="/advisory-board" class="inline-block mt-4 text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink">
-            Advisory board &rsaquo;
-          </a>
+          <p class="text-body text-ink/90">
+            The Advisory Board is twenty-five named operators from across the Fortune 500. They sit at
+            the center of a broader network of fifty thousand senior executives in five hundred
+            companies. Programs, research, and member access all flow through this circle.
+          </p>
+          <div class="mt-5">
+            <a href="/advisory-board" class="inline-block text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink">
+              Advisory board &rsaquo;
+            </a>
+          </div>
         </article>
       </div>
     </div>
@@ -98,24 +118,35 @@ import Placeholder from '@components/ui/Placeholder.astro';
       <div class="grid grid-cols-1 md:grid-cols-12 gap-10">
         <div class="md:col-span-5">
           <div class="eyebrow eyebrow-on-light mb-6">Who we serve</div>
-          <h2 class="font-display text-h2 text-muted opacity-70">
-            [Placeholder: who we serve section title]
+          <h2 class="font-display text-h2 text-ink">
+            Three rooms. Same standard.
           </h2>
         </div>
         <div class="md:col-span-7 space-y-8">
           <div>
             <h3 class="font-sans text-lg font-bold text-ink mb-2">University leaders</h3>
-            <Placeholder label="Two sentences. Presidents, provosts, deans of continuing education." />
+            <p class="text-body text-ink/90">
+              Presidents, provosts, and deans of continuing education. The pressure is real, the budget
+              is finite, the timeline is short. We do not add work for your team. We carry it.
+            </p>
           </div>
           <hr class="rule-muted" />
           <div>
             <h3 class="font-sans text-lg font-bold text-ink mb-2">Enterprise leaders</h3>
-            <Placeholder label="Two sentences. Chief learning officers, chief transformation officers, heads of strategy." />
+            <p class="text-body text-ink/90">
+              Chief learning officers, chief transformation officers, heads of strategy. The workforce
+              needs AI fluency now, and the senior team needs a clear read on what is changing in the
+              industry. We build both.
+            </p>
           </div>
           <hr class="rule-muted" />
           <div>
             <h3 class="font-sans text-lg font-bold text-ink mb-2">Senior executives</h3>
-            <Placeholder label="Two sentences. Members and prospective members of the advisory network." />
+            <p class="text-body text-ink/90">
+              Members and prospective members of the Advisory Board. The Board does serious work that
+              informs the institute and the field. If that fits the way you want to spend an hour, we
+              should talk.
+            </p>
           </div>
         </div>
       </div>
@@ -138,17 +169,26 @@ import Placeholder from '@components/ui/Placeholder.astro';
         <article class="border-t-2 border-rule pt-5">
           <div class="font-mono text-xs uppercase tracking-wide-cap text-muted mb-3">Report &middot; 2026</div>
           <h3 class="font-display text-xl text-ink mb-3">AI readiness gap</h3>
-          <Placeholder label="One-sentence summary of the AI Readiness Gap report." />
+          <p class="text-body text-ink/90">
+            How Fortune 500 organizations are actually adopting AI, and where the gap lives between
+            executive intent and operator capability.
+          </p>
         </article>
         <article class="border-t-2 border-rule pt-5">
           <div class="font-mono text-xs uppercase tracking-wide-cap text-muted mb-3">Report &middot; 2026</div>
           <h3 class="font-display text-xl text-ink mb-3">AI skills gap</h3>
-          <Placeholder label="One-sentence summary of the AI Skills Gap report." />
+          <p class="text-body text-ink/90">
+            What the workforce needs to learn next, surfaced from interviews with the people closest to
+            the work.
+          </p>
         </article>
         <article class="border-t-2 border-rule pt-5">
           <div class="font-mono text-xs uppercase tracking-wide-cap text-muted mb-3">Forthcoming</div>
           <h3 class="font-display text-xl text-ink mb-3">Agent readiness gap</h3>
-          <Placeholder label="One-sentence summary of the forthcoming Agent Readiness Gap report." />
+          <p class="text-body text-ink/90">
+            How enterprises are preparing for agentic AI, and the operational questions the field has
+            not yet answered.
+          </p>
         </article>
       </div>
     </div>
@@ -158,12 +198,14 @@ import Placeholder from '@components/ui/Placeholder.astro';
     <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-24">
       <div class="max-w-prose-wide">
         <div class="eyebrow mb-6">Start a conversation</div>
-        <h2 class="font-display text-h2 text-paper/60">
-          [Placeholder: closing CTA section headline]
+        <h2 class="font-display text-h2 text-paper">
+          The first step is a conversation.
         </h2>
-        <div class="mt-6 max-w-prose-narrow">
-          <Placeholder label="Closing CTA section body, one sentence." />
-        </div>
+        <p class="mt-6 text-body-lg text-paper/85 max-w-prose-narrow">
+          Whether you are a university partner, an enterprise buyer, or a senior operator considering
+          the Board, the first step is a short conversation. We will tell you honestly whether there is
+          a fit. If there is not, we will say so.
+        </p>
         <div class="mt-10 flex flex-wrap gap-4">
           <a href="/contact" class="btn btn-primary">Request a conversation</a>
           <a href="/research" class="btn btn-ghost-light">Read the research</a>
