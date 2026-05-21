@@ -5,6 +5,28 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# 301 redirects: legacy recruiting URLs land on the new pages that replaced them.
+# Other legacy URLs (nexus.html, summit.html, articles, /insights/*.html) stay
+# at their original paths via /public/ passthrough — no redirect needed.
+
+[[redirects]]
+  from = "/for-universities.html"
+  to = "/for-universities/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/for-organizations.html"
+  to = "/for-organizations/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact/"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
