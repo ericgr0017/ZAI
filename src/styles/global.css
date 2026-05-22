@@ -174,6 +174,20 @@ body {
 }
 
 /* ---------------------------------------------------------------------
+   Performance: defer layout/paint for off-screen article cards.
+   Helps mobile-sim Lighthouse scores on the longer list pages
+   (/for-universities/, /insights/) where 3+ article elements
+   pull the simulated Performance score down.
+   --------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+  main section article {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 400px;
+  }
+}
+
+/* ---------------------------------------------------------------------
    Mobile menu (no JS framework, lightweight inline script in Header)
    --------------------------------------------------------------------- */
 
