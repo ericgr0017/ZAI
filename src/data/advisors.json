@@ -1,0 +1,26 @@
+{
+  "chair": {
+    "name": "Alan Paris",
+    "title": "Global Head, Financial Services Risk & Compliance · Field CTO",
+    "company": "ServiceNow"
+  },
+  "members": [
+    { "name": "Nersa Acosta", "title": "Senior Executive", "company": "Meta" },
+    { "name": "Joe Chapa", "title": "Senior Executive · AI & National Security", "company": "USAF" },
+    { "name": "Sherry Comes", "title": "Applied AI & Emerging Tech Leader", "company": "PwC" },
+    { "name": "Gina Dunham", "title": "Business Lead & Chief of Staff", "company": "Meta" },
+    { "name": "Torrell Funderburk", "title": "Global Chief Information Security Officer", "company": "OverSpace" },
+    { "name": "Eric Greenberg", "title": "CEO", "company": "ZAI Institute" },
+    { "name": "Ira Greenberg", "title": "Professor and Director, SMU Center for Creative Computation", "company": "Southern Methodist University" },
+    { "name": "Jean Guan", "title": "COO, Chief of Staff & Head of Transformation Office", "company": "BlueCross BlueShield MA" },
+    { "name": "Callie King", "title": "Founder & Principal", "company": "Porchlight Consulting" },
+    { "name": "Bryan Liebert", "title": "Field CISO, East & Public Sector", "company": "World Wide Technology" },
+    { "name": "Andre Magni", "title": "Cloud & AI Leader, US Retail & CPG", "company": "Microsoft" },
+    { "name": "Bovio Pulito", "title": "Head of Platform Growth Partnerships", "company": "Google" },
+    { "name": "Cathy Ryan Reneer", "title": "Managing Director", "company": "JPMorgan Chase" },
+    { "name": "Karin Smith", "title": "Account Executive & Field CTO, Retail & Consumer Goods", "company": "Microsoft" },
+    { "name": "Valerie Usmanova", "title": "Lead, Agentic AI GTM & Monetization Partnerships", "company": "Meta" },
+    { "name": "Janee Vane", "title": "Head of Commerce", "company": "Google" },
+    { "name": "Mariana Venter", "title": "SVP, Global Finance Systems & AI Engineering", "company": "Experian" }
+  ]
+}

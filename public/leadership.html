@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leadership &amp; Advisory Network — ZAI Institute</title>
+<meta name="description" content="Meet the academics, practitioners, and industry leaders who shape ZAI Institute programs across 60+ university partners.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "@id": "https://zaiinstitute.ai/#organization",
+  "name": "ZAI Institute",
+  "url": "https://zaiinstitute.ai",
+  "description": "ZAI Institute partners with 60+ universities to deploy AI executive education programs under university brands in 30 days.",
+  "founder": {
+    "@type": "Person",
+    "name": "Eric Greenberg",
+    "jobTitle": "Founder & CEO",
+    "worksFor": { "@type": "EducationalOrganization", "name": "ZAI Institute" },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "The Wharton School, University of Pennsylvania" },
+      { "@type": "CollegeOrUniversity", "name": "NYU School of Law" }
+    ],
+    "knowsAbout": ["Artificial Intelligence", "Executive Education", "University Partnerships", "Digital Marketing Strategy"],
+    "description": "Author of Strategic AI and Strategic Digital Marketing (McGraw-Hill). Built university-industry partnership models across 60+ institutions."
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   ZAI INSTITUTE — ENHANCED COLOR SYSTEM
+   Exact match from production site
+   ============================================================ */
+:root {
+  --ink: #0A0A0F;
+  --ink-soft: #1A1A2E;
+  --gold: #B8962E;
+  --gold-light: #D4AE4A;
+  --gold-pale: #F5EDD4;
+  --gold-accessible: #7D6415;      /* 5.1:1 on paper, 5.7:1 on white — WCAG AA */
+  --gold-accessible-light: #886E1A; /* 4.9:1 on white — WCAG AA */
+  --paper: #F5F2ED;
+  --slate: #2C3E5A;
+  --muted: #6B6B7A;
+  --slate-deep: #1B2A40;
+  --slate-mid: #3D5478;
+  --slate-light: #5A7399;
+  --teal: #1A5C6B;
+  --teal-soft: #2A7A8A;
+  --teal-pale: #E4F2F5;
+  --warm: #8B5E3C;
+  --warm-light: #C49A6C;
+  --warm-pale: #F8F0E6;
+  --sage: #4A6B5A;
+  --sage-light: #6B8E7A;
+  --serif: 'Cormorant Garamond', Georgia, serif;
+  --sans: 'Inter', -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', 'Courier New', monospace;
+  --section-pad: clamp(80px, 10vw, 140px);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--sans);
+  color: var(--ink);
+  background: var(--paper);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   NAVIGATION — Exact match
+   ============================================================ */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(10, 10, 15, 0.92);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(184, 150, 46, 0.15);
+}
+nav .nav-inner {
+  max-width: 1280px; margin: 0 auto;
+  padding: 18px 40px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: var(--mono); font-size: 13px;
+  letter-spacing: 0.3em; color: #fff;
+  text-decoration: none; display: flex; align-items: center; gap: 14px;
+}
+.z-mark {
+  flex-shrink: 0;
+  width: 36px; height: 36px; min-width: 36px;
+  display: block;
+  background-image: url("data:image/svg+xml,%3Csvg width='36' height='36' viewBox='0 0 36 36' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='34' height='34' stroke='%23B8962E' stroke-width='1.2' fill='none'/%3E%3Cline x1='8' y1='10' x2='28' y2='10' stroke='%23F5F2ED' stroke-width='2.2' stroke-linecap='round'/%3E%3Cline x1='28' y1='10' x2='8' y2='26' stroke='%23F5F2ED' stroke-width='2.2' stroke-linecap='round'/%3E%3Cline x1='8' y1='26' x2='28' y2='26' stroke='%23F5F2ED' stroke-width='2.2' stroke-linecap='round'/%3E%3Ccircle cx='28' cy='10' r='2.5' fill='%23B8962E'/%3E%3Ccircle cx='8' cy='26' r='2.5' fill='%23B8962E'/%3E%3Cline x1='8' y1='26' x2='28' y2='26' stroke='%23F5F2ED' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.z-mark-lg { width: 42px; height: 42px; min-width: 42px; }
+.nav-logo .logo-text { display: flex; flex-direction: column; gap: 2px; }
+.nav-logo .logo-zai { font-size: 22px; font-weight: 600; color: var(--gold); letter-spacing: 0.25em; }
+.nav-logo .logo-inst { font-size: 10px; letter-spacing: 0.4em; color: rgba(255,255,255,0.6); }
+nav ul { list-style: none; display: flex; gap: 28px; align-items: center; }
+nav ul li a {
+  font-family: var(--sans); font-size: 13px; font-weight: 500;
+  color: rgba(255,255,255,0.7); text-decoration: none;
+  letter-spacing: 0.02em; transition: color 0.3s;
+}
+nav ul li a:hover, nav ul li a.active { color: var(--gold); }
+.nav-audience-uni a { border: 1px solid rgba(184,150,46,0.5); padding: 7px 16px; color: var(--gold) !important; transition: background 0.2s !important; }
+.nav-audience-uni a:hover { background: rgba(184,150,46,0.1) !important; }
+.nav-audience-org a { background: var(--gold); padding: 7px 16px; color: #0A0A0F !important; font-weight: 600 !important; transition: opacity 0.2s !important; }
+.nav-audience-org a:hover { opacity: 0.85 !important; }
+
+/* Shared components */
+.section-eyebrow {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.25em;
+  color: var(--gold-accessible); text-transform: uppercase; margin-bottom: 16px;
+}
+.section-heading {
+  font-family: var(--serif); font-size: clamp(32px, 4vw, 48px);
+  font-weight: 400; line-height: 1.2; color: var(--ink); margin-bottom: 20px;
+}
+.section-heading em { font-style: italic; color: var(--slate); }
+.btn-gold {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--ink); font-family: var(--sans); font-size: 14px; font-weight: 600;
+  text-decoration: none; letter-spacing: 0.02em; border: none; cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(184,150,46,0.3); }
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 32px; background: transparent;
+  border: 1px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.8); font-family: var(--sans); font-size: 14px; font-weight: 500;
+  text-decoration: none; letter-spacing: 0.02em; cursor: pointer;
+  transition: border-color 0.3s, color 0.3s;
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+
+/* ============================================================
+   HERO — Leadership page version
+   ============================================================ */
+.hero {
+  position: relative; min-height: 70vh;
+  display: flex; align-items: center;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 80%, rgba(26, 92, 107, 0.25) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 20%, rgba(44, 62, 90, 0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 90% 80% at 50% 50%, rgba(26, 26, 46, 0.9) 0%, rgba(10, 10, 15, 1) 70%);
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 60px, rgba(184,150,46,0.03) 60px, rgba(184,150,46,0.03) 61px),
+    repeating-linear-gradient(90deg, transparent, transparent 60px, rgba(184,150,46,0.03) 60px, rgba(184,150,46,0.03) 61px);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 200px;
+  background: linear-gradient(to top, var(--paper), transparent);
+  pointer-events: none;
+}
+.hero-glow {
+  position: absolute; top: -100px; right: -100px;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(184,150,46,0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: glow-drift 8s ease-in-out infinite alternate;
+}
+@keyframes glow-drift {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(-60px, 40px) scale(1.15); }
+}
+.hero-glow-2 {
+  position: absolute; bottom: -50px; left: -80px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(26,92,107,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: glow-drift-2 10s ease-in-out infinite alternate;
+}
+@keyframes glow-drift-2 {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(40px, -30px) scale(1.1); }
+}
+.hero-content {
+  position: relative; z-index: 2;
+  max-width: 1280px; margin: 0 auto;
+  padding: 160px 40px 100px;
+}
+.hero-eyebrow {
+  font-family: var(--mono); font-size: 12px; letter-spacing: 0.25em;
+  color: var(--gold); text-transform: uppercase; margin-bottom: 24px;
+  opacity: 0; animation: fade-up 0.8s ease forwards 0.2s;
+}
+.hero h1 {
+  font-family: var(--serif); font-size: clamp(38px, 5vw, 64px);
+  font-weight: 400; line-height: 1.1; color: #fff;
+  max-width: 800px; margin-bottom: 28px;
+  opacity: 0; animation: fade-up 0.8s ease forwards 0.4s;
+}
+.hero h1 em {
+  font-style: italic; color: var(--gold-light);
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-sub {
+  font-family: var(--sans); font-size: 17px; line-height: 1.7;
+  color: rgba(255,255,255,0.6); max-width: 600px;
+  opacity: 0; animation: fade-up 0.8s ease forwards 0.6s;
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Hero quote */
+.hero-quote {
+  max-width: 680px; margin-top: 48px;
+  padding: 28px 0 0 32px;
+  border-left: 3px solid var(--gold);
+  opacity: 0; animation: fade-up 0.8s ease forwards 0.8s;
+}
+.hero-quote blockquote {
+  font-family: var(--serif); font-size: 20px; font-style: italic;
+  line-height: 1.6; color: rgba(255,255,255,0.55);
+}
+.hero-quote cite {
+  display: block; margin-top: 12px;
+  font-family: var(--mono); font-size: 10px; font-style: normal;
+  letter-spacing: 0.15em; color: var(--gold); text-transform: uppercase;
+}
+
+/* Stats bar */
+.hero-stats {
+  position: relative; z-index: 2;
+  max-width: 1280px; margin: -50px auto 0; padding: 0 40px;
+}
+.hero-stats-inner {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  background: rgba(27, 42, 64, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(184,150,46,0.2);
+  border-radius: 2px; overflow: hidden;
+}
+.stat-card {
+  padding: 32px 24px; text-align: center; position: relative;
+}
+.stat-card:not(:last-child)::after {
+  content: '';
+  position: absolute; right: 0; top: 20%; height: 60%; width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(184,150,46,0.3), transparent);
+}
+.stat-number {
+  font-family: var(--serif); font-size: 36px; font-weight: 700;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.stat-label {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em;
+  color: rgba(255,255,255,0.55); text-transform: uppercase; margin-top: 6px;
+}
+
+/* ============================================================
+   CARD GRID — Leadership cards
+   ============================================================ */
+.grid-section {
+  padding: var(--section-pad) 40px;
+  max-width: 1280px; margin: 0 auto;
+}
+.grid-intro {
+  max-width: 680px; margin-bottom: 48px;
+}
+.grid-intro p {
+  font-size: 16px; line-height: 1.8; color: var(--muted); max-width: 600px;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid rgba(10,10,15,0.06);
+  padding: 32px 28px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(10,10,15,0.06);
+}
+.card.expanded {
+  box-shadow: 0 20px 60px rgba(10,10,15,0.1);
+  transform: translateY(-3px);
+}
+/* Color-coded top bar — cycles through palette */
+.card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+}
+.card[data-accent="slate"]::before { background: linear-gradient(90deg, var(--slate), var(--slate-mid)); }
+.card[data-accent="teal"]::before { background: linear-gradient(90deg, var(--teal), var(--teal-soft)); }
+.card[data-accent="warm"]::before { background: linear-gradient(90deg, var(--warm), var(--warm-light)); }
+.card[data-accent="gold"]::before { background: linear-gradient(90deg, var(--gold), var(--gold-light)); }
+.card[data-accent="sage"]::before { background: linear-gradient(90deg, var(--sage), var(--sage-light)); }
+.card[data-accent="ink"]::before { background: linear-gradient(90deg, var(--ink), var(--slate)); }
+
+.card-header {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 12px;
+}
+.card-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-family: var(--mono);
+  font-size: 13px; font-weight: 600; letter-spacing: 0.05em;
+  flex-shrink: 0;
+}
+.card[data-accent="slate"] .card-avatar { background: var(--slate); }
+.card[data-accent="teal"] .card-avatar { background: var(--teal); }
+.card[data-accent="warm"] .card-avatar { background: var(--warm); }
+.card[data-accent="gold"] .card-avatar { background: var(--gold); }
+.card[data-accent="sage"] .card-avatar { background: var(--sage); }
+.card[data-accent="ink"] .card-avatar { background: var(--ink-soft); }
+
+.card-name {
+  font-family: var(--serif); font-size: 20px; font-weight: 600;
+  color: var(--ink); line-height: 1.2;
+}
+.card-org {
+  font-family: var(--mono); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; margin-top: 3px;
+}
+.card[data-accent="slate"] .card-org { color: var(--slate); }
+.card[data-accent="teal"] .card-org { color: var(--teal); }
+.card[data-accent="warm"] .card-org { color: var(--warm); }
+.card[data-accent="gold"] .card-org { color: var(--gold-accessible-light); }
+.card[data-accent="sage"] .card-org { color: var(--sage); }
+.card[data-accent="ink"] .card-org { color: var(--ink-soft); }
+
+.card-title {
+  font-size: 14px; line-height: 1.5; color: var(--muted);
+}
+.card-affiliation {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.08em;
+  color: var(--muted); margin-top: 6px;
+}
+.card-chevron {
+  position: absolute; top: 32px; right: 24px;
+  font-size: 14px; color: rgba(10,10,15,0.15);
+  transition: transform 0.3s, color 0.3s;
+}
+.card.expanded .card-chevron {
+  transform: rotate(180deg); color: var(--gold);
+}
+.card-bio {
+  margin-top: 20px; padding-top: 20px;
+  border-top: 1px solid rgba(10,10,15,0.06);
+  font-size: 15px; line-height: 1.8; color: var(--muted);
+  display: none;
+}
+.card.expanded .card-bio {
+  display: block;
+  animation: bio-fade 0.3s ease;
+}
+@keyframes bio-fade {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   NETWORK TICKERS — Exact match
+   ============================================================ */
+.network-band {
+  position: relative;
+  background: linear-gradient(135deg, var(--ink) 0%, var(--slate-deep) 40%, var(--ink-soft) 100%);
+  padding: 56px 0;
+  overflow: hidden;
+}
+.network-band::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 50% 40% at 70% 30%, rgba(184,150,46,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 50% at 20% 70%, rgba(26,92,107,0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.network-band-inner {
+  position: relative; z-index: 1;
+  max-width: 1280px; margin: 0 auto; padding: 0 40px;
+}
+.network-band-intro {
+  font-family: var(--serif); font-size: 19px; font-weight: 400;
+  color: rgba(255,255,255,0.5); text-align: center;
+  margin-bottom: 32px;
+}
+.network-band-intro strong {
+  color: #fff; font-weight: 600;
+}
+.network-scroll {
+  overflow: hidden; margin: 0 -40px;
+}
+.scroll-track {
+  display: flex; gap: 48px;
+  animation: scroll-left 50s linear infinite;
+  width: max-content;
+}
+.scroll-track.reverse { animation-direction: reverse; animation-duration: 55s; }
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.company-name {
+  font-family: var(--sans); font-size: 15px; font-weight: 500;
+  color: rgba(255,255,255,0.5); white-space: nowrap;
+  transition: color 0.3s;
+}
+.company-name:hover { color: rgba(255,255,255,0.8); }
+.network-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(184,150,46,0.2), transparent);
+  margin: 24px 0;
+}
+.uni-track .company-name { color: rgba(212, 174, 74, 0.7); }
+.uni-track .company-name:hover { color: var(--gold-light); }
+.network-band-note {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.5); text-align: center;
+  text-transform: uppercase; margin-top: 32px;
+}
+.network-band-cta {
+  text-align: center; margin-top: 28px;
+}
+.network-band-cta a {
+  font-family: var(--sans); font-size: 13px; font-weight: 600;
+  color: var(--gold); text-decoration: none;
+  letter-spacing: 0.02em; transition: opacity 0.3s;
+}
+.network-band-cta a:hover { opacity: 0.7; }
+
+/* ============================================================
+   CTA — Exact match
+   ============================================================ */
+.cta-section {
+  position: relative;
+  background: var(--ink);
+  padding: var(--section-pad) 40px;
+  text-align: center; overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(184,150,46,0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cta-inner {
+  max-width: 700px; margin: 0 auto; position: relative; z-index: 1;
+}
+.cta-section .section-heading { color: #fff; text-align: center; margin-bottom: 20px; }
+.cta-section .section-heading em { color: var(--gold-light); }
+.cta-sub {
+  font-size: 17px; line-height: 1.7;
+  color: rgba(255,255,255,0.5); margin-bottom: 40px;
+}
+.cta-buttons {
+  display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;
+}
+
+/* ============================================================
+   FOOTER — Exact match
+   ============================================================ */
+footer {
+  background: var(--ink);
+  border-top: 1px solid rgba(184,150,46,0.15);
+  padding: 60px 40px 40px;
+}
+.footer-inner {
+  max-width: 1280px; margin: 0 auto;
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px;
+}
+.footer-brand .footer-logo-row {
+  display: flex; align-items: center; gap: 14px;
+}
+.footer-brand .logo-text { display: flex; flex-direction: column; gap: 2px; }
+.footer-brand .logo-zai {
+  font-family: var(--mono); font-size: 22px; font-weight: 600;
+  color: var(--gold); letter-spacing: 0.25em;
+}
+.footer-brand .logo-inst {
+  font-family: var(--mono); font-size: 10px;
+  letter-spacing: 0.4em; color: rgba(255,255,255,0.4);
+}
+.footer-tagline {
+  font-family: var(--serif); font-size: 15px; font-style: italic;
+  color: rgba(255,255,255,0.55); margin-top: 16px; max-width: 250px; line-height: 1.5;
+}
+.footer-col h4 {
+  font-family: var(--mono); font-size: 10px; letter-spacing: 0.2em;
+  color: var(--gold); text-transform: uppercase; margin-bottom: 20px;
+}
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a {
+  font-size: 14px; color: rgba(255,255,255,0.55);
+  text-decoration: none; transition: color 0.3s;
+}
+.footer-col ul li a:hover { color: rgba(255,255,255,0.8); }
+.footer-bottom {
+  max-width: 1280px; margin: 40px auto 0;
+  padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06);
+  text-align: center;
+}
+.footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.25); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  nav ul { display: none; }
+  .hero-stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .stat-card:not(:last-child)::after { display: none; }
+  .card-grid { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr 1fr; }
+  [style*="grid-template-columns: repeat(3"] { grid-template-columns: 1fr !important; }
+}
+@media (max-width: 600px) {
+  .hero-content { padding: 130px 20px 80px; }
+  .hero-stats-inner { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; }
+}
+/* MOBILE MENU */
+.hamburger{display:none;cursor:pointer;background:none;border:none;padding:8px;z-index:101}
+.hamburger span{display:block;width:22px;height:2px;background:#B8962E;margin:5px 0;transition:all 0.3s}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mobile-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(10,10,15,0.98);z-index:98;flex-direction:column;align-items:center;justify-content:center;gap:28px}
+.mobile-overlay.open{display:flex}
+.mobile-overlay a{font-family:var(--serif);font-size:28px;color:rgba(255,255,255,0.7);text-decoration:none;transition:color 0.3s}
+.mobile-overlay a:hover{color:var(--gold)}
+.mobile-overlay .mob-cta{font-family:var(--sans);font-size:14px;font-weight:600;color:#0A0A0F;background:#B8962E;padding:14px 32px;margin-top:16px;text-decoration:none}
+@media(max-width:900px){.hamburger{display:block}}
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <span class="z-mark" role="img" aria-label="ZAI Institute logo"></span>
+      <div class="logo-text">
+        <span class="logo-zai">ZAI</span>
+        <span class="logo-inst">INSTITUTE</span>
+      </div>
+    </a>
+    <ul>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="platform.html">Platform</a></li>
+      <li><a href="insights/index.html">Insights</a></li>
+      <li><a href="for-universities.html">For Universities</a></li>
+      <li><a href="for-organizations.html">For Organizations</a></li>
+      <li><a href="contact.html">Partner With Us</a></li>
+    </ul>
+    <button class="hamburger" onclick="document.querySelector('.mobile-overlay').classList.toggle('open');this.classList.toggle('active')" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+</nav>
+<div class="mobile-overlay">
+  <a href="index.html#about">About</a>
+  <a href="platform.html">Platform</a>
+  <a href="insights/index.html">Insights</a>
+  <a href="for-universities.html">For Universities</a>
+  <a href="for-organizations.html">For Organizations</a>
+  <a href="contact.html" class="mob-cta">Partner With Us</a>
+</div>
+
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Leadership &amp; Advisory Network</p>
+    <h1>Academics, practitioners, and industry leaders <em>building the future of education together.</em></h1>
+    <p class="hero-sub">ZAI programs are shaped by a network of executives, scholars, and practitioners from the world&rsquo;s leading organizations and universities &mdash; guiding curriculum, mentoring participants, and connecting learning to real-world impact.</p>
+    <div class="hero-quote">
+      <blockquote>&ldquo;The greatest untapped resource in education is not technology &mdash; it is the connection between university leadership and industry leadership.&rdquo;</blockquote>
+      <cite>ZAI Institute Founding Principle</cite>
+    </div>
+  </div>
+</section>
+
+<!-- STATS BAR -->
+<div class="hero-stats">
+  <div class="hero-stats-inner">
+    <div class="stat-card"><div class="stat-number">18</div><div class="stat-label">Advisory Board</div></div>
+    <div class="stat-card"><div class="stat-number">60+</div><div class="stat-label">University Partners</div></div>
+    <div class="stat-card"><div class="stat-number">500+</div><div class="stat-label">Companies Represented</div></div>
+  </div>
+</div>
+
+<!-- CARD GRID -->
+<section class="grid-section">
+  <div class="grid-intro">
+    <p class="section-eyebrow">Our Team</p>
+    <h2 class="section-heading">The people who <em>shape our programs.</em></h2>
+    <p>Every ZAI program is guided by executives, academics, and practitioners who bring real-world expertise from the organizations and institutions that define their industries.</p>
+  </div>
+  <div class="card-grid">
+    <div class="card" data-accent="slate" onclick="this.classList.toggle('expanded')">
+      <div class="card-header">
+        <div class="card-avatar">EG</div>
+        <div>
+          <div class="card-name">Eric Greenberg</div>
+          <div class="card-org">ZAI Institute</div>
+        </div>
+      </div>
+      <div class="card-title">Founder &amp; CEO, ZAI Institute</div>
+      
+      <div class="card-chevron">&#9662;</div>
+      <div class="card-bio">Eric built ZAI Institute on a decade of experience at the intersection of universities and industry. As Managing Director at Rutgers Business School, he created Johnson &amp; Johnson’s flagship Digital Marketing program — deployed globally and the origin proof-of-concept for the ZAI model. Author of 12 titles including <em>Strategic AI</em> and <em>Strategic Digital Marketing</em> (McGraw-Hill). Wharton School, University of Pennsylvania, NYU School of Law.</div>
+    </div>
+    </div>
+
+    <!-- Advisory Network Description -->
+    <div style="margin-top: 48px; padding: 56px 48px; background: #fff; border: 1px solid rgba(10,10,15,0.06);">
+      <p style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold-accessible); margin-bottom: 20px;">Advisory Network</p>
+      <h3 style="font-family: var(--serif); font-size: 30px; font-weight: 600; color: var(--ink); margin-bottom: 16px; line-height: 1.25;">25+ executives and academics <em style="font-style:italic; color: var(--slate);">shaping every program.</em></h3>
+      <p style="font-size: 16px; line-height: 1.8; color: var(--muted); max-width: 640px; margin-bottom: 40px;">Our advisory board includes senior leaders from the organizations that define their industries — guiding curriculum, evaluating capstone projects, mentoring students, and connecting graduates to opportunity. Every ZAI program carries their expertise.</p>
+
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 40px;">
+        <div>
+          <p style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--slate); margin-bottom: 14px;">Industries Represented</p>
+          <p style="font-size: 14px; line-height: 1.8; color: var(--muted);">Technology &amp; Cloud Computing, Healthcare &amp; Life Sciences, Financial Services &amp; Banking, Management Consulting, Consumer Products, Media &amp; Entertainment, Supply Chain &amp; Operations, Data Science &amp; Analytics</p>
+        </div>
+        <div>
+          <p style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px;">Roles &amp; Seniority</p>
+          <p style="font-size: 14px; line-height: 1.8; color: var(--muted);">C-Suite Executives, SVPs &amp; VPs of AI Strategy, Global Heads of Product &amp; Platform, Chief Quality &amp; Medical Officers, Directors of Research &amp; Innovation, University Department Chairs &amp; Tenured Faculty</p>
+        </div>
+        <div>
+          <p style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--warm); margin-bottom: 14px;">Organizations</p>
+          <p style="font-size: 14px; line-height: 1.8; color: var(--muted);">Microsoft, Google, Meta, Adobe, PwC, EY, Bloomberg, Johnson &amp; Johnson, Kaiser Permanente, Mayo Clinic, JPMorgan Chase, Bank of America, Verizon, ServiceNow, Coca-Cola, Est&eacute;e Lauder, Experian, and more</p>
+        </div>
+      </div>
+
+      <div style="padding-top: 32px; border-top: 1px solid rgba(10,10,15,0.06);">
+        <p style="font-family: var(--serif); font-size: 20px; font-style: italic; color: var(--slate); line-height: 1.5; max-width: 560px;">Advisors serve as capstone evaluators, curriculum reviewers, executive mentors, and the bridge between academic programs and the employers who hire their graduates.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 32px; padding: 36px 48px; background: rgba(44,62,90,0.04); border: 1px solid rgba(10,10,15,0.04); text-align: center;">
+      <p style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-accessible); margin-bottom: 12px;">Interested in joining the advisory network?</p>
+      <p style="font-size: 15px; color: var(--muted); margin-bottom: 20px;">We&rsquo;re selectively expanding our advisory board with senior executives who want to shape AI education at the university level.</p>
+      <a href="contact.html" style="font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--gold-accessible); text-decoration: none; letter-spacing: 0.02em;">Start a conversation &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- NETWORK TICKER BAND -->
+<section class="network-band">
+  <div class="network-band-inner">
+    <p class="network-band-intro">Join a community of <strong>senior</strong> executives from organizations including</p>
+  </div>
+  <div class="network-scroll">
+    <div class="scroll-track">
+        <span class="company-name">Accenture</span>
+        <span class="company-name">Aetna</span>
+        <span class="company-name">AIG</span>
+        <span class="company-name">AT&amp;T</span>
+        <span class="company-name">Bank of America</span>
+        <span class="company-name">BlueCross BlueShield</span>
+        <span class="company-name">Cigna</span>
+        <span class="company-name">Comcast</span>
+        <span class="company-name">Deloitte</span>
+        <span class="company-name">Dow Jones</span>
+        <span class="company-name">Est&eacute;e Lauder</span>
+        <span class="company-name">Forbes</span>
+        <span class="company-name">Intel</span>
+        <span class="company-name">Johnson &amp; Johnson</span>
+        <span class="company-name">Marriott</span>
+        <span class="company-name">Mastercard</span>
+        <span class="company-name">Merck</span>
+        <span class="company-name">Microsoft</span>
+        <span class="company-name">Morgan Stanley</span>
+        <span class="company-name">Novartis</span>
+        <span class="company-name">Prudential</span>
+        <span class="company-name">Salesforce</span>
+        <span class="company-name">JPMorgan Chase</span>
+        <span class="company-name">Oracle</span>
+        <span class="company-name">IBM</span>
+        <span class="company-name">Adobe</span>
+        <span class="company-name">Accenture</span>
+        <span class="company-name">Aetna</span>
+        <span class="company-name">AIG</span>
+        <span class="company-name">AT&amp;T</span>
+        <span class="company-name">Bank of America</span>
+        <span class="company-name">BlueCross BlueShield</span>
+        <span class="company-name">Cigna</span>
+        <span class="company-name">Comcast</span>
+        <span class="company-name">Deloitte</span>
+        <span class="company-name">Dow Jones</span>
+        <span class="company-name">Est&eacute;e Lauder</span>
+        <span class="company-name">Forbes</span>
+        <span class="company-name">Intel</span>
+        <span class="company-name">Johnson &amp; Johnson</span>
+        <span class="company-name">Marriott</span>
+        <span class="company-name">Mastercard</span>
+        <span class="company-name">Merck</span>
+        <span class="company-name">Microsoft</span>
+        <span class="company-name">Morgan Stanley</span>
+        <span class="company-name">Novartis</span>
+        <span class="company-name">Prudential</span>
+        <span class="company-name">Salesforce</span>
+        <span class="company-name">JPMorgan Chase</span>
+        <span class="company-name">Oracle</span>
+        <span class="company-name">IBM</span>
+        <span class="company-name">Adobe</span>
+        </div>
+  </div>
+  <div class="network-divider"></div>
+  <div class="network-scroll">
+    <div class="scroll-track reverse uni-track">
+        <span class="company-name">UCLA</span>
+        <span class="company-name">University of Miami</span>
+        <span class="company-name">Seton Hall University</span>
+        <span class="company-name">University of Colorado Colorado Springs</span>
+        <span class="company-name">University of Minnesota Mankato</span>
+        <span class="company-name">University of Richmond</span>
+        <span class="company-name">Ohio State University</span>
+        <span class="company-name">University of San Francisco</span>
+        <span class="company-name">University of Colorado Boulder</span>
+        <span class="company-name">UCLA</span>
+        <span class="company-name">University of Miami</span>
+        <span class="company-name">Seton Hall University</span>
+        <span class="company-name">University of Colorado Colorado Springs</span>
+        <span class="company-name">University of Minnesota Mankato</span>
+        <span class="company-name">University of Richmond</span>
+        <span class="company-name">Ohio State University</span>
+        <span class="company-name">University of San Francisco</span>
+        <span class="company-name">University of Colorado Boulder</span>
+        </div>
+  </div>
+  <div class="network-band-inner">
+    <p class="network-band-note">Advisory board members across 60+ university partner programs</p>
+    <div class="network-band-cta">
+      <a href="index.html#network">Explore the full network &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <p class="section-eyebrow" style="color:var(--gold);">Begin the Conversation</p>
+    <h2 class="section-heading">The institutions that move with intention <em>now</em> will define what comes next.</h2>
+    <p class="cta-sub">Which side of that sentence does your institution want to be on?</p>
+    <div class="cta-buttons">
+      <a href="contact.html" class="btn-gold">Request a Partnership Conversation</a>
+      <a href="index.html#research" class="btn-outline">Join the AI Readiness Study</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo-row">
+        <span class="z-mark z-mark-lg" role="img" aria-label="ZAI Institute logo"></span>
+        <div class="logo-text">
+          <span class="logo-zai">ZAI</span>
+          <span class="logo-inst">INSTITUTE</span>
+        </div>
+      </div>
+      <p class="footer-tagline">Transforming Education for the Age of AI</p>
+    </div>
+    <div class="footer-col">
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="index.html#programs">Indispensable &mdash; Foundation</a></li>
+        <li><a href="index.html#programs">Indispensable &mdash; Professional</a></li>
+        <li><a href="index.html#programs">Faculty AI Training</a></li>
+        <li><a href="index.html#programs">Corporate AI Training</a></li>
+        <li><a href="index.html#research">AI Readiness Study</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Institute</h4>
+      <ul>
+        <li><a href="index.html#about">Our Story</a></li>
+        <li><a href="#">Leadership</a></li>
+        <li><a href="index.html#approach">Our Approach</a></li>
+        <li><a href="index.html#network">The Network</a></li>
+        <li><a href="case-studies/">Case Studies</a></li>
+      <li><a href="insights/index.html">Insights</a></li>
+        <li><a href="platform.html">Platform</a></li>
+      <li><a href="contact.html">Partner With Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="mailto:info@zaiinstitute.ai">info@zaiinstitute.ai</a></li>
+        <li><a href="tel:+18883847020">(888) 384-7020</a></li>
+        <li><a href="contact.html">Schedule a Call</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 ZAI Institute, LLC. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

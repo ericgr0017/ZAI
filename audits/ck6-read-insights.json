@@ -1,0 +1,20 @@
+{
+  "url": "https://deploy-preview-1--exquisite-pony-4a10e3.netlify.app/insights/",
+  "wordCount": 264,
+  "sentenceCount": 17,
+  "averageSentenceLength": 15.53,
+  "averageSyllablesPerWord": 1.65,
+  "fleschReadingEase": 51.4,
+  "fleschKincaidGrade": 10,
+  "passiveRatePercent": 0,
+  "longSentenceCount": 2,
+  "longSentences": [
+    "Report May 2026 14 min read The AI readiness gap A look at how Fortune 500 organizations are translating AI awareness into organizational capability, and where the gap lives between executive intent a",
+    "Read the report > Report May 2026 12 min read The AI skills gap What the workforce needs to learn next, with a finding that surprised the researchers: forty-seven percent of leaders cite undefined AI "
+  ],
+  "flags": {
+    "sentenceLengthOver25": "OK",
+    "passiveOver15Percent": "OK",
+    "gradeOutsideTarget": "NOTE"
+  }
+}

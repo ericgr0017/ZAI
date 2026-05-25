@@ -1,0 +1,22 @@
+{
+  "url": "https://deploy-preview-1--exquisite-pony-4a10e3.netlify.app/advisory-board/",
+  "wordCount": 377,
+  "sentenceCount": 10,
+  "averageSentenceLength": 37.7,
+  "averageSyllablesPerWord": 1.95,
+  "fleschReadingEase": 3.4,
+  "fleschKincaidGrade": 22.1,
+  "passiveRatePercent": 0,
+  "longSentenceCount": 4,
+  "longSentences": [
+    "How the board works The Advisory Board meets quarterly and contributes throughout the year through curriculum review, capstone evaluations, panel participation, and informal peer briefings with cohort",
+    "Chair ServiceNow Alan Paris Global Head, Financial Services Risk & Compliance · Field CTO Members Meta Nersa Acosta Senior Executive Johnson & Johnson Wael Adhami Vice President, Global Trade Complian",
+    "Director, Global Strategic Marketing · Biosense Webster World Wide Technology Bryan Liebert Field CISO, East & Public Sector Microsoft Andre Magni Cloud & AI Leader, US Retail & CPG Bloomberg Ewerton ",
+    "Director of Experience Research Meta Valerie Usmanova Lead, Agentic AI GTM & Monetization Partnerships Google Janee Vane Head of Commerce Experian Mariana Venter SVP, Global Finance Systems & AI Engin"
+  ],
+  "flags": {
+    "sentenceLengthOver25": "FLAG",
+    "passiveOver15Percent": "OK",
+    "gradeOutsideTarget": "NOTE"
+  }
+}

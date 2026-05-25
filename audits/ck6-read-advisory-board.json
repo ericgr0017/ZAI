@@ -1,0 +1,20 @@
+{
+  "url": "https://deploy-preview-1--exquisite-pony-4a10e3.netlify.app/advisory-board/",
+  "wordCount": 320,
+  "sentenceCount": 11,
+  "averageSentenceLength": 29.09,
+  "averageSyllablesPerWord": 1.9,
+  "fleschReadingEase": 16.8,
+  "fleschKincaidGrade": 18.1,
+  "passiveRatePercent": 18.2,
+  "longSentenceCount": 2,
+  "longSentences": [
+    "How the board works The Advisory Board meets quarterly and contributes throughout the year through curriculum review, capstone evaluations, panel participation, and informal peer briefings with cohort",
+    "Chair ServiceNow Alan Paris Global Head, Financial Services Risk & Compliance · Field CTO Members Meta Nersa Acosta Senior Executive USAF Joe Chapa Senior Executive · AI & National Security PwC Sherry"
+  ],
+  "flags": {
+    "sentenceLengthOver25": "FLAG",
+    "passiveOver15Percent": "FLAG",
+    "gradeOutsideTarget": "NOTE"
+  }
+}

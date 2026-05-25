@@ -1,0 +1,21 @@
+{
+  "url": "https://deploy-preview-1--exquisite-pony-4a10e3.netlify.app/",
+  "wordCount": 480,
+  "sentenceCount": 42,
+  "averageSentenceLength": 11.43,
+  "averageSyllablesPerWord": 1.63,
+  "fleschReadingEase": 57.8,
+  "fleschKincaidGrade": 8,
+  "passiveRatePercent": 7.1,
+  "longSentenceCount": 3,
+  "longSentences": [
+    "ZAI Institute is where universities go to launch AI programs, where enterprises go to train their workforce, and where senior operators go to think clearly about what AI is changing in their industry.",
+    "Advisory board > By the numbers 30+ University partners 50,000+ Executives in the network 500+ Companies represented 25 Advisory board members Who we serve Three rooms.",
+    "All insights > Report · 2026 AI readiness gap How Fortune 500 organizations are actually adopting AI, and where the gap lives between executive intent and operator capability."
+  ],
+  "flags": {
+    "sentenceLengthOver25": "OK",
+    "passiveOver15Percent": "OK",
+    "gradeOutsideTarget": "NOTE"
+  }
+}

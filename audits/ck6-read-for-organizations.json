@@ -1,0 +1,23 @@
+{
+  "url": "https://deploy-preview-1--exquisite-pony-4a10e3.netlify.app/for-organizations/",
+  "wordCount": 536,
+  "sentenceCount": 33,
+  "averageSentenceLength": 16.24,
+  "averageSyllablesPerWord": 1.74,
+  "fleschReadingEase": 43.4,
+  "fleschKincaidGrade": 11.2,
+  "passiveRatePercent": 9.1,
+  "longSentenceCount": 5,
+  "longSentences": [
+    "We build programs that look like university executive education because that is what they are, delivered through partner universities, taught by faculty, with operator-grade content that travels back ",
+    "Content is built for the role, not the headline: what the AI tools actually do, what they do not, and where human judgment still matters most.",
+    "Custom curriculum is appropriate when the workforce challenge is industry-specific (financial services compliance, healthcare clinical adoption, regulated manufacturing) or when the organization wants",
+    "Advisory network access Senior leadership at partner organizations gain access to the institute's advisory network: a community of senior executives across more than five hundred companies, with eight",
+    "We will tell you whether our partner universities can build the program you need, what a first cohort would look like, and what you would commit."
+  ],
+  "flags": {
+    "sentenceLengthOver25": "OK",
+    "passiveOver15Percent": "OK",
+    "gradeOutsideTarget": "OK"
+  }
+}

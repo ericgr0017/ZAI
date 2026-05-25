@@ -1,0 +1,27 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Thank you"
+  description="Your message reached the institute. We will reply within two business days."
+>
+  <section class="bg-ink text-paper min-h-[60vh] flex items-center">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-24">
+      <div class="max-w-prose-wide">
+        <div class="eyebrow mb-6">Received</div>
+        <h1 class="font-display text-h1 text-paper">
+          Thank you. Your message reached the institute.
+        </h1>
+        <p class="mt-8 text-body-lg text-paper/85 max-w-prose-narrow">
+          A member of the team will reply within two business days. If your matter is urgent, you can
+          also call us at <a href="tel:+18883847020" class="text-gold-light font-mono">(888) 384-7020</a>.
+        </p>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="/" class="btn btn-ghost-light">Return home</a>
+          <a href="/insights" class="btn btn-ghost-light">Read the research</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

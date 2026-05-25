@@ -1,0 +1,128 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import SectionHero from '@components/ui/SectionHero.astro';
+---
+
+<BaseLayout
+  title="Insights"
+  description="Published research from ZAI Institute on AI readiness, AI skills, and agent readiness in the enterprise."
+>
+  <SectionHero
+    eyebrow="Insights"
+    title="Published research from the institute."
+    lede="Reports informed by structured interviews with senior operators across the institute's executive community. Free to read. No registration required."
+  />
+
+  <section class="bg-paper text-ink">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-24">
+
+      <div class="max-w-prose-wide mb-16 space-y-4 text-body text-ink/90">
+        <p>
+          The institute publishes the work it considers most useful to the broader field. Each
+          report draws on direct survey responses from the executives in the network, paired with
+          the qualitative interviews that anchor the research.
+        </p>
+        <p>
+          New reports release as the work supports them. The finding that holds across the
+          published library so far: the strategy gap is wider than the skills gap.
+        </p>
+      </div>
+
+      <hr class="rule-gold opacity-60 mb-12" />
+
+      <ul class="divide-y divide-light-border/60 list-none p-0 m-0" role="list">
+
+        <li class="py-8 md:py-12 first:pt-0">
+          <article class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <div class="md:col-span-3">
+              <div class="font-mono text-xs uppercase tracking-wide-cap text-muted">Report</div>
+              <div class="font-mono text-xs text-muted mt-1">May 2026</div>
+              <div class="font-mono text-xs text-muted mt-1">14 min read</div>
+            </div>
+            <div class="md:col-span-9">
+              <h2 class="font-display text-h2 text-ink">The AI readiness gap</h2>
+              <p class="mt-4 text-body text-ink/90 max-w-prose-wide">
+                A look at how Fortune 500 organizations are translating AI awareness into
+                organizational capability, and where the gap lives between executive intent and
+                operator readiness.
+              </p>
+              <a
+                href="/insights/ai-readiness-gap-2026-updated.html"
+                class="inline-block mt-5 text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink"
+              >
+                Read the report &rsaquo;
+              </a>
+            </div>
+          </article>
+        </li>
+
+        <li class="py-8 md:py-12">
+          <article class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <div class="md:col-span-3">
+              <div class="font-mono text-xs uppercase tracking-wide-cap text-muted">Report</div>
+              <div class="font-mono text-xs text-muted mt-1">May 2026</div>
+              <div class="font-mono text-xs text-muted mt-1">12 min read</div>
+            </div>
+            <div class="md:col-span-9">
+              <h2 class="font-display text-h2 text-ink">The AI skills gap</h2>
+              <p class="mt-4 text-body text-ink/90 max-w-prose-wide">
+                What the workforce needs to learn next, with a finding that surprised the
+                researchers: forty-seven percent of leaders cite undefined AI strategy, not skills
+                shortage, as their biggest barrier to closing the gap.
+              </p>
+              <a
+                href="/insights/ai-skills-gap-2026.html"
+                class="inline-block mt-5 text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink"
+              >
+                Read the report &rsaquo;
+              </a>
+            </div>
+          </article>
+        </li>
+
+        <li class="py-8 md:py-12">
+          <article class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            <div class="md:col-span-3">
+              <div class="font-mono text-xs uppercase tracking-wide-cap text-muted">Report</div>
+              <div class="font-mono text-xs text-muted mt-1">May 2026</div>
+              <div class="font-mono text-xs text-muted mt-1">10 min read</div>
+            </div>
+            <div class="md:col-span-9">
+              <h2 class="font-display text-h2 text-ink">The agent readiness gap</h2>
+              <p class="mt-4 text-body text-ink/90 max-w-prose-wide">
+                Why enterprises are deploying AI agents faster than they can govern them. Sixty-nine
+                percent are piloting or in production. Thirty-nine percent have a formal oversight
+                policy. The gap is the work of the next eighteen months.
+              </p>
+              <a
+                href="/insights/agent-readiness-gap-2026.html"
+                class="inline-block mt-5 text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink"
+              >
+                Read the report &rsaquo;
+              </a>
+            </div>
+          </article>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <section class="bg-ink text-paper">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-24">
+      <div class="max-w-prose-wide">
+        <div class="eyebrow mb-6">Commission research</div>
+        <h2 class="font-display text-h2 text-paper">A question the public reports do not answer?</h2>
+        <p class="mt-6 text-body-lg text-paper/85 max-w-prose-narrow">
+          The institute commissions custom research for AI platform vendors, large enterprises, and
+          investment firms with a specific decision in front of them. The first conversation is one
+          hour.
+        </p>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="/research" class="btn btn-primary">How research works</a>
+          <a href="/contact" class="btn btn-ghost-light">Start a conversation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

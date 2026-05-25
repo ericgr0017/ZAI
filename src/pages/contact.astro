@@ -1,0 +1,140 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import SectionHero from '@components/ui/SectionHero.astro';
+
+const routes = [
+  {
+    id: 'partnership',
+    eyebrow: 'For universities',
+    heading: 'Partner with us',
+    body: 'Tell us about your institution and what you want to launch. We will reply with whether the partnership makes sense and what a first cohort would look like.',
+    email: 'partnerships@zaiinstitute.ai',
+    formName: 'partnership-inquiry',
+    interest: 'universities',
+  },
+  {
+    id: 'training',
+    eyebrow: 'For organizations',
+    heading: 'Train your organization',
+    body: 'Tell us what the workforce needs and your timeline. We will reply with whether a partner university can build the program you need.',
+    email: 'training@zaiinstitute.ai',
+    formName: 'training-inquiry',
+    interest: 'enterprises',
+  },
+  {
+    id: 'research',
+    eyebrow: 'For research buyers',
+    heading: 'Commission research',
+    body: 'Tell us what you are trying to decide and what you have considered. We will reply on whether commissioned research is the right answer.',
+    email: 'research@zaiinstitute.ai',
+    formName: 'research-inquiry',
+    interest: 'research',
+  },
+];
+---
+
+<BaseLayout
+  title="Contact"
+  description="Three ways to start a conversation with ZAI Institute: partner with us as a university, train your organization, or commission research."
+>
+  <SectionHero
+    eyebrow="Contact"
+    title="Start a conversation."
+    lede="Three doors in. Pick the one that fits. The first conversation is one hour."
+  />
+
+  <section class="bg-paper text-ink">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-24">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12">
+        {
+          routes.map((r) => (
+            <article id={r.id} class="border-t-2 border-rule pt-6">
+              <div class="eyebrow eyebrow-on-light mb-4">{r.eyebrow}</div>
+              <h2 class="font-display text-2xl text-ink mb-3">{r.heading}</h2>
+              <p class="text-body text-ink/90 mb-5">{r.body}</p>
+              <p class="text-sm mb-6">
+                <a
+                  href={`mailto:${r.email}`}
+                  class="text-gold-deep border-b border-gold pb-0.5 hover:text-ink font-mono"
+                >
+                  {r.email}
+                </a>
+              </p>
+
+              <form
+                name={r.formName}
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                action="/thanks/"
+                class="space-y-4"
+              >
+                <input type="hidden" name="form-name" value={r.formName} />
+                <input type="hidden" name="interest" value={r.interest} />
+                <p class="hidden" aria-hidden="true">
+                  <label>Don't fill this out: <input name="bot-field" /></label>
+                </p>
+
+                <div>
+                  <label for={`${r.id}-name`} class="block text-xs font-mono uppercase tracking-wide-cap text-muted mb-1">Name</label>
+                  <input
+                    id={`${r.id}-name`}
+                    type="text"
+                    name="name"
+                    required
+                    autocomplete="name"
+                    class="w-full bg-white border border-light-border px-3 py-2 text-body text-ink focus:outline-none focus:border-gold"
+                  />
+                </div>
+
+                <div>
+                  <label for={`${r.id}-email`} class="block text-xs font-mono uppercase tracking-wide-cap text-muted mb-1">Work email</label>
+                  <input
+                    id={`${r.id}-email`}
+                    type="email"
+                    name="email"
+                    required
+                    autocomplete="email"
+                    class="w-full bg-white border border-light-border px-3 py-2 text-body text-ink focus:outline-none focus:border-gold"
+                  />
+                </div>
+
+                <div>
+                  <label for={`${r.id}-organization`} class="block text-xs font-mono uppercase tracking-wide-cap text-muted mb-1">Organization</label>
+                  <input
+                    id={`${r.id}-organization`}
+                    type="text"
+                    name="organization"
+                    required
+                    autocomplete="organization"
+                    class="w-full bg-white border border-light-border px-3 py-2 text-body text-ink focus:outline-none focus:border-gold"
+                  />
+                </div>
+
+                <div>
+                  <label for={`${r.id}-message`} class="block text-xs font-mono uppercase tracking-wide-cap text-muted mb-1">A few sentences on what you have in mind</label>
+                  <textarea
+                    id={`${r.id}-message`}
+                    name="message"
+                    rows="4"
+                    required
+                    class="w-full bg-white border border-light-border px-3 py-2 text-body text-ink focus:outline-none focus:border-gold resize-vertical"
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-full">Send</button>
+              </form>
+            </article>
+          ))
+        }
+      </div>
+
+      <hr class="rule-muted my-16" />
+
+      <div class="max-w-prose-wide">
+        <h2 class="eyebrow eyebrow-on-light mb-3">Phone</h2>
+        <a href="tel:+18883847020" class="font-mono text-xl text-ink hover:text-gold-deep">(888) 384-7020</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

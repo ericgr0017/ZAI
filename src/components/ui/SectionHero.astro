@@ -1,0 +1,18 @@
+---
+export interface Props {
+  eyebrow: string;
+  title: string;
+  lede?: string;
+}
+const { eyebrow, title, lede } = Astro.props;
+---
+
+<section class="bg-ink text-paper">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-28">
+    <div class="max-w-prose-wide">
+      <div class="eyebrow mb-6">{eyebrow}</div>
+      <h1 class="font-display text-h1 text-paper">{title}</h1>
+      {lede && <p class="mt-8 text-body-lg text-paper/85 max-w-prose-narrow">{lede}</p>}
+    </div>
+  </div>
+</section>
