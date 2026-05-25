@@ -1,0 +1,17 @@
+{
+  "url": "https://deploy-preview-1--exquisite-pony-4a10e3.netlify.app/thanks/",
+  "wordCount": 45,
+  "sentenceCount": 5,
+  "averageSentenceLength": 9,
+  "averageSyllablesPerWord": 1.33,
+  "fleschReadingEase": 84.9,
+  "fleschKincaidGrade": 3.7,
+  "passiveRatePercent": 0,
+  "longSentenceCount": 0,
+  "longSentences": [],
+  "flags": {
+    "sentenceLengthOver25": "OK",
+    "passiveOver15Percent": "OK",
+    "gradeOutsideTarget": "NOTE"
+  }
+}

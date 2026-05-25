@@ -7,18 +7,21 @@ import BaseLayout from '@layouts/BaseLayout.astro';
   description="ZAI Institute is where universities launch AI programs, where enterprises train their workforce, and where senior operators think clearly about what AI is changing in their industry."
 >
   <section class="bg-ink text-paper">
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-24 md:py-36">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-28">
       <div class="max-w-prose-wide">
         <div class="eyebrow mb-6">ZAI Institute</div>
         <h1 class="font-display text-h1 text-paper">
           The institution behind the institutions.
         </h1>
         <p class="mt-8 text-body-lg text-paper/85 max-w-prose-narrow">
-          ZAI Institute is where universities go to launch AI programs, where enterprises go to train
-          their workforce, and where senior operators go to think clearly about what AI is changing in
-          their industry. The three are one organization on purpose. The research informs the programs.
-          The network sharpens both.
+          Where universities launch AI programs, enterprises train their workforce, and senior
+          operators think clearly about what AI is changing in their industry.
         </p>
+        <div class="mt-10 flex flex-wrap gap-3">
+          <a href="/for-universities" class="btn btn-primary">Launch an AI program</a>
+          <a href="/for-organizations" class="btn btn-ghost-light">Train your workforce</a>
+          <a href="/research" class="btn btn-ghost-light">Commission research</a>
+        </div>
       </div>
     </div>
   </section>
@@ -72,7 +75,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
         <article>
           <div class="eyebrow eyebrow-on-light mb-3">03 &middot; Network</div>
           <h3 class="font-display text-2xl text-ink mb-3">
-            Eighteen, then fifty thousand.
+            An inner circle. A wider community.
           </h3>
           <p class="text-body text-ink/90">
             The Advisory Board is eighteen named operators from across the Fortune 500. They sit at
@@ -162,30 +165,45 @@ import BaseLayout from '@layouts/BaseLayout.astro';
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-        <article class="border-t-2 border-rule pt-5">
-          <div class="font-mono text-xs uppercase tracking-wide-cap text-muted mb-3">Report &middot; 2026</div>
-          <h3 class="font-display text-xl text-ink mb-3">AI readiness gap</h3>
-          <p class="text-body text-ink/90">
-            How Fortune 500 organizations are actually adopting AI, and where the gap lives between
-            executive intent and operator capability.
-          </p>
-        </article>
-        <article class="border-t-2 border-rule pt-5">
-          <div class="font-mono text-xs uppercase tracking-wide-cap text-muted mb-3">Report &middot; 2026</div>
-          <h3 class="font-display text-xl text-ink mb-3">AI skills gap</h3>
-          <p class="text-body text-ink/90">
-            What the workforce needs to learn next, surfaced from interviews with the people closest to
-            the work.
-          </p>
-        </article>
-        <article class="border-t-2 border-rule pt-5">
-          <div class="font-mono text-xs uppercase tracking-wide-cap text-muted mb-3">Forthcoming</div>
-          <h3 class="font-display text-xl text-ink mb-3">Agent readiness gap</h3>
-          <p class="text-body text-ink/90">
-            How enterprises are preparing for agentic AI, and the operational questions the field has
-            not yet answered.
-          </p>
-        </article>
+        <a href="/insights/ai-readiness-gap-2026-updated.html" class="block group">
+          <article class="border-t-2 border-rule pt-5 h-full">
+            <div class="font-mono text-xs uppercase tracking-wide-cap text-muted mb-3">Report &middot; 2026</div>
+            <h3 class="font-display text-xl text-ink mb-3 group-hover:text-gold-deep transition-colors">AI readiness gap</h3>
+            <p class="text-body text-ink/90">
+              How Fortune 500 organizations are actually adopting AI, and where the gap lives between
+              executive intent and operator capability.
+            </p>
+            <span class="inline-block mt-4 text-sm font-medium text-gold-deep border-b border-gold pb-0.5 group-hover:text-ink">
+              Read the report &rsaquo;
+            </span>
+          </article>
+        </a>
+        <a href="/insights/ai-skills-gap-2026.html" class="block group">
+          <article class="border-t-2 border-rule pt-5 h-full">
+            <div class="font-mono text-xs uppercase tracking-wide-cap text-muted mb-3">Report &middot; 2026</div>
+            <h3 class="font-display text-xl text-ink mb-3 group-hover:text-gold-deep transition-colors">AI skills gap</h3>
+            <p class="text-body text-ink/90">
+              What the workforce needs to learn next, surfaced from interviews with the people closest to
+              the work.
+            </p>
+            <span class="inline-block mt-4 text-sm font-medium text-gold-deep border-b border-gold pb-0.5 group-hover:text-ink">
+              Read the report &rsaquo;
+            </span>
+          </article>
+        </a>
+        <a href="/insights/agent-readiness-gap-2026.html" class="block group">
+          <article class="border-t-2 border-rule pt-5 h-full">
+            <div class="font-mono text-xs uppercase tracking-wide-cap text-muted mb-3">Report &middot; 2026</div>
+            <h3 class="font-display text-xl text-ink mb-3 group-hover:text-gold-deep transition-colors">Agent readiness gap</h3>
+            <p class="text-body text-ink/90">
+              Why enterprises are deploying AI agents faster than they can govern them. The
+              deployment curve is now ahead of the oversight curve.
+            </p>
+            <span class="inline-block mt-4 text-sm font-medium text-gold-deep border-b border-gold pb-0.5 group-hover:text-ink">
+              Read the report &rsaquo;
+            </span>
+          </article>
+        </a>
       </div>
     </div>
   </section>

@@ -1,0 +1,20 @@
+{
+  "url": "https://deploy-preview-1--exquisite-pony-4a10e3.netlify.app/contact/",
+  "wordCount": 175,
+  "sentenceCount": 11,
+  "averageSentenceLength": 15.91,
+  "averageSyllablesPerWord": 1.55,
+  "fleschReadingEase": 59.7,
+  "fleschKincaidGrade": 8.9,
+  "passiveRatePercent": 0,
+  "longSentenceCount": 2,
+  "longSentences": [
+    "partnerships@zaiinstitute.ai Don't fill this out: Name Work email Organization A few sentences on what you have in mind Send For organizations Train your organization Tell us what the workforce needs ",
+    "training@zaiinstitute.ai Don't fill this out: Name Work email Organization A few sentences on what you have in mind Send For research buyers Commission research Tell us what you are trying to decide a"
+  ],
+  "flags": {
+    "sentenceLengthOver25": "OK",
+    "passiveOver15Percent": "OK",
+    "gradeOutsideTarget": "NOTE"
+  }
+}
