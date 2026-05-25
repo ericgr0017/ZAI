@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The 2026 ZAI AI Governance & Accountability Survey. Ten questions for senior leaders on how organizations oversee, govern, and answer for the AI agents they deploy.">
+<title>AI Governance &amp; Accountability Survey 2026 | ZAI Institute</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --paper: #faf8f4;
+    --paper-2: #f1ede4;
+    --rule: #d8d2c4;
+    --gold: #8a6d3b;
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+  /* Nav */
+  nav { border-bottom: 1px solid var(--rule); background: var(--paper); }
+  .nav-inner {
+    max-width: 1080px; margin: 0 auto; padding: 22px 24px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px;
+  }
+  .brand {
+    font-family: var(--sans); font-weight: 700; letter-spacing: .18em;
+    font-size: 14px; text-decoration: none; color: var(--ink);
+  }
+  .nav-links { display: flex; gap: 22px; flex-wrap: wrap; }
+  .nav-links a {
+    font-family: var(--sans); font-size: 13px; letter-spacing: .04em;
+    text-decoration: none; color: var(--ink-soft);
+  }
+  .nav-links a:hover { color: var(--ink); }
+
+  /* Header */
+  header { padding: 60px 0 30px; }
+  .eyebrow {
+    font-family: var(--sans); font-size: 12px; letter-spacing: .22em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 18px;
+  }
+  h1 { font-size: 40px; line-height: 1.14; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 20px; }
+  h1 em { font-style: italic; color: var(--gold); }
+  .dek { font-size: 18px; color: var(--ink-soft); line-height: 1.55; }
+  .meta-line {
+    font-family: var(--sans); font-size: 12px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--ink-soft); margin-top: 26px;
+    border-top: 1px solid var(--rule); padding-top: 22px;
+  }
+
+  /* Form */
+  form { padding: 14px 0 60px; }
+  .q { padding: 30px 0; border-bottom: 1px solid var(--rule); }
+  .q-num {
+    font-family: var(--sans); font-size: 12px; letter-spacing: .12em;
+    text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 8px;
+  }
+  .q-label { font-size: 21px; font-weight: 700; line-height: 1.3; margin-bottom: 4px; }
+  .q-hint { font-family: var(--sans); font-size: 13px; color: var(--ink-soft); margin-bottom: 18px; }
+  .opts { display: flex; flex-direction: column; gap: 2px; }
+  .opt {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 13px 16px; border: 1px solid var(--rule); background: #fff;
+    cursor: pointer; font-family: var(--sans); font-size: 15px; transition: border-color .15s, background .15s;
+  }
+  .opt:hover { border-color: var(--gold); background: var(--paper-2); }
+  .opt input { margin-top: 3px; accent-color: var(--ink); flex: 0 0 auto; }
+  .opt span { line-height: 1.4; }
+  textarea {
+    width: 100%; min-height: 130px; padding: 14px 16px; border: 1px solid var(--rule);
+    background: #fff; font-family: var(--serif); font-size: 16px; line-height: 1.5; resize: vertical;
+  }
+  textarea:focus, .opt:focus-within { outline: none; border-color: var(--gold); }
+
+  .submit-row { padding: 36px 0 0; }
+  button {
+    background: var(--ink); color: var(--paper); border: none;
+    font-family: var(--sans); font-size: 15px; letter-spacing: .06em;
+    padding: 16px 42px; cursor: pointer;
+  }
+  button:hover { background: var(--gold); }
+  .privacy { font-family: var(--sans); font-size: 13px; color: var(--ink-soft); margin-top: 18px; line-height: 1.5; }
+
+  /* Thank-you state */
+  #thanks { display: none; padding: 80px 0; text-align: center; }
+  #thanks h2 { font-size: 32px; margin-bottom: 14px; }
+  #thanks h2 em { font-style: italic; color: var(--gold); }
+  #thanks p { font-size: 18px; color: var(--ink-soft); max-width: 480px; margin: 0 auto 24px; }
+  #thanks a {
+    display: inline-block; font-family: var(--sans); font-size: 14px; letter-spacing: .06em;
+    background: var(--ink); color: var(--paper); padding: 14px 34px; text-decoration: none;
+  }
+
+  footer { border-top: 1px solid var(--rule); padding: 30px 0; }
+  .foot-inner {
+    max-width: 1080px; margin: 0 auto; padding: 0 24px;
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px;
+    font-family: var(--sans); font-size: 13px; color: var(--ink-soft);
+  }
+  .foot-inner a { color: var(--ink-soft); text-decoration: none; margin-left: 18px; }
+
+  @media (max-width: 640px) {
+    h1 { font-size: 30px; }
+    .q-label { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="/">ZAI INSTITUTE</a>
+    <div class="nav-links">
+      <a href="/#about">About</a>
+      <a href="/platform">Platform</a>
+      <a href="/insights/">Insights</a>
+      <a href="/for-universities">For Universities</a>
+      <a href="/for-organizations">For Organizations</a>
+      <a href="/contact">Partner With Us</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">ZAI Institute Research Survey</div>
+    <h1>The AI Governance &amp; Accountability <em>Survey</em></h1>
+    <p class="dek">Leaders are deploying AI agents faster than they are governing them. This survey asks how your organization oversees, controls, and answers for the agents it has put to work. Ten questions, about four minutes. Findings will be published anonymously on the ZAI Insights page.</p>
+    <div class="meta-line">Senior Leaders &nbsp;&#9674;&nbsp; 10 Questions &nbsp;&#9674;&nbsp; Anonymous &nbsp;&#9674;&nbsp; May 2026</div>
+  </header>
+
+  <form id="zaiform" action="https://formspree.io/f/mlgvpdbd" method="POST">
+
+    <input type="hidden" name="_subject" value="ZAI Survey Response: Governance & Accountability (May 2026)">
+
+    <!-- Q1 -->
+    <div class="q">
+      <div class="q-num">Question 1</div>
+      <div class="q-label">Which best describes your role?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q1_role" value="c_suite" required><span>C-Suite (CEO, COO, CFO, CIO, CTO, etc.)</span></label>
+        <label class="opt"><input type="radio" name="q1_role" value="evp_svp"><span>EVP / SVP</span></label>
+        <label class="opt"><input type="radio" name="q1_role" value="vp"><span>Vice President</span></label>
+        <label class="opt"><input type="radio" name="q1_role" value="director"><span>Director</span></label>
+        <label class="opt"><input type="radio" name="q1_role" value="manager"><span>Manager</span></label>
+        <label class="opt"><input type="radio" name="q1_role" value="other"><span>Other</span></label>
+      </div>
+    </div>
+
+    <!-- Q2 -->
+    <div class="q">
+      <div class="q-num">Question 2</div>
+      <div class="q-label">Which industry best describes your organization?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q2_industry" value="tech" required><span>Technology &amp; software</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="financial"><span>Financial services</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="healthcare"><span>Healthcare &amp; life sciences</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="prof_services"><span>Professional services &amp; consulting</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="manufacturing"><span>Manufacturing &amp; industrial</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="consumer"><span>Retail &amp; consumer</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="govt_nonprofit"><span>Government &amp; nonprofit</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="other"><span>Other</span></label>
+      </div>
+    </div>
+
+    <!-- Q3 -->
+    <div class="q">
+      <div class="q-num">Question 3</div>
+      <div class="q-label">How mature is your organization's formal policy for governing AI agents?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q3_policy_maturity" value="formal_policy" required><span>We have a formal, documented oversight policy in force</span></label>
+        <label class="opt"><input type="radio" name="q3_policy_maturity" value="informal"><span>We govern agents informally, with no documented policy</span></label>
+        <label class="opt"><input type="radio" name="q3_policy_maturity" value="in_progress"><span>A policy is in progress but not yet in force</span></label>
+        <label class="opt"><input type="radio" name="q3_policy_maturity" value="not_addressed"><span>We have not yet addressed this</span></label>
+        <label class="opt"><input type="radio" name="q3_policy_maturity" value="na"><span>Not applicable / we do not use agents</span></label>
+      </div>
+    </div>
+
+    <!-- Q4 -->
+    <div class="q">
+      <div class="q-num">Question 4</div>
+      <div class="q-label">When an AI agent makes a decision that turns out to be wrong, who is accountable?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q4_accountable_owner" value="reviewer" required><span>A designated human reviewer</span></label>
+        <label class="opt"><input type="radio" name="q4_accountable_owner" value="dept"><span>The department that deployed it</span></label>
+        <label class="opt"><input type="radio" name="q4_accountable_owner" value="deployer"><span>The individual who deployed it</span></label>
+        <label class="opt"><input type="radio" name="q4_accountable_owner" value="vendor"><span>The vendor or model provider</span></label>
+        <label class="opt"><input type="radio" name="q4_accountable_owner" value="undecided"><span>Undecided / not yet defined</span></label>
+        <label class="opt"><input type="radio" name="q4_accountable_owner" value="na"><span>Not applicable</span></label>
+      </div>
+    </div>
+
+    <!-- Q5 -->
+    <div class="q">
+      <div class="q-num">Question 5</div>
+      <div class="q-label">Which governance controls are still missing or incomplete in your organization?</div>
+      <div class="q-hint">Select all that apply.</div>
+      <div class="opts">
+        <label class="opt"><input type="checkbox" name="q5_governance_gaps" value="audit_trails"><span>Audit trails and logging of agent actions</span></label>
+        <label class="opt"><input type="checkbox" name="q5_governance_gaps" value="human_in_loop"><span>Defined human-in-the-loop checkpoints</span></label>
+        <label class="opt"><input type="checkbox" name="q5_governance_gaps" value="escalation"><span>Escalation and override procedures</span></label>
+        <label class="opt"><input type="checkbox" name="q5_governance_gaps" value="bias_testing"><span>Bias, accuracy, and quality testing</span></label>
+        <label class="opt"><input type="checkbox" name="q5_governance_gaps" value="access_controls"><span>Access controls and permission limits</span></label>
+        <label class="opt"><input type="checkbox" name="q5_governance_gaps" value="incident_response"><span>Incident response for agent failures</span></label>
+        <label class="opt"><input type="checkbox" name="q5_governance_gaps" value="vendor_terms"><span>Vendor accountability terms and contracts</span></label>
+        <label class="opt"><input type="checkbox" name="q5_governance_gaps" value="data_privacy"><span>Data privacy and handling safeguards</span></label>
+      </div>
+    </div>
+
+    <!-- Q6 -->
+    <div class="q">
+      <div class="q-num">Question 6</div>
+      <div class="q-label">How often are your deployed AI agents reviewed for performance and risk?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q6_review_frequency" value="continuous" required><span>Continuously, with automated monitoring</span></label>
+        <label class="opt"><input type="radio" name="q6_review_frequency" value="weekly"><span>Weekly</span></label>
+        <label class="opt"><input type="radio" name="q6_review_frequency" value="monthly"><span>Monthly</span></label>
+        <label class="opt"><input type="radio" name="q6_review_frequency" value="quarterly"><span>Quarterly or less often</span></label>
+        <label class="opt"><input type="radio" name="q6_review_frequency" value="ad_hoc"><span>Only when something goes wrong</span></label>
+        <label class="opt"><input type="radio" name="q6_review_frequency" value="none"><span>Not reviewed on any schedule</span></label>
+      </div>
+    </div>
+
+    <!-- Q7 -->
+    <div class="q">
+      <div class="q-num">Question 7</div>
+      <div class="q-label">What is your single greatest governance concern about AI agents?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q7_biggest_risk" value="security" required><span>Security and data privacy</span></label>
+        <label class="opt"><input type="radio" name="q7_biggest_risk" value="hallucination"><span>Accuracy, errors, and hallucination</span></label>
+        <label class="opt"><input type="radio" name="q7_biggest_risk" value="compliance"><span>Regulatory and compliance exposure</span></label>
+        <label class="opt"><input type="radio" name="q7_biggest_risk" value="reputational"><span>Reputational or brand damage</span></label>
+        <label class="opt"><input type="radio" name="q7_biggest_risk" value="bias"><span>Bias and fairness</span></label>
+        <label class="opt"><input type="radio" name="q7_biggest_risk" value="autonomy"><span>Agents acting beyond intended scope</span></label>
+      </div>
+    </div>
+
+    <!-- Q8 -->
+    <div class="q">
+      <div class="q-num">Question 8</div>
+      <div class="q-label">At what level does AI agent oversight currently sit in your organization?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q8_board_visibility" value="board" required><span>Board-level visibility and reporting</span></label>
+        <label class="opt"><input type="radio" name="q8_board_visibility" value="exec"><span>Executive team, but not the board</span></label>
+        <label class="opt"><input type="radio" name="q8_board_visibility" value="dept"><span>Department or team level only</span></label>
+        <label class="opt"><input type="radio" name="q8_board_visibility" value="none"><span>No formal oversight at any level</span></label>
+      </div>
+    </div>
+
+    <!-- Q9 -->
+    <div class="q">
+      <div class="q-num">Question 9</div>
+      <div class="q-label">How confident are you that your current controls would catch a serious agent failure before it caused harm?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q9_confidence" value="very" required><span>Very confident</span></label>
+        <label class="opt"><input type="radio" name="q9_confidence" value="somewhat"><span>Somewhat confident</span></label>
+        <label class="opt"><input type="radio" name="q9_confidence" value="not_very"><span>Not very confident</span></label>
+        <label class="opt"><input type="radio" name="q9_confidence" value="not_at_all"><span>Not at all confident</span></label>
+      </div>
+    </div>
+
+    <!-- Q10 -->
+    <div class="q">
+      <div class="q-num">Question 10</div>
+      <div class="q-label">What should business leaders understand about governing AI agents that this survey has not asked?</div>
+      <div class="q-hint">Optional. Your words may be quoted anonymously in the published findings.</div>
+      <textarea name="q10_open_response" placeholder="Share your perspective..."></textarea>
+    </div>
+
+    <div class="submit-row">
+      <button type="submit">Submit Response</button>
+      <p class="privacy">Your responses are anonymous and will be aggregated for research. ZAI Institute will never attribute individual answers without separate written permission.</p>
+    </div>
+
+  </form>
+
+  <!-- Thank-you (shown after AJAX submit) -->
+  <div id="thanks">
+    <h2>Thank you for your <em>perspective</em>.</h2>
+    <p>Your response has been recorded. The aggregated findings from this survey will be published on the ZAI Insights page.</p>
+    <a href="/insights/">Read the Latest Insights</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div>ZAI Institute &middot; The Institution Behind the Institutions</div>
+    <div>
+      <a href="/#about">About</a>
+      <a href="/platform">Platform</a>
+      <a href="/insights/">Insights</a>
+      <a href="/contact">Partner With Us</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // AJAX submit so the respondent stays on a branded thank-you state instead of Formspree's page.
+  var form = document.getElementById('zaiform');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (res) {
+      if (res.ok) {
+        form.style.display = 'none';
+        document.querySelector('header').style.display = 'none';
+        document.getElementById('thanks').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Submit Response';
+        alert('Something went wrong. Please try again.');
+      }
+    }).catch(function () {
+      btn.disabled = false;
+      btn.textContent = 'Submit Response';
+      alert('Something went wrong. Please try again.');
+    });
+  });
+</script>
+
+</body>
+</html>
