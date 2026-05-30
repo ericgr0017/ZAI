@@ -40,7 +40,7 @@ const routes = [
   <SectionHero
     eyebrow="Contact"
     title="Start a conversation."
-    lede="Three doors in. Pick the one that fits. The first conversation is one hour."
+    lede="Three doors in. Pick the one that fits. Start with a 20-minute fit call. If there is a reason to go deeper, we will map the next 30 days."
   />
 
   <section class="bg-paper text-ink">
@@ -71,8 +71,8 @@ const routes = [
               >
                 <input type="hidden" name="form-name" value={r.formName} />
                 <input type="hidden" name="interest" value={r.interest} />
-                <p class="hidden" aria-hidden="true">
-                  <label>Don't fill this out: <input name="bot-field" /></label>
+                <p class="hidden" aria-hidden="true" style="display:none">
+                  <label>Don't fill this out: <input name="bot-field" tabindex="-1" autocomplete="off" /></label>
                 </p>
 
                 <div>
