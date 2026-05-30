@@ -58,6 +58,20 @@
   status = 301
   force = true
 
+# Advisory board consolidated into the Leadership page; its content now lives
+# there as the named-roster centerpiece. Old URLs 301 to /leadership/.
+[[redirects]]
+  from = "/advisory-board"
+  to = "/leadership/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/advisory-board/"
+  to = "/leadership/"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]

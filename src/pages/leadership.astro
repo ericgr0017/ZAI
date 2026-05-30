@@ -1,5 +1,8 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import advisors from '../data/advisors.json';
+
+const { chair, members } = advisors;
 ---
 
 <BaseLayout
@@ -56,61 +59,47 @@ import BaseLayout from '@layouts/BaseLayout.astro';
     </div>
   </div>
 
-  <!-- CARD GRID -->
+  <!-- ADVISORY BOARD ROSTER -->
   <section class="grid-section">
     <div class="grid-intro">
-      <p class="section-eyebrow">Our Team</p>
-      <h2 class="section-heading">The people who <em>shape our programs.</em></h2>
-      <p>Every ZAI program is guided by executives, academics, and practitioners who bring real-world expertise from the organizations and institutions that define their industries.</p>
+      <p class="section-eyebrow">The Board</p>
+      <h2 class="section-heading">The executives and academics <em>who advise the institute.</em></h2>
+      <p>A board of named senior operators and academics advises the institute itself. They sit above the advisory boards that run across our university partner programs, guiding research direction, curriculum standards, capstone evaluation, and the connection between academic work and the employers who hire graduates.</p>
     </div>
-    <div class="card-grid">
-      <div class="card" data-accent="slate" onclick="this.classList.toggle('expanded')">
-        <div class="card-header">
-          <div class="card-avatar">EG</div>
-          <div>
-            <div class="card-name">Eric Greenberg</div>
-            <div class="card-org">ZAI Institute</div>
-          </div>
-        </div>
-        <div class="card-title">Founder &amp; CEO, ZAI Institute</div>
 
-        <div class="card-chevron">&#9662;</div>
-        <div class="card-bio">Eric built ZAI Institute on a decade of experience at the intersection of universities and industry. As Managing Director at Rutgers Business School, he created Johnson &amp; Johnson&rsquo;s flagship Digital Marketing program, deployed globally and the origin proof-of-concept for the ZAI model. Author of six titles, including <em>Strategic AI</em> and <em>Strategic Digital Marketing</em>, the latter published by McGraw-Hill. Wharton School, University of Pennsylvania, NYU School of Law.</div>
+    <div class="board-works">
+      <p>The Advisory Board meets quarterly and contributes throughout the year through curriculum review, capstone evaluations, panel participation, and informal peer briefings with cohort participants.</p>
+      <p>The Board does not approve research findings or program syllabi. It informs them. What the institute publishes is aggregated and de-identified. No finding is attributed to a member or their company by name.</p>
+    </div>
+
+    <div class="chair-block">
+      <p class="roster-eyebrow">Chair</p>
+      <div class="chair-card">
+        <div class="roster-company">{chair.company}</div>
+        <div class="chair-name">{chair.name}</div>
+        <div class="roster-title">{chair.title}</div>
       </div>
+    </div>
+
+    <div class="members-block">
+      <p class="roster-eyebrow">Members</p>
+      <div class="roster-grid">
+        {
+          members.map((m) => (
+            <div class="roster-card">
+              <div class="roster-company">{m.company}</div>
+              <div class="roster-name">{m.name}</div>
+              <div class="roster-title">{m.title}</div>
+            </div>
+          ))
+        }
       </div>
+    </div>
 
-      <!-- Advisory Network Description -->
-      <div style="margin-top: 48px; padding: 56px 48px; background: #fff; border: 1px solid rgba(10,10,15,0.06);">
-        <p style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold-accessible); margin-bottom: 20px;">Advisory Network</p>
-        <h3 style="font-family: var(--serif); font-size: 30px; font-weight: 600; color: var(--ink); margin-bottom: 16px; line-height: 1.25;">The executives and academics <em style="font-style:italic; color: var(--slate);">who advise the institute.</em></h3>
-        <p style="font-size: 16px; line-height: 1.8; color: var(--muted); max-width: 640px; margin-bottom: 40px;">A board of named senior operators and academics advises the institute itself. They sit above the advisory boards that run across our university partner programs, guiding research direction, curriculum standards, capstone evaluation, and the connection between academic work and the employers who hire graduates.</p>
-
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 40px;">
-          <div>
-            <p style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--slate); margin-bottom: 14px;">Industries Represented</p>
-            <p style="font-size: 14px; line-height: 1.8; color: var(--muted);">Technology &amp; Cloud Computing, Healthcare &amp; Life Sciences, Financial Services &amp; Banking, Management Consulting, Consumer Products, Media &amp; Entertainment, Supply Chain &amp; Operations, Data Science &amp; Analytics</p>
-          </div>
-          <div>
-            <p style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--teal); margin-bottom: 14px;">Roles &amp; Seniority</p>
-            <p style="font-size: 14px; line-height: 1.8; color: var(--muted);">C-Suite Executives, SVPs &amp; VPs of AI Strategy, Global Heads of Product &amp; Platform, Chief Quality &amp; Medical Officers, Directors of Research &amp; Innovation, University Department Chairs &amp; Tenured Faculty</p>
-          </div>
-          <div>
-            <p style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--warm); margin-bottom: 14px;">Organizations</p>
-            <p style="font-size: 14px; line-height: 1.8; color: var(--muted);">Microsoft, Google, Meta, Adobe, PwC, EY, Bloomberg, Johnson &amp; Johnson, Kaiser Permanente, Mayo Clinic, JPMorgan Chase, Bank of America, Verizon, ServiceNow, Coca-Cola, Est&eacute;e Lauder, Experian, and more</p>
-          </div>
-        </div>
-
-        <div style="padding-top: 32px; border-top: 1px solid rgba(10,10,15,0.06);">
-          <p style="font-family: var(--serif); font-size: 20px; font-style: italic; color: var(--slate); line-height: 1.5; max-width: 560px;">Advisors serve as capstone evaluators, curriculum reviewers, executive mentors, and the bridge between academic programs and the employers who hire their graduates.</p>
-        </div>
-      </div>
-
-      <div style="margin-top: 32px; padding: 36px 48px; background: rgba(44,62,90,0.04); border: 1px solid rgba(10,10,15,0.04); text-align: center;">
-        <p style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold-accessible); margin-bottom: 12px;">Interested in joining the advisory network?</p>
-        <p style="font-size: 15px; color: var(--muted); margin-bottom: 20px;">We&rsquo;re selectively expanding our advisory board with senior executives who want to shape AI education at the university level.</p>
-        <a href="/contact/" style="font-family: var(--sans); font-size: 13px; font-weight: 600; color: var(--gold-accessible); text-decoration: none; letter-spacing: 0.02em;">Start a conversation &rarr;</a>
-      </div>
-
+    <div class="join-board">
+      <p class="section-eyebrow">Join the board</p>
+      <p class="join-board-lede">Join the executives helping define what AI education should measure, teach, and prove. Benchmark with peers, shape the research, and see what leaders are actually doing with AI.</p>
+      <a href="/contact/" class="btn-gold">Join our research network</a>
     </div>
   </section>
 
@@ -200,9 +189,6 @@ import BaseLayout from '@layouts/BaseLayout.astro';
     </div>
     <div class="network-band-inner">
       <p class="network-band-note">Advisory board members across 60+ university partner programs</p>
-      <div class="network-band-cta">
-        <a href="/advisory-board/">Explore the full network &rarr;</a>
-      </div>
     </div>
   </section>
 
@@ -381,7 +367,7 @@ import BaseLayout from '@layouts/BaseLayout.astro';
   max-width: 1280px; margin: -50px auto 0; padding: 0 40px;
 }
 .hero-stats-inner {
-  display: grid; grid-template-columns: repeat(4, 1fr);
+  display: grid; grid-template-columns: repeat(3, 1fr);
   background: rgba(27, 42, 64, 0.95);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(184,150,46,0.2);
@@ -418,6 +404,59 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 }
 .grid-intro p {
   font-size: 16px; line-height: 1.8; color: var(--muted); max-width: 600px;
+}
+
+/* Board roster */
+.board-works {
+  max-width: 680px; margin-bottom: 56px;
+}
+.board-works p {
+  font-size: 16px; line-height: 1.8; color: var(--muted); margin-bottom: 16px;
+}
+.board-works p:last-child { margin-bottom: 0; }
+.roster-eyebrow {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--gold-accessible); margin-bottom: 20px;
+}
+.chair-block { margin-bottom: 56px; }
+.chair-card {
+  background: #fff; border: 1px solid rgba(10,10,15,0.06);
+  border-top: 3px solid var(--slate);
+  padding: 32px 28px; max-width: 680px;
+}
+.chair-name {
+  font-family: var(--serif); font-size: 30px; font-weight: 600;
+  color: var(--ink); line-height: 1.2; margin: 6px 0 8px;
+}
+.members-block { margin-bottom: 64px; }
+.roster-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.roster-card {
+  background: #fff; border: 1px solid rgba(10,10,15,0.06);
+  border-top: 3px solid var(--slate);
+  padding: 28px 24px;
+}
+.roster-company {
+  font-family: var(--mono); font-size: 10px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--slate);
+}
+.roster-name {
+  font-family: var(--serif); font-size: 22px; font-weight: 600;
+  color: var(--ink); line-height: 1.2; margin: 6px 0 6px;
+}
+.roster-title {
+  font-size: 14px; line-height: 1.5; color: var(--muted);
+}
+.join-board {
+  background: rgba(44,62,90,0.04); border: 1px solid rgba(10,10,15,0.04);
+  padding: 48px; text-align: center;
+}
+.join-board-lede {
+  font-family: var(--serif); font-size: 22px; line-height: 1.5;
+  color: var(--slate); max-width: 640px; margin: 0 auto 28px;
 }
 .card-grid {
   display: grid;
