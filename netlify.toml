@@ -6,12 +6,19 @@
   NODE_VERSION = "20"
 
 # 301 redirects: legacy recruiting URLs land on the new pages that replaced them.
-# Other legacy URLs (nexus.html, summit.html, articles, /insights/*.html) stay
-# at their original paths via /public/ passthrough — no redirect needed.
+# The old standalone pages (leadership, nexus, platform, summit, legacy index)
+# have been migrated onto the shared Astro layout; their .html URLs 301 to the
+# new routes so existing links and search rankings survive.
 
 [[redirects]]
   from = "/for-universities.html"
   to = "/for-universities/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/leadership.html"
+  to = "/leadership/"
   status = 301
   force = true
 
@@ -24,6 +31,30 @@
 [[redirects]]
   from = "/contact.html"
   to = "/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/platform.html"
+  to = "/platform/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/nexus.html"
+  to = "/nexus/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/summit.html"
+  to = "/summit/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/legacy-index.html"
+  to = "/"
   status = 301
   force = true
 
