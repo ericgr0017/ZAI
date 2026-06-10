@@ -72,6 +72,17 @@
   status = 301
   force = true
 
+# Advisor directory: served from a separate Netlify site (zai-advisor-directory)
+# but surfaced here under zaiinstitute.ai/advisors/<school>/. status 200 = proxy
+# (the URL stays on zaiinstitute.ai). :splat strips the /advisors prefix to match
+# that site's root-level output, so /advisors/ollu/ -> .../ollu/ and the
+# /advisors/_astro/* assets resolve through the same rule.
+[[redirects]]
+  from = "/advisors/*"
+  to = "https://zai-advisory-directory.netlify.app/:splat"
+  status = 200
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
