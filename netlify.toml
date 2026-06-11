@@ -72,6 +72,30 @@
   status = 301
   force = true
 
+# The master index (the page that LISTS every directory) is internal. The proxy
+# below would serve it as a cacheable 200 on the public domain, bypassing the
+# origin's password gate. So intercept the bare index FIRST and 302 it to the
+# password-protected origin, where it prompts for credentials. These exact-match
+# rules sit above the /advisors/* catch-all (first match wins); individual
+# /advisors/<slug>/ pages fall through to the proxy and stay public.
+[[redirects]]
+  from = "/advisors"
+  to = "https://zai-advisory-directory.netlify.app/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/advisors/"
+  to = "https://zai-advisory-directory.netlify.app/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/advisors/index.html"
+  to = "https://zai-advisory-directory.netlify.app/"
+  status = 302
+  force = true
+
 # Advisor directory: served from a separate Netlify site (zai-advisor-directory)
 # but surfaced here under zaiinstitute.ai/advisors/<school>/. status 200 = proxy
 # (the URL stays on zaiinstitute.ai). :splat strips the /advisors prefix to match
