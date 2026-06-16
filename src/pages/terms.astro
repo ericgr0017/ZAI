@@ -1,0 +1,42 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import SectionHero from '@components/ui/SectionHero.astro';
+
+const updated = 'June 15, 2026';
+const sections = [
+  { h: '1. What you get', p: 'Your membership grants one named individual access to the ZAI Operator Intelligence library — the monthly Executive Intelligence Report, operator briefs, and Pulse Reports — for the duration of your paid term. Memberships are personal and may not be shared.' },
+  { h: '2. Billing and renewal', p: 'Membership is billed in advance on a recurring basis (monthly or annual, as selected) and auto-renews until cancelled. Founding members keep their founding rate for as long as their membership remains continuous.' },
+  { h: '3. Cancellation', p: 'You may cancel at any time. Access continues through the end of your current paid period; after that, billing stops and access ends.' },
+  { h: '4. Refunds', p: 'New members may request a full refund within 14 days of their first purchase. Renewals and partial periods are non-refundable.' },
+  { h: '5. Permitted use', p: 'Membership is for your own and your organization’s internal use only. You may not redistribute, resell, republish, post publicly, share login credentials, or scrape the content. Brief, attributed quotation for internal decision-making is permitted.' },
+  { h: '6. Intellectual property', p: 'All reports, findings, and data remain the property of ZAI Institute. Membership grants a limited, non-transferable license to access them; it does not transfer ownership.' },
+  { h: '7. De-identification and confidentiality', p: 'Research is de-identified and conducted under Chatham House norms. You agree not to attempt to identify any participant, organization, or source, and to treat gated content as confidential.' },
+  { h: '8. Informational only', p: 'The reports are intelligence provided for informational purposes. They are not legal, financial, investment, or professional advice, and ZAI Institute makes no guarantee of any outcome. Content is provided “as is.”' },
+  { h: '9. Privacy', p: 'Your information is handled in accordance with the ZAI Privacy Policy.' },
+  { h: '10. Suspension', p: 'ZAI Institute may suspend or terminate access for breach of these terms, including redistribution of content, without refund.' },
+  { h: '11. Changes', p: 'ZAI Institute may update these terms or future pricing with reasonable notice. Your founding rate will be honored while your membership remains continuous.' },
+  { h: '12. Governing law', p: 'These terms are governed by the laws of the State of Florida, USA.' },
+];
+---
+
+<BaseLayout title="Membership Terms" description="Terms governing ZAI Operator Intelligence membership.">
+  <SectionHero
+    eyebrow="Legal"
+    title="Membership Terms"
+    lede="The terms governing your ZAI Operator Intelligence membership."
+  />
+  <section class="bg-paper text-ink">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-20">
+      <div class="max-w-prose-wide space-y-8 text-body text-ink/90">
+        <p class="font-mono text-xs uppercase tracking-wide-cap text-muted">Last updated: {updated}</p>
+        {sections.map((s) => (
+          <div>
+            <h2 class="font-display text-xl text-ink mb-2">{s.h}</h2>
+            <p>{s.p}</p>
+          </div>
+        ))}
+        <p class="text-sm text-muted">Questions: <a class="text-gold-deep border-b border-gold" href="mailto:egreenberg@zaiinstitute.ai">egreenberg@zaiinstitute.ai</a></p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

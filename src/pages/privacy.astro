@@ -1,0 +1,42 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import SectionHero from '@components/ui/SectionHero.astro';
+
+const updated = 'June 15, 2026';
+const sections = [
+  { h: '1. Scope', p: 'This policy explains how ZAI Institute collects, uses, and protects information in connection with the ZAI Operator Intelligence platform and website.' },
+  { h: '2. Information we collect', p: 'Account information you provide (email address and, optionally, your name) to sign in and manage your membership. Payment details are collected and processed by our payment provider; we do not store card numbers. We also collect limited technical and usage data needed to operate the service.' },
+  { h: '3. How we use it', p: 'To provide and secure the service, authenticate sign-in, deliver the reports you are entitled to, process payments, and communicate with you about your membership. We do not sell your personal information.' },
+  { h: '4. Cookies', p: 'We use a single sign-in session cookie to keep you logged in. We do not use advertising or third-party tracking cookies.' },
+  { h: '5. Service providers', p: 'We rely on a small number of trusted processors to run the service: hosting and database/authentication infrastructure, our payment processor, and email delivery for sign-in links. These providers process data only to deliver the service on our behalf.' },
+  { h: '6. Research data and de-identification', p: 'Our research draws on advisory boards, interviews, and surveys conducted under consent and Chatham House norms. Findings are de-identified before publication — no participant, organization, or source is named. Research participation data is never sold and is used only to produce de-identified intelligence.' },
+  { h: '7. Data retention', p: 'We keep account information for as long as your membership is active and as needed for legal, accounting, and security purposes, then delete or anonymize it.' },
+  { h: '8. Your rights', p: 'You may request access to, correction of, or deletion of your personal information by emailing us. We will respond within a reasonable time.' },
+  { h: '9. Security', p: 'We use industry-standard safeguards to protect your information. No method of transmission or storage is perfectly secure, but we work to protect your data and limit access to it.' },
+  { h: '10. Children', p: 'The service is intended for business professionals and is not directed to anyone under 18.' },
+  { h: '11. Changes', p: 'We may update this policy from time to time. Material changes will be posted on this page with a new “last updated” date.' },
+  { h: '12. Contact', p: 'Questions or requests: egreenberg@zaiinstitute.ai. This policy is governed by the laws of the State of Florida, USA.' },
+];
+---
+
+<BaseLayout title="Privacy Policy" description="How ZAI Institute handles your information.">
+  <SectionHero
+    eyebrow="Legal"
+    title="Privacy Policy"
+    lede="How ZAI Institute collects, uses, and protects your information."
+  />
+  <section class="bg-paper text-ink">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-20">
+      <div class="max-w-prose-wide space-y-8 text-body text-ink/90">
+        <p class="font-mono text-xs uppercase tracking-wide-cap text-muted">Last updated: {updated}</p>
+        {sections.map((s) => (
+          <div>
+            <h2 class="font-display text-xl text-ink mb-2">{s.h}</h2>
+            <p>{s.p}</p>
+          </div>
+        ))}
+        <p class="text-sm text-muted">Contact: <a class="text-gold-deep border-b border-gold" href="mailto:egreenberg@zaiinstitute.ai">egreenberg@zaiinstitute.ai</a></p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
