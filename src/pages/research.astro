@@ -5,16 +5,34 @@ import SectionHero from '@components/ui/SectionHero.astro';
 
 <BaseLayout
   title="Research"
-  description="ZAI Institute conducts structured qualitative research with senior operators on enterprise AI adoption. Custom engagements, subscription intelligence, and published reports."
+  description="ZAI Institute runs in-depth interviews with the executives making enterprise AI decisions at the Fortune 500 and the platform companies that serve them. Custom engagements, subscription intelligence, and published reports."
 >
   <SectionHero
     eyebrow="Research"
     title="Intelligence from the people doing the work."
-    lede="We interview senior operators at the Fortune 500 and the AI platform companies that serve them. Real decisions, real constraints, in their words. What we learn becomes the published reports, the custom studies partners commission, and the standing intelligence we deliver to subscribers. It is built for the person making the call, not the person writing the briefing deck."
+    lede="We run in-depth interviews with the senior executives making enterprise technology and AI decisions inside the Fortune 500, and with the platform companies that serve them. Surveys and analyst reports capture what organizations say. Our work captures the reasoning behind the decision: the budgets, the constraints, the internal politics, the tradeoffs that rarely reach public data. It is built for the person making the call, not the person writing the briefing deck."
   />
 
   <section class="bg-paper text-ink">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-24 space-y-16">
+
+      <div>
+        <h2 class="eyebrow eyebrow-on-light mb-4">Who relies on it</h2>
+        <div class="max-w-prose-wide space-y-4 text-body text-ink/90">
+          <p>
+            Technology companies, investors, consulting firms, and corporate strategy teams use
+            these conversations to validate strategy, guide product development, assess markets, and
+            read where enterprise adoption is actually heading.
+          </p>
+          <p>
+            Before committing to a product, a market, an acquisition, or an investment thesis, they
+            get direct insight into how decision-makers are thinking, what they are prioritizing, and
+            why they are making the choices that will shape their organizations.
+          </p>
+        </div>
+      </div>
+
+      <hr class="rule-muted" />
 
       <div>
         <h2 class="eyebrow eyebrow-on-light mb-4">Methodology</h2>
@@ -62,10 +80,10 @@ import SectionHero from '@components/ui/SectionHero.astro';
         <h2 class="eyebrow eyebrow-on-light mb-4">Custom engagements</h2>
         <div class="max-w-prose-wide space-y-4 text-body text-ink/90">
           <p>
-            Most of the institute's research is commissioned by AI platform vendors, large
-            enterprises, and investment firms with a specific question that the public reports do
-            not answer. Custom engagements come in three tiers, distinguished by scope, sample size,
-            and depth of synthesis.
+            Most of the institute's research is commissioned by technology companies, investors,
+            consulting firms, and corporate strategy teams with a specific question that the public
+            reports do not answer. Custom engagements come in three tiers, distinguished by scope,
+            sample size, and depth of synthesis.
           </p>
           <p>
             <strong class="font-sans font-semibold">The smallest tier</strong> is appropriate for
@@ -101,10 +119,14 @@ import SectionHero from '@components/ui/SectionHero.astro';
             researchers, and curated introductions, with the consent of the operators involved.
           </p>
           <p>
-            The subscription is built for AI platform vendors, large enterprises with active AI
+            The subscription is built for AI platform companies, large enterprises with active AI
             portfolios, and investment firms with AI-heavy theses. Annual commitment. Single seat or
             organization-wide.
           </p>
+        </div>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="https://insights.zaiinstitute.ai" class="btn btn-primary">Explore the Intelligence Library</a>
+          <a href="https://insights.zaiinstitute.ai/tiers" class="btn btn-ghost">See membership</a>
         </div>
       </div>
 
