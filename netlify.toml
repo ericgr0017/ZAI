@@ -107,6 +107,17 @@
   status = 200
   force = true
 
+# Co-branded directory URLs: zaiinstitute.ai/<school.edu>/advisors/<slug>/
+# embeds the partner school's official domain as a cosmetic path segment.
+# The :school placeholder matches a single path segment (dots allowed), so
+# "mankato.mnsu.edu" matches. The .edu part of the path is dropped before
+# proxying — the directory site sees /<slug>/ and serves the existing page.
+[[redirects]]
+  from = "/:school/advisors/*"
+  to = "https://zai-advisory-directory.netlify.app/:splat"
+  status = 200
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
