@@ -26,15 +26,16 @@ const fmtDate = (d: string) =>
           <li class="py-8 md:py-12 first:pt-0">
             <article class="grid grid-cols-1 md:grid-cols-12 gap-6">
               <div class="md:col-span-3">
-                <div class="font-mono text-xs uppercase tracking-wide-cap text-gold-deep">{a.label}</div>
+                <div class="font-mono text-xs uppercase tracking-wide-cap text-gold-deep">Topic</div>
                 <div class="font-mono text-xs text-muted mt-1">{fmtDate(a.date)}</div>
                 <div class="font-mono text-xs text-muted mt-1">{a.article.readMinutes} min read</div>
                 <div class="font-mono text-xs text-muted mt-1">{a.reportCount} {a.reportCount === 1 ? 'report' : 'reports'}</div>
               </div>
               <div class="md:col-span-9">
                 <h2 class="font-display text-h2 text-ink">
-                  <a href={`/blog/${a.slug}/`} class="hover:text-gold-deep">{a.article.headline}</a>
+                  <a href={`/blog/${a.slug}/`} class="hover:text-gold-deep">{a.label}</a>
                 </h2>
+                <p class="mt-2 font-display italic text-xl text-slate">{a.article.headline}</p>
                 <p class="mt-4 text-body text-ink/90 max-w-prose-wide">{a.article.dek}</p>
                 <div class="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2">
                   <a

@@ -68,9 +68,10 @@ const jsonld = {
       </div>
 
       <div class="mt-12 border-t border-light-border/60 pt-10">
-        <div class="font-mono text-xs uppercase tracking-wide-cap text-gold-deep mb-3">The research behind this</div>
+        <div class="font-mono text-xs uppercase tracking-wide-cap text-gold-deep mb-3">The {a.label} reports</div>
         <p class="text-body text-ink/90 max-w-prose-wide">
-          Own the {a.label} topic and every report behind it, or read the executive summaries free.
+          The research behind this analysis. If you own this topic, each report opens in full. If not,
+          the executive summary is free to read.
         </p>
         <div class="mt-6 flex flex-wrap gap-4">
           <a href={oneTopicUrl} class="btn btn-primary">Own this topic, $395 &rsaquo;</a>
@@ -78,9 +79,15 @@ const jsonld = {
         </div>
         {a.reports && a.reports.length > 0 && (
           <ul class="mt-8 divide-y divide-light-border/60 list-none p-0 m-0">
-            {a.reports.slice(0, 10).map((r) => (
+            {a.reports.map((r) => (
               <li class="py-3">
-                <a href={`${appUrl}/insights/${r.slug}`} class="text-ink hover:text-gold-deep">{r.title}</a>
+                <a
+                  href={`${appUrl}/insights/${r.slug}`}
+                  class="flex items-baseline justify-between gap-4 text-ink hover:text-gold-deep"
+                >
+                  <span>{r.title}</span>
+                  <span class="font-mono text-xs text-gold-deep whitespace-nowrap">Read &rsaquo;</span>
+                </a>
               </li>
             ))}
           </ul>
