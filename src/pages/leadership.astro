@@ -2,7 +2,7 @@
 import BaseLayout from '@layouts/BaseLayout.astro';
 import advisors from '../data/advisors.json';
 
-const { chair, members } = advisors;
+const { chair, researchLead, members } = advisors;
 ---
 
 <BaseLayout
@@ -78,6 +78,15 @@ const { chair, members } = advisors;
         <div class="roster-company">{chair.company}</div>
         <div class="chair-name">{chair.name}</div>
         <div class="roster-title">{chair.title}</div>
+      </div>
+    </div>
+
+    <div class="chair-block">
+      <p class="roster-eyebrow">Head of Research</p>
+      <div class="chair-card research-lead-card">
+        <div class="roster-company">{researchLead.company}</div>
+        <div class="chair-name">{researchLead.name}</div>
+        <div class="roster-title">{researchLead.title}</div>
       </div>
     </div>
 
@@ -423,6 +432,9 @@ const { chair, members } = advisors;
   background: #fff; border: 1px solid rgba(10,10,15,0.06);
   border-top: 3px solid var(--slate);
   padding: 32px 28px; max-width: 680px;
+}
+.chair-card.research-lead-card {
+  border-top: 3px solid var(--gold);
 }
 .chair-name {
   font-family: var(--serif); font-size: 30px; font-weight: 600;
