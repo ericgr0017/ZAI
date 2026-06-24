@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The 2026 ZAI AI ROI & Measurement Survey. Twelve questions for senior leaders on how organizations measure the return on their AI investments, and where the numbers stop.">
+<title>AI ROI &amp; Measurement Survey 2026 | ZAI Institute</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --paper: #faf8f4;
+    --paper-2: #f1ede4;
+    --rule: #d8d2c4;
+    --gold: #8a6d3b;
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--serif); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  nav { border-bottom: 1px solid var(--rule); background: var(--paper); }
+  .nav-inner { max-width: 1080px; margin: 0 auto; padding: 22px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .brand { font-family: var(--sans); font-weight: 700; letter-spacing: .18em; font-size: 14px; text-decoration: none; color: var(--ink); }
+  .nav-links { display: flex; gap: 22px; flex-wrap: wrap; }
+  .nav-links a { font-family: var(--sans); font-size: 13px; letter-spacing: .04em; text-decoration: none; color: var(--ink-soft); }
+  .nav-links a:hover { color: var(--ink); }
+  header { padding: 60px 0 30px; }
+  .eyebrow { font-family: var(--sans); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+  h1 { font-size: 40px; line-height: 1.14; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 20px; }
+  h1 em { font-style: italic; color: var(--gold); }
+  .dek { font-size: 18px; color: var(--ink-soft); line-height: 1.55; }
+  .meta-line { font-family: var(--sans); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); margin-top: 26px; border-top: 1px solid var(--rule); padding-top: 22px; }
+  form { padding: 14px 0 60px; }
+  .q { padding: 30px 0; border-bottom: 1px solid var(--rule); }
+  .q-num { font-family: var(--sans); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 8px; }
+  .q-label { font-size: 21px; font-weight: 700; line-height: 1.3; margin-bottom: 4px; }
+  .q-hint { font-family: var(--sans); font-size: 13px; color: var(--ink-soft); margin-bottom: 18px; }
+  .opts { display: flex; flex-direction: column; gap: 2px; }
+  .opt { display: flex; align-items: flex-start; gap: 12px; padding: 13px 16px; border: 1px solid var(--rule); background: #fff; cursor: pointer; font-family: var(--sans); font-size: 15px; transition: border-color .15s, background .15s; }
+  .opt:hover { border-color: var(--gold); background: var(--paper-2); }
+  .opt input { margin-top: 3px; accent-color: var(--ink); flex: 0 0 auto; }
+  .opt span { line-height: 1.4; }
+  textarea { width: 100%; min-height: 130px; padding: 14px 16px; border: 1px solid var(--rule); background: #fff; font-family: var(--serif); font-size: 16px; line-height: 1.5; resize: vertical; }
+  textarea:focus, .opt:focus-within { outline: none; border-color: var(--gold); }
+  .submit-row { padding: 36px 0 0; }
+  button { background: var(--ink); color: var(--paper); border: none; font-family: var(--sans); font-size: 15px; letter-spacing: .06em; padding: 16px 42px; cursor: pointer; }
+  button:hover { background: var(--gold); }
+  .privacy { font-family: var(--sans); font-size: 13px; color: var(--ink-soft); margin-top: 18px; line-height: 1.5; }
+  #thanks { display: none; padding: 80px 0; text-align: center; }
+  #thanks h2 { font-size: 32px; margin-bottom: 14px; }
+  #thanks h2 em { font-style: italic; color: var(--gold); }
+  #thanks p { font-size: 18px; color: var(--ink-soft); max-width: 480px; margin: 0 auto 24px; }
+  #thanks a { display: inline-block; font-family: var(--sans); font-size: 14px; letter-spacing: .06em; background: var(--ink); color: var(--paper); padding: 14px 34px; text-decoration: none; }
+  footer { border-top: 1px solid var(--rule); padding: 30px 0; }
+  .foot-inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; font-family: var(--sans); font-size: 13px; color: var(--ink-soft); }
+  .foot-inner a { color: var(--ink-soft); text-decoration: none; margin-left: 18px; }
+  @media (max-width: 640px) { h1 { font-size: 30px; } .q-label { font-size: 18px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="/">ZAI INSTITUTE</a>
+    <div class="nav-links">
+      <a href="/#about">About</a>
+      <a href="/platform">Platform</a>
+      <a href="/insights/">Insights</a>
+      <a href="/for-universities">For Universities</a>
+      <a href="/for-organizations">For Organizations</a>
+      <a href="/contact">Partner With Us</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">ZAI Institute Research Survey</div>
+    <h1>The AI ROI &amp; Measurement <em>Survey</em></h1>
+    <p class="dek">Everyone is investing in AI. Far fewer can prove what it returns. This survey asks how your organization measures the value of its AI, and where the numbers stop. Twelve questions, about four minutes. Findings will be published anonymously on the ZAI Insights page.</p>
+    <div class="meta-line">Senior Leaders &nbsp;&#9674;&nbsp; 12 Questions &nbsp;&#9674;&nbsp; Anonymous &nbsp;&#9674;&nbsp; June 2026</div>
+  </header>
+
+  <!-- Set action to the Formspree endpoint for the "AI ROI Survey" form: https://formspree.io/f/<FORM_ID> -->
+  <form id="zaiform" action="https://formspree.io/f/xpqgqazl" method="POST">
+
+    <input type="hidden" name="_subject" value="ZAI Survey Response: AI ROI & Measurement (June 2026)">
+
+    <div class="q">
+      <div class="q-num">Question 1</div>
+      <div class="q-label">Which best describes your role?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q1_role" value="c_suite" required><span>C-Suite (CEO, COO, CFO, CIO, CTO, etc.)</span></label>
+        <label class="opt"><input type="radio" name="q1_role" value="evp_svp"><span>EVP / SVP</span></label>
+        <label class="opt"><input type="radio" name="q1_role" value="vp"><span>Vice President</span></label>
+        <label class="opt"><input type="radio" name="q1_role" value="director"><span>Director</span></label>
+        <label class="opt"><input type="radio" name="q1_role" value="manager"><span>Manager</span></label>
+        <label class="opt"><input type="radio" name="q1_role" value="other"><span>Other</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 2</div>
+      <div class="q-label">Which industry best describes your organization?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q2_industry" value="tech" required><span>Technology &amp; software</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="financial"><span>Financial services</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="healthcare"><span>Healthcare &amp; life sciences</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="prof_services"><span>Professional services &amp; consulting</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="manufacturing"><span>Manufacturing &amp; industrial</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="consumer"><span>Retail &amp; consumer</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="govt_nonprofit"><span>Government &amp; nonprofit</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="other"><span>Other</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 3</div>
+      <div class="q-label">How large is your organization?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q3_org_size" value="under_500" required><span>Under 500 employees</span></label>
+        <label class="opt"><input type="radio" name="q3_org_size" value="500_2499"><span>500 to 2,499</span></label>
+        <label class="opt"><input type="radio" name="q3_org_size" value="2500_9999"><span>2,500 to 9,999</span></label>
+        <label class="opt"><input type="radio" name="q3_org_size" value="10000_49999"><span>10,000 to 49,999</span></label>
+        <label class="opt"><input type="radio" name="q3_org_size" value="50000_plus"><span>50,000 or more</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 4</div>
+      <div class="q-label">Have you tied any AI initiative to a specific P&amp;L line?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q4_pnl_tie" value="yes_clearly" required><span>Yes, clearly</span></label>
+        <label class="opt"><input type="radio" name="q4_pnl_tie" value="partially"><span>Partially</span></label>
+        <label class="opt"><input type="radio" name="q4_pnl_tie" value="no"><span>No</span></label>
+        <label class="opt"><input type="radio" name="q4_pnl_tie" value="not_yet"><span>Not yet, but working on it</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 5</div>
+      <div class="q-label">How do you primarily measure AI's impact today?</div>
+      <div class="q-hint">Select all that apply.</div>
+      <div class="opts">
+        <label class="opt"><input type="checkbox" name="q5_measure_method" value="time_saved"><span>Time saved</span></label>
+        <label class="opt"><input type="checkbox" name="q5_measure_method" value="cost_reduction"><span>Cost reduction</span></label>
+        <label class="opt"><input type="checkbox" name="q5_measure_method" value="revenue_lift"><span>Revenue lift</span></label>
+        <label class="opt"><input type="checkbox" name="q5_measure_method" value="quality_accuracy"><span>Quality or accuracy</span></label>
+        <label class="opt"><input type="checkbox" name="q5_measure_method" value="headcount_avoided"><span>Headcount avoided</span></label>
+        <label class="opt"><input type="checkbox" name="q5_measure_method" value="dont_measure"><span>We don't formally measure it</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 6</div>
+      <div class="q-label">Could you state your AI ROI as a number your board would accept?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q6_board_credible_number" value="yes" required><span>Yes</span></label>
+        <label class="opt"><input type="radio" name="q6_board_credible_number" value="roughly"><span>Roughly</span></label>
+        <label class="opt"><input type="radio" name="q6_board_credible_number" value="no"><span>No</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 7</div>
+      <div class="q-label">What share of your AI initiatives have a success metric defined before launch?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q7_metric_before_launch" value="none" required><span>None</span></label>
+        <label class="opt"><input type="radio" name="q7_metric_before_launch" value="under_25"><span>Under 25%</span></label>
+        <label class="opt"><input type="radio" name="q7_metric_before_launch" value="25_50"><span>25 to 50%</span></label>
+        <label class="opt"><input type="radio" name="q7_metric_before_launch" value="50_75"><span>50 to 75%</span></label>
+        <label class="opt"><input type="radio" name="q7_metric_before_launch" value="over_75"><span>Over 75%</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 8</div>
+      <div class="q-label">What is the single biggest barrier to proving AI ROI?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q8_biggest_barrier" value="no_baseline" required><span>No baseline to compare against</span></label>
+        <label class="opt"><input type="radio" name="q8_biggest_barrier" value="diffuse"><span>Benefits are too diffuse to attribute</span></label>
+        <label class="opt"><input type="radio" name="q8_biggest_barrier" value="no_owner"><span>No clear owner for measurement</span></label>
+        <label class="opt"><input type="radio" name="q8_biggest_barrier" value="data_tooling"><span>Data or tooling gaps</span></label>
+        <label class="opt"><input type="radio" name="q8_biggest_barrier" value="too_early"><span>Too early to tell</span></label>
+        <label class="opt"><input type="radio" name="q8_biggest_barrier" value="not_asked"><span>Leadership isn't asking for it</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 9</div>
+      <div class="q-label">Has unprovable ROI ever stalled or killed an AI investment for you?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q9_stalled_investment" value="yes" required><span>Yes</span></label>
+        <label class="opt"><input type="radio" name="q9_stalled_investment" value="no"><span>No</span></label>
+        <label class="opt"><input type="radio" name="q9_stalled_investment" value="not_sure"><span>Not sure</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 10</div>
+      <div class="q-label">Where have you seen the clearest measurable return?</div>
+      <div class="q-hint">Select all that apply.</div>
+      <div class="opts">
+        <label class="opt"><input type="checkbox" name="q10_clearest_return" value="marketing"><span>Marketing &amp; content</span></label>
+        <label class="opt"><input type="checkbox" name="q10_clearest_return" value="support"><span>Customer support</span></label>
+        <label class="opt"><input type="checkbox" name="q10_clearest_return" value="engineering"><span>Engineering &amp; development</span></label>
+        <label class="opt"><input type="checkbox" name="q10_clearest_return" value="finance_ops"><span>Finance &amp; operations</span></label>
+        <label class="opt"><input type="checkbox" name="q10_clearest_return" value="data_analysis"><span>Data &amp; analysis</span></label>
+        <label class="opt"><input type="checkbox" name="q10_clearest_return" value="none_yet"><span>None clearly yet</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 11</div>
+      <div class="q-label">How pressing is solving AI ROI measurement for you in the next 12 months?</div>
+      <div class="q-hint">1 is not pressing, 5 is urgent.</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q11_urgency" value="1" required><span>1 &mdash; Not pressing</span></label>
+        <label class="opt"><input type="radio" name="q11_urgency" value="2"><span>2</span></label>
+        <label class="opt"><input type="radio" name="q11_urgency" value="3"><span>3</span></label>
+        <label class="opt"><input type="radio" name="q11_urgency" value="4"><span>4</span></label>
+        <label class="opt"><input type="radio" name="q11_urgency" value="5"><span>5 &mdash; Urgent</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 12</div>
+      <div class="q-label">What is the one thing you wish you could measure about AI's impact, but can't today?</div>
+      <div class="q-hint">Optional. Your words may be quoted anonymously in the published findings.</div>
+      <textarea name="q12_open_response" placeholder="Share your perspective..."></textarea>
+    </div>
+
+    <div class="submit-row">
+      <button type="submit">Submit Response</button>
+      <p class="privacy">Your responses are anonymous and will be aggregated for research. ZAI Institute will never attribute individual answers without separate written permission.</p>
+    </div>
+
+  </form>
+
+  <div id="thanks">
+    <h2>Thank you for your <em>perspective</em>.</h2>
+    <p>Your response has been recorded. The aggregated findings from this survey will be published on the ZAI Insights page.</p>
+    <a href="/insights/">Read the Latest Insights</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div>ZAI Institute &middot; The Institution Behind the Institutions</div>
+    <div>
+      <a href="/#about">About</a>
+      <a href="/platform">Platform</a>
+      <a href="/insights/">Insights</a>
+      <a href="/contact">Partner With Us</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var form = document.getElementById('zaiform');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (res) {
+      if (res.ok) {
+        form.style.display = 'none';
+        document.querySelector('header').style.display = 'none';
+        document.getElementById('thanks').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Submit Response';
+        alert('Something went wrong. Please try again.');
+      }
+    }).catch(function () {
+      btn.disabled = false;
+      btn.textContent = 'Submit Response';
+      alert('Something went wrong. Please try again.');
+    });
+  });
+</script>
+
+</body>
+</html>
