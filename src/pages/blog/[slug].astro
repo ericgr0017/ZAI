@@ -9,6 +9,9 @@ export function getStaticPaths() {
 const { a } = Astro.props;
 const art = a.article;
 const appUrl = data.appUrl;
+// Buy goes straight to Zoho hosted checkout (the One-Topic page carries the chosen topic).
+const oneTopicUrl = `https://zohosecurepay.com/checkout/lwysrd1-io8tf7gxfpg69/ZAI-Operator-Intelligence--One-Topic?topic=${a.slug}`;
+const everythingUrl = 'https://zohosecurepay.com/checkout/rh4nvcy-ndq5r87hri3e7/ZAI-Operator-Intelligence--Membership-Annual';
 const fmtDate = (d: string) =>
   new Date(d + 'T00:00:00Z').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 
@@ -70,8 +73,8 @@ const jsonld = {
           Own the {a.label} topic and every report behind it, or read the executive summaries free.
         </p>
         <div class="mt-6 flex flex-wrap gap-4">
-          <a href={`${appUrl}/topics/${a.slug}`} class="btn btn-primary">Own this topic &rsaquo;</a>
-          <a href={`${appUrl}/topics/${a.slug}`} class="btn btn-ghost">See the {a.reportCount} reports</a>
+          <a href={oneTopicUrl} class="btn btn-primary">Own this topic, $395 &rsaquo;</a>
+          <a href={everythingUrl} class="btn btn-ghost">Get everything, $1,495</a>
         </div>
         {a.reports && a.reports.length > 0 && (
           <ul class="mt-8 divide-y divide-light-border/60 list-none p-0 m-0">
