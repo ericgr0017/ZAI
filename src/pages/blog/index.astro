@@ -1,0 +1,50 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import SectionHero from '@components/ui/SectionHero.astro';
+import data from '../../data/topic-articles.json';
+
+const articles = data.articles;
+const fmtDate = (d: string) =>
+  new Date(d + 'T00:00:00Z').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+---
+
+<BaseLayout
+  title="Blog"
+  description="Research notes from ZAI Institute on what senior operators are actually doing with AI, organized by topic and drawn from interviews, advisory boards, and surveys."
+>
+  <SectionHero
+    eyebrow="Blog"
+    title="Notes from the research."
+    lede="What senior operators are actually doing with AI, one topic at a time. Each piece is drawn from interviews, advisory boards, and surveys across the institute's executive community."
+  />
+
+  <section class="bg-paper text-ink">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-24">
+      <ul class="divide-y divide-light-border/60 list-none p-0 m-0" role="list">
+        {articles.map((a) => (
+          <li class="py-8 md:py-12 first:pt-0">
+            <article class="grid grid-cols-1 md:grid-cols-12 gap-6">
+              <div class="md:col-span-3">
+                <div class="font-mono text-xs uppercase tracking-wide-cap text-gold-deep">{a.label}</div>
+                <div class="font-mono text-xs text-muted mt-1">{fmtDate(a.date)}</div>
+                <div class="font-mono text-xs text-muted mt-1">{a.article.readMinutes} min read</div>
+              </div>
+              <div class="md:col-span-9">
+                <h2 class="font-display text-h2 text-ink">
+                  <a href={`/blog/${a.slug}/`} class="hover:text-gold-deep">{a.article.headline}</a>
+                </h2>
+                <p class="mt-4 text-body text-ink/90 max-w-prose-wide">{a.article.dek}</p>
+                <a
+                  href={`/blog/${a.slug}/`}
+                  class="inline-block mt-5 text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink"
+                >
+                  Read &rsaquo;
+                </a>
+              </div>
+            </article>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

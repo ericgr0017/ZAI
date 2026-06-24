@@ -1,0 +1,92 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import data from '../../data/topic-articles.json';
+
+export function getStaticPaths() {
+  return data.articles.map((a) => ({ params: { slug: a.slug }, props: { a } }));
+}
+
+const { a } = Astro.props;
+const art = a.article;
+const appUrl = data.appUrl;
+const fmtDate = (d: string) =>
+  new Date(d + 'T00:00:00Z').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: art.headline,
+  description: art.dek,
+  datePublished: a.date,
+  dateModified: a.date,
+  author: { '@type': 'Organization', name: 'ZAI Institute' },
+  publisher: { '@type': 'Organization', name: 'ZAI Institute' },
+  articleSection: a.label,
+};
+---
+
+<BaseLayout title={art.headline} description={art.dek}>
+  <Fragment slot="head">
+    <meta property="og:type" content="article" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonld)} />
+  </Fragment>
+
+  <article class="bg-paper text-ink">
+    <div class="max-w-3xl mx-auto px-6 lg:px-8 py-16 md:py-20">
+      <div class="font-mono text-xs uppercase tracking-wide-cap text-gold-deep mb-4">
+        <a href="/blog/" class="hover:text-ink">Blog</a> &middot; {a.label}
+      </div>
+      <h1 class="font-display text-h1 text-ink">{art.headline}</h1>
+      <p class="mt-5 text-body-lg text-ink/80 max-w-prose-wide">{art.dek}</p>
+      <div class="font-mono text-xs text-muted mt-6 border-t border-light-border/60 pt-4">
+        ZAI Institute Research &middot; {fmtDate(a.date)} &middot; {art.readMinutes} min read
+      </div>
+
+      {art.keyStats && art.keyStats.length > 0 && (
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-10">
+          {art.keyStats.map((k) => (
+            <div class="border border-light-border/60 p-5">
+              <div class="font-display text-h3 text-ink">{k.stat}</div>
+              <div class="text-sm text-ink/70 mt-1">{k.label}</div>
+            </div>
+          ))}
+        </div>
+      )}
+
+      <div class="mt-8">
+        {art.sections.map((s) => (
+          <section class="mb-9">
+            <h2 class="font-display text-h2 text-ink mb-3">{s.heading}</h2>
+            {s.paragraphs.map((p) => (
+              <p class="text-body text-ink/90 mb-4 max-w-prose-wide">{p}</p>
+            ))}
+          </section>
+        ))}
+      </div>
+
+      <div class="mt-12 border-t border-light-border/60 pt-10">
+        <div class="font-mono text-xs uppercase tracking-wide-cap text-gold-deep mb-3">The research behind this</div>
+        <p class="text-body text-ink/90 max-w-prose-wide">
+          Own the {a.label} topic and every report behind it, or read the executive summaries free.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-4">
+          <a href={`${appUrl}/topics/${a.slug}`} class="btn btn-primary">Own this topic &rsaquo;</a>
+          <a href={`${appUrl}/topics/${a.slug}`} class="btn btn-ghost">See the {a.reportCount} reports</a>
+        </div>
+        {a.reports && a.reports.length > 0 && (
+          <ul class="mt-8 divide-y divide-light-border/60 list-none p-0 m-0">
+            {a.reports.slice(0, 10).map((r) => (
+              <li class="py-3">
+                <a href={`${appUrl}/insights/${r.slug}`} class="text-ink hover:text-gold-deep">{r.title}</a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      <div class="mt-12 pt-6 border-t border-light-border/60">
+        <a href="/blog/" class="text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink">&lsaquo; All posts</a>
+      </div>
+    </div>
+  </article>
+</BaseLayout>
