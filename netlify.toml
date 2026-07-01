@@ -118,6 +118,20 @@
   status = 200
   force = true
 
+# Advisory Board Portals (the private "Roundtable" rooms): a separate SSR Netlify
+# site (zai-advisor-board-portals) surfaced here under
+# zaiinstitute.ai/roundtable/<school.edu>/<program-slug>/. Unlike the static
+# directory, this is a logged-in app (session cookies, hashed assets, POST actions),
+# so it needs a fixed prefix: the portal app is built with base="/roundtable", and
+# this rule PRESERVES that prefix (does not strip it) so its pages, /roundtable/_astro/*
+# assets, /roundtable/auth/* sign-in, and POST actions all resolve. status 200 = proxy
+# (URL stays on zaiinstitute.ai; the session cookie is set for this domain).
+[[redirects]]
+  from = "/roundtable/*"
+  to = "https://zai-advisor-board-portals.netlify.app/roundtable/:splat"
+  status = 200
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
