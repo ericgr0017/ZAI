@@ -3,6 +3,34 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import SectionHero from '@components/ui/SectionHero.astro';
 
 const LIBRARY_URL = 'https://insights.zaiinstitute.ai';
+
+// Open surveys, newest first. Each one feeds the next report on that topic.
+const surveys = [
+  {
+    topic: 'Cost of Compute',
+    month: 'August 2026',
+    questions: 12,
+    href: '/ai-cost-survey/',
+    blurb:
+      'What AI actually costs to run, how organizations budget for it, and who is measuring the spend against the return.',
+  },
+  {
+    topic: 'ROI & Measurement',
+    month: 'June 2026',
+    questions: 12,
+    href: '/ai-roi-survey/',
+    blurb:
+      'How organizations decide whether their AI investment is working, and what they count when the answer is unclear.',
+  },
+  {
+    topic: 'Governance & Accountability',
+    month: 'May 2026',
+    questions: 10,
+    href: '/governance-accountability-survey/',
+    blurb:
+      'How organizations oversee, control, and answer for the AI agents they have put to work.',
+  },
+];
 ---
 
 <BaseLayout
@@ -91,29 +119,36 @@ const LIBRARY_URL = 'https://insights.zaiinstitute.ai';
           </article>
         </li>
 
-        <li class="py-8 md:py-12">
-          <article class="grid grid-cols-1 md:grid-cols-12 gap-6">
-            <div class="md:col-span-3">
-              <div class="font-mono text-xs uppercase tracking-wide-cap text-gold-deep">Open survey</div>
-              <div class="font-mono text-xs text-muted mt-1">10 questions &middot; ~4 min</div>
-            </div>
-            <div class="md:col-span-9">
-              <h2 class="font-display text-h2 text-ink">Contribute to the research</h2>
-              <p class="mt-4 text-body text-ink/90 max-w-prose-wide">
-                The research is built from operators like you. Add your view on how organizations
-                oversee, control, and answer for the AI they have put to work. Ten questions,
-                anonymous, feeding the next report.
-              </p>
-              <a
-                href="/governance-accountability-survey/"
-                class="inline-block mt-5 text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink"
-              >
-                Take the survey &rsaquo;
-              </a>
-            </div>
-          </article>
-        </li>
+      </ul>
+    </div>
+  </section>
 
+  <section class="bg-paper text-ink border-t border-light-border/60">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-24">
+      <div class="max-w-prose-wide mb-12">
+        <h2 class="eyebrow eyebrow-on-light mb-4">Open research</h2>
+        <p class="font-display text-h2 text-ink">Contribute to the next report.</p>
+        <p class="mt-5 text-body text-ink/90">
+          The research is built from operators like you. Each survey is anonymous, takes about four
+          minutes, and feeds the next report on that topic.
+        </p>
+      </div>
+
+      <ul class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 list-none p-0 m-0" role="list">
+        {surveys.map((s) => (
+          <li>
+            <a href={s.href} class="block group border-t-2 border-rule pt-5 h-full">
+              <div class="font-mono text-xs uppercase tracking-wide-cap text-gold-deep">{s.topic}</div>
+              <div class="font-mono text-xs text-muted mt-1">
+                {s.month} &middot; {s.questions} questions
+              </div>
+              <p class="mt-4 text-body text-ink/90">{s.blurb}</p>
+              <span class="inline-block mt-4 text-sm font-medium text-gold-deep border-b border-gold pb-0.5 group-hover:text-ink">
+                Take the survey &rsaquo;
+              </span>
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   </section>

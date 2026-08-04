@@ -15,6 +15,14 @@ const everythingUrl = 'https://zohosecurepay.com/checkout/rh4nvcy-ndq5r87hri3e7/
 const fmtDate = (d: string) =>
   new Date(d + 'T00:00:00Z').toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
 
+// Topics with an open survey feeding their next report.
+const SURVEYS: Record<string, { href: string; questions: number }> = {
+  'cost-of-compute': { href: '/ai-cost-survey/', questions: 12 },
+  'roi-measurement': { href: '/ai-roi-survey/', questions: 12 },
+  'governance-accountability': { href: '/governance-accountability-survey/', questions: 10 },
+};
+const survey = SURVEYS[a.slug];
+
 const jsonld = {
   '@context': 'https://schema.org',
   '@type': 'Article',
@@ -93,6 +101,18 @@ const jsonld = {
           </ul>
         )}
       </div>
+
+      {survey && (
+        <div class="mt-12 border border-light-border/70 border-t-4 border-t-gold bg-gold-pale/30 p-8 md:p-10">
+          <div class="font-mono text-xs uppercase tracking-wide-cap text-gold-deep mb-3">Open research</div>
+          <h2 class="font-display text-2xl text-ink mb-3">Contribute to the next {a.label} report.</h2>
+          <p class="text-body text-ink/90 max-w-prose-wide mb-6">
+            This analysis came from operators like you. The next one is being built now. {survey.questions} questions,
+            anonymous, about four minutes.
+          </p>
+          <a href={survey.href} class="btn btn-primary">Take the {a.label} survey &rsaquo;</a>
+        </div>
+      )}
 
       <div class="mt-12 pt-6 border-t border-light-border/60">
         <a href="/blog/" class="text-sm font-medium text-gold-deep border-b border-gold pb-0.5 hover:text-ink">&lsaquo; All posts</a>
