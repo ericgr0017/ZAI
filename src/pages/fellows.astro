@@ -6,7 +6,12 @@ import SectionHero from '@components/ui/SectionHero.astro';
 // Services, which is the attachment clients actually sign. If a term changes
 // there, change it here. A marketing page that disagrees with the agreement is
 // worse than no marketing page.
-const FEE = '$1,500';
+//
+// The fee figure is deliberately not on this page. It is stated in the
+// engagement email after the first conversation, once we know what someone is
+// asking us to do. The page still says plainly that there is a fee and what it
+// covers, because hiding that a paid service is paid is the thing this whole
+// positioning is built to avoid.
 
 const BUILD = [
   'Your biography',
@@ -136,15 +141,43 @@ const NEED = [
       <div>
         <h2 class="eyebrow mb-4">The fee</h2>
         <div class="max-w-prose-wide space-y-4 text-body text-paper/85">
-          <p class="font-display text-h2 text-paper">{FEE}, once, on signing.</p>
+          <p class="font-display text-h2 text-paper">One fee, once, on signing.</p>
           <p>
-            No commissions. No placement fees. No contingent payments of any kind.
+            The Executive Representation and Onboarding Fee covers everything above: your
+            initial consultation and positioning, media kit development, opportunity
+            identification, active university outreach, faculty introductions, and three months
+            of representation.
           </p>
           <p>
-            If you have not accepted a position, volunteer or paid, by the end of the three
-            month placement term, we refund the full {FEE}. That applies provided you approved
-            your kit on time and did not decline a position we secured for you. Taking the
-            refund ends the Fellowship.
+            No commissions. No success fees. No placement fees of any kind.
+          </p>
+          <p>
+            The fee is for our representation services. It is not a payment to a university,
+            and it is not a payment for a title, appointment, or position. Universities and
+            faculty retain complete discretion over whom they engage.
+          </p>
+          <p>
+            We go through the figure in the first conversation, once we know what you are
+            asking us to do. <a href="/contact" class="underline underline-offset-4">Ask us</a>
+            and we will walk you through it.
+          </p>
+        </div>
+      </div>
+
+      <hr class="rule-muted" />
+
+      <div>
+        <h2 class="eyebrow mb-4">Our guarantee</h2>
+        <div class="max-w-prose-wide space-y-4 text-body text-paper/85">
+          <p>
+            If you have not accepted a qualifying university position, volunteer or paid, by
+            the end of the three month representation period, we refund the fee in full.
+          </p>
+          <p>
+            That applies provided you approved your media kit within the required timeframe,
+            participated reasonably in the process, and did not decline a qualifying position
+            we secured for you consistent with the preferences you gave us. Taking the refund
+            ends the Fellowship.
           </p>
         </div>
       </div>
@@ -174,8 +207,9 @@ const NEED = [
       <div class="max-w-prose-wide space-y-6">
         <h2 class="font-display text-h2 text-ink">Start with a conversation.</h2>
         <p class="text-body text-ink/90">
-          Tell us what you want to teach and where. If we do not think we can place you, we
-          will say so on that call rather than take the fee.
+          Tell us what you want to teach and where, and we will walk you through how the fee
+          structure works. If we do not think we can place you, we will say so on that call
+          rather than take the fee.
         </p>
         <p class="text-body text-ink/90">
           <a href="/contact" class="underline underline-offset-4">Get in touch</a>
