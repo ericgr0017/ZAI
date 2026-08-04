@@ -1,0 +1,186 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import SectionHero from '@components/ui/SectionHero.astro';
+
+// Every term on this page is taken from the ZAI Fellows Description of
+// Services, which is the attachment clients actually sign. If a term changes
+// there, change it here. A marketing page that disagrees with the agreement is
+// worse than no marketing page.
+const FEE = '$1,500';
+
+const BUILD = [
+  'Your biography',
+  'Teaching and speaking topics',
+  'Areas of expertise',
+  'A professional headshot',
+  'A one page summary written for faculty',
+];
+
+const NEED = [
+  'Where you will travel, and whether remote works',
+  'The kind of engagement you want: guest lecture, semester mentor, executive in residence, workshop',
+  'Accurate professional information and a current headshot',
+  'Written approval of your kit within fourteen days',
+  'Availability for interviews, usually thirty to forty five minutes',
+];
+---
+
+<BaseLayout
+  title="ZAI Fellows"
+  description="ZAI Fellows places senior executives into university guest lecture, mentor and executive in residence positions. We build your media kit, present you to faculty across our university network, and make direct introductions."
+>
+  <SectionHero
+    eyebrow="For executives"
+    title="Teach where the decisions get made."
+    lede="Universities want practitioners who have actually run something. Most senior operators never hear about the opening, because the search happens through faculty networks they are not part of. ZAI Fellows is the way in. We build your case, present it to our university network, and make the introduction."
+  />
+
+  <section class="bg-paper text-ink">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-24 space-y-16">
+
+      <div class="max-w-prose-wide space-y-4 text-body text-ink/90">
+        <p>
+          The institute has spent years on the other side of this. We work with universities to
+          build and staff AI executive education programs, which means we are the ones asking
+          who should teach the session. ZAI Fellows turns that around and represents the
+          practitioner.
+        </p>
+      </div>
+
+      <hr class="rule-muted" />
+
+      <div>
+        <h2 class="eyebrow eyebrow-on-light mb-4">The Fellowship</h2>
+        <div class="max-w-prose-wide space-y-4 text-body text-ink/90">
+          <p>
+            When you approve your media kit you become a ZAI Fellow. The title is yours for
+            twelve months, it appears on everything we put in front of a university, and it
+            renews at no cost if you have taught or scheduled at least one engagement during
+            the year.
+          </p>
+          <p>
+            It is held while you are active rather than bought outright. That is deliberate.
+            A designation anyone can buy and keep is worth what they paid for it, and the
+            faculty who matter can tell the difference.
+          </p>
+        </div>
+      </div>
+
+      <hr class="rule-muted" />
+
+      <div>
+        <h2 class="eyebrow eyebrow-on-light mb-4">What we build</h2>
+        <div class="max-w-prose-wide space-y-4 text-body text-ink/90">
+          <p>A media kit, which is the document a department chair actually asks to see.</p>
+          <ul class="space-y-2 mt-4">
+            {BUILD.map((item) => <li class="text-ink/90">{item}</li>)}
+          </ul>
+          <p class="mt-6">
+            Nothing goes to any institution until you have approved it in writing. Two rounds
+            of revisions are included.
+          </p>
+        </div>
+      </div>
+
+      <hr class="rule-muted" />
+
+      <div>
+        <h2 class="eyebrow eyebrow-on-light mb-4">Where it goes</h2>
+        <div class="max-w-prose-wide space-y-4 text-body text-ink/90">
+          <p>
+            To faculty, deans, department chairs and program directors across our university
+            network. We look for openings that match the geography and the kind of engagement
+            you want, make the introduction directly, and coordinate the interview.
+          </p>
+          <p>
+            We keep going for three months, or until you accept a position, and we tell you
+            what we have sent and what came back as we go.
+          </p>
+        </div>
+      </div>
+
+      <hr class="rule-muted" />
+
+      <div>
+        <h2 class="eyebrow eyebrow-on-light mb-4">What we need from you</h2>
+        <div class="max-w-prose-wide space-y-4 text-body text-ink/90">
+          <ul class="space-y-2">
+            {NEED.map((item) => <li class="text-ink/90">{item}</li>)}
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="bg-ink text-paper">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-24 space-y-12">
+
+      <div>
+        <h2 class="eyebrow mb-4">Most of these roles begin unpaid</h2>
+        <div class="max-w-prose-wide space-y-4 text-body text-paper/85">
+          <p>
+            Worth saying plainly, because it is the thing people find out later. Universities
+            bring executives in for the expertise and for the standing it gives their programs.
+            Paid engagements typically follow once you have built a relationship with the
+            department.
+          </p>
+          <p>
+            Our obligation is to secure your first offer, in either form.
+          </p>
+        </div>
+      </div>
+
+      <hr class="rule-muted" />
+
+      <div>
+        <h2 class="eyebrow mb-4">The fee</h2>
+        <div class="max-w-prose-wide space-y-4 text-body text-paper/85">
+          <p class="font-display text-h2 text-paper">{FEE}, once, on signing.</p>
+          <p>
+            No commissions. No placement fees. No contingent payments of any kind.
+          </p>
+          <p>
+            If you have not accepted a position, volunteer or paid, by the end of the three
+            month placement term, we refund the full {FEE}. That applies provided you approved
+            your kit on time and did not decline a position we secured for you. Taking the
+            refund ends the Fellowship.
+          </p>
+        </div>
+      </div>
+
+      <hr class="rule-muted" />
+
+      <div>
+        <h2 class="eyebrow mb-4">What we do not promise</h2>
+        <div class="max-w-prose-wide space-y-4 text-body text-paper/85">
+          <p>
+            Universities are selective. Faculty and academic departments make every appointment
+            decision on their own criteria and by their own process, and they will interview
+            you as they would any candidate.
+          </p>
+          <p>
+            We secure the introduction and the interview. We do not control the outcome, and we
+            do not guarantee placement.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="bg-paper text-ink">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-24">
+      <div class="max-w-prose-wide space-y-6">
+        <h2 class="font-display text-h2 text-ink">Start with a conversation.</h2>
+        <p class="text-body text-ink/90">
+          Tell us what you want to teach and where. If we do not think we can place you, we
+          will say so on that call rather than take the fee.
+        </p>
+        <p class="text-body text-ink/90">
+          <a href="/contact" class="underline underline-offset-4">Get in touch</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
