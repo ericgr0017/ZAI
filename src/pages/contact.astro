@@ -30,22 +30,35 @@ const routes = [
     formName: 'research-inquiry',
     interest: 'research',
   },
+  {
+    id: 'fellows',
+    eyebrow: 'For executives',
+    heading: 'Apply to be a Fellow',
+    body: 'Tell us what you have run and what you want to teach. We will reply on whether the fellowship is a fit and what the first introduction would look like.',
+    email: 'fellows@zaiinstitute.ai',
+    formName: 'fellows-inquiry',
+    interest: 'fellows',
+    messageLabel: 'What you have run, and what you want to teach',
+    extra: [
+      { name: 'linkedin', label: 'LinkedIn profile', type: 'url', required: false, autocomplete: 'url' },
+    ],
+  },
 ];
 ---
 
 <BaseLayout
   title="Contact"
-  description="Three ways to start a conversation with ZAI Institute: partner with us as a university, train your organization, or commission research."
+  description="Four ways to start a conversation with ZAI Institute: partner with us as a university, train your organization, commission research, or apply to be a ZAI Fellow."
 >
   <SectionHero
     eyebrow="Contact"
     title="Start a conversation."
-    lede="Three doors in. Pick the one that fits. Start with a 20-minute fit call. If there is a reason to go deeper, we will map the next 30 days."
+    lede="Four doors in. Pick the one that fits. Start with a 20-minute fit call. If there is a reason to go deeper, we will map the next 30 days."
   />
 
   <section class="bg-paper text-ink">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-24">
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 lg:gap-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10 lg:gap-12">
         {
           routes.map((r) => (
             <article id={r.id} class="border-t-2 border-rule pt-6">
@@ -111,8 +124,24 @@ const routes = [
                   />
                 </div>
 
+                {r.extra?.map((f) => (
+                  <div>
+                    <label for={`${r.id}-${f.name}`} class="block text-xs font-mono uppercase tracking-wide-cap text-muted mb-1">
+                      {f.label}{!f.required && <span class="text-muted/70"> (optional)</span>}
+                    </label>
+                    <input
+                      id={`${r.id}-${f.name}`}
+                      type={f.type}
+                      name={f.name}
+                      required={f.required}
+                      autocomplete={f.autocomplete}
+                      class="w-full bg-white border border-light-border px-3 py-2 text-body text-ink focus:outline-none focus:border-gold"
+                    />
+                  </div>
+                ))}
+
                 <div>
-                  <label for={`${r.id}-message`} class="block text-xs font-mono uppercase tracking-wide-cap text-muted mb-1">A few sentences on what you have in mind</label>
+                  <label for={`${r.id}-message`} class="block text-xs font-mono uppercase tracking-wide-cap text-muted mb-1">{r.messageLabel ?? 'A few sentences on what you have in mind'}</label>
                   <textarea
                     id={`${r.id}-message`}
                     name="message"
