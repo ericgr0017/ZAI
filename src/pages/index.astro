@@ -6,6 +6,30 @@ import BaseLayout from '@layouts/BaseLayout.astro';
   title="ZAI Institute"
   description="ZAI Institute closes the gap between what AI promises and what it delivers. University AI programs, enterprise training, and field research, built on the insight of thousands of senior executives."
 >
+  <Fragment slot="head">
+    <script type="application/ld+json" is:inline>
+    {
+      "@context": "https://schema.org",
+      "@type": "EducationalOrganization",
+      "@id": "https://zaiinstitute.ai/#organization",
+      "name": "ZAI Institute",
+      "url": "https://zaiinstitute.ai",
+      "description": "ZAI Institute closes the gap between what AI promises and what it delivers, through university AI programs, enterprise training, and field research with senior operators.",
+      "telephone": "+1-888-384-7020",
+      "email": "research@zaiinstitute.ai",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "6600 N. Andrews Avenue",
+        "addressLocality": "Fort Lauderdale",
+        "addressRegion": "FL",
+        "postalCode": "33304",
+        "addressCountry": "US"
+      },
+      "sameAs": ["https://www.linkedin.com/company/zaiinstitute"]
+    }
+    </script>
+  </Fragment>
+
   <section class="bg-ink text-paper">
     <div class="max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-28">
       <div class="max-w-prose-wide">
