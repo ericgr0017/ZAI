@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The 2026 ZAI AI Security and Compliance Survey. Twelve questions for senior leaders on shadow AI, safeguards, and who answers for the AI tools in use.">
+<title>AI Security &amp; Compliance Survey 2026 | ZAI Institute</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --ink-soft: #4a4a4a;
+    --paper: #faf8f4;
+    --paper-2: #f1ede4;
+    --rule: #d8d2c4;
+    --gold: #8a6d3b;
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--paper); color: var(--ink); font-family: var(--serif); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+  nav { border-bottom: 1px solid var(--rule); background: var(--paper); }
+  .nav-inner { max-width: 1080px; margin: 0 auto; padding: 22px 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .brand { font-family: var(--sans); font-weight: 700; letter-spacing: .18em; font-size: 14px; text-decoration: none; color: var(--ink); }
+  .nav-links { display: flex; gap: 22px; flex-wrap: wrap; }
+  .nav-links a { font-family: var(--sans); font-size: 13px; letter-spacing: .04em; text-decoration: none; color: var(--ink-soft); }
+  .nav-links a:hover { color: var(--ink); }
+  header { padding: 60px 0 30px; }
+  .eyebrow { font-family: var(--sans); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+  h1 { font-size: 40px; line-height: 1.14; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 20px; }
+  h1 em { font-style: italic; color: var(--gold); }
+  .dek { font-size: 18px; color: var(--ink-soft); line-height: 1.55; }
+  .meta-line { font-family: var(--sans); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-soft); margin-top: 26px; border-top: 1px solid var(--rule); padding-top: 22px; }
+  form { padding: 14px 0 60px; }
+  .q { padding: 30px 0; border-bottom: 1px solid var(--rule); }
+  .q-num { font-family: var(--sans); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 8px; }
+  .q-label { font-size: 21px; font-weight: 700; line-height: 1.3; margin-bottom: 4px; }
+  .q-hint { font-family: var(--sans); font-size: 13px; color: var(--ink-soft); margin-bottom: 18px; }
+  .opts { display: flex; flex-direction: column; gap: 2px; }
+  .opt { display: flex; align-items: flex-start; gap: 12px; padding: 13px 16px; border: 1px solid var(--rule); background: #fff; cursor: pointer; font-family: var(--sans); font-size: 15px; transition: border-color .15s, background .15s; }
+  .opt:hover { border-color: var(--gold); background: var(--paper-2); }
+  .opt input { margin-top: 3px; accent-color: var(--ink); flex: 0 0 auto; }
+  .opt span { line-height: 1.4; }
+  textarea { width: 100%; min-height: 130px; padding: 14px 16px; border: 1px solid var(--rule); background: #fff; font-family: var(--serif); font-size: 16px; line-height: 1.5; resize: vertical; }
+  textarea:focus, .opt:focus-within { outline: none; border-color: var(--gold); }
+  .submit-row { padding: 36px 0 0; }
+  button { background: var(--ink); color: var(--paper); border: none; font-family: var(--sans); font-size: 15px; letter-spacing: .06em; padding: 16px 42px; cursor: pointer; }
+  button:hover { background: var(--gold); }
+  .privacy { font-family: var(--sans); font-size: 13px; color: var(--ink-soft); margin-top: 18px; line-height: 1.5; }
+  #thanks { display: none; padding: 80px 0; text-align: center; }
+  #thanks h2 { font-size: 32px; margin-bottom: 14px; }
+  #thanks h2 em { font-style: italic; color: var(--gold); }
+  #thanks p { font-size: 18px; color: var(--ink-soft); max-width: 480px; margin: 0 auto 24px; }
+  #thanks a { display: inline-block; font-family: var(--sans); font-size: 14px; letter-spacing: .06em; background: var(--ink); color: var(--paper); padding: 14px 34px; text-decoration: none; }
+  footer { border-top: 1px solid var(--rule); padding: 30px 0; }
+  .foot-inner { max-width: 1080px; margin: 0 auto; padding: 0 24px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 14px; font-family: var(--sans); font-size: 13px; color: var(--ink-soft); }
+  .foot-inner a { color: var(--ink-soft); text-decoration: none; margin-left: 18px; }
+  @media (max-width: 640px) { h1 { font-size: 30px; } .q-label { font-size: 18px; } }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="/">ZAI INSTITUTE</a>
+    <div class="nav-links">
+      <a href="/#about">About</a>
+      <a href="/platform">Platform</a>
+      <a href="/insights/">Insights</a>
+      <a href="/for-universities">For Universities</a>
+      <a href="/for-organizations">For Organizations</a>
+      <a href="/contact">Partner With Us</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">ZAI Institute Research Survey</div>
+    <h1>The AI Security &amp; Compliance <em>Survey</em></h1>
+    <p class="dek">Executives keep telling us the same two stories: staff quietly use AI tools nobody approved, and clients now ask hard questions about the AI tools that are approved. This survey asks what safeguards are really in place, where data actually goes, and who answers for it. Twelve questions, about three minutes. Findings will be published anonymously on the ZAI Insights page.</p>
+    <div class="meta-line">Senior Leaders &nbsp;&#9674;&nbsp; 12 Questions &nbsp;&#9674;&nbsp; Anonymous &nbsp;&#9674;&nbsp; October 2026</div>
+  </header>
+
+  <form id="zaiform" action="https://formspree.io/f/xppqejdn" method="POST">
+
+    <input type="hidden" name="_subject" value="ZAI Survey Response: AI Security &amp; Compliance (October 2026)">
+
+    <div class="q">
+      <div class="q-num">Question 1</div>
+      <div class="q-label">Which best describes your role?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q1_role" value="c_suite" required><span>C-Suite (CEO, COO, CFO, CIO, CTO, etc.)</span></label>
+        <label class="opt"><input type="radio" name="q1_role" value="evp_svp"><span>EVP / SVP</span></label>
+        <label class="opt"><input type="radio" name="q1_role" value="vp"><span>Vice President</span></label>
+        <label class="opt"><input type="radio" name="q1_role" value="director"><span>Director</span></label>
+        <label class="opt"><input type="radio" name="q1_role" value="manager"><span>Manager</span></label>
+        <label class="opt"><input type="radio" name="q1_role" value="other"><span>Other</span></label>
+      </div>
+    </div>
+
+<div class="q">
+      <div class="q-num">Question 2</div>
+      <div class="q-label">Which industry best describes your organization?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q2_industry" value="tech" required><span>Technology &amp; software</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="financial"><span>Financial services</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="healthcare"><span>Healthcare &amp; life sciences</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="prof_services"><span>Professional services &amp; consulting</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="manufacturing"><span>Manufacturing &amp; industrial</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="consumer"><span>Retail &amp; consumer</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="govt_nonprofit"><span>Government &amp; nonprofit</span></label>
+        <label class="opt"><input type="radio" name="q2_industry" value="other"><span>Other</span></label>
+      </div>
+    </div>
+
+<div class="q">
+      <div class="q-num">Question 3</div>
+      <div class="q-label">How large is your organization?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q3_org_size" value="under_500" required><span>Under 500 employees</span></label>
+        <label class="opt"><input type="radio" name="q3_org_size" value="500_2499"><span>500 to 2,499</span></label>
+        <label class="opt"><input type="radio" name="q3_org_size" value="2500_9999"><span>2,500 to 9,999</span></label>
+        <label class="opt"><input type="radio" name="q3_org_size" value="10000_49999"><span>10,000 to 49,999</span></label>
+        <label class="opt"><input type="radio" name="q3_org_size" value="50000_plus"><span>50,000 or more</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 4</div>
+      <div class="q-label">Does your organization have an approved list of AI tools?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q4_approved_list" value="formal_enforced" required><span>Yes, formal and enforced</span></label>
+        <label class="opt"><input type="radio" name="q4_approved_list" value="formal_loose"><span>Yes, formal, but loosely enforced</span></label>
+        <label class="opt"><input type="radio" name="q4_approved_list" value="informal"><span>Informal guidance only</span></label>
+        <label class="opt"><input type="radio" name="q4_approved_list" value="none"><span>No policy</span></label>
+        <label class="opt"><input type="radio" name="q4_approved_list" value="dont_know"><span>Don't know</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 5</div>
+      <div class="q-label">Honestly, how often do employees use AI tools that were never approved?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q5_shadow_use" value="routinely" required><span>Routinely</span></label>
+        <label class="opt"><input type="radio" name="q5_shadow_use" value="sometimes"><span>Sometimes</span></label>
+        <label class="opt"><input type="radio" name="q5_shadow_use" value="rarely"><span>Rarely</span></label>
+        <label class="opt"><input type="radio" name="q5_shadow_use" value="never"><span>Never</span></label>
+        <label class="opt"><input type="radio" name="q5_shadow_use" value="no_way_to_know"><span>We have no way to know</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 6</div>
+      <div class="q-label">In the past year, has company data ended up in a personal or unapproved AI account?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q6_data_incident" value="known_incidents" required><span>Yes, we know of incidents</span></label>
+        <label class="opt"><input type="radio" name="q6_data_incident" value="suspected"><span>We suspect it, but cannot confirm</span></label>
+        <label class="opt"><input type="radio" name="q6_data_incident" value="no"><span>No</span></label>
+        <label class="opt"><input type="radio" name="q6_data_incident" value="dont_know"><span>Don't know</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 7</div>
+      <div class="q-label">Which safeguards are actually in place?</div>
+      <div class="q-hint">Select all that apply.</div>
+      <div class="opts">
+        <label class="opt"><input type="checkbox" name="q7_safeguards" value="allowlist"><span>An approved-tool allowlist</span></label>
+        <label class="opt"><input type="checkbox" name="q7_safeguards" value="dlp_blocking"><span>Blocking or data-loss prevention on AI sites</span></label>
+        <label class="opt"><input type="checkbox" name="q7_safeguards" value="enterprise_agreements"><span>Enterprise agreements with AI vendors</span></label>
+        <label class="opt"><input type="checkbox" name="q7_safeguards" value="security_review"><span>Security review before a tool is adopted</span></label>
+        <label class="opt"><input type="checkbox" name="q7_safeguards" value="ai_training"><span>AI-specific staff training</span></label>
+        <label class="opt"><input type="checkbox" name="q7_safeguards" value="incident_response"><span>Incident response that covers AI</span></label>
+        <label class="opt"><input type="checkbox" name="q7_safeguards" value="none_yet"><span>None yet</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 8</div>
+      <div class="q-label">Do customers or clients now ask about your AI use in contracts or security reviews?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q8_client_scrutiny" value="routinely" required><span>Yes, routinely</span></label>
+        <label class="opt"><input type="radio" name="q8_client_scrutiny" value="starting"><span>It is starting to come up</span></label>
+        <label class="opt"><input type="radio" name="q8_client_scrutiny" value="not_yet"><span>Not yet</span></label>
+        <label class="opt"><input type="radio" name="q8_client_scrutiny" value="we_ask_them"><span>We ask our vendors, but are not asked ourselves</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 9</div>
+      <div class="q-label">How confident are you that sensitive data stays inside approved boundaries?</div>
+      <div class="q-hint">1 is not confident at all, 5 is fully confident.</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q9_boundary_confidence" value="1" required><span>1 &mdash; Not confident at all</span></label>
+        <label class="opt"><input type="radio" name="q9_boundary_confidence" value="2"><span>2</span></label>
+        <label class="opt"><input type="radio" name="q9_boundary_confidence" value="3"><span>3</span></label>
+        <label class="opt"><input type="radio" name="q9_boundary_confidence" value="4"><span>4</span></label>
+        <label class="opt"><input type="radio" name="q9_boundary_confidence" value="5"><span>5 &mdash; Fully confident</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 10</div>
+      <div class="q-label">Has staff been trained on what data may and may not go into AI tools?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q10_training" value="all_staff" required><span>Yes, all staff</span></label>
+        <label class="opt"><input type="radio" name="q10_training" value="some_teams"><span>Some teams</span></label>
+        <label class="opt"><input type="radio" name="q10_training" value="planned"><span>Planned, not yet delivered</span></label>
+        <label class="opt"><input type="radio" name="q10_training" value="no"><span>No</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 11</div>
+      <div class="q-label">Who clearly owns AI security in your organization?</div>
+      <div class="opts">
+        <label class="opt"><input type="radio" name="q11_ownership" value="ciso_security" required><span>The CISO or security team</span></label>
+        <label class="opt"><input type="radio" name="q11_ownership" value="it"><span>IT, along with everything else</span></label>
+        <label class="opt"><input type="radio" name="q11_ownership" value="ai_council"><span>An AI council or steering committee</span></label>
+        <label class="opt"><input type="radio" name="q11_ownership" value="compliance_legal"><span>Compliance or legal</span></label>
+        <label class="opt"><input type="radio" name="q11_ownership" value="nobody"><span>Nobody clearly owns it</span></label>
+        <label class="opt"><input type="radio" name="q11_ownership" value="dont_know"><span>Don't know</span></label>
+      </div>
+    </div>
+
+    <div class="q">
+      <div class="q-num">Question 12</div>
+      <div class="q-label">What is the one AI security risk that worries you most?</div>
+      <div class="q-hint">Optional. Your words may be quoted anonymously in the published findings.</div>
+      <textarea name="q12_open_response" placeholder="Share your perspective..."></textarea>
+    </div>
+
+    <div class="submit-row">
+      <button type="submit">Submit Response</button>
+      <p class="privacy">Your responses are anonymous and will be aggregated for research. ZAI Institute will never attribute individual answers without separate written permission.</p>
+    </div>
+
+  </form>
+
+  <div id="thanks">
+    <h2>Thank you for your <em>perspective</em>.</h2>
+    <p>Your response has been recorded. The aggregated findings from this survey will be published on the ZAI Insights page.</p>
+    <a href="/insights/">Read the Latest Insights</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="foot-inner">
+    <div>ZAI Institute &middot; The Institution Behind the Institutions</div>
+    <div>
+      <a href="/#about">About</a>
+      <a href="/platform">Platform</a>
+      <a href="/insights/">Insights</a>
+      <a href="/contact">Partner With Us</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var form = document.getElementById('zaiform');
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (res) {
+      if (res.ok) {
+        form.style.display = 'none';
+        document.querySelector('header').style.display = 'none';
+        document.getElementById('thanks').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Submit Response';
+        alert('Something went wrong. Please try again.');
+      }
+    }).catch(function () {
+      btn.disabled = false;
+      btn.textContent = 'Submit Response';
+      alert('Something went wrong. Please try again.');
+    });
+  });
+</script>
+
+</body>
+</html>
